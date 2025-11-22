@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f8f9fb;
+    color: #222;
+}
+
+/* Couleurs SCQ */
+:root {
+    --scq-blue: #003da5;
+    --scq-red: #e0001b;
+    --scq-white: #ffffff;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 20px;
+    background: var(--scq-blue);
+    color: var(--scq-white);
+}
+
+.logo {
+    max-width: 120px;
+    margin-bottom: 10px;
+}
+
+/* Chat flottant */
+#chat-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--scq-red);
+    color: white;
+    padding: 12px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Boîte du chat */
+#chat-box {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    height: 420px;
+    background: white;
+    border: 2px solid var(--scq-blue);
+    border-radius: 12px;
+    display: none;
+    flex-direction: column;
+}
+
+#chat-header {
+    background: var(--scq-blue);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#chat-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+#chat-input {
+    border: none;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+}
