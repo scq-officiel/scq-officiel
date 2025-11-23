@@ -3,31 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SCQ — Souveraineté et Citoyenneté du Québec</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Souveraineté et Citoyenneté du Québec (SCQ)</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0d0d0d;
+            color: white;
+        }
+
+        header {
+            background: #002b55;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #007bff;
+        }
+
+        header img {
+            width: 160px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            margin-top: 10px;
+            font-size: 2rem;
+        }
+
+        .section {
+            max-width: 950px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #111827;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+            border-left: 4px solid #007bff;
+        }
+
+        .section h2 {
+            color: #4da6ff;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            padding: 25px;
+            background: #001a33;
+            color: #ccc;
+        }
+
+        a.button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 20px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        a.button:hover {
+            background: #005fcc;
+        }
+    </style>
+
 </head>
 <body>
-    <header class="header">
-        <img src="https://raw.githubusercontent.com/cantin2025/scq-officiel/main/logo-scq.png" alt="Logo SCQ" class="logo">
-        <h1>Souveraineté et Citoyenneté du Québec</h1>
-        <p>Le parti 100% citoyen pour remettre le Québec entre les mains du peuple.</p>
+
+    <header>
+        <img src="Logo SCQ.jpg" alt="Logo du SCQ">
+        <h1>Souveraineté et Citoyenneté du Québec (SCQ)</h1>
+        <p>Un parti 100% citoyen — Pour que le Québec appartienne enfin à son peuple.</p>
     </header>
 
-    <main class="content">
-        <h2>Bienvenue sur le site officiel du SCQ</h2>
-        <p>Nous construisons un mouvement citoyen pour un Québec souverain, juste et moderne.</p>
-    </main>
-
-    <!-- Bouton du chat -->
-    <div id="chat-btn">💬 SCQ Chat</div>
-
-    <!-- Fenêtre du chat -->
-    <div id="chat-box">
-        <div id="chat-header">Chat SCQ — IA</div>
-        <div id="chat-messages"></div>
-        <input id="chat-input" placeholder="Pose ta question..." />
+    <div class="section">
+        <h2>Notre mission</h2>
+        <p>
+            Le SCQ est un mouvement politique citoyen qui vise à remettre le pouvoir 
+            entre les mains du peuple québécois. Nous travaillons pour un Québec 
+            souverain, moderne, transparent et libéré de l’influence de l’élite 
+            politique et mondiale.
+        </p>
     </div>
 
-    <script src="script.js"></script>
+    <div class="section">
+        <h2>Ce que nous construisons</h2>
+        <ul>
+            <li>Une Constitution du Québec écrite par et pour le peuple</li>
+            <li>Des réformes majeures pour un pays moderne et équitable</li>
+            <li>Un système politique transparent et contrôlé par les citoyens</li>
+            <li>Des plateformes numériques ouvertes et accessibles</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Rejoindre le mouvement</h2>
+        <p>Chaque personne compte. Ensemble, nous pouvons bâtir un Québec souverain.</p>
+
+        <a class="button" href="https://www.facebook.com/Souverainete.et.Citoyennete.du.Quebec" target="_blank">
+            Rejoindre la page Facebook du SCQ
+        </a>
+    </div>
+
+    <footer>
+        © 2025 — Souveraineté et Citoyenneté du Québec (SCQ)  
+    </footer>
+
 </body>
 </html>
