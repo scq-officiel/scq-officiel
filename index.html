@@ -1,116 +1,129 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Souveraineté et Citoyenneté du Québec (SCQ)</title>
-
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #0d0d0d;
-            color: white;
-        }
-
-        header {
-            background: #002b55;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 3px solid #007bff;
-        }
-
-        header img {
-            width: 160px;
-            border-radius: 10px;
-        }
-
-        h1 {
-            margin-top: 10px;
-            font-size: 2rem;
-        }
-
-        .section {
-            max-width: 950px;
-            margin: 40px auto;
-            padding: 20px;
-            background: #111827;
-            border-radius: 12px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.5);
-            border-left: 4px solid #007bff;
-        }
-
-        .section h2 {
-            color: #4da6ff;
-        }
-
-        footer {
-            margin-top: 40px;
-            text-align: center;
-            padding: 25px;
-            background: #001a33;
-            color: #ccc;
-        }
-
-        a.button {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 12px 20px;
-            background: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            transition: 0.3s;
-        }
-
-        a.button:hover {
-            background: #005fcc;
-        }
-    </style>
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SCQ — Souveraineté et Citoyenneté du Québec</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <!-- chemin fourni par toi (sera transformé en URL par le système) -->
+        <img src="/mnt/data/af2cd3d2-9dee-44e4-9863-e10c539f20d1.png" alt="Logo SCQ" class="logo">
+        <div>
+          <h1>Souveraineté &amp; Citoyenneté du Québec</h1>
+          <p class="slogan">Un parti 100% citoyen — Pour que le Québec appartienne au peuple</p>
+        </div>
+      </div>
 
-    <header>
-        <img src="Logo SCQ.jpg" alt="Logo du SCQ">
-        <h1>Souveraineté et Citoyenneté du Québec (SCQ)</h1>
-        <p>Un parti 100% citoyen — Pour que le Québec appartienne enfin à son peuple.</p>
-    </header>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="#accueil">Accueil</a>
+        <a href="#constitution">Constitution</a>
+        <a href="#reformes">Réformes</a>
+        <a href="#leparti">Le parti</a>
+        <a href="#contact">Nous joindre</a>
+      </nav>
 
-    <div class="section">
-        <h2>Notre mission</h2>
-        <p>
-            Le SCQ est un mouvement politique citoyen qui vise à remettre le pouvoir 
-            entre les mains du peuple québécois. Nous travaillons pour un Québec 
-            souverain, moderne, transparent et libéré de l’influence de l’élite 
-            politique et mondiale.
-        </p>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false">☰</button>
     </div>
+  </header>
 
-    <div class="section">
-        <h2>Ce que nous construisons</h2>
-        <ul>
-            <li>Une Constitution du Québec écrite par et pour le peuple</li>
-            <li>Des réformes majeures pour un pays moderne et équitable</li>
-            <li>Un système politique transparent et contrôlé par les citoyens</li>
-            <li>Des plateformes numériques ouvertes et accessibles</li>
-        </ul>
+  <section id="accueil" class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-text">
+        <h2>Pour un Québec souverain, transparent et dirigé par ses citoyens</h2>
+        <p>Le SCQ réunit les citoyennes et citoyens qui veulent reprendre le contrôle des institutions et bâtir un avenir collectif.</p>
+        <div class="cta-group">
+          <a href="#leparti" class="btn primary">En savoir plus</a>
+          <a href="https://www.facebook.com/Souverainete.et.Citoyennete.du.Quebec" target="_blank" class="btn outline">Rejoindre la page</a>
+        </div>
+      </div>
+
+      <div class="hero-cards">
+        <article class="card">
+          <h3>Constitution</h3>
+          <p>Principes fondateurs et droits garantis pour protéger la souveraineté et les citoyens.</p>
+          <a href="#constitution" class="link-small">Voir la Constitution →</a>
+        </article>
+        <article class="card">
+          <h3>Réformes</h3>
+          <p>Propositions concrètes pour moderniser la société, l'économie et les institutions.</p>
+          <a href="#reformes" class="link-small">Voir les réformes →</a>
+        </article>
+        <article class="card">
+          <h3>Participation</h3>
+          <p>Rejoignez nos actions, signez des pétitions, participez aux consultations citoyennes.</p>
+          <a href="#contact" class="link-small">Nous joindre →</a>
+        </article>
+      </div>
     </div>
+  </section>
 
-    <div class="section">
-        <h2>Rejoindre le mouvement</h2>
-        <p>Chaque personne compte. Ensemble, nous pouvons bâtir un Québec souverain.</p>
+  <main class="wrap site-main">
+    <section id="constitution" class="section">
+      <h2>Constitution du Québec souverain</h2>
+      <div id="constitution-content" class="content-grid loading">Chargement…</div>
+    </section>
 
-        <a class="button" href="https://www.facebook.com/Souverainete.et.Citoyennete.du.Quebec" target="_blank">
-            Rejoindre la page Facebook du SCQ
-        </a>
+    <section id="reformes" class="section">
+      <h2>Réformes proposées</h2>
+      <div id="reformes-content" class="content-grid loading">Chargement…</div>
+    </section>
+
+    <section id="leparti" class="section">
+      <h2>Le parti</h2>
+      <p>
+        Le SCQ est un parti citoyen indépendant, fondé pour donner aux Québécoises et Québécois
+        les moyens de décider de leur avenir. Nous privilégions la transparence, la participation directe
+        et la défense des intérêts du peuple.
+      </p>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact &amp; Soutien</h2>
+      <p>Pour proposer un texte, rejoindre le mouvement, ou obtenir plus d'information :</p>
+      <ul>
+        <li>Facebook : <a href="https://www.facebook.com/Souverainete.et.Citoyennete.du.Quebec" target="_blank">Page du SCQ</a></li>
+        <li>Email : contact@scq-officiel.ca (à configurer)</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>© <span id="year"></span> Souveraineté et Citoyenneté du Québec (SCQ) — Tous droits réservés.</small>
+      <div class="footer-links">
+        <a href="#constitution">Constitution</a>
+        <a href="#reformes">Réformes</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
+  </footer>
 
-    <footer>
-        © 2025 — Souveraineté et Citoyenneté du Québec (SCQ)  
-    </footer>
+  <!-- Chat widget (intégré, responsive) -->
+  <div id="scq-chat-root" aria-live="polite">
+    <button id="scq-open-btn" title="Chat SCQ" aria-haspopup="dialog">💬 Parlez au SCQ</button>
 
+    <div id="scq-chat-panel" role="dialog" aria-label="Chat SCQ" hidden>
+      <div id="scq-chat-header">
+        <img id="scq-mini-logo" src="/mnt/data/af2cd3d2-9dee-44e4-9863-e10c539f20d1.png" alt="SCQ">
+        <strong>Chat — SCQ</strong>
+        <button id="scq-close-btn" aria-label="Fermer">✕</button>
+      </div>
+
+      <div id="scq-messages" role="log"></div>
+
+      <form id="scq-input-form" autocomplete="off">
+        <input id="scq-input" type="text" placeholder="Posez votre question sur la Constitution, les réformes..." />
+        <button type="submit" id="scq-send">Envoyer</button>
+      </form>
+
+      <div id="scq-note">Réponses basées sur les textes officiels du SCQ.</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
