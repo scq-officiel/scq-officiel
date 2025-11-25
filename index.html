@@ -1,133 +1,314 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Souveraineté & Citoyenneté du Québec (SCQ)</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Souveraineté et citoyenneté du Québec (SCQ)</title>
 
-<link rel="stylesheet" href="styles.css">
-<link rel="icon" href="Logo SCQ.jpg">
-<script src="lang.js" defer></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            color: #222;
+        }
+
+        header {
+            background: #0012C0;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            font-size: 1.4rem;
+        }
+
+        nav {
+            background: #0A1A7A;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #0012C0;
+        }
+
+        /* --- CHAT WIDGET --- */
+
+        #scq-open-btn {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            z-index: 9999;
+            background: #0012C0;
+            color: white;
+            border: none;
+            border-radius: 28px;
+            padding: 12px 16px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+            cursor: pointer;
+        }
+
+        #scq-chat-panel {
+            position: fixed;
+            right: 18px;
+            bottom: 76px;
+            width: 360px;
+            max-width: calc(100% - 36px);
+            height: 520px;
+            max-height: 80vh;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 12px 36px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 10000;
+        }
+
+        #scq-chat-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            background: linear-gradient(90deg, rgba(0,18,192,0.06), rgba(0,18,192,0));
+        }
+
+        #scq-logo {
+            width: 36px;
+            height: 36px;
+            object-fit: contain;
+        }
+
+        #scq-messages {
+            flex: 1;
+            padding: 12px;
+            overflow-y: auto;
+            font-size: 14px;
+        }
+
+        .scq-msg {
+            margin-bottom: 10px;
+        }
+        .scq-msg.scq-user {
+            text-align: right;
+        }
+
+        #scq-input-form {
+            display: flex;
+            gap: 8px;
+            padding: 10px;
+            border-top: 1px solid #eee;
+        }
+
+        #scq-input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        #scq-input-form button {
+            padding: 10px 12px;
+            border-radius: 8px;
+            border: none;
+            background: #0012C0;
+            color: white;
+        }
+
+        #scq-footer-note {
+            font-size: 12px;
+            color: #666;
+            padding: 8px;
+            text-align: center;
+            border-top: 1px solid #f6f6f6;
+        }
+
+        @media (max-width: 480px) {
+            #scq-chat-panel {
+                width: calc(100% - 24px);
+                left: 12px;
+                right: 12px;
+                bottom: 76px;
+                height: 62vh;
+            }
+        }
+    </style>
+
 </head>
-
 <body>
 
 <header>
-    <div class="logo">
-        <img src="Logo SCQ.jpg" alt="SCQ" />
-        <h1 data-fr="Souveraineté & Citoyenneté du Québec"
-            data-en="Quebec Sovereignty & Citizenship">
-        </h1>
-    </div>
-
-    <nav>
-        <a href="index.html" data-fr="Accueil" data-en="Home"></a>
-        <a href="constitution.html" data-fr="Constitution" data-en="Constitution"></a>
-        <a href="reformes.html" data-fr="Réformes" data-en="Reforms"></a>
-        <a href="#parti" data-fr="Le parti" data-en="The Party"></a>
-        <a href="#contact" data-fr="Nous joindre" data-en="Contact"></a>
-
-        <select id="langSwitcher">
-            <option value="fr">FR</option>
-            <option value="en">EN</option>
-        </select>
-    </nav>
+    Parti — Souveraineté et citoyenneté du Québec (SCQ)
 </header>
 
-<section class="hero">
-    <h2 data-fr="Pour un Québec souverain dirigé par ses citoyens"
-        data-en="For a sovereign Quebec led by its citizens"></h2>
-    <p data-fr="Le SCQ est un parti 100% citoyen, transparent et moderne."
-       data-en="SCQ is a 100% citizen-led, transparent and modern movement."></p>
+<nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#constitution">Constitution</a>
+    <a href="#reformes">Réformes</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="accueil">
+    <h2>Un Québec souverain, fort et libre</h2>
+    <p>
+        Le parti <strong>Souveraineté et citoyenneté du Québec (SCQ)</strong> est un mouvement politique créé 
+        par le peuple et pour le peuple.  
+    </p>
+    <p>
+        Notre mission : bâtir un pays juste, équitable et prospère, où chaque citoyen reprend 
+        le contrôle de ses institutions et de son avenir collectif.
+    </p>
 </section>
 
-<section class="cards">
-    <div class="card">
-        <h3 data-fr="Constitution" data-en="Constitution"></h3>
-        <p data-fr="Principes fondateurs et droits du Québec souverain."
-           data-en="Founding principles and rights of a sovereign Quebec."></p>
-        <a href="constitution.html" class="btn" data-fr="Voir la Constitution →" data-en="View Constitution →"></a>
-    </div>
+<section id="constitution">
+    <h2>Constitution du Québec souverain</h2>
+    <p>Ci-dessous, vous trouverez les fondements qui guideront l'État québécois souverain.</p>
 
-    <div class="card">
-        <h3 data-fr="Réformes proposées" data-en="Proposed Reforms"></h3>
-        <p data-fr="Mesures concrètes pour améliorer l’État et la société."
-           data-en="Concrete reforms to improve the state and society."></p>
-        <a href="reformes.html" class="btn" data-fr="Voir les réformes →" data-en="View Reforms →"></a>
-    </div>
-
-    <div class="card">
-        <h3 data-fr="Participation citoyenne" data-en="Citizen Participation"></h3>
-        <p data-fr="Participez au mouvement, signez, proposez, agissez."
-           data-en="Participate in the movement, sign, propose, take action."></p>
-        <a href="#contact" class="btn" data-fr="Nous joindre →" data-en="Contact us →"></a>
+    <div id="constitution-content">
+        Chargement...
     </div>
 </section>
 
-<section id="parti" class="section">
-    <h2 data-fr="Le parti politique" data-en="The Political Party"></h2>
-    <p data-fr="Le SCQ vise à redonner le contrôle du Québec à ses citoyens..."
-       data-en="SCQ aims to give control of Quebec back to its citizens..."></p>
+<section id="reformes">
+    <h2>Réformes proposées</h2>
+    <p>Le SCQ propose un ensemble de réformes pour garantir justice, équité, transparence et prospérité.</p>
 
-    <h3 data-fr="Postes disponibles" data-en="Available Roles"></h3>
+    <div id="reformes-content">
+        Chargement...
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Nous joindre</h2>
+    <p>Pour devenir membre, soutenir le projet ou poser une question :</p>
     <ul>
-        <li data-fr="Secrétaire général" data-en="General Secretary"></li>
-        <li data-fr="Responsable des communications" data-en="Communications Director"></li>
-        <li data-fr="Responsable financier" data-en="Financial Officer"></li>
-        <li data-fr="Coordonnateur régional" data-en="Regional Coordinator"></li>
-        <li data-fr="Responsable des opérations" data-en="Operations Manager"></li>
+        <li>Facebook : <a href="https://www.facebook.com/Souverainete.et.Citoyennete.du.Quebec" target="_blank">Page officielle</a></li>
+        <li>Email : contact@scq.quebec</li>
     </ul>
 </section>
 
-<section id="contact" class="section">
-    <h2 data-fr="Contact & Soutien" data-en="Contact & Support"></h2>
+<!-- CHAT WIDGET -->
+<button id="scq-open-btn">Chat SCQ</button>
 
-    <div class="form-container">
-        <h3 data-fr="Formulaire de contact" data-en="Contact Form"></h3>
-
-        <form action="https://formspree.io/f/xyzabwqj" method="POST">
-            <label data-fr="Nom complet" data-en="Full name"></label>
-            <input name="name" required>
-
-            <label data-fr="Courriel" data-en="Email"></label>
-            <input name="email" type="email" required>
-
-            <label data-fr="Message" data-en="Message"></label>
-            <textarea name="message" required></textarea>
-
-            <button class="btn primary" data-fr="Envoyer" data-en="Send"></button>
-        </form>
+<div id="scq-chat-panel" hidden>
+    <div id="scq-chat-header">
+        <img src="/assets/logo_scq.png" alt="SCQ" id="scq-logo">
+        <span>S.C.Q — Assistance</span>
+        <button id="scq-close-btn">✕</button>
     </div>
 
-    <div class="form-container">
-        <h3 data-fr="Devenir membre ou soutenir le parti"
-            data-en="Become a member or support the party"></h3>
+    <div id="scq-messages"></div>
 
-        <form action="https://formspree.io/f/xyzabwqj" method="POST">
-            <label data-fr="Nom complet" data-en="Full name"></label>
-            <input name="name" required>
+    <form id="scq-input-form" autocomplete="off">
+        <input id="scq-input" type="text" placeholder="Posez une question au SCQ..." required>
+        <button type="submit">Envoyer</button>
+    </form>
 
-            <label data-fr="Courriel" data-en="Email"></label>
-            <input name="email" type="email" required>
-
-            <label data-fr="Téléphone (optionnel)" data-en="Phone (optional)"></label>
-            <input name="phone">
-
-            <label data-fr="Choisir" data-en="Choose"></label>
-            <select name="choice" required>
-                <option value="member" data-fr="Devenir membre" data-en="Become a member"></option>
-                <option value="support" data-fr="Soutenir le parti" data-en="Support the party"></option>
-                <option value="volunteer" data-fr="Bénévolat" data-en="Volunteer"></option>
-            </select>
-
-            <button class="btn primary" data-fr="Envoyer" data-en="Send"></button>
-        </form>
+    <div id="scq-footer-note">
+        Basé sur les textes officiels du parti SCQ.
     </div>
-</section>
+</div>
 
-<footer>
-    © 2025 SCQ — Tous droits réservés
-</footer>
+<script>
+/* ----- LOADING CONSTITUTION + REFORMES -------- */
+async function loadSections() {
+    try {
+        const res = await fetch('/api/knowledge');
+        const data = await res.json();
+
+        const constitution = data.constitution || [];
+        const reforms = data.reforms || [];
+
+        document.getElementById('constitution-content').innerHTML =
+            constitution.map(c => `
+                <article>
+                    <h3>${c.title}</h3>
+                    <p>${c.text}</p>
+                    <hr>
+                </article>
+            `).join('');
+
+        document.getElementById('reformes-content').innerHTML =
+            reforms.map(r => `
+                <article>
+                    <h3>${r.title}</h3>
+                    <p>${r.text}</p>
+                    <hr>
+                </article>
+            `).join('');
+
+    } catch (err) {
+        document.getElementById('constitution-content').innerHTML = "Erreur de chargement.";
+        document.getElementById('reformes-content').innerHTML = "Erreur de chargement.";
+    }
+}
+loadSections();
+
+/* ---------- CHAT ------------ */
+
+const openBtn = document.getElementById('scq-open-btn');
+const panel = document.getElementById('scq-chat-panel');
+const closeBtn = document.getElementById('scq-close-btn');
+const messages = document.getElementById('scq-messages');
+const form = document.getElementById('scq-input-form');
+const input = document.getElementById('scq-input');
+
+openBtn.addEventListener('click', () => panel.hidden = !panel.hidden);
+closeBtn.addEventListener('click', () => panel.hidden = true);
+
+function addMessage(text, who='bot') {
+    const el = document.createElement('div');
+    el.className = 'scq-msg ' + (who === 'user' ? 'scq-user' : 'scq-bot');
+    el.textContent = text;
+    messages.appendChild(el);
+    messages.scrollTop = messages.scrollHeight;
+}
+
+async function sendToBackend(q) {
+    addMessage(q, 'user');
+    addMessage('...', 'bot');
+    const placeholder = messages.lastChild;
+
+    try {
+        const res = await fetch('/api/chat', {
+            method: 'POST',
+            headers: {'Content-Type':'application/json'},
+            body: JSON.stringify({question: q})
+        });
+
+        const data = await res.json();
+        placeholder.textContent = data.answer;
+    } catch {
+        placeholder.textContent = "Erreur : Impossible de contacter le serveur SCQ.";
+    }
+}
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    const q = input.value.trim();
+    if (!q) return;
+    input.value = '';
+    sendToBackend(q);
+});
+</script>
 
 </body>
 </html>
