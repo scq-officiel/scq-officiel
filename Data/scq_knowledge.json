@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "party_name": "Souveraineté et citoyenneté du Québec (SCQ)",
+    "last_updated": "2025-11-19T00:00:00Z",
+    "version": "1.0"
+  },
+  "constitution": [
+    {
+      "id": "c1",
+      "title": "Principe de souveraineté et non-ingérence",
+      "text": "Ces discours visent à susciter la peur. Si le Québec devenait un État souverain et se consacrait exclusivement à la gestion de ses propres affaires, il n'aurait rien à craindre. C'est en s'immisçant dans les affaires d'autrui que l'on prend des risques et s'attire des ennuis.",
+      "author": "SCQ",
+      "date": "2025-11-08"
+    }
+  ],
+  "reforms": [
+    {
+      "id": "r1",
+      "title": "Réforme du système de santé",
+      "text": "Proposition de renforcement du personnel de première ligne, financement public prioritaire et formation locale pour garantir l'accès aux soins.",
+      "author": "SCQ",
+      "date": "2025-11-01"
+    }
+  ],
+  "faqs": [
+    {
+      "id": "f1",
+      "question": "Comment devenir membre du SCQ ?",
+      "answer": "Remplir le formulaire d'adhésion sur la page 'Devenir membre' et accepter la charte du parti."
+    }
+  ],
+  "communiques": []
+}
