@@ -1,27 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>Constitution du Québec souverain — SCQ</title>
-<link rel="stylesheet" href="styles.css">
-<script src="lang.js" defer></script>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Constitution — SCQ</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="lang/lang.js" defer></script>
 </head>
-
 <body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <img src="/mnt/data/af2cd3d2-9dee-44e4-9863-e10c539f20d1.png" alt="Logo SCQ" class="logo">
+      <nav class="main-nav"><a href="index.html">Accueil</a><a href="constitution.html">Constitution</a><a href="reformes.html">Réformes</a></nav>
+      <select id="langSwitcher"><option value="fr">FR</option><option value="en">EN</option></select>
+    </div>
+  </header>
 
-<header>
-    <a href="index.html" class="back" data-fr="← Retour" data-en="← Back"></a>
-</header>
+  <main class="wrap site-main">
+    <section class="section">
+      <h2>Constitution du Québec souverain</h2>
+      <div id="constitution-full" class="content-grid loading">Chargement de la Constitution...</div>
+    </section>
+  </main>
 
-<h1 data-fr="Constitution du Québec souverain"
-    data-en="Constitution of a Sovereign Quebec"></h1>
+  <footer class="site-footer"><div class="wrap"><small>© <span id="year"></span> SCQ</small></div></footer>
 
-<div class="content">
-    <p>
-        (Ici je vais intégrer automatiquement **tout ce que tu as envoyé pour la Constitution**,
-         déjà classé selon ta mémoire permanente.)
-    </p>
-</div>
-
+  <script>
+    async function loadConstitution() {
+      try {
+        const res = await fetch('/api/knowledge');
+        const data = await res.json();
+        const cons = data.constitution || [];
+        if (cons.length === 0) document.getElementById('constitution-full').innerHTML = '<p class="loading">Aucun article disponible.</p>';
+        else document.getElementById('constitution-full').innerHTML = cons.map(c => `<article class="card"><h3>${escapeHtml(c.title)}</h3><p>${escapeHtml(c.text)}</p><small>— ${escapeHtml(c.author||'SCQ')} • ${escapeHtml(c.date||'')}</small></article>`).join('');
+      } catch (e) {
+        document.getElementById('constitution-full').innerHTML = '<p class="loading">Impossible de charger la Constitution.</p>';
+      }
+    }
+    loadConstitution();
+    function escapeHtml(s){ if(!s) return ''; return s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;'); }
+  </script>
 </body>
 </html>
