@@ -1,0 +1,63 @@
+:root{
+  --scq-blue:#003B73;
+  --scq-blue-2:#005EA8;
+  --scq-gold:#E5C100;
+  --bg:#f4f7fb;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --wrap:1100px;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:#0b2540;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 18px}
+.header-inner{display:flex;align-items:center;gap:18px;justify-content:space-between;padding:12px 0}
+.site-header{background:linear-gradient(90deg,var(--scq-blue),var(--scq-blue-2));color:#fff;position:sticky;top:0;z-index:40}
+.logo{height:64px;border-radius:8px;object-fit:contain;border:2px solid rgba(255,255,255,0.08)}
+.brand-titles h1{margin:0;font-size:1.05rem}
+.slogan{margin:0;font-size:0.85rem;opacity:.95}
+.main-nav{display:flex;gap:12px}
+.main-nav a{color:#fff;text-decoration:none;padding:8px 10px;border-radius:6px;font-weight:600}
+.main-nav a:hover{background:rgba(255,255,255,0.06)}
+.actions select{padding:6px;border-radius:6px;border:none}
+.hero{padding:48px 0;background:linear-gradient(180deg,rgba(0,0,0,0.03),transparent)}
+.hero-grid{display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap}
+.hero-left{flex:1;min-width:260px}
+.hero-right{flex:1;min-width:260px;display:flex;flex-direction:column;gap:12px}
+.hero h2{font-size:2rem;color:var(--scq-blue);margin:0 0 12px}
+.cta .btn{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:700}
+.btn.primary{background:var(--scq-blue);color:#fff}
+.btn.outline{background:transparent;border:2px solid var(--scq-blue);color:var(--scq-blue)}
+.cards .card{background:var(--card);padding:18px;border-radius:10px;border-left:6px solid var(--scq-blue);box-shadow:0 6px 22px rgba(8,15,30,0.04);margin-bottom:12px}
+.site-main{padding:30px 0}
+.section{background:var(--card);padding:20px;border-radius:10px;margin-bottom:18px;box-shadow:0 6px 20px rgba(4,12,30,0.04)}
+.section h2{color:var(--scq-blue);margin-top:0}
+.content-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.link-more{display:inline-block;margin-top:10px;color:var(--scq-blue);text-decoration:none;font-weight:700}
+.positions{list-style:none;padding:0;margin:10px 0}
+.positions li{background:#fbfdff;padding:12px;border-radius:8px;margin-bottom:8px;border-left:4px solid var(--scq-blue)}
+.forms-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.form-card{background:#fff;padding:14px;border-radius:10px;border:1px solid #f0f4fb}
+.form-card label{display:block;margin-top:8px;font-weight:600}
+.form-card input,.form-card textarea,.form-card select{width:100%;padding:8px;margin-top:6px;border-radius:8px;border:1px solid #e6eef9}
+.form-status{margin-top:8px;color:var(--muted)}
+.site-footer{background:var(--scq-blue);color:#fff;padding:18px 0;margin-top:18px}
+.footer-links{margin-top:8px;display:flex;gap:12px;flex-wrap:wrap}
+.footer-links a{color:rgba(255,255,255,0.9);text-decoration:none}
+
+/* Chat widget */
+#scq-open-btn{display:none}
+#chatButton{position:fixed;right:18px;bottom:18px;z-index:9999;background:var(--scq-gold);color:var(--scq-blue);border:none;padding:12px 16px;border-radius:28px;box-shadow:0 8px 28px rgba(0,0,0,0.12);cursor:pointer;font-weight:700}
+#chatWindow{position:fixed;right:18px;bottom:84px;width:360px;max-width:calc(100% - 36px);height:520px;background:#fff;border-radius:12px;box-shadow:0 20px 50px rgba(20,30,50,0.15);display:flex;flex-direction:column;overflow:hidden;z-index:10000}
+#chatWindow.hidden{display:none}
+.chatHeader{display:flex;align-items:center;justify-content:space-between;padding:10px;border-bottom:1px solid #eee;background:linear-gradient(90deg,#f8fafc,#fff)}
+#chatMessages{flex:1;padding:12px;overflow:auto;background:linear-gradient(180deg,#fbfdff,#f7fbff)}
+.scq-msg{margin-bottom:10px;padding:10px;border-radius:10px;max-width:85%}
+.scq-user{background:var(--scq-blue);color:#fff;margin-left:auto}
+.scq-bot{background:#eef6ff;border-left:4px solid var(--scq-blue)}
+.chatInput{display:flex;padding:10px;border-top:1px solid #eee;gap:8px}
+.chatInput input{flex:1;padding:10px;border-radius:8px;border:1px solid #e6eef9}
+.chatInput button{background:var(--scq-blue);color:#fff;padding:10px;border-radius:8px;border:0;cursor:pointer}
+
+/* responsive */
+@media (max-width:860px){.hero-grid{flex-direction:column}.main-nav{display:none}}
+@media (max-width:480px){.logo{height:52px}#chatWindow{width:calc(100% - 28px);right:14px;bottom:78px;height:56vh}}
