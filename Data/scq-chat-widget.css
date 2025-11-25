@@ -1,0 +1,55 @@
+/* minimal responsive styling */
+#scq-open-btn {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 9999;
+  background: #0012C0;
+  color: white;
+  border: none;
+  border-radius: 28px;
+  padding: 12px 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+#scq-chat-panel {
+  position: fixed;
+  right: 18px;
+  bottom: 76px;
+  width: 360px;
+  max-width: calc(100% - 36px);
+  height: 520px;
+  max-height: 80vh;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 12px 36px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 10000;
+}
+
+#scq-chat-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  background: linear-gradient(90deg, rgba(0,18,192,0.06), rgba(0,18,192,0));
+}
+
+#scq-logo { width: 36px; height: 36px; object-fit: contain; }
+#scq-messages { flex: 1; padding: 12px; overflow-y: auto; font-size: 14px; }
+.scq-msg { margin-bottom: 10px; }
+.scq-msg.scq-user { text-align: right; }
+.scq-msg.scq-bot { text-align: left; }
+
+#scq-input-form { display:flex; gap:8px; padding:10px; border-top:1px solid #eee; }
+#scq-input { flex:1; padding:10px; border:1px solid #ddd; border-radius:8px; font-size:14px; }
+#scq-input-form button { padding:10px 12px; border-radius:8px; border:none; background:#0012C0; color:white; }
+
+#scq-footer-note { font-size:12px; color:#666; padding:8px; text-align:center; border-top:1px solid #f6f6f6; }
+@media (max-width: 480px) {
+  #scq-chat-panel { width: calc(100% - 24px); left: 12px; right: 12px; bottom: 76px; height: 62vh; }
+}
