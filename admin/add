@@ -1,0 +1,4 @@
+curl -X POST http://ton-site.ca:8000/api/admin/add \
+  -F "title=Nouvelle réforme X" \
+  -F "content=Texte complet de la réforme..." \
+  -F "author=SCQ"
