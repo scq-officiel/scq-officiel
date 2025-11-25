@@ -1,51 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Réformes — SCQ</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="lang/lang.js" defer></script>
-  <script src="script.js" defer></script>
+<meta charset="UTF-8">
+<title>Réformes proposées — SCQ</title>
+<link rel="stylesheet" href="styles.css">
+<script src="lang.js" defer></script>
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <img src="/mnt/data/af2cd3d2-9dee-44e4-9863-e10c539f20d1.png" alt="Logo SCQ" class="logo">
-      <div class="brand-titles"><h1>SCQ</h1></div>
-      <nav class="main-nav">
-        <a href="index.html">Accueil</a>
-        <a href="constitution.html">Constitution</a>
-        <a href="reformes.html">Réformes</a>
-      </nav>
-      <select id="langSwitcher" aria-label="Langue">
-        <option value="fr">FR</option><option value="en">EN</option>
-      </select>
-    </div>
-  </header>
 
-  <main class="wrap site-main">
-    <section class="section">
-      <h2>Réformes proposées</h2>
-      <div id="reformes-full">
-        <p class="loading">Chargement des réformes...</p>
-      </div>
-    </section>
-  </main>
+<header>
+    <a href="index.html" class="back" data-fr="← Retour" data-en="← Back"></a>
+</header>
 
-  <footer class="site-footer"><div class="wrap"><small>© <span id="year"></span> SCQ</small></div></footer>
+<h1 data-fr="Réformes proposées" data-en="Proposed Reforms"></h1>
 
-  <script>
-    async function loadReforms() {
-      try {
-        const res = await fetch('/api/knowledge');
-        const data = await res.json();
-        const r = data.reforms || [];
-        if (r.length === 0) document.getElementById('reformes-full').innerHTML = '<p class="loading">Aucune réforme publiée.</p>';
-        else document.getElementById('reformes-full').innerHTML = r.map(it => `<article class="card"><h3>${escapeHtml(it.title)}</h3><p>${escapeHtml(it.text)}</p><small>— ${escapeHtml(it.author||'SCQ')} • ${escapeHtml(it.date||'')}</small></article>`).join('');
-      } catch(e){ document.getElementById('reformes-full').innerHTML = '<p class="loading">Impossible de charger les réformes.</p>'; }
-    }
-    loadReforms();
-    function escapeHtml(s){ if(!s) return ''; return s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;'); }
-  </script>
+<div class="content">
+    <p>
+        (Ici je vais intégrer **toutes les réformes** que tu as classées dans ta Constitution SCQ.)
+    </p>
+</div>
+
 </body>
 </html>
