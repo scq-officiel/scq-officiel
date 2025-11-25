@@ -1,39 +1,17 @@
-// forms.js
+// small UI feedback for forms (forms already post to Formspree)
 document.addEventListener('DOMContentLoaded', ()=>{
-  const CONTACT_ENDPOINT = 'https://formspree.io/f/xyzabwqj'; // <--- remplace
-  const ADHESION_ENDPOINT = 'https://formspree.io/f/xyzabwqj'; // <--- remplace
-
-  async function postForm(url, formData, statusEl){
-    statusEl.textContent = 'Envoi…';
-    try {
-      const res = await fetch(url, {method:'POST', headers:{'Accept':'application/json'}, body: formData});
-      if(res.ok){ statusEl.textContent = 'Merci ! Message envoyé.'; return true; }
-      else { statusEl.textContent = 'Erreur lors de l\'envoi.'; return false; }
-    } catch(e){
-      statusEl.textContent = 'Erreur de connexion.';
-      return false;
-    }
-  }
-
-  const contactForm = document.getElementById('contactForm');
-  if(contactForm){
-    contactForm.addEventListener('submit', async (e)=>{
+  document.querySelectorAll('form[action^="https://formspree.io"]').forEach(form=>{
+    form.addEventListener('submit', async (e)=>{
       e.preventDefault();
-      const status = document.getElementById('contactFormStatus');
-      const fd = new FormData(contactForm);
-      await postForm(CONTACT_ENDPOINT, fd, status);
-      contactForm.reset();
+      const endpoint = form.getAttribute('action');
+      const formData = new FormData(form);
+      const statusEl = form.querySelector('.form-status');
+      if(statusEl) statusEl.textContent = 'Envoi ...';
+      try{
+        const res = await fetch(endpoint, {method:'POST', body: formData, headers:{'Accept':'application/json'}});
+        if(res.ok){ if(statusEl) statusEl.textContent = 'Merci — message envoyé.'; form.reset(); }
+        else { if(statusEl) statusEl.textContent = 'Erreur lors de l’envoi.'; }
+      }catch(e){ if(statusEl) statusEl.textContent = 'Erreur de connexion.'; }
     });
-  }
-
-  const adhesionForm = document.getElementById('adhesionForm');
-  if(adhesionForm){
-    adhesionForm.addEventListener('submit', async (e)=>{
-      e.preventDefault();
-      const status = document.getElementById('adhesionFormStatus');
-      const fd = new FormData(adhesionForm);
-      await postForm(ADHESION_ENDPOINT, fd, status);
-      adhesionForm.reset();
-    });
-  }
+  });
 });
