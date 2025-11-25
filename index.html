@@ -1,312 +1,217 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Souveraineté et citoyenneté du Québec (SCQ)</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Souveraineté et citoyenneté du Québec (SCQ)</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            color: #222;
-        }
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f4f7fb;
+        color: #003B73;
+    }
 
-        header {
-            background: #0012C0;
-            padding: 20px;
-            color: white;
-            text-align: center;
-            font-size: 1.4rem;
-        }
+    /* HEADER */
+    header {
+        background: #003B73;
+        color: white;
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
 
-        nav {
-            background: #0A1A7A;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
+    header img {
+        height: 60px;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    header h1 {
+        font-size: 22px;
+        margin: 0;
+        padding-left: 15px;
+        border-left: 3px solid #E5C100;
+    }
 
-        section {
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: auto;
-            background: white;
-            margin-top: 20px;
-            border-radius: 10px;
-        }
+    /* SECTION PRINCIPALE */
+    .hero {
+        text-align: center;
+        padding: 40px 20px;
+        background: linear-gradient(135deg, #003B73, #005EA8);
+        color: white;
+    }
 
-        h2 {
-            color: #0012C0;
-        }
+    .hero h2 {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
 
-        /* --- CHAT WIDGET --- */
+    .hero p {
+        font-size: 18px;
+        max-width: 700px;
+        margin: 0 auto;
+    }
 
-        #scq-open-btn {
-            position: fixed;
-            right: 18px;
-            bottom: 18px;
-            z-index: 9999;
-            background: #0012C0;
-            color: white;
-            border: none;
-            border-radius: 28px;
-            padding: 12px 16px;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-            cursor: pointer;
-        }
+    /* CHAT IA */
+    #chat_container {
+        max-width: 800px;
+        margin: 40px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px solid #003B73;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
 
-        #scq-chat-panel {
-            position: fixed;
-            right: 18px;
-            bottom: 76px;
-            width: 360px;
-            max-width: calc(100% - 36px);
-            height: 520px;
-            max-height: 80vh;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 12px 36px rgba(0,0,0,0.3);
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            z-index: 10000;
-        }
+    #chat_box {
+        height: 400px;
+        overflow-y: auto;
+        border: 1px solid #005EA8;
+        padding: 15px;
+        border-radius: 6px;
+        background: #fdfdfd;
+    }
 
-        #scq-chat-header {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px;
-            border-bottom: 1px solid #eee;
-            background: linear-gradient(90deg, rgba(0,18,192,0.06), rgba(0,18,192,0));
-        }
+    .message {
+        margin-bottom: 15px;
+        padding: 10px 15px;
+        border-radius: 8px;
+        max-width: 80%;
+        line-height: 1.4;
+    }
 
-        #scq-logo {
-            width: 36px;
-            height: 36px;
-            object-fit: contain;
-        }
+    .user {
+        background: #005EA8;
+        color: white;
+        margin-left: auto;
+    }
 
-        #scq-messages {
-            flex: 1;
-            padding: 12px;
-            overflow-y: auto;
-            font-size: 14px;
-        }
+    .bot {
+        background: #e0eaff;
+        border-left: 4px solid #003B73;
+    }
 
-        .scq-msg {
-            margin-bottom: 10px;
-        }
-        .scq-msg.scq-user {
-            text-align: right;
-        }
+    #input_area {
+        display: flex;
+        margin-top: 15px;
+    }
 
-        #scq-input-form {
-            display: flex;
-            gap: 8px;
-            padding: 10px;
-            border-top: 1px solid #eee;
-        }
+    #user_input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #003B73;
+        border-radius: 6px;
+    }
 
-        #scq-input {
-            flex: 1;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 14px;
-        }
+    #send_btn {
+        background: #E5C100;
+        border: none;
+        color: #003B73;
+        padding: 10px 20px;
+        margin-left: 10px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+    }
 
-        #scq-input-form button {
-            padding: 10px 12px;
-            border-radius: 8px;
-            border: none;
-            background: #0012C0;
-            color: white;
-        }
+    #send_btn:hover {
+        background: #fbe46a;
+    }
 
-        #scq-footer-note {
-            font-size: 12px;
-            color: #666;
-            padding: 8px;
-            text-align: center;
-            border-top: 1px solid #f6f6f6;
-        }
-
-        @media (max-width: 480px) {
-            #scq-chat-panel {
-                width: calc(100% - 24px);
-                left: 12px;
-                right: 12px;
-                bottom: 76px;
-                height: 62vh;
-            }
-        }
-    </style>
+    /* FOOTER */
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: #003B73;
+        color: white;
+        margin-top: 40px;
+    }
+</style>
 
 </head>
 <body>
 
 <header>
-    Parti — Souveraineté et citoyenneté du Québec (SCQ)
+    <img src="logo_scq.png" alt="Logo SCQ">
+    <h1>Souveraineté et citoyenneté du Québec</h1>
 </header>
 
-<nav>
-    <a href="#accueil">Accueil</a>
-    <a href="#constitution">Constitution</a>
-    <a href="#reformes">Réformes</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<section id="accueil">
-    <h2>Un Québec souverain, fort et libre</h2>
+<section class="hero">
+    <h2>Un Québec souverain, fort et fier</h2>
     <p>
-        Le parti <strong>Souveraineté et citoyenneté du Québec (SCQ)</strong> est un mouvement politique créé 
-        par le peuple et pour le peuple.  
-    </p>
-    <p>
-        Notre mission : bâtir un pays juste, équitable et prospère, où chaque citoyen reprend 
-        le contrôle de ses institutions et de son avenir collectif.
+        Le parti Souveraineté et citoyenneté du Québec (SCQ) œuvre pour bâtir un pays juste, équitable et entièrement dédié à sa population.  
     </p>
 </section>
 
-<section id="constitution">
-    <h2>Constitution du Québec souverain</h2>
-    <p>Ci-dessous, vous trouverez les fondements qui guideront l'État québécois souverain.</p>
+<div id="chat_container">
+    <h3>Chat IA – SCQ</h3>
 
-    <div id="constitution-content">
-        Chargement...
-    </div>
-</section>
+    <div id="chat_box"></div>
 
-<section id="reformes">
-    <h2>Réformes proposées</h2>
-    <p>Le SCQ propose un ensemble de réformes pour garantir justice, équité, transparence et prospérité.</p>
-
-    <div id="reformes-content">
-        Chargement...
-    </div>
-</section>
-
-<section id="contact">
-    <h2>Nous joindre</h2>
-    <p>Pour devenir membre, soutenir le projet ou poser une question :</p>
-    <ul>
-        <li>Facebook : <a href="https://www.facebook.com/Souverainete.et.Citoyennete.du.Quebec" target="_blank">Page officielle</a></li>
-        <li>Email : contact@scq.quebec</li>
-    </ul>
-</section>
-
-<!-- CHAT WIDGET -->
-<button id="scq-open-btn">Chat SCQ</button>
-
-<div id="scq-chat-panel" hidden>
-    <div id="scq-chat-header">
-        <img src="logo_scq.png" alt="Logo SCQ">
-        <span>S.C.Q — Assistance</span>
-        <button id="scq-close-btn">✕</button>
-    </div>
-
-    <div id="scq-messages"></div>
-
-    <form id="scq-input-form" autocomplete="off">
-        <input id="scq-input" type="text" placeholder="Posez une question au SCQ..." required>
-        <button type="submit">Envoyer</button>
-    </form>
-
-    <div id="scq-footer-note">
-        Basé sur les textes officiels du parti SCQ.
+    <div id="input_area">
+        <input type="text" id="user_input" placeholder="Posez votre question au SCQ...">
+        <button id="send_btn">Envoyer</button>
     </div>
 </div>
 
+<footer>
+    © 2025 – Parti politique S.C.Q – Tous droits réservés.
+</footer>
+
 <script>
-/* ----- LOADING CONSTITUTION + REFORMES -------- */
-async function loadSections() {
-    try {
-        const res = await fetch('/api/knowledge');
-        const data = await res.json();
+async function sendMessage() {
+    let input = document.getElementById("user_input");
+    let text = input.value.trim();
+    if (text === "") return;
 
-        const constitution = data.constitution || [];
-        const reforms = data.reforms || [];
+    let chatBox = document.getElementById("chat_box");
 
-        document.getElementById('constitution-content').innerHTML =
-            constitution.map(c => `
-                <article>
-                    <h3>${c.title}</h3>
-                    <p>${c.text}</p>
-                    <hr>
-                </article>
-            `).join('');
+    // message utilisateur
+    let userMsg = document.createElement("div");
+    userMsg.className = "message user";
+    userMsg.textContent = text;
+    chatBox.appendChild(userMsg);
 
-        document.getElementById('reformes-content').innerHTML =
-            reforms.map(r => `
-                <article>
-                    <h3>${r.title}</h3>
-                    <p>${r.text}</p>
-                    <hr>
-                </article>
-            `).join('');
+    input.value = "";
 
-    } catch (err) {
-        document.getElementById('constitution-content').innerHTML = "Erreur de chargement.";
-        document.getElementById('reformes-content').innerHTML = "Erreur de chargement.";
-    }
-}
-loadSections();
+    // scroll
+    chatBox.scrollTop = chatBox.scrollHeight;
 
-/* ---------- CHAT ------------ */
-
-const openBtn = document.getElementById('scq-open-btn');
-const panel = document.getElementById('scq-chat-panel');
-const closeBtn = document.getElementById('scq-close-btn');
-const messages = document.getElementById('scq-messages');
-const form = document.getElementById('scq-input-form');
-const input = document.getElementById('scq-input');
-
-openBtn.addEventListener('click', () => panel.hidden = !panel.hidden);
-closeBtn.addEventListener('click', () => panel.hidden = true);
-
-function addMessage(text, who='bot') {
-    const el = document.createElement('div');
-    el.className = 'scq-msg ' + (who === 'user' ? 'scq-user' : 'scq-bot');
-    el.textContent = text;
-    messages.appendChild(el);
-    messages.scrollTop = messages.scrollHeight;
-}
-
-async function sendToBackend(q) {
-    addMessage(q, 'user');
-    addMessage('...', 'bot');
-    const placeholder = messages.lastChild;
+    // appel au serveur Ollama
+    let botMsg = document.createElement("div");
+    botMsg.className = "message bot";
+    botMsg.textContent = "Patientez...";
+    chatBox.appendChild(botMsg);
 
     try {
-        const res = await fetch('/api/chat', {
-            method: 'POST',
-            headers: {'Content-Type':'application/json'},
-            body: JSON.stringify({question: q})
+        let response = await fetch("http://127.0.0.1:11434/api/generate", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                model: "llama3.1:8b",
+                prompt: text
+            })
         });
 
-        const data = await res.json();
-        placeholder.textContent = data.answer;
-    } catch {
-        placeholder.textContent = "Erreur : Impossible de contacter le serveur SCQ.";
+        let data = await response.json();
+
+        botMsg.textContent = data.response || "Erreur : pas de réponse IA";
+
+    } catch (e) {
+        botMsg.textContent = "Impossible de joindre le serveur IA.";
     }
+
+    chatBox.scrollTop = chatBox.scrollHeight;
 }
 
-form.addEventListener('submit', e => {
-    e.preventDefault();
-    const q = input.value.trim();
-    if (!q) return;
-    input.value = '';
-    sendToBackend(q);
+document.getElementById("send_btn").onclick = sendMessage;
+
+document.getElementById("user_input").addEventListener("keypress", function(e) {
+    if (e.key === "Enter") sendMessage();
 });
 </script>
 
