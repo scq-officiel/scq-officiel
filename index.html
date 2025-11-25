@@ -1,129 +1,114 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>SCQ — Souveraineté et Citoyenneté du Québec</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCQ — Souveraineté et Citoyenneté du Québec</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Gestion bilingue -->
+    <script src="lang.js" defer></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap">
-      <div class="brand">
-        <!-- chemin fourni par toi (sera transformé en URL par le système) -->
-        <img src="Logo SCQ.jpg" alt="Logo SCQ" class="logo">
-        <div>
-          <h1>Souveraineté &amp; Citoyenneté du Québec</h1>
-          <p class="slogan">Un parti 100% citoyen — Pour que le Québec appartienne au peuple</p>
-        </div>
-      </div>
 
-      <nav class="main-nav" aria-label="Navigation principale">
-        <a href="#accueil">Accueil</a>
-        <a href="#constitution">Constitution</a>
-        <a href="#reformes">Réformes</a>
-        <a href="#leparti">Le parti</a>
-        <a href="#contact">Nous joindre</a>
-      </nav>
+<header>
+    <div class="container">
+        <img src="Logo SCQ.jpg" class="logo" alt="Logo SCQ">
+        <nav>
+            <a data-lang="menu_home"></a>
+            <a data-lang="menu_constitution"></a>
+            <a data-lang="menu_reformes"></a>
+            <a data-lang="menu_contact"></a>
+        </nav>
 
-      <button class="menu-toggle" id="menuToggle" aria-expanded="false">☰</button>
+        <select id="langSwitcher">
+            <option value="fr">FR</option>
+            <option value="en">EN</option>
+        </select>
     </div>
-  </header>
+</header>
 
-  <section id="accueil" class="hero">
-    <div class="wrap hero-inner">
-      <div class="hero-text">
-        <h2>Pour un Québec souverain, transparent et dirigé par ses citoyens</h2>
-        <p>Le SCQ réunit les citoyennes et citoyens qui veulent reprendre le contrôle des institutions et bâtir un avenir collectif.</p>
-        <div class="cta-group">
-          <a href="#leparti" class="btn primary">En savoir plus</a>
-          <a href="https://www.facebook.com/Souverainete.et.Citoyennete.du.Quebec" target="_blank" class="btn outline">Rejoindre la page</a>
-        </div>
-      </div>
-
-      <div class="hero-cards">
-        <article class="card">
-          <h3>Constitution</h3>
-          <p>Principes fondateurs et droits garantis pour protéger la souveraineté et les citoyens.</p>
-          <a href="#constitution" class="link-small">Voir la Constitution →</a>
-        </article>
-        <article class="card">
-          <h3>Réformes</h3>
-          <p>Propositions concrètes pour moderniser la société, l'économie et les institutions.</p>
-          <a href="#reformes" class="link-small">Voir les réformes →</a>
-        </article>
-        <article class="card">
-          <h3>Participation</h3>
-          <p>Rejoignez nos actions, signez des pétitions, participez aux consultations citoyennes.</p>
-          <a href="#contact" class="link-small">Nous joindre →</a>
-        </article>
-      </div>
+<section class="hero">
+    <div class="container">
+        <h1 data-lang="hero_title"></h1>
+        <p data-lang="hero_subtitle"></p>
     </div>
-  </section>
+</section>
 
-  <main class="wrap site-main">
-    <section id="constitution" class="section">
-      <h2>Constitution du Québec souverain</h2>
-      <div id="constitution-content" class="content-grid loading">Chargement…</div>
-    </section>
-
-    <section id="reformes" class="section">
-      <h2>Réformes proposées</h2>
-      <div id="reformes-content" class="content-grid loading">Chargement…</div>
-    </section>
-
-    <section id="leparti" class="section">
-      <h2>Le parti</h2>
-      <p>
-        Le SCQ est un parti citoyen indépendant, fondé pour donner aux Québécoises et Québécois
-        les moyens de décider de leur avenir. Nous privilégions la transparence, la participation directe
-        et la défense des intérêts du peuple.
-      </p>
-    </section>
-
-    <section id="contact" class="section">
-      <h2>Contact &amp; Soutien</h2>
-      <p>Pour proposer un texte, rejoindre le mouvement, ou obtenir plus d'information :</p>
-      <ul>
-        <li>Facebook : <a href="https://www.facebook.com/Souverainete.et.Citoyennete.du.Quebec" target="_blank">Page du SCQ</a></li>
-        <li>Email : contact@scq-officiel.ca (à configurer)</li>
-      </ul>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap">
-      <small>© <span id="year"></span> Souveraineté et Citoyenneté du Québec (SCQ) — Tous droits réservés.</small>
-      <div class="footer-links">
-        <a href="#constitution">Constitution</a>
-        <a href="#reformes">Réformes</a>
-        <a href="#contact">Contact</a>
-      </div>
+<section class="vision">
+    <div class="container">
+        <h2 data-lang="vision_title"></h2>
+        <p data-lang="vision_text"></p>
     </div>
-  </footer>
+</section>
 
-  <!-- Chat widget (intégré, responsive) -->
-  <div id="scq-chat-root" aria-live="polite">
-    <button id="scq-open-btn" title="Chat SCQ" aria-haspopup="dialog">💬 Parlez au SCQ</button>
+<section class="contact" id="contact">
+    <div class="container">
+        <h2 data-lang="contact_title"></h2>
 
-    <div id="scq-chat-panel" role="dialog" aria-label="Chat SCQ" hidden>
-      <div id="scq-chat-header">
-        <img id="scq-mini-logo" src="/mnt/data/af2cd3d2-9dee-44e4-9863-e10c539f20d1.png" alt="SCQ">
-        <strong>Chat — SCQ</strong>
-        <button id="scq-close-btn" aria-label="Fermer">✕</button>
-      </div>
+        <form id="contactForm">
+            <label data-lang="form_name"></label>
+            <input type="text" name="name" required>
 
-      <div id="scq-messages" role="log"></div>
+            <label data-lang="form_email"></label>
+            <input type="email" name="email" required>
 
-      <form id="scq-input-form" autocomplete="off">
-        <input id="scq-input" type="text" placeholder="Posez votre question sur la Constitution, les réformes..." />
-        <button type="submit" id="scq-send">Envoyer</button>
-      </form>
+            <label data-lang="form_message"></label>
+            <textarea name="message" required></textarea>
 
-      <div id="scq-note">Réponses basées sur les textes officiels du SCQ.</div>
+            <button type="submit" data-lang="form_send"></button>
+        </form>
     </div>
-  </div>
+</section>
 
-  <script src="script.js"></script>
+<section class="adhesion">
+    <div class="container">
+        <h2 data-lang="adhesion_title"></h2>
+
+        <form id="adhesionForm">
+            <label data-lang="form_name"></label>
+            <input type="text" name="name" required>
+
+            <label data-lang="form_email"></label>
+            <input type="email" name="email" required>
+
+            <label data-lang="form_phone"></label>
+            <input type="text" name="phone">
+
+            <label data-lang="form_choice"></label>
+            <select name="choice" required>
+                <option data-lang="choice_member"></option>
+                <option data-lang="choice_support"></option>
+                <option data-lang="choice_signature"></option>
+            </select>
+
+            <button type="submit" data-lang="form_send"></button>
+        </form>
+    </div>
+</section>
+
+<!-- Chat IA -->
+<div id="chatButton">💬</div>
+<div id="chatWindow" class="hidden">
+    <div class="chatHeader">
+        <span>SCQ IA</span>
+        <button id="closeChat">✖</button>
+    </div>
+
+    <div id="chatMessages"></div>
+
+    <div class="chatInput">
+        <input id="chatText" type="text" placeholder="Écrivez votre question…">
+        <button id="sendChat">Envoyer</button>
+    </div>
+</div>
+
+<script src="chat.js"></script>
+
+<footer>
+    <p>© 2025 — Souveraineté et Citoyenneté du Québec (SCQ)</p>
+</footer>
+
 </body>
 </html>
