@@ -1,133 +1,174 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Souveraineté & Citoyenneté du Québec (SCQ)</title>
-
-<link rel="stylesheet" href="styles.css">
-<link rel="icon" href="Logo SCQ.jpg">
-<script src="lang.js" defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SCQ — Souveraineté & Citoyenneté du Québec</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="lang/lang.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="chat.js" defer></script>
+  <script src="forms.js" defer></script>
 </head>
-
 <body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <!-- Chemin local fourni : remplace par 'Logo SCQ.jpg' après upload -->
+      <img src="/mnt/data/af2cd3d2-9dee-44e4-9863-e10c539f20d1.png" alt="Logo SCQ" class="logo">
+      <div class="brand-titles">
+        <h1 data-i18n="site_title">Souveraineté & Citoyenneté du Québec</h1>
+        <p class="slogan" data-i18n="site_tagline">Un parti 100% citoyen — Pour que le Québec appartienne au peuple</p>
+      </div>
 
-<header>
-    <div class="logo">
-        <img src="Logo SCQ.jpg" alt="SCQ" />
-        <h1 data-fr="Souveraineté & Citoyenneté du Québec"
-            data-en="Quebec Sovereignty & Citizenship">
-        </h1>
-    </div>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="index.html" data-i18n="nav_home">Accueil</a>
+        <a href="constitution.html" data-i18n="nav_constitution">Constitution</a>
+        <a href="reformes.html" data-i18n="nav_reformes">Réformes</a>
+        <a href="#leparti" data-i18n="nav_leparti">Le parti</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </nav>
 
-    <nav>
-        <a href="index.html" data-fr="Accueil" data-en="Home"></a>
-        <a href="constitution.html" data-fr="Constitution" data-en="Constitution"></a>
-        <a href="reformes.html" data-fr="Réformes" data-en="Reforms"></a>
-        <a href="#parti" data-fr="Le parti" data-en="The Party"></a>
-        <a href="#contact" data-fr="Nous joindre" data-en="Contact"></a>
-
-        <select id="langSwitcher">
-            <option value="fr">FR</option>
-            <option value="en">EN</option>
+      <div class="actions">
+        <select id="langSwitcher" aria-label="Langue">
+          <option value="fr">FR</option>
+          <option value="en">EN</option>
         </select>
-    </nav>
-</header>
-
-<section class="hero">
-    <h2 data-fr="Pour un Québec souverain dirigé par ses citoyens"
-        data-en="For a sovereign Quebec led by its citizens"></h2>
-    <p data-fr="Le SCQ est un parti 100% citoyen, transparent et moderne."
-       data-en="SCQ is a 100% citizen-led, transparent and modern movement."></p>
-</section>
-
-<section class="cards">
-    <div class="card">
-        <h3 data-fr="Constitution" data-en="Constitution"></h3>
-        <p data-fr="Principes fondateurs et droits du Québec souverain."
-           data-en="Founding principles and rights of a sovereign Quebec."></p>
-        <a href="constitution.html" class="btn" data-fr="Voir la Constitution →" data-en="View Constitution →"></a>
+      </div>
     </div>
+  </header>
 
-    <div class="card">
-        <h3 data-fr="Réformes proposées" data-en="Proposed Reforms"></h3>
-        <p data-fr="Mesures concrètes pour améliorer l’État et la société."
-           data-en="Concrete reforms to improve the state and society."></p>
-        <a href="reformes.html" class="btn" data-fr="Voir les réformes →" data-en="View Reforms →"></a>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-left">
+        <h2 data-i18n="hero_title">Pour un Québec souverain, transparent et dirigé par ses citoyens</h2>
+        <p data-i18n="hero_subtitle">Le SCQ réunit les citoyennes et citoyens qui veulent reprendre le contrôle des institutions et bâtir un avenir collectif.</p>
+        <div class="cta">
+          <a class="btn primary" href="#leparti" data-i18n="cta_learn">En savoir plus</a>
+          <a class="btn outline" href="https://www.facebook.com/Souverainete.et.Citoyennete.du.Quebec" target="_blank" data-i18n="cta_join">Rejoindre la page</a>
+        </div>
+      </div>
+
+      <div class="hero-right cards">
+        <article class="card">
+          <h3 data-i18n="card_constitution">Constitution</h3>
+          <p data-i18n="card_constitution_text">Principes fondateurs et droits garantis pour protéger la souveraineté et les citoyens.</p>
+          <a href="constitution.html" class="link" data-i18n="card_view">Voir la Constitution →</a>
+        </article>
+
+        <article class="card">
+          <h3 data-i18n="card_reformes">Réformes</h3>
+          <p data-i18n="card_reformes_text">Propositions concrètes pour moderniser la société et nos institutions.</p>
+          <a href="reformes.html" class="link" data-i18n="card_view">Voir les réformes →</a>
+        </article>
+
+        <article class="card">
+          <h3 data-i18n="card_participation">Participation</h3>
+          <p data-i18n="card_participation_text">Inscrivez-vous, signez et participez aux consultations citoyennes.</p>
+          <a href="#contact" class="link" data-i18n="card_join">Nous joindre →</a>
+        </article>
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-        <h3 data-fr="Participation citoyenne" data-en="Citizen Participation"></h3>
-        <p data-fr="Participez au mouvement, signez, proposez, agissez."
-           data-en="Participate in the movement, sign, propose, take action."></p>
-        <a href="#contact" class="btn" data-fr="Nous joindre →" data-en="Contact us →"></a>
-    </div>
-</section>
+  <!-- MAIN -->
+  <main class="wrap site-main">
+    <section id="constitution_preview" class="section">
+      <h2 data-i18n="section_constitution">Constitution du Québec souverain</h2>
+      <div id="constitution-content" class="content-grid loading">Chargement…</div>
+      <a class="link-more" href="constitution.html" data-i18n="see_full">Voir la suite</a>
+    </section>
 
-<section id="parti" class="section">
-    <h2 data-fr="Le parti politique" data-en="The Political Party"></h2>
-    <p data-fr="Le SCQ vise à redonner le contrôle du Québec à ses citoyens..."
-       data-en="SCQ aims to give control of Quebec back to its citizens..."></p>
+    <section id="reformes_preview" class="section">
+      <h2 data-i18n="section_reformes">Réformes proposées</h2>
+      <div id="reformes-content" class="content-grid loading">Chargement…</div>
+      <a class="link-more" href="reformes.html" data-i18n="see_full">Voir la suite</a>
+    </section>
 
-    <h3 data-fr="Postes disponibles" data-en="Available Roles"></h3>
-    <ul>
-        <li data-fr="Secrétaire général" data-en="General Secretary"></li>
-        <li data-fr="Responsable des communications" data-en="Communications Director"></li>
-        <li data-fr="Responsable financier" data-en="Financial Officer"></li>
-        <li data-fr="Coordonnateur régional" data-en="Regional Coordinator"></li>
-        <li data-fr="Responsable des opérations" data-en="Operations Manager"></li>
-    </ul>
-</section>
+    <!-- LE PARTI -->
+    <section id="leparti" class="section">
+      <h2 data-i18n="party_title">Le parti</h2>
+      <p data-i18n="party_text">Le SCQ est un parti citoyen indépendant, fondé pour donner aux Québécoises et Québécois les moyens de décider de leur avenir. Nous privilégions la transparence, la participation directe et la défense des intérêts du peuple.</p>
 
-<section id="contact" class="section">
-    <h2 data-fr="Contact & Soutien" data-en="Contact & Support"></h2>
+      <h3 data-i18n="positions_title">Postes disponibles</h3>
+      <p data-i18n="positions_intro">Tous les postes travaillent sous la direction du chef/fondateur — chaque rôle est important :</p>
 
-    <div class="form-container">
-        <h3 data-fr="Formulaire de contact" data-en="Contact Form"></h3>
+      <ul class="positions">
+        <li><strong data-i18n="pos_secretary">Secrétaire</strong> — <span data-i18n="pos_secretary_desc">Gestion administrative, procès-verbaux, correspondance</span></li>
+        <li><strong data-i18n="pos_accountant">Comptable</strong> — <span data-i18n="pos_accountant_desc">Comptes, transparence financière et rapports</span></li>
+        <li><strong data-i18n="pos_communications">Responsable communications</strong> — <span data-i18n="pos_communications_desc">Réseaux sociaux, communiqués, médias</span></li>
+        <li><strong data-i18n="pos_organizer">Organisateur</strong> — <span data-i18n="pos_organizer_desc">Coordination des événements et bénévoles</span></li>
+        <li><strong data-i18n="pos_legal">Conseiller juridique</strong> — <span data-i18n="pos_legal_desc">Conseil sur cadres légaux et conformité</span></li>
+        <li><strong data-i18n="pos_other">Autres postes</strong> — <span data-i18n="pos_other_desc">Bénévoles & rôles spécialisés</span></li>
+      </ul>
+      <p><a class="btn primary" href="#contact" data-i18n="apply_now">Postuler / S'informer</a></p>
+    </section>
 
-        <form action="https://formspree.io/f/xyzabwqj" method="POST">
-            <label data-fr="Nom complet" data-en="Full name"></label>
-            <input name="name" required>
+    <!-- CONTACTS & FORMS -->
+    <section id="contact" class="section">
+      <h2 data-i18n="contact_title">Contact & Soutien</h2>
+      <p data-i18n="contact_intro">Pour proposer un texte, rejoindre le mouvement, ou obtenir plus d'information :</p>
+      <ul>
+        <li data-i18n="contact_facebook">Facebook : <a href="https://www.facebook.com/Souverainete.et.Citoyennete.du.Quebec" target="_blank">Page du SCQ</a></li>
+        <li data-i18n="contact_email">Email : contact@scq-officiel.ca (à configurer)</li>
+      </ul>
 
-            <label data-fr="Courriel" data-en="Email"></label>
+      <div class="forms-grid">
+        <div class="form-card">
+          <h3 data-i18n="form_contact_title">Formulaire de contact</h3>
+          <form id="contactForm">
+            <label data-i18n="form_label_name">Nom complet</label>
+            <input name="name" type="text" required>
+
+            <label data-i18n="form_label_email">Courriel</label>
             <input name="email" type="email" required>
 
-            <label data-fr="Message" data-en="Message"></label>
-            <textarea name="message" required></textarea>
+            <label data-i18n="form_label_message">Message</label>
+            <textarea name="message" rows="5" required></textarea>
 
-            <button class="btn primary" data-fr="Envoyer" data-en="Send"></button>
-        </form>
-    </div>
+            <button type="submit" class="btn primary" data-i18n="form_send">Envoyer</button>
+            <div class="form-status" id="contactFormStatus"></div>
+          </form>
+        </div>
 
-    <div class="form-container">
-        <h3 data-fr="Devenir membre ou soutenir le parti"
-            data-en="Become a member or support the party"></h3>
+        <div class="form-card">
+          <h3 data-i18n="form_member_title">Formulaire d'adhésion / soutien</h3>
+          <form id="adhesionForm">
+            <label data-i18n="form_label_name">Nom complet</label>
+            <input name="name" type="text" required>
 
-        <form action="https://formspree.io/f/xyzabwqj" method="POST">
-            <label data-fr="Nom complet" data-en="Full name"></label>
-            <input name="name" required>
-
-            <label data-fr="Courriel" data-en="Email"></label>
+            <label data-i18n="form_label_email">Courriel</label>
             <input name="email" type="email" required>
 
-            <label data-fr="Téléphone (optionnel)" data-en="Phone (optional)"></label>
-            <input name="phone">
+            <label data-i18n="form_label_phone">Téléphone (optionnel)</label>
+            <input name="phone" type="text">
 
-            <label data-fr="Choisir" data-en="Choose"></label>
+            <label data-i18n="form_label_choice">Je souhaite</label>
             <select name="choice" required>
-                <option value="member" data-fr="Devenir membre" data-en="Become a member"></option>
-                <option value="support" data-fr="Soutenir le parti" data-en="Support the party"></option>
-                <option value="volunteer" data-fr="Bénévolat" data-en="Volunteer"></option>
+              <option value="member" data-i18n="choice_member">Devenir membre</option>
+              <option value="support" data-i18n="choice_support">Soutenir la création du parti</option>
+              <option value="volunteer" data-i18n="choice_volunteer">Être bénévole</option>
             </select>
 
-            <button class="btn primary" data-fr="Envoyer" data-en="Send"></button>
-        </form>
-    </div>
-</section>
+            <button type="submit" class="btn primary" data-i18n="form_send">Envoyer</button>
+            <div class="form-status" id="adhesionFormStatus"></div>
+          </form>
+        </div>
+      </div>
+    </section>
 
-<footer>
-    © 2025 SCQ — Tous droits réservés
-</footer>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>© <span id="year"></span> — Souveraineté et Citoyenneté du Québec (SCQ)</small>
+      <div class="footer-links">
+        <a href="constitution.html" data-i18n="footer_constitution">Constitution</a>
+        <a href="reformes.html" data-i18n="footer_reformes">Réformes</a>
+        <a href="#contact" data-i18n="footer_contact">Contact</a>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
