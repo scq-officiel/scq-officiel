@@ -1,41 +1,15 @@
 <!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Réformes — SCQ</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="lang/lang.js" defer></script>
-</head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Réformes — SCQ</title><link rel="stylesheet" href="styles.css"><script src="script.js" defer></script></head>
 <body>
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <img src="/mnt/data/af2cd3d2-9dee-44e4-9863-e10c539f20d1.png" alt="Logo SCQ" class="logo">
-      <nav class="main-nav"><a href="index.html">Accueil</a><a href="constitution.html">Constitution</a><a href="reformes.html">Réformes</a></nav>
-      <select id="langSwitcher"><option value="fr">FR</option><option value="en">EN</option></select>
+<header class="site-header"><div class="wrap header-inner"><img src="Logo%20SCQ.jpg" alt="Logo SCQ" class="logo"><nav class="main-nav"><a href="index.html">Accueil</a><a href="constitution.html">Constitution</a><a href="reformes.html">Réformes</a></nav><select id="langSwitcher"><option value="fr">FR</option><option value="en">EN</option></select></div></header>
+<main class="wrap site-main">
+  <section class="section">
+    <h2>Réformes proposées</h2>
+    <div id="reformes-full">
+      <p>Liste des réformes (colle-les ici ou utilise un backend pour les charger).</p>
     </div>
-  </header>
-
-  <main class="wrap site-main">
-    <section class="section">
-      <h2>Réformes proposées</h2>
-      <div id="reformes-full" class="content-grid loading">Chargement des réformes...</div>
-    </section>
-  </main>
-
-  <footer class="site-footer"><div class="wrap"><small>© <span id="year"></span> SCQ</small></div></footer>
-
-  <script>
-    async function loadReforms() {
-      try {
-        const res = await fetch('/api/knowledge');
-        const data = await res.json();
-        const r = data.reforms || [];
-        if (r.length === 0) document.getElementById('reformes-full').innerHTML = '<p class="loading">Aucune réforme publiée.</p>';
-        else document.getElementById('reformes-full').innerHTML = r.map(it => `<article class="card"><h3>${escapeHtml(it.title)}</h3><p>${escapeHtml(it.text)}</p><small>— ${escapeHtml(it.author||'SCQ')} • ${escapeHtml(it.date||'')}</small></article>`).join('');
-      } catch(e){ document.getElementById('reformes-full').innerHTML = '<p class="loading">Impossible de charger les réformes.</p>'; }
-    }
-    loadReforms();
-    function escapeHtml(s){ if(!s) return ''; return s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;'); }
-  </script>
+  </section>
+</main>
 </body>
 </html>
