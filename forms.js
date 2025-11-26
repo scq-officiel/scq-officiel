@@ -1,6 +1,6 @@
 // small UI feedback for forms (forms already post to Formspree)
 document.addEventListener('DOMContentLoaded', ()=>{
-  document.querySelectorAll('form[action^="https://formspree.io/f/xldkzgno"]').forEach(form=>{
+  document.querySelectorAll('form[action^="https://formspree.io/f/xpwgwwwv"]').forEach(form=>{
     form.addEventListener('submit', async (e)=>{
       e.preventDefault();
       const endpoint = form.getAttribute('action');
