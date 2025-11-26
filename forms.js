@@ -47,6 +47,7 @@
       font-size: 16px;
       border-radius: 5px;
       cursor: pointer;
+      transition: background-color 0.2s;
     }
     button:hover {
       background-color: #002080;
@@ -73,6 +74,7 @@
 
     <button type="submit">Envoyer</button>
 
+    <!-- zone de statut pour forms.js -->
     <div class="form-status"></div>
   </form>
 </section>
