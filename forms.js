@@ -66,17 +66,20 @@
   <img src="logo_scq.jpg" alt="Logo SCQ">
 
   <form action="https://formspree.io/f/xpwgwwwv" method="POST">
-    <label for="email">Votre email :</label>
-    <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+  <label>
+    Votre email :
+    <input type="email" name="email" placeholder="votre@email.com" required>
+  </label>
 
-    <label for="message">Votre message :</label>
-    <textarea id="message" name="message" placeholder="Écrivez votre message ici..." required></textarea>
+  <label>
+    Votre message :
+    <textarea name="message" placeholder="Écrivez votre message ici..." required></textarea>
+  </label>
 
-    <button type="submit">Envoyer</button>
+  <button type="submit">Envoyer</button>
+  <div class="form-status"></div>
+</form>
 
-    <!-- zone de statut pour forms.js -->
-    <div class="form-status"></div>
-  </form>
 </section>
 
 <script>
