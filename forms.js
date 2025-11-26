@@ -65,7 +65,7 @@
   <!-- Logo SCQ -->
   <img src="logo_scq.jpg" alt="Logo SCQ">
 
-  <form action="https://formspree.io/f/xpwgwwwv" method="POST">
+  <form action="https://formspree.io/f/meobokok" method="POST">
   <label>
     Votre email :
     <input type="email" name="email" placeholder="votre@email.com" required>
@@ -85,7 +85,7 @@
 <script>
   // forms.js — gestion des formulaires Formspree pour SCQ
   document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('form[action^="https://formspree.io/f/xpwgwwwv"]').forEach(form => {
+    document.querySelectorAll('form[action^="https://formspree.io/f/meobokok"]').forEach(form => {
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
         const endpoint = form.getAttribute('action');
