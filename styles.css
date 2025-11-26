@@ -1,7 +1,6 @@
 :root{
   --scq-blue:#003B73;
   --scq-blue-2:#005EA8;
-  --scq-gold:#E5C100;
   --bg:#f4f7fb;
   --card:#ffffff;
   --muted:#6b7280;
@@ -43,5 +42,8 @@ body{margin:0;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;background:var(
 .site-footer{background:var(--scq-blue);color:#fff;padding:18px 0;margin-top:18px}
 .footer-links{margin-top:8px;display:flex;gap:12px;flex-wrap:wrap}
 .footer-links a{color:rgba(255,255,255,0.9);text-decoration:none}
+.data-table{width:100%;border-collapse:collapse;margin:10px 0}
+.data-table th,.data-table td{border:1px solid #e6eef9;padding:8px;text-align:left}
+.big-number{font-size:2.4rem;color:var(--scq-blue);font-weight:700}
+.muted{color:var(--muted);font-size:0.95rem}
 @media (max-width:860px){.hero-grid{flex-direction:column}.main-nav{display:none}}
-@media (max-width:480px){.logo{height:52px}#scq-chat-panel{width:calc(100% - 28px);right:14px;bottom:78px;height:56vh}}
