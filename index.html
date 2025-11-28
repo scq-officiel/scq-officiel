@@ -1,14 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SCQ — Souveraineté & Citoyenneté du Québec</title>
 
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
   <script src="chat.js" defer></script>
-
 </head>
 <body>
 
@@ -24,16 +23,18 @@
         <p class="slogan" data-i18n="site_tagline">Un parti 100% citoyen — Pour que le Québec appartienne au peuple.</p>
       </div>
 
-      <!-- NAV -->
+      <!-- NAVIGATION PRINCIPALE -->
       <nav class="main-nav" aria-label="Navigation principale">
         <a href="index.html">Accueil</a>
         <a href="constitution.html">Constitution</a>
         <a href="reformes.html">Réformes</a>
         <a href="postes.html">Postes</a>
         <a href="transparence.html">Transparence</a>
+        <a href="implication_scq.html">Implication & Reconnaissance</a> <!-- Nouveau lien -->
         <a href="#contact">Contact</a>
       </nav>
 
+      <!-- Switcher langue -->
       <div class="actions">
         <select id="langSwitcher">
           <option value="fr">FR</option>
@@ -44,16 +45,12 @@
     </div>
   </header>
 
-
-
-
   <!-- HERO -->
   <main class="wrap site-main">
     <section class="hero section">
 
       <div class="hero-left">
         <h2>Pour un Québec souverain, transparent et dirigé par ses citoyens.</h2>
-
         <p>Le SCQ rassemble les citoyens qui veulent reprendre le contrôle des institutions et bâtir un avenir collectif.</p>
 
         <div class="cta">
@@ -86,36 +83,23 @@
 
     </section>
 
-
-
-
     <!-- COMPTE MEMBRES -->
     <section class="section">
       <h2>Membres inscrits</h2>
-
       <p id="members-count" class="big-number">—</p>
       <p id="members-updated" class="muted">Dernière mise à jour : —</p>
     </section>
 
-
-
-
     <!-- FORMULAIRES -->
     <section id="contact" class="section">
-
       <h2>Contact & Soutien</h2>
 
       <div class="forms-grid">
 
-
-
         <!-- Formulaire CONTACT -->
         <div class="form-card">
           <h3>Formulaire de contact</h3>
-
           <form action="https://formspree.io/f/meobokok" method="POST">
-
-            <!-- OBLIGATOIRE pour Form Rules -->
             <input type="hidden" name="_subject" value="contact">
 
             <label>Nom complet</label>
@@ -131,16 +115,10 @@
           </form>
         </div>
 
-
-
-
-
         <!-- Formulaire ADHÉSION -->
         <div class="form-card">
           <h3>Formulaire d’adhésion / soutien</h3>
-
           <form action="https://formspree.io/f/meobokok" method="POST">
-
             <input type="hidden" name="_subject" value="adhesion">
 
             <label>Nom complet</label>
@@ -157,18 +135,13 @@
             </select>
 
             <button class="btn primary" type="submit">Envoyer</button>
-
           </form>
         </div>
 
       </div>
-
     </section>
 
   </main>
-
-
-
 
   <!-- FOOTER -->
   <footer class="site-footer">
@@ -180,8 +153,10 @@
     </div>
   </footer>
 
-
-
+  <script>
+    // Mise à jour de l'année automatiquement
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
