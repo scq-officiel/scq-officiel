@@ -3,55 +3,78 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact — SCQ</title>
+  <title>SCQ — Contact & Soutien</title>
+
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/script.js" defer></script>
 </head>
 <body>
 
-<header class="site-header">
-  <div class="wrap header-inner">
-    <img src="images/logo_scq.jpg" alt="Logo SCQ" class="logo">
-    <div class="brand-titles">
-      <h1 data-i18n="site_title">Souveraineté & Citoyenneté du Québec</h1>
-      <p class="slogan" data-i18n="site_tagline">Un parti 100% citoyen — Pour que le Québec appartienne au peuple.</p>
-    </div>
-    <nav class="main-nav" aria-label="Navigation principale">
-      <a href="index.html">Accueil</a>
-      <a href="constitution.html">Constitution</a>
-      <a href="reformes.html">Réformes</a>
-      <a href="postes.html">Postes</a>
-      <a href="implication_scq.html">Implication</a>
-      <a href="differences.html">Différences</a>
-      <a href="plateforme.html">Plateforme</a>
-      <a href="vision.html">Vision</a>
-      <a href="histoire.html">Histoire</a>
-      <a href="don.html">Contribuer</a>
-      <a href="contact.html" class="active">Contact</a>
-    </nav>
-    <div class="actions">
-      <select id="langSwitcher">
-        <option value="fr">FR</option>
-        <option value="en">EN</option>
-      </select>
-    </div>
-  </div>
-</header>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="wrap header-inner">
 
-<main class="wrap site-main">
-  <section class="section">
-    <h2>Comment nous rejoindre</h2>
-    <p>Pour Devenir membre actif ou toute autre question en lien avec la section membre : <strong>membre@scq-officiel.ca</strong></p>
-    <p>Pour Contact & Soutien ou toute autre question : <strong>contact@scq-officiel.ca</strong></p>
-    <p>Pour demande d'emplois ou toute autre question en lien avec la section poste : <strong>administration@scq-officiel.ca</strong></p>
-  </section>
-</main>
+      <!-- Logo -->
+      <img src="images/logo_scq.jpg" alt="Logo SCQ" class="logo">
 
-<footer class="site-footer">
-  <div class="wrap">
-    <small>© <span id="year"></span> Souveraineté et Citoyenneté du Québec (SCQ)</small>
-  </div>
-</footer>
+      <div class="brand-titles">
+        <h1 data-i18n="site_title">Souveraineté & Citoyenneté du Québec</h1>
+        <p class="slogan" data-i18n="site_tagline">Un parti 100% citoyen — Pour que le Québec appartienne au peuple.</p>
+      </div>
+
+      <!-- NAV -->
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="index.html" data-i18n="nav_accueil">Accueil</a>
+        <a href="constitution.html" data-i18n="nav_constitution">Constitution</a>
+        <a href="reformes.html" data-i18n="nav_reformes">Réformes</a>
+        <a href="postes.html" data-i18n="nav_postes">Postes</a>
+        <a href="implication_scq.html" data-i18n="nav_implication">Implication</a>
+        <a href="differences.html" data-i18n="nav_differences">Différences</a>
+        <a href="plateforme.html" data-i18n="nav_plateforme">Plateforme</a>
+        <a href="vision.html" data-i18n="nav_vision">Vision</a>
+        <a href="histoire.html" data-i18n="nav_histoire">Histoire</a>
+        <a href="don.html" data-i18n="nav_don">Contribuer</a>
+        <a href="contact.html" data-i18n="nav_contact">Contact</a>
+      </nav>
+
+      <div class="actions">
+        <select id="langSwitcher">
+          <option value="fr">FR</option>
+          <option value="en">EN</option>
+        </select>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="wrap site-main">
+    <section class="section">
+      <h2>Comment nous rejoindre</h2>
+
+      <p>
+        Pour Devenir membre actif ou toute autre question en lien avec la section membre :<br>
+        <strong>membre@scq-officiel.ca</strong>
+      </p>
+
+      <p>
+        Pour Contact & Soutien ou toute autre question générale :<br>
+        <strong>contact@scq-officiel.ca</strong>
+      </p>
+
+      <p>
+        Pour demande d’emplois ou toute question en lien avec la section postes :<br>
+        <strong>administration@scq-officiel.ca</strong>
+      </p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>© <span id="year"></span> Souveraineté et Citoyenneté du Québec (SCQ)</small>
+    </div>
+  </footer>
 
 </body>
 </html>
