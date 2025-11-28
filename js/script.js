@@ -1,42 +1,50 @@
-// script.js - SCQ
+// =====================================
+// Traduction FR/EN
+// =====================================
+
+// Exemple des textes traduits
+const translations = {
+  "site_title": {
+    fr: "Souveraineté & Citoyenneté du Québec",
+    en: "Sovereignty & Citizenship of Quebec"
+  },
+  "site_tagline": {
+    fr: "Un parti 100% citoyen — Pour que le Québec appartienne au peuple.",
+    en: "A 100% citizen party — So Quebec belongs to the people."
+  },
+  "nav_accueil": { fr: "Accueil", en: "Home" },
+  "nav_constitution": { fr: "Constitution", en: "Constitution" },
+  "nav_reformes": { fr: "Réformes", en: "Reforms" },
+  "nav_postes": { fr: "Postes", en: "Positions" },
+  "nav_implication": { fr: "Implication", en: "Involvement" },
+  "nav_differences": { fr: "Différences", en: "Differences" },
+  "nav_plateforme": { fr: "Plateforme", en: "Platform" },
+  "nav_vision": { fr: "Vision", en: "Vision" },
+  "nav_histoire": { fr: "Histoire", en: "History" },
+  "nav_don": { fr: "Contribuer", en: "Contribute" },
+  "nav_contact": { fr: "Contact", en: "Contact" }
+};
+
+// Fonction pour traduire tous les éléments
+function translatePage(lang) {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if(translations[key] && translations[key][lang]) {
+      el.textContent = translations[key][lang];
+    }
+  });
+}
+
+// Événement sur le select
 document.addEventListener("DOMContentLoaded", () => {
-  // Année dynamique
-  const yearSpan = document.getElementById('year');
-  if(yearSpan) yearSpan.textContent = new Date().getFullYear();
-
-  // Traductions FR/EN
-  const translations = {
-    en: {
-      site_title: "Sovereignty & Citizenship of Quebec",
-      nav_home: "Home",
-      nav_constitution: "Constitution",
-      nav_reformes: "Reforms",
-      nav_postes: "Positions",
-      nav_implication: "Involvement & Recognition",
-      nav_differences: "Differences with other parties",
-      nav_plateforme: "Electoral platform",
-      nav_vision: "Party vision",
-      nav_histoire: "Party history",
-      nav_contact: "Contact",
-      nav_don: "Contribute",
-      platform_title: "Electoral Platform",
-      vision_title: "Party Vision",
-      history_title: "Party History",
-      don_title: "Contribute to SCQ"
-    },
-    fr: {} // FR = textes par défaut
-  };
-
-  const langSwitcher = document.getElementById('langSwitcher');
-  if(langSwitcher){
-    langSwitcher.addEventListener('change', () => {
-      const lang = langSwitcher.value;
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if(translations[lang] && translations[lang][key]){
-          el.textContent = translations[lang][key];
-        }
-      });
+  const langSwitcher = document.getElementById("langSwitcher");
+  if(langSwitcher) {
+    langSwitcher.addEventListener("change", (e) => {
+      translatePage(e.target.value);
     });
   }
+  
+  // Initialisation année footer
+  const yearSpan = document.getElementById("year");
+  if(yearSpan) yearSpan.textContent = new Date().getFullYear();
 });
