@@ -1,49 +1,169 @@
-:root{
-  --scq-blue:#003B73;
-  --scq-blue-2:#005EA8;
-  --bg:#f4f7fb;
-  --card:#ffffff;
-  --muted:#6b7280;
-  --wrap:1100px;
+/* styles.css - SCQ */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  color: #1b1b1b;
 }
-*{box-sizing:border-box}
-body{margin:0;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:#0b2540;-webkit-font-smoothing:antialiased}
-.wrap{max-width:var(--wrap);margin:0 auto;padding:0 18px}
-.header-inner{display:flex;align-items:center;gap:18px;justify-content:space-between;padding:12px 0}
-.site-header{background:linear-gradient(90deg,var(--scq-blue),var(--scq-blue-2));color:#fff;position:sticky;top:0;z-index:40}
-.logo{height:64px;border-radius:8px;object-fit:contain;border:2px solid rgba(255,255,255,0.08)}
-.brand-titles h1{margin:0;font-size:1.05rem}
-.slogan{margin:0;font-size:0.85rem;opacity:.95}
-.main-nav{display:flex;gap:12px}
-.main-nav a{color:#fff;text-decoration:none;padding:8px 10px;border-radius:6px;font-weight:600}
-.main-nav a:hover{background:rgba(255,255,255,0.06)}
-.actions select{padding:6px;border-radius:6px;border:none}
-.hero{padding:48px 0;background:linear-gradient(180deg,rgba(0,0,0,0.03),transparent)}
-.hero-grid{display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap}
-.hero-left{flex:1;min-width:260px}
-.hero-right{flex:1;min-width:260px;display:flex;flex-direction:column;gap:12px}
-.hero h2{font-size:2rem;color:var(--scq-blue);margin:0 0 12px}
-.cta .btn{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:700}
-.btn.primary{background:var(--scq-blue);color:#fff;padding:10px 12px;border-radius:8px}
-.btn.outline{background:transparent;border:2px solid var(--scq-blue);color:var(--scq-blue);padding:8px 12px;border-radius:8px}
-.cards .card{background:var(--card);padding:18px;border-radius:10px;border-left:6px solid var(--scq-blue);box-shadow:0 6px 22px rgba(8,15,30,0.04);margin-bottom:12px}
-.site-main{padding:30px 0}
-.section{background:var(--card);padding:20px;border-radius:10px;margin-bottom:18px;box-shadow:0 6px 20px rgba(4,12,30,0.04)}
-.section h2{color:var(--scq-blue);margin-top:0}
-.content-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
-.link-more{display:inline-block;margin-top:10px;color:var(--scq-blue);text-decoration:none;font-weight:700}
-.positions{list-style:none;padding:0;margin:10px 0}
-.positions li{background:#fbfdff;padding:12px;border-radius:8px;margin-bottom:8px;border-left:4px solid var(--scq-blue)}
-.forms-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
-.form-card{background:#fff;padding:14px;border-radius:10px;border:1px solid #f0f4fb}
-.form-card label{display:block;margin-top:8px;font-weight:600}
-.form-card input,.form-card textarea,.form-card select{width:100%;padding:8px;margin-top:6px;border-radius:8px;border:1px solid #e6eef9}
-.form-status{margin-top:8px;color:var(--muted)}
-.site-footer{background:var(--scq-blue);color:#fff;padding:18px 0;margin-top:18px}
-.footer-links{margin-top:8px;display:flex;gap:12px;flex-wrap:wrap}
-.footer-links a{color:rgba(255,255,255,0.9);text-decoration:none}
-.data-table{width:100%;border-collapse:collapse;margin:10px 0}
-.data-table th,.data-table td{border:1px solid #e6eef9;padding:8px;text-align:left}
-.big-number{font-size:2.4rem;color:var(--scq-blue);font-weight:700}
-.muted{color:var(--muted);font-size:0.95rem}
-@media (max-width:860px){.hero-grid{flex-direction:column}.main-nav{display:none}}
+
+a {
+  text-decoration: none;
+  color: #004aad;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.site-header, .site-footer {
+  background-color: #004aad; /* Couleur principale SCQ */
+  color: #ffffff;
+}
+
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+
+.logo {
+  max-height: 60px;
+}
+
+.brand-titles h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.brand-titles p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #dcdcdc;
+}
+
+.main-nav {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.main-nav a.active {
+  background-color: #ffcc00; /* Couleur accent SCQ */
+  color: #000;
+}
+
+.actions select {
+  padding: 5px;
+  border-radius: 4px;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.site-main {
+  padding: 40px 0;
+}
+
+.section h2 {
+  color: #004aad;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.section p, .section ul, .section li {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.forms-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1 1 300px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.form-card label {
+  display: block;
+  margin-top: 10px;
+}
+
+.form-card input, .form-card textarea, .form-card select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn.primary {
+  background-color: #004aad;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background-color: #003380;
+}
+
+.btn.outline {
+  background-color: transparent;
+  border: 2px solid #004aad;
+  color: #004aad;
+}
+
+.btn.outline:hover {
+  background-color: #004aad;
+  color: #fff;
+}
+
+.site-footer {
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.site-footer a {
+  color: #ffcc00;
+}
+
+.big-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.muted {
+  color: #888;
+}
