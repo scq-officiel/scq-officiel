@@ -1,70 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>SCQ — Réformes</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="js/script.js" defer></script>
+<meta charset="UTF-8">
+<title>SCQ - Réformes</title>
+<style>
+  body { font-family: Arial, sans-serif; line-height:1.6; color:#222; margin:0; padding:0; background-color:#f7f9fc; scroll-behavior:smooth; }
+  h1, h2 { color:#0047ab; }
+  h1 { font-size:36px; margin-bottom:10px; text-align:center; padding-top:20px; }
+  h2 { font-size:28px; margin-top:30px; margin-bottom:15px; }
+  section { padding:40px 20px; max-width:900px; margin:0 auto; }
+  ul { margin-left:20px; }
+  p { font-size:18px; line-height:1.7; }
+  nav { background-color:#0047ab; padding:12px 20px; position:sticky; top:0; z-index:100; display:flex; flex-wrap:wrap; }
+  nav a { color:white; text-decoration:none; margin-right:20px; font-weight:bold; padding:5px 0; }
+  nav a:hover { text-decoration:underline; }
+  .nav-link { color:white; text-decoration:none; font-weight:bold; margin-right:15px; }
+  .nav-link:hover { text-decoration:underline; }
+</style>
 </head>
 <body>
 
-<header class="site-header">
-  <div class="wrap header-inner">
-    <img src="images/logo_scq.jpg" alt="Logo SCQ" class="logo">
-    <div class="brand-titles">
-      <h1 data-i18n="site_title">Souveraineté & Citoyenneté du Québec</h1>
-      <p class="slogan" data-i18n="site_tagline">Un parti 100% citoyen — Pour que le Québec appartienne au peuple.</p>
-    </div>
-    <nav class="main-nav">
-      <a href="index.html" data-i18n="nav_accueil">Accueil</a>
-      <a href="constitution.html" data-i18n="nav_constitution">Constitution</a>
-      <a href="reformes.html" class="active" data-i18n="nav_reformes">Réformes</a>
-      <a href="postes.html" data-i18n="nav_postes">Postes</a>
-      <a href="implication_scq.html" data-i18n="nav_implication">Implication</a>
-      <a href="differences.html" data-i18n="nav_differences">Différences</a>
-      <a href="plateforme.html" data-i18n="nav_plateforme">Plateforme</a>
-      <a href="vision.html" data-i18n="nav_vision">Vision</a>
-      <a href="histoire.html" data-i18n="nav_histoire">Histoire</a>
-      <a href="don.html" data-i18n="nav_don">Contribuer</a>
-      <a href="contact.html" data-i18n="nav_contact">Contact</a>
-    </nav>
-    <div class="actions">
-      <select id="langSwitcher">
-        <option value="fr">FR</option>
-        <option value="en">EN</option>
-      </select>
-    </div>
-  </div>
-</header>
+<nav>
+  <a class="nav-link" href="index.html">Accueil</a>
+  <a class="nav-link" href="mission.html">Mission</a>
+  <a class="nav-link" href="constitution.html">Constitution</a>
+  <a class="nav-link" href="reformes.html">Réformes</a>
+  <a class="nav-link" href="comparatif.html">Comparatif</a>
+  <a class="nav-link" href="contact.html">Contact</a>
+</nav>
 
-<main class="wrap site-main">
-  <section class="section">
-    <h2 data-i18n="reformes_titre">Sommaire des Réformes</h2>
-    <p data-i18n="reformes_intro">
-      Accédez à chaque chapitre des réformes proposées par le SCQ.
-    </p>
-<ul>
-  <li><a href="reformes/reformes_chapitre1.html" data-i18n="reformes_chapitre1">Chapitre 1 – Réformes institutionnelles</a></li>
-  <li><a href="reformes/reformes_chapitre2.html" data-i18n="reformes_chapitre2">Chapitre 2 – Droits et devoirs des citoyens</a></li>
-  <li><a href="reformes/reformes_chapitre3.html" data-i18n="reformes_chapitre3">Chapitre 3 – Gouvernance et transparence</a></li>
-  <li><a href="reformes/reformes_chapitre4.html" data-i18n="reformes_chapitre4">Chapitre 4 – Économie et finances publiques</a></li>
-  <li><a href="reformes/reformes_chapitre5.html" data-i18n="reformes_chapitre5">Chapitre 5 – Éducation et culture</a></li>
-  <li><a href="reformes/reformes_chapitre6.html" data-i18n="reformes_chapitre6">Chapitre 6 – Santé et bien-être</a></li>
-  <li><a href="reformes/reformes_chapitre7.html" data-i18n="reformes_chapitre7">Chapitre 7 – Sécurité et justice</a></li>
-  <li><a href="reformes/reformes_chapitre8.html" data-i18n="reformes_chapitre8">Chapitre 8 – Relations internationales</a></li>
-  <li><a href="reformes/reformes_chapitre9.html" data-i18n="reformes_chapitre9">Chapitre 9 – Environnement et développement durable</a></li>
-  <li><a href="reformes/reformes_chapitre10.html" data-i18n="reformes_chapitre10">Chapitre 10 – Dispositions finales</a></li>
-  <!-- Ajouter d’autres chapitres si nécessaire -->
-</ul>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="wrap">
-    <small>© <span id="year"></span> Souveraineté et Citoyenneté du Québec (SCQ)</small>
-  </div>
-</footer>
+<section id="reformes">
+  <h1>Réformes proposées par le SCQ</h1>
+  <ul>
+    <li>Audit obligatoire de tous les organismes publics et privés financés par l’État.</li>
+    <li>Transparence totale des contrats publics et appels d’offres.</li>
+    <li>Reddition de comptes citoyenne : consultations, rapports publics et suivi régulier.</li>
+    <li>Sanctions sévères contre tout manquement ou tentative de corruption.</li>
+    <li>Indépendance totale des institutions de contrôle.</li>
+    <li>Réforme du financement politique : interdiction de dons corporatifs ou anonymes.</li>
+    <li>Réforme des marchés publics : concours publics, audits, publication complète.</li>
+    <li>Réforme de la fonction publique : rotations de postes à risque, contrôles anti-conflits d’intérêts.</li>
+  </ul>
+</section>
 
 </body>
 </html>
