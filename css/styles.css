@@ -1,22 +1,23 @@
-/* styles.css - SCQ */
+/* styles.css - SCQ professionnel */
 body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f0f2f5;
+  background-color: #f5f6f7;
   color: #1b1b1b;
 }
 
 a {
   text-decoration: none;
   color: #004aad;
+  transition: all 0.3s ease;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #ffcc00;
 }
 
 .site-header, .site-footer {
-  background-color: #004aad; /* Couleur principale SCQ */
+  background-color: #004aad;
   color: #ffffff;
 }
 
@@ -28,10 +29,10 @@ a:hover {
 
 .header-inner {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
   flex-wrap: wrap;
-  padding: 10px 0;
 }
 
 .logo {
@@ -40,7 +41,8 @@ a:hover {
 
 .brand-titles h1 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
 .brand-titles p {
@@ -56,29 +58,87 @@ a:hover {
 }
 
 .main-nav a {
-  padding: 5px 10px;
+  padding: 8px 12px;
   border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
+.main-nav a:hover,
 .main-nav a.active {
-  background-color: #ffcc00; /* Couleur accent SCQ */
+  background-color: #ffcc00;
   color: #000;
 }
 
 .actions select {
-  padding: 5px;
+  padding: 5px 8px;
   border-radius: 4px;
   border: none;
   font-size: 0.9rem;
 }
 
 .site-main {
-  padding: 40px 0;
+  padding: 50px 0;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.hero-left {
+  flex: 1 1 500px;
+}
+
+.hero-left h2 {
+  font-size: 2rem;
+  color: #004aad;
+  margin-bottom: 20px;
+}
+
+.hero-left p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.cta .btn {
+  margin-right: 10px;
+}
+
+.hero-right {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #004aad;
+}
+
+.card p {
+  margin-bottom: 10px;
 }
 
 .section h2 {
-  color: #004aad;
   font-size: 1.8rem;
+  color: #004aad;
   margin-bottom: 20px;
 }
 
@@ -100,20 +160,21 @@ ul {
 
 .form-card {
   background-color: #ffffff;
-  padding: 20px;
+  padding: 25px;
   border-radius: 8px;
   flex: 1 1 300px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
 .form-card label {
   display: block;
   margin-top: 10px;
+  font-weight: 600;
 }
 
 .form-card input, .form-card textarea, .form-card select {
   width: 100%;
-  padding: 8px;
+  padding: 10px;
   margin-top: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -122,11 +183,12 @@ ul {
 .btn {
   display: inline-block;
   margin-top: 15px;
-  padding: 10px 15px;
-  border-radius: 5px;
+  padding: 12px 18px;
+  border-radius: 6px;
   border: none;
   cursor: pointer;
   font-weight: bold;
+  transition: all 0.3s ease;
 }
 
 .btn.primary {
@@ -150,13 +212,14 @@ ul {
 }
 
 .site-footer {
-  padding: 20px 0;
+  padding: 25px 0;
   text-align: center;
   font-size: 0.9rem;
 }
 
 .site-footer a {
   color: #ffcc00;
+  margin-left: 10px;
 }
 
 .big-number {
