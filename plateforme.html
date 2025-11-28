@@ -1,31 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Plateforme électorale - SCQ</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Plateforme électorale — SCQ</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap header-inner">
-    <img src="logo_scq.jpg" alt="Logo SCQ" class="logo">
+    <img src="images/logo_scq.jpg" alt="Logo SCQ" class="logo">
     <div class="brand-titles">
-      <h1 data-i18n="site_title">Souveraineté & Citoyenneté du Québec</h1>
+      <h1>Souveraineté & Citoyenneté du Québec</h1>
+      <p class="slogan">Un parti 100% citoyen — Pour que le Québec appartienne au peuple.</p>
     </div>
-    <nav class="main-nav">
-      <a href="index.html" data-i18n="nav_home">Accueil</a>
-      <a href="constitution.html" data-i18n="nav_constitution">Constitution</a>
-      <a href="reformes.html" data-i18n="nav_reformes">Réformes</a>
-      <a href="postes.html" data-i18n="nav_postes">Postes</a>
-      <a href="implication_scq.html" data-i18n="nav_implication">Implication & Reconnaissance</a>
-      <a href="differences.html" data-i18n="nav_differences">Différences avec autres partis</a>
-      <a href="plateforme.html" class="active" data-i18n="nav_plateforme">Plateforme électorale</a>
-      <a href="vision.html" data-i18n="nav_vision">Vision du parti</a>
-      <a href="histoire.html" data-i18n="nav_histoire">Histoire du parti</a>
-      <a href="contact.html" data-i18n="nav_contact">Contact</a>
-      <a href="don.html" data-i18n="nav_don">Contribuer</a>
+    <nav class="main-nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="constitution.html">Constitution</a>
+      <a href="reformes.html">Réformes</a>
+      <a href="postes.html">Postes</a>
+      <a href="implication_scq.html">Implication</a>
+      <a href="differences.html">Différences</a>
+      <a href="plateforme.html" class="active">Plateforme</a>
+      <a href="vision.html">Vision</a>
+      <a href="histoire.html">Histoire</a>
+      <a href="don.html">Contribuer</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <div class="actions">
       <select id="langSwitcher">
@@ -37,16 +39,19 @@
 </header>
 
 <main class="wrap site-main">
-<section class="section">
-  <h2 data-i18n="platform_title">Plateforme électorale</h2>
-  <ul>
-    <li>Promotion de la souveraineté du Québec et gestion autonome des affaires du peuple.</li>
-    <li>Transparence totale des décisions politiques et des finances publiques.</li>
-    <li>Priorité aux services citoyens et à la protection des droits fondamentaux.</li>
-    <li>Anti-corruption et anti-partisannerie : toutes les actions sont sous contrôle citoyen.</li>
-    <li>Participation active des citoyens à chaque étape des décisions gouvernementales.</li>
-  </ul>
-</section>
+  <section class="section">
+    <h2>Plateforme électorale</h2>
+    <p>Le SCQ propose une plateforme claire et axée sur :</p>
+    <ul>
+      <li>La souveraineté du Québec et la gestion autonome de ses affaires.</li>
+      <li>La transparence et la responsabilité de tous les élus envers les citoyens.</li>
+      <li>L’engagement citoyen à tous les niveaux de décision.</li>
+      <li>Le renforcement des services publics essentiels et l’équité sociale.</li>
+      <li>La protection des générations futures et de l’environnement.</li>
+      <li>La modernisation des institutions pour qu’elles servent uniquement le peuple.</li>
+    </ul>
+    <p>Que le SCQ soit majoritaire ou en opposition, nous respectons ces valeurs et nous assurons que chaque décision sert directement les citoyens.</p>
+  </section>
 </main>
 
 <footer class="site-footer">
@@ -54,37 +59,6 @@
     <small>© <span id="year"></span> Souveraineté et Citoyenneté du Québec (SCQ)</small>
   </div>
 </footer>
-
-<script>
-document.getElementById('year').textContent = new Date().getFullYear();
-const translations = {
-  en: {
-    site_title: "Sovereignty & Citizenship of Quebec",
-    nav_home: "Home",
-    nav_constitution: "Constitution",
-    nav_reformes: "Reforms",
-    nav_postes: "Positions",
-    nav_implication: "Involvement & Recognition",
-    nav_differences: "Differences with other parties",
-    nav_plateforme: "Electoral platform",
-    nav_vision: "Party vision",
-    nav_histoire: "Party history",
-    nav_contact: "Contact",
-    nav_don: "Contribute",
-    platform_title: "Electoral Platform"
-  }
-};
-const langSwitcher = document.getElementById('langSwitcher');
-langSwitcher.addEventListener('change', () => {
-  const lang = langSwitcher.value;
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if(translations[lang] && translations[lang][key]){
-      el.textContent = translations[lang][key];
-    }
-  });
-});
-</script>
 
 </body>
 </html>
