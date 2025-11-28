@@ -1,0 +1,33 @@
+Mission<section id="mission" style="padding:40px; background-color:#f7f9fc; font-family:Arial, sans-serif;">
+  <div style="max-width:900px; margin:0 auto; text-align:left;">
+    <h2 style="color:#0047ab; font-size:32px; margin-bottom:20px;">Notre Mission</h2>
+
+    <p style="font-size:18px; line-height:1.6; color:#222;">
+      Le <strong>Souveraineté et citoyenneté du Québec (SCQ)</strong> est un parti politique entièrement dédié aux citoyens. 
+      Notre priorité absolue est de servir le peuple avant tout, et non les intérêts privés, les multinationales ou tout autre pouvoir externe. 
+      Chaque décision, chaque réforme, chaque initiative du parti est pensée pour renforcer l’autonomie, la sécurité et le bien-être des Québécois.
+    </p>
+
+    <h3 style="color:#0047ab; font-size:24px; margin-top:30px;">Nos engagements principaux</h3>
+    <ul style="font-size:18px; line-height:1.8; color:#222;">
+      <li><strong>Intégrité et anti-corruption :</strong> Toutes les actions du SCQ respectent la transparence totale. Nous refusons les lobbys et tout conflit d’intérêts.</li>
+      <li><strong>Participation citoyenne :</strong> Les citoyens sont impliqués dans toutes les décisions majeures via consultations, assemblées locales et outils numériques.</li>
+      <li><strong>Démocratie réelle :</strong> Nous mettons en place des mécanismes de contrôle direct et d’audit indépendant pour garantir que les élus servent réellement le peuple.</li>
+      <li><strong>Éducation politique pour tous :</strong> Nous expliquons les enjeux politiques simplement, via des guides, capsules vidéos, ateliers et accompagnement personnalisé, afin que chaque citoyen comprenne et participe.</li>
+      <li><strong>Souveraineté et protection du Québec :</strong> Nous défendons l’indépendance démocratique et culturelle de notre nation, en mettant le Québec au centre de toutes nos décisions.</li>
+      <li><strong>Justice sociale et économie locale :</strong> Nous soutenons les services publics forts, l’économie locale, les PME et l’équité sociale, pour un développement durable et citoyen.</li>
+      <li><strong>Transparence et reddition de comptes :</strong> Tous les budgets, contrats et décisions sont accessibles aux citoyens et soumis à des audits réguliers.</li>
+      <li><strong>Mission de proximité :</strong> Les élus et membres du SCQ sont au service du peuple, pas d’intérêts privés ou corporatifs. Chaque action est vérifiable et orientée vers le bien commun.</li>
+    </ul>
+
+    <h3 style="color:#0047ab; font-size:24px; margin-top:30px;">Pourquoi nous choisir ?</h3>
+    <p style="font-size:18px; line-height:1.6; color:#222;">
+      Le SCQ n’est pas un parti comme les autres. Nous sommes un mouvement citoyen, structuré autour de l’intégrité, de l’éducation, de la participation réelle et de la souveraineté. 
+      Nous refusons les compromis qui privilégient l’élite ou les intérêts privés. Nous construisons un Québec libre, informé et autonome, où chaque citoyen a sa voix et son rôle à jouer.
+    </p>
+
+    <p style="font-size:18px; line-height:1.6; color:#222; margin-top:20px;">
+      <strong>Au SCQ, le peuple d’abord.</strong>
+    </p>
+  </div>
+</section>
