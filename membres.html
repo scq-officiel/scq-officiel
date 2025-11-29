@@ -5,29 +5,20 @@
 <title>SCQ - Membres</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-body { font-family: Arial, sans-serif; line-height:1.6; color:#222; margin:0; padding:0; background-color:#f7f9fc; }
-h1 { color:#0047ab; font-size:36px; text-align:center; margin-top:40px; }
-h2 { color:#0047ab; font-size:28px; margin-top:30px; text-align:center; }
-p { max-width:900px; margin:15px auto; font-size:18px; line-height:1.7; padding:0 15px; text-align:left; }
-.content-box { max-width:950px; margin:30px auto; background:#fff; padding:25px; border-radius:10px; box-shadow:0 0 12px rgba(0,0,0,0.1); }
-nav { background-color:#0047ab; padding:12px 20px; position:sticky; top:0; z-index:100; display:flex; flex-wrap:wrap; }
+body { font-family: Arial, sans-serif; margin:0; padding:0; background-color:#f7f9fc; color:#222; line-height:1.6; }
+h1 { text-align:center; color:#0047ab; font-size:36px; margin-top:40px; }
+nav { background-color:#0047ab; padding:12px 20px; position:sticky; top:0; display:flex; flex-wrap:wrap; }
 nav a { color:white; text-decoration:none; margin-right:15px; font-weight:bold; padding:5px 0; }
 nav a:hover { text-decoration:underline; }
-.counter-box { text-align:center; background:#e0f0ff; padding:20px; border-radius:8px; margin-top:20px; box-shadow:0 0 8px rgba(0,0,0,0.1); }
-.counter-number { font-size:48px; color:#0047ab; font-weight:bold; margin-bottom:5px; }
-.counter-date { font-size:14px; color:#555; }
-@media(max-width:640px){
-  h1 { font-size:28px; }
-  h2 { font-size:22px; }
-  nav { flex-direction:column; }
-  nav a { margin-bottom:10px; }
-  p { font-size:16px; }
-}
+.banner { text-align:center; margin-top:20px; }
+.banner img { max-width:100%; height:auto; }
+.content { max-width:900px; margin:30px auto; background:#fff; padding:25px; border-radius:10px; box-shadow:0 0 12px rgba(0,0,0,0.1); }
+.counter { text-align:center; font-size:28px; margin:15px 0; color:#0047ab; font-weight:bold; }
+.updated { text-align:center; font-size:14px; color:#666; margin-bottom:20px; }
+@media(max-width:640px){ h1{font-size:28px;} nav{flex-direction:column;} nav a{margin-bottom:10px;} }
 </style>
 </head>
 <body>
-
-<!-- Menu de navigation -->
 <nav>
   <a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ" style="height:40px; vertical-align:middle; margin-right:10px;"></a>
   <a href="index.html">Accueil</a>
@@ -36,55 +27,33 @@ nav a:hover { text-decoration:underline; }
   <a href="reformes.html">Réformes</a>
   <a href="comparatif.html">Comparatif</a>
   <a href="membres.html">Membres</a>
+  <a href="equipe.html">Équipe</a>
+  <a href="comptabilite.html">Comptabilité</a>
   <a href="contact.html">Contact</a>
 </nav>
 
-<!-- Bannière -->
-<div style="text-align:center; margin-top:20px;">
-  <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ" style="max-width:100%; height:auto;">
+<div class="banner">
+  <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
 </div>
 
-<h1>Merci à nos membres</h1>
+<h1>Nos Membres</h1>
 
-<!-- Compteur de membres -->
-<div class="counter-box">
-  <div class="counter-number" id="memberCount">14</div>
-  <div class="counter-date" id="updateDate">Mise à jour : 28 novembre 2025</div>
+<div class="counter">
+Membres totaux : <span id="memberCount">120</span>
+</div>
+<div class="updated">
+Dernière mise à jour du compteur : <span id="updatedDate">28 novembre 2025</span>
 </div>
 
-<!-- Message officiel aux membres -->
-<div class="content-box">
-  <p>
-    Cher(ère) membre,
-  </p>
-  <p>
-    Au nom du parti Souveraineté et Citoyenneté du Québec (SCQ), je tiens à vous exprimer ma profonde reconnaissance pour votre engagement et la confiance que vous accordez à notre mouvement. Votre adhésion représente bien plus qu’un geste d’appui : elle témoigne d’une volonté claire de contribuer au renouveau démocratique et à la construction d’un Québec plus fort, plus juste et véritablement gouverné par ses citoyens.
-  </p>
-  <p>
-    Aujourd’hui, chaque personne qui se joint à nous renforce l’énergie collective nécessaire pour bâtir un avenir où le Québec assume pleinement son pouvoir décisionnel, où nos institutions servent réellement la population, et où la souveraineté et la citoyenneté sont les fondements d’un projet national moderne.
-  </p>
-  <p>
-    Je vous invite chaleureusement à visiter régulièrement notre site officiel afin de demeurer informé(e) des annonces, des actions et des prochaines étapes du SCQ. Vous y trouverez des informations cruciales pour mieux comprendre notre vision, nos priorités et les initiatives mises en place pour transformer durablement notre société.
-  </p>
-  <p>
-    Votre engagement est précieux, et votre présence parmi nous fait une réelle différence. Ensemble, nous façonnons un mouvement fondé sur la transparence, la participation citoyenne et la volonté concrète de bâtir un Québec souverain et responsable.
-  </p>
-  <p>
-    Avec toute ma gratitude,<br><br>
-    Le fondateur et porte-parole<br>
-    Parti Souveraineté et Citoyenneté du Québec (SCQ)
-  </p>
+<div class="content">
+<p>Cher(ère) membre,</p>
+<p>Au nom du parti Souveraineté et Citoyenneté du Québec (SCQ), je tiens à vous exprimer ma profonde reconnaissance pour votre engagement et la confiance que vous accordez à notre mouvement. Votre adhésion représente bien plus qu’un geste d’appui : elle témoigne d’une volonté claire de contribuer au renouveau démocratique et à la construction d’un Québec plus fort, plus juste et véritablement gouverné par ses citoyens.</p>
+<p>Aujourd’hui, chaque personne qui se joint à nous renforce l’énergie collective nécessaire pour bâtir un avenir où le Québec assume pleinement son pouvoir décisionnel, où nos institutions servent réellement la population, et où la souveraineté et la citoyenneté sont les fondements d’un projet national moderne.</p>
+<p>Je vous invite chaleureusement à visiter régulièrement notre site officiel afin de demeurer informé(e) des annonces, des actions et des prochaines étapes du SCQ. Vous y trouverez des informations cruciales pour mieux comprendre notre vision, nos priorités et les initiatives mises en place pour transformer durablement notre société.</p>
+<p>Votre engagement est précieux, et votre présence parmi nous fait une réelle différence. Ensemble, nous façonnons un mouvement fondé sur la transparence, la participation citoyenne et la volonté concrète de bâtir un Québec souverain et responsable.</p>
+<p>Avec toute ma gratitude,</p>
+<p>Le fondateur et porte-parole<br>Parti Souveraineté et Citoyenneté du Québec (SCQ)</p>
 </div>
-
-<!-- Script pour modifier facilement le compteur -->
-<script>
-  // Facilement modifiable
-  const memberCount = 14; // Nombre de membres
-  const lastUpdate = "28 novembre 2025"; // Date de mise à jour
-
-  document.getElementById('memberCount').innerText = memberCount;
-  document.getElementById('updateDate').innerText = "Mise à jour : " + lastUpdate;
-</script>
 
 </body>
 </html>
