@@ -5,18 +5,20 @@
 <title>SCQ - Accueil</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-body { font-family: Arial, sans-serif; margin:0; padding:0; background-color:#f7f9fc; color:#222; line-height:1.6; }
+body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f7f9fc; color:#222; line-height:1.6; }
 h1 { text-align:center; color:#0047ab; font-size:36px; margin-top:40px; }
-nav { background-color:#0047ab; padding:12px 20px; position:sticky; top:0; z-index:100; display:flex; flex-wrap:wrap; }
+nav { background-color:#0047ab; padding:12px 20px; position:sticky; top:0; display:flex; flex-wrap:wrap; }
 nav a { color:white; text-decoration:none; margin-right:15px; font-weight:bold; padding:5px 0; }
 nav a:hover { text-decoration:underline; }
 .banner { text-align:center; margin-top:20px; }
 .banner img { max-width:100%; height:auto; }
-.content { max-width:900px; margin:30px auto; background:#fff; padding:25px; border-radius:10px; box-shadow:0 0 12px rgba(0,0,0,0.1); text-align:center; }
+.counter { text-align:center; font-size:24px; font-weight:bold; color:#0047ab; margin:15px 0; }
+.content { max-width:900px; margin:30px auto; background:#fff; padding:25px; border-radius:10px; box-shadow:0 0 12px rgba(0,0,0,0.1); }
 @media(max-width:640px){ h1{font-size:28px;} nav{flex-direction:column;} nav a{margin-bottom:10px;} }
 </style>
 </head>
 <body>
+
 <nav>
   <a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ" style="height:40px; vertical-align:middle; margin-right:10px;"></a>
   <a href="index.html">Accueil</a>
@@ -34,11 +36,38 @@ nav a:hover { text-decoration:underline; }
   <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
 </div>
 
-<h1>Bienvenue au SCQ</h1>
+<div class="counter">
+<h3>Nombre total de visites sur le site :</h3>
+<p id="visitor-count">0</p>
+<small id="visitor-last-update"></small>
+</div>
 
 <div class="content">
-<p>Le Souveraineté et Citoyenneté du Québec (SCQ) est un mouvement politique fondé par le peuple et pour le peuple, visant à bâtir un Québec souverain, transparent et juste.</p>
-<p>Découvrez nos missions, nos réformes et rejoignez notre équipe pour participer activement à la transformation de notre société.</p>
+<h1>Bienvenue sur le site officiel du SCQ</h1>
+<p>Le parti Souveraineté et Citoyenneté du Québec (SCQ) œuvre pour un Québec souverain, transparent et gouverné par ses citoyens. Explorez notre site pour découvrir notre mission, nos membres et nos initiatives.</p>
 </div>
+
+<script>
+// --- Compteur de visiteurs avec LocalStorage ---
+function updateVisitorCounter() {
+    let totalVisits = localStorage.getItem("scq_total_visits") || 0;
+    let hasVisited = localStorage.getItem("scq_visited");
+
+    if (!hasVisited) {
+        totalVisits++;
+        localStorage.setItem("scq_total_visits", totalVisits);
+        localStorage.setItem("scq_visited", "yes");
+        localStorage.setItem("scq_last_update", new Date().toLocaleString());
+    }
+
+    document.getElementById("visitor-count").textContent = totalVisits;
+    const lastUpdate = localStorage.getItem("scq_last_update");
+    if(lastUpdate){
+        document.getElementById("visitor-last-update").textContent = "Dernière mise à jour : " + lastUpdate;
+    }
+}
+updateVisitorCounter();
+</script>
+
 </body>
 </html>
