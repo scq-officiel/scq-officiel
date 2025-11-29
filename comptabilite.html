@@ -6,21 +6,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f7f9fc; color:#222; line-height:1.6; }
-h1 { text-align:center; color:#0047ab; font-size:36px; margin-top:40px; }
-section { max-width:900px; margin:30px auto; background:#fff; padding:25px; border-radius:10px; box-shadow:0 0 12px rgba(0,0,0,0.1); }
+h1,h2,h3 { text-align:center; color:#0047ab; }
 nav { background-color:#0047ab; padding:12px 20px; position:sticky; top:0; display:flex; flex-wrap:wrap; }
 nav a { color:white; text-decoration:none; margin-right:15px; font-weight:bold; padding:5px 0; }
 nav a:hover { text-decoration:underline; }
 .banner { text-align:center; margin-top:20px; }
 .banner img { max-width:100%; height:auto; }
-table { width:100%; border-collapse:collapse; margin-top:15px; }
+.section { max-width:900px; margin:30px auto; background:#fff; padding:25px; border-radius:10px; box-shadow:0 0 12px rgba(0,0,0,0.1); }
+.table-container { overflow-x:auto; margin-top:15px; }
+table { width:100%; border-collapse:collapse; }
 th, td { border:1px solid #ccc; padding:8px; text-align:left; }
 th { background:#0047ab; color:white; }
-.archive { margin-top:20px; }
-@media(max-width:640px){ h1{font-size:28px;} nav{flex-direction:column;} nav a{margin-bottom:10px;} table, th, td{font-size:14px;} }
+.total { font-weight:bold; color:#0047ab; font-size:18px; text-align:right; margin-top:10px; }
+.archive { margin-top:40px; }
+ul { margin-left:20px; }
+@media(max-width:640px){
+    nav{flex-direction:column;} 
+    nav a{margin-bottom:10px;} 
+    table, th, td{font-size:14px;}
+}
 </style>
 </head>
 <body>
+
 <nav>
   <a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ" style="height:40px; vertical-align:middle; margin-right:10px;"></a>
   <a href="index.html">Accueil</a>
@@ -38,24 +46,54 @@ th { background:#0047ab; color:white; }
   <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
 </div>
 
+<div class="section">
 <h1>Comptabilité et Transparence</h1>
 
-<section>
 <h2>Dons et Dépenses 2025</h2>
-<table>
-<tr><th>Date</th><th>Description</th><th>Montant</th><th>Type</th></tr>
-<tr><td>2025/11/21</td><td>Don citoyen</td><td>$0</td><td>Entrée</td></tr>
-<tr><td>2025/11/21</td><td>Dépenses </td><td>$0</td><td>Sortie</td></tr>
-<!-- Ajouter plus de lignes pour chaque transaction -->
+<div class="table-container">
+<table id="finance-table">
+<thead>
+<tr>
+<th>Date</th>
+<th>Description</th>
+<th>Type</th>
+<th>Montant (CAD)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>2025/11/21</td><td>Don citoyen</td><td>Don</td><td>0</td></tr>
+<tr><td>2025/11/21</td><td>Dépense divers</td><td>Dépense</td><td>0</td></tr>
+<!-- Ajouter plus de lignes ici pour chaque transaction -->
+</tbody>
 </table>
+</div>
+
+<div class="total" id="total-balance">Total actuel : 0 CAD</div>
 
 <div class="archive">
 <h3>Archives</h3>
 <p>Vous pouvez consulter les transactions des années précédentes :</p>
 <ul>
-<li><a href="#">Pas d’année précédente pour le moment. </a></li>
+<li><a href="#">Pas d’année précédente pour le moment.</a></li>
 </ul>
 </div>
-</section>
+</div>
+
+<script>
+// Calcul automatique du total actuel (dons - dépenses)
+function calculateTotal() {
+    const rows = document.querySelectorAll("#finance-table tbody tr");
+    let total = 0;
+    rows.forEach(row => {
+        const type = row.children[2].textContent.trim();
+        const amount = parseFloat(row.children[3].textContent.trim()) || 0;
+        if(type === "Don") total += amount;
+        else if(type === "Dépense") total -= amount;
+    });
+    document.getElementById("total-balance").textContent = "Total actuel : " + total + " CAD";
+}
+calculateTotal();
+</script>
+
 </body>
 </html>
