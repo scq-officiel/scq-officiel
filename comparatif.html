@@ -5,40 +5,39 @@
 <title>SCQ - Comparatif</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-body { font-family: Arial, sans-serif; line-height:1.6; color:#222; margin:0; padding:0; background-color:#f7f9fc; }
-h1 { color:#0047ab; font-size:36px; text-align:center; margin-top:40px; }
-p { max-width:800px; margin:15px auto; font-size:18px; line-height:1.7; padding:0 15px; }
-.content-box { max-width:900px; margin:30px auto; background:#fff; padding:25px; border-radius:10px; box-shadow:0 0 12px rgba(0,0,0,0.1); }
-nav { background-color:#0047ab; padding:12px 20px; position:sticky; top:0; z-index:100; display:flex; flex-wrap:wrap; }
+body { font-family: Arial, sans-serif; margin:0; padding:0; background-color:#f7f9fc; color:#222; line-height:1.6; }
+h1 { text-align:center; color:#0047ab; font-size:36px; margin-top:40px; }
+.content { max-width:900px; margin:30px auto; background:#fff; padding:25px; border-radius:10px; box-shadow:0 0 12px rgba(0,0,0,0.1); }
+nav { background-color:#0047ab; padding:12px 20px; position:sticky; top:0; display:flex; flex-wrap:wrap; }
 nav a { color:white; text-decoration:none; margin-right:15px; font-weight:bold; padding:5px 0; }
 nav a:hover { text-decoration:underline; }
-@media(max-width:640px){
-  h1 { font-size:28px; }
-  nav { flex-direction:column; }
-  nav a { margin-bottom:10px; }
-}
+.banner { text-align:center; margin-top:20px; }
+.banner img { max-width:100%; height:auto; }
+@media(max-width:640px){ h1{font-size:28px;} nav{flex-direction:column;} nav a{margin-bottom:10px;} }
 </style>
 </head>
 <body>
-
 <nav>
+  <a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ" style="height:40px; vertical-align:middle; margin-right:10px;"></a>
   <a href="index.html">Accueil</a>
   <a href="mission.html">Mission</a>
   <a href="constitution.html">Constitution</a>
   <a href="reformes.html">Réformes</a>
   <a href="comparatif.html">Comparatif</a>
   <a href="membres.html">Membres</a>
+  <a href="equipe.html">Équipe</a>
+  <a href="comptabilite.html">Comptabilité</a>
   <a href="contact.html">Contact</a>
 </nav>
 
-<div style="text-align:center; margin-top:20px;">
-  <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ" style="max-width:100%; height:auto;">
+<div class="banner">
+  <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
 </div>
 
-<h1>Comparatif</h1>
-<div class="content-box">
-  <p>Cette page est actuellement en construction…</p>
-</div>
+<h1>Comparatif des initiatives</h1>
 
+<div class="content">
+<p>Cette page est actuellement en construction…</p>
+</div>
 </body>
 </html>
