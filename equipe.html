@@ -6,20 +6,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f7f9fc; color:#222; line-height:1.6; }
-h1 { text-align:center; color:#0047ab; font-size:36px; margin-top:40px; }
-section { max-width:900px; margin:30px auto; background:#fff; padding:25px; border-radius:10px; box-shadow:0 0 12px rgba(0,0,0,0.1); }
+h1,h2 { color:#0047ab; text-align:center; }
 nav { background-color:#0047ab; padding:12px 20px; position:sticky; top:0; display:flex; flex-wrap:wrap; }
 nav a { color:white; text-decoration:none; margin-right:15px; font-weight:bold; padding:5px 0; }
 nav a:hover { text-decoration:underline; }
 .banner { text-align:center; margin-top:20px; }
 .banner img { max-width:100%; height:auto; }
+.section { max-width:900px; margin:30px auto; background:#fff; padding:25px; border-radius:10px; box-shadow:0 0 12px rgba(0,0,0,0.1); }
 .member-card { display:flex; align-items:center; margin-bottom:15px; }
-.member-card img { width:60px; height:60px; border-radius:50%; margin-right:15px; }
+.member-card img { width:60px; height:60px; border-radius:50%; margin-right:15px; object-fit:cover; }
 .separator { border-top:2px dashed #0047ab; margin:30px 0; }
-@media(max-width:640px){ h1{font-size:28px;} nav{flex-direction:column;} nav a{margin-bottom:10px;} .member-card{flex-direction:column;align-items:flex-start;} .member-card img{margin-bottom:10px;} }
+ul { margin-left:20px; }
+@media(max-width:640px){ 
+    nav{flex-direction:column;} 
+    nav a{margin-bottom:10px;} 
+    .member-card{flex-direction:column;align-items:flex-start;} 
+    .member-card img{margin-bottom:10px;} 
+}
 </style>
 </head>
 <body>
+
 <nav>
   <a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ" style="height:40px; vertical-align:middle; margin-right:10px;"></a>
   <a href="index.html">Accueil</a>
@@ -37,24 +44,28 @@ nav a:hover { text-decoration:underline; }
   <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
 </div>
 
+<div class="section">
 <h1>Notre Équipe</h1>
 
-<section>
 <h2>Chef du parti</h2>
 <div class="member-card">
 <img src="images/photo_vide.jpg" alt="Benoit Cantin">
-<div>
-<strong>Benoit Cantin</strong><br>Québec
-</div>
+<div><strong>Benoit Cantin</strong><br>Québec - Chef du parti</div>
 </div>
 
-<h2>ts et représentants officiels</h2>
+<h2>Dirigeants et représentants officiels</h2>
 <div class="member-card">
-<img src="images/photo_vide.jpg" alt=""><div><strong>Nom 1</strong><br>Poste : Dirigeant 1</div></div>
+<img src="images/photo_vide.jpg" alt="Dirigeant 1">
+<div><strong>Nom 1</strong><br>Poste : Dirigeant 1</div>
+</div>
 <div class="member-card">
-<img src="images/photo_vide.jpg" alt=""><div><strong>Nom 2</strong><br>Poste : Dirigeant 2</div></div>
+<img src="images/photo_vide.jpg" alt="Dirigeant 2">
+<div><strong>Nom 2</strong><br>Poste : Dirigeant 2</div>
+</div>
 <div class="member-card">
-<img src="images/photo_vide.jpg" alt=""><div><strong>Nom 3</strong><br>Poste : Représentant Officiel</div></div>
+<img src="images/photo_vide.jpg" alt="Représentant officiel">
+<div><strong>Nom 3</strong><br>Poste : Représentant Officiel</div>
+</div>
 
 <div class="separator"></div>
 
@@ -70,10 +81,15 @@ nav a:hover { text-decoration:underline; }
 
 <h2>Représentants par municipalité</h2>
 <div class="member-card">
-<img src="images/photo_vide.jpg" alt="Municipalité 1"><div><strong>Nom</strong><br>Poste :</div></div>
+<img src="images/photo_vide.jpg" alt="Municipalité 1">
+<div><strong>Nom</strong><br>Municipalité 1</div>
+</div>
 <div class="member-card">
-<img src="images/photo_vide.jpg" alt="Municipalité 2"><div><strong>Nom</strong><br>Poste :</div></div>
+<img src="images/photo_vide.jpg" alt="Municipalité 2">
+<div><strong>Nom</strong><br>Municipalité 2</div>
+</div>
 <!-- Ajouter d'autres municipalités selon besoin -->
-</section>
+
+</div>
 </body>
 </html>
