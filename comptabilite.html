@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>SCQ - Comptabilité et Transparence</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: Arial, sans-serif; margin:0; padding:0; background-color:#f7f9fc; color:#222; line-height:1.6; }
+h1, h2 { color:#0047ab; text-align:center; }
+h1 { margin-top:40px; font-size:36px; }
+h2 { margin-top:30px; font-size:28px; }
+nav { background-color:#0047ab; padding:12px 20px; position:sticky; top:0; z-index:100; display:flex; flex-wrap:wrap; }
+nav a { color:white; text-decoration:none; margin-right:15px; font-weight:bold; padding:5px 0; }
+nav a:hover { text-decoration:underline; }
+.content-box { max-width:1000px; margin:30px auto; background:#fff; padding:25px; border-radius:10px; box-shadow:0 0 12px rgba(0,0,0,0.1); }
+.table-container { overflow-x:auto; margin-top:20px; }
+table { width:100%; border-collapse:collapse; }
+th, td { border:1px solid #ccc; padding:10px; text-align:left; }
+th { background-color:#0047ab; color:white; }
+.total-box { text-align:center; background:#e0f0ff; padding:20px; border-radius:8px; margin-top:20px; box-shadow:0 0 8px rgba(0,0,0,0.1); font-size:20px; }
+@media(max-width:640px){
+  h1 { font-size:28px; }
+  h2 { font-size:22px; }
+  nav { flex-direction:column; }
+  nav a { margin-bottom:10px; }
+  th, td { font-size:14px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Menu -->
+<nav>
+  <a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ" style="height:40px; vertical-align:middle; margin-right:10px;"></a>
+  <a href="index.html">Accueil</a>
+  <a href="mission.html">Mission</a>
+  <a href="constitution.html">Constitution</a>
+  <a href="reformes.html">Réformes</a>
+  <a href="comparatif.html">Comparatif</a>
+  <a href="membres.html">Membres</a>
+  <a href="equipe.html">Équipe</a>
+  <a href="comptabilite.html">Comptabilité</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<!-- Bannière -->
+<div style="text-align:center; margin-top:20px;">
+  <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ" style="max-width:100%; height:auto;">
+</div>
+
+<h1>Comptabilité et Transparence</h1>
+
+<div class="total-box">
+  <div>Total des dons reçus : <strong id="totalDons">$0</strong></div>
+  <div>Total des dépenses : <strong id="totalDepenses">$0</strong></div>
+  <div>Solde actuel : <strong id="soldeActuel">$0</strong></div>
+</div>
+
+<h2>Transactions par année</h2>
+
+<div class="content-box">
+  <label for="anneeSelect">Choisir une année :</label>
+  <select id="anneeSelect">
+    <option value="2025">2025</option>
+    <option value="2024">2024</option>
+    <option value="2023">2023</option>
+  </select>
+
+  <div class="table-container">
+    <table id="transactionsTable">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Description</th>
+          <th>Type</th>
+          <th>Montant</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Les transactions seront ajoutées ici -->
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Script pour gérer les transactions -->
+<script>
+  // Exemple de données, tu peux ajouter autant que nécessaire
+  const transactions = {
+    "2025": [
+      {date:"01/01/2025", description:"Don citoyen A", type:"don", montant:500},
+      {date:"05/02/2025", description:"Dépense imprimés", type:"depense", montant:200},
+      {date:"10/03/2025", description:"Don citoyen B", type:"don", montant:300},
+      {date:"15/04/2025", description:"Dépense réunion", type:"depense", montant:150}
+    ],
+    "2024": [
+      {date:"12/01/2024", description:"Don citoyen C", type:"don", montant:400},
+      {date:"20/02/2024", description:"Dépense site web", type:"depense", montant:250}
+    ],
+    "2023": [
+      {date:"05/05/2023", description:"Don citoyen D", type:"don", montant:600}
+    ]
+  };
+
+  const totalDonsElem = document.getElementById('totalDons');
+  const totalDepensesElem = document.getElementById('totalDepenses');
+  const soldeActuelElem = document.getElementById('soldeActuel');
+  const anneeSelect = document.getElementById('anneeSelect');
+  const transactionsTable = document.getElementById('transactionsTable').getElementsByTagName('tbody')[0];
+
+  function updateTransactions() {
+    const annee = anneeSelect.value;
+    const t = transactions[annee] || [];
+    transactionsTable.innerHTML = '';
+
+    let totalDons = 0;
+    let totalDepenses = 0;
+
+    t.forEach(tr => {
+      const row = transactionsTable.insertRow();
+      row.insertCell(0).innerText = tr.date;
+      row.insertCell(1).innerText = tr.description;
+      row.insertCell(2).innerText = tr.type === "don" ? "Don" : "Dépense";
+      row.insertCell(3).innerText = "$" + tr.montant;
+
+      if(tr.type === "don") totalDons += tr.montant;
+      else totalDepenses += tr.montant;
+    });
+
+    const solde = totalDons - totalDepenses;
+
+    totalDonsElem.innerText = "$" + totalDons;
+    totalDepensesElem.innerText = "$" + totalDepenses;
+    soldeActuelElem.innerText = "$" + solde;
+  }
+
+  anneeSelect.addEventListener('change', updateTransactions);
+  updateTransactions(); // initialisation
+</script>
+
+</body>
+</html>
