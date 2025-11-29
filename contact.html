@@ -5,23 +5,38 @@
 <title>SCQ - Contact</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  body { font-family: Arial, sans-serif; line-height:1.6; color:#222; margin:0; padding:0; background-color:#f7f9fc; scroll-behavior:smooth; }
+  body { font-family: Arial, sans-serif; line-height:1.6; color:#222; margin:0; padding:0; background-color:#f7f9fc; }
   h1 { color:#0047ab; font-size:36px; text-align:center; margin-top:40px; }
-  form { max-width:600px; margin:30px auto; background:#fff; padding:20px; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1); }
-  label { display:block; margin-bottom:8px; font-weight:bold; }
-  input, textarea { width:100%; padding:10px; margin-bottom:15px; border:1px solid #ccc; border-radius:5px; font-size:16px; }
-  button { background:#0047ab; color:white; border:none; padding:12px 20px; border-radius:5px; font-size:16px; cursor:pointer; }
-  button:hover { background:#003080; }
+  p { max-width:700px; margin:10px auto; font-size:18px; line-height:1.7; padding:0 15px; }
+  .contact-box { 
+    max-width:600px; 
+    margin:30px auto;
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 12px rgba(0,0,0,0.1);
+  }
+  .contact-box h2 {
+    text-align:center;
+    color:#0047ab;
+  }
+  .email-item {
+    background:#eef4ff;
+    padding:15px;
+    margin:12px 0;
+    border-radius:8px;
+    font-size:18px;
+  }
+  .email-item strong {
+    color:#0047ab;
+  }
   nav { background-color:#0047ab; padding:12px 20px; position:sticky; top:0; z-index:100; display:flex; flex-wrap:wrap; }
   nav a { color:white; text-decoration:none; margin-right:15px; font-weight:bold; padding:5px 0; }
   nav a:hover { text-decoration:underline; }
-  .confirmation { text-align:center; color:green; font-weight:bold; margin-top:20px; }
   @media(max-width:640px){
-    h1{font-size:28px;}
-    form{margin:20px 10px; padding:15px;}
-    button{width:100%;}
-    nav{flex-direction:column;}
-    nav a{margin-bottom:10px;}
+    h1 { font-size:28px; }
+    nav { flex-direction:column; }
+    nav a { margin-bottom:10px; }
   }
 </style>
 </head>
@@ -40,43 +55,31 @@
 
 <h1>Contactez le SCQ</h1>
 
-<form id="contactForm">
-  <label for="name">Nom</label>
-  <input type="text" id="name" name="name" placeholder="Votre nom" required>
+<div class="contact-box">
+  <h2>Nous joindre</h2>
+  <p>
+    Pour toute question, suggestion ou demande d’information, vous pouvez communiquer directement avec le SCQ aux adresses suivantes :
+  </p>
 
-  <label for="email">Email</label>
-  <input type="email" id="email" name="email" placeholder="votre.email@exemple.com" required>
+  <div class="email-item">
+    <strong>Courriel général :</strong><br>
+    <a href="mailto:contact@scq-officiel.ca">contact@scq-officiel.ca</a>
+  </div>
 
-  <label for="message">Message</label>
-  <textarea id="message" name="message" rows="6" placeholder="Votre message" required></textarea>
+  <div class="email-item">
+    <strong>Demandes citoyennes :</strong><br>
+    <a href="mailto:citoyens@scq-officiel.ca">citoyens@scq-officiel.ca</a>
+  </div>
 
-  <button type="submit">Envoyer</button>
-</form>
+  <div class="email-item">
+    <strong>Administration :</strong><br>
+    <a href="mailto:administration@scq-officiel.ca">administration@scq-officiel.ca</a>
+  </div>
 
-<div class="confirmation" id="confirmationMessage" style="display:none;">
-  Merci, votre message a été envoyé avec succès !
+  <p style="margin-top:20px; text-align:center;">
+    Nous répondons généralement dans un délai de 24 à 48 heures.
+  </p>
 </div>
-
-<!-- EmailJS -->
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-  // Initialise EmailJS avec la Public Key
-  emailjs.init("n2syPGesMR7drTQeo"; // exactement comme dans le dashboard
-
-  const form = document.getElementById('contactForm');
-  const confirmation = document.getElementById('confirmationMessage');
-
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    emailjs.sendForm('contact', 'template_7y84brg', this)
-      .then(function() {
-        form.style.display = 'none';
-        confirmation.style.display = 'block';
-      }, function(error) {
-        alert('Erreur lors de l\'envoi : ' + JSON.stringify(error));
-      });
-  });
-</script>
 
 </body>
 </html>
