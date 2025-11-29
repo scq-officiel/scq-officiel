@@ -5,7 +5,7 @@
 <title>SCQ - Membres</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-body { font-family: Arial, sans-serif; margin:0; padding:0; background-color:#f7f9fc; color:#222; line-height:1.6; }
+body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f7f9fc; color:#222; line-height:1.6; }
 h1 { text-align:center; color:#0047ab; font-size:36px; margin-top:40px; }
 nav { background-color:#0047ab; padding:12px 20px; position:sticky; top:0; display:flex; flex-wrap:wrap; }
 nav a { color:white; text-decoration:none; margin-right:15px; font-weight:bold; padding:5px 0; }
@@ -13,12 +13,13 @@ nav a:hover { text-decoration:underline; }
 .banner { text-align:center; margin-top:20px; }
 .banner img { max-width:100%; height:auto; }
 .content { max-width:900px; margin:30px auto; background:#fff; padding:25px; border-radius:10px; box-shadow:0 0 12px rgba(0,0,0,0.1); }
-.counter { text-align:center; font-size:28px; margin:15px 0; color:#0047ab; font-weight:bold; }
-.updated { text-align:center; font-size:14px; color:#666; margin-bottom:20px; }
+.counter { text-align:center; font-size:24px; font-weight:bold; color:#0047ab; margin-bottom:20px; }
+small { display:block; text-align:center; margin-bottom:20px; color:#555; }
 @media(max-width:640px){ h1{font-size:28px;} nav{flex-direction:column;} nav a{margin-bottom:10px;} }
 </style>
 </head>
 <body>
+
 <nav>
   <a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ" style="height:40px; vertical-align:middle; margin-right:10px;"></a>
   <a href="index.html">Accueil</a>
@@ -36,16 +37,14 @@ nav a:hover { text-decoration:underline; }
   <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
 </div>
 
-<h1>Nos Membres</h1>
-
 <div class="counter">
-Membres totaux : <span id="memberCount">14</span>
-</div>
-<div class="updated">
-Dernière mise à jour du compteur : <span id="updatedDate">28 novembre 2025</span>
+<h3>Total des membres du SCQ :</h3>
+<p id="member-count">0</p>
+<small id="member-last-update">Dernière mise à jour : N/A</small>
 </div>
 
 <div class="content">
+<h1>Message aux membres</h1>
 <p>Cher(ère) membre,</p>
 <p>Au nom du parti Souveraineté et Citoyenneté du Québec (SCQ), je tiens à vous exprimer ma profonde reconnaissance pour votre engagement et la confiance que vous accordez à notre mouvement. Votre adhésion représente bien plus qu’un geste d’appui : elle témoigne d’une volonté claire de contribuer au renouveau démocratique et à la construction d’un Québec plus fort, plus juste et véritablement gouverné par ses citoyens.</p>
 <p>Aujourd’hui, chaque personne qui se joint à nous renforce l’énergie collective nécessaire pour bâtir un avenir où le Québec assume pleinement son pouvoir décisionnel, où nos institutions servent réellement la population, et où la souveraineté et la citoyenneté sont les fondements d’un projet national moderne.</p>
@@ -53,7 +52,25 @@ Dernière mise à jour du compteur : <span id="updatedDate">28 novembre 2025</sp
 <p>Votre engagement est précieux, et votre présence parmi nous fait une réelle différence. Ensemble, nous façonnons un mouvement fondé sur la transparence, la participation citoyenne et la volonté concrète de bâtir un Québec souverain et responsable.</p>
 <p>Avec toute ma gratitude,</p>
 <p>Le fondateur et porte-parole<br>Parti Souveraineté et Citoyenneté du Québec (SCQ)</p>
+
 </div>
+
+<script>
+// --- Compteur membres modifiable ---
+function updateMemberCounter() {
+    let totalMembers = localStorage.getItem("scq_total_members") || 0;
+    let lastUpdate = localStorage.getItem("scq_members_last_update") || "N/A";
+
+    document.getElementById("member-count").textContent = totalMembers;
+    document.getElementById("member-last-update").textContent = "Dernière mise à jour : " + lastUpdate;
+}
+updateMemberCounter();
+
+// --- Fonction pour mettre à jour manuellement (via console si besoin) ---
+// Exemple : 
+// localStorage.setItem("scq_total_members", 14);
+// localStorage.setItem("scq_members_last_update", new Date().toLocaleString());
+</script>
 
 </body>
 </html>
