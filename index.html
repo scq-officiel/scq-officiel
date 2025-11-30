@@ -4,151 +4,57 @@
 <meta charset="UTF-8">
 <title>SCQ - Accueil</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
-/* --- Styles généraux --- */
-body {
-    font-family: Arial, sans-serif;
-    margin:0;
-    padding:0;
-    background:#f7f9fc;
-    color:#222;
-    line-height:1.6;
-}
+body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f7f9fc; color:#222; }
 
-nav {
-    background-color:#0047ab;
-    padding:12px 20px;
-    position:sticky;
-    top:0;
-    display:flex;
-    flex-wrap:wrap;
-    align-items:center;
-}
+/* --- NAVBAR --- */
+nav { background-color:#0047ab; padding:12px 20px; position:sticky; top:0; display:flex; flex-wrap:wrap; }
+nav a { color:white; text-decoration:none; margin-right:15px; font-weight:bold; padding:5px 0; }
+nav a:hover { text-decoration:underline; }
+nav img { height:40px; }
 
-nav a {
-    color:white;
-    text-decoration:none;
-    margin-right:15px;
-    font-weight:bold;
-    padding:5px 0;
-}
+/* --- Banner --- */
+.banner { text-align:center; margin-top:20px; }
+.banner img { max-width:100%; height:auto; }
 
-nav a:hover {
-    text-decoration:underline;
-}
+/* --- Main content box --- */
+.content { max-width:900px; margin:30px auto; background:#fff; padding:25px; border-radius:10px; box-shadow:0 0 12px rgba(0,0,0,0.1); }
 
-nav img {
-    height:40px;
-    vertical-align:middle;
-    margin-right:10px;
-}
+/* --- Compteur 3D flamme --- */
+.counter-box { text-align:center; margin:20px 0; }
 
-.banner {
-    text-align:center;
-    margin-top:20px;
-}
-
-.banner img {
-    max-width:100%;
-    height:auto;
-    border-radius:10px;
-}
-
-/* --- Compteur flamme 3D --- */
-.flame-counter {
-    font-size: 48px;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 20px;
-    color: #ff4500;
-    text-shadow:
-        0 0 5px #ff3,
-        0 0 10px #ff3,
-        0 0 20px #f80,
-        0 0 30px #f20,
-        0 0 40px #f00;
-    animation: flame 1.5s infinite alternate ease-in-out;
+.fire-number {
+  font-size: 48px;
+  font-weight: bold;
+  display: inline-block;
+  color: #ffddaa;
+  text-shadow:
+    0 0 5px #ff9900,
+    0 0 10px #ff6600,
+    0 0 20px #ff3300,
+    0 0 40px #ff0000,
+    0 0 60px #ff2200,
+    0 0 80px #ff4400;
+  animation: flame 1.4s infinite alternate ease-in-out;
 }
 
 @keyframes flame {
-    0% {
-        text-shadow:
-            0 0 5px #ff3,
-            0 0 10px #ff3,
-            0 0 20px #f80,
-            0 0 30px #f20,
-            0 0 40px #f00;
-        transform: scale(1) rotate(0deg);
-    }
-    50% {
-        text-shadow:
-            0 0 10px #ff6,
-            0 0 15px #ff3,
-            0 0 25px #fa0,
-            0 0 35px #f60,
-            0 0 50px #f20;
-        transform: scale(1.05) rotate(1deg);
-    }
-    100% {
-        text-shadow:
-            0 0 7px #ff9,
-            0 0 12px #ff6,
-            0 0 22px #fa0,
-            0 0 32px #f40,
-            0 0 45px #f10;
-        transform: scale(0.98) rotate(-1deg);
-    }
+  0% { transform: scale(1) translateY(0px); filter: hue-rotate(0deg); }
+  50% { transform: scale(1.05) translateY(-3px); filter: hue-rotate(-15deg); }
+  100% { transform: scale(1) translateY(0px); filter: hue-rotate(15deg); }
 }
 
-.counter-box {
-    text-align: center;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 350px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 0 12px rgba(0,0,0,0.1);
-}
-
-.counter-box h3 {
-    margin-bottom: 10px;
-    font-size: 22px;
-}
-
-/* --- Contenu principal --- */
-.main-content {
-    max-width:900px;
-    margin:30px auto;
-    background:#fff;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0 0 12px rgba(0,0,0,0.1);
-}
-
-.main-content h1 {
-    text-align:center;
-    color:#0047ab;
-    font-size:36px;
-    margin-bottom:20px;
-}
-
-.main-content p {
-    font-size:18px;
-    margin-bottom:15px;
-}
-
+/* mobile */
 @media(max-width:640px){
-    h1{font-size:28px;}
-    nav{flex-direction:column;}
-    nav a{margin-bottom:10px;}
-    .flame-counter{font-size:36px;}
+  .fire-number { font-size:36px; }
 }
 </style>
 </head>
 <body>
 
 <nav>
-  <a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ"></a>
+  <a href="index.html"><img src="images/logo_scq.jpg" alt="Logo"></a>
   <a href="index.html">Accueil</a>
   <a href="mission.html">Mission</a>
   <a href="constitution.html">Constitution</a>
@@ -164,28 +70,41 @@ nav img {
   <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
 </div>
 
-<div class="counter-box">
-    <h3>Nombre total de visites sur le site :</h3>
-    <div id="visit-counter" class="flame-counter">0</div>
-</div>
+<div class="content">
+  <h1 style="text-align:center; color:#0047ab;">Bienvenue au SCQ</h1>
 
-<div class="main-content">
-    <h1>Bienvenue au Souveraineté et Citoyenneté du Québec (SCQ)</h1>
-    <p>Le SCQ est un mouvement citoyen dédié à la souveraineté du Québec et à la participation active de ses citoyens dans la gouvernance. Notre objectif est de construire un Québec plus fort, plus juste et véritablement démocratique, où chaque voix compte.</p>
-    <p>Explorez nos pages pour découvrir notre mission, notre constitution, nos réformes, et rencontrer les membres et l’équipe qui travaillent pour le futur de notre province.</p>
+  <div class="counter-box">
+      <h3>Nombre total de visites sur le site :</h3>
+      <span id="visit-counter" class="fire-number">0</span>
+  </div>
+
+  <p style="text-align:center; margin-top:20px; font-size:18px;">
+      Le mouvement Souveraineté et Citoyenneté du Québec (SCQ) grandit chaque jour.
+      Merci de faire partie de ce changement historique.
+  </p>
 </div>
 
 <script>
-// --- Compteur réel via CountAPI ---
-fetch("https://api.countapi.xyz/hit/scq_website_global_counter/visits")
-    .then(res => res.json())
-    .then(data => {
-        document.getElementById("visit-counter").textContent = data.value;
-    })
-    .catch(err => {
-        console.error("Erreur compteur :", err);
-        document.getElementById("visit-counter").textContent = "Erreur";
-    });
+/* ————————————————
+   COMPTEUR DE VISITES RÉEL
+   Fonctionne 100% côté navigateur
+——————————————— */
+
+// Récupérer compteur
+let visits = localStorage.getItem("scq_visit_counter");
+
+// Si première visite → initialiser
+if (!visits) {
+    visits = 1;
+} else {
+    visits = parseInt(visits) + 1;
+}
+
+// Sauvegarder le nouveau total
+localStorage.setItem("scq_visit_counter", visits);
+
+// Afficher dans la page
+document.getElementById("visit-counter").textContent = visits;
 </script>
 
 </body>
