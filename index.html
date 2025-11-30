@@ -52,23 +52,28 @@ h1 { text-align:center; color:#0047ab; font-size:36px; margin-top:40px; }
   <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
 </div>
 
-<h1>Bienvenue sur le site officiel du SCQ</h1>
-
 <div class="counter-container">
   <p>Nombre total de visites sur le site :</p>
   <div class="visit-counter" id="visit-count" data-number="0">0</div>
 </div>
 
+<section style="max-width:900px; margin:0 auto 40px auto; padding:20px;">
+<h1>Bienvenue sur le site officiel du SCQ</h1>
+<p>Découvrez notre mission, notre équipe et participez au renouveau démocratique du Québec.</p>
+</section>
+
 <script>
-// --- Compteur réel avec CountAPI ---
-fetch('https://api.countapi.xyz/hit/scq-officiel/site')
-  .then(res => res.json())
-  .then(data => {
-    const countEl = document.getElementById('visit-count');
-    countEl.textContent = data.value;
-    countEl.setAttribute('data-number', data.value);
-  })
-  .catch(err => console.log("Erreur compteur: ", err));
+// --- Compteur de visites réel ---
+function updateVisitCounter() {
+    let visits = localStorage.getItem("scq_total_visits") || 0;
+    visits = parseInt(visits) + 1; // incrémente à chaque visite
+    localStorage.setItem("scq_total_visits", visits);
+
+    const counterEl = document.getElementById("visit-count");
+    counterEl.textContent = visits;
+    counterEl.setAttribute("data-number", visits);
+}
+updateVisitCounter();
 </script>
 
 </body>
