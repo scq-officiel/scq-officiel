@@ -6,44 +6,37 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f7f9fc; color:#222; line-height:1.6; }
-nav { background-color:#0047ab; padding:12px 20px; position:sticky; top:0; display:flex; flex-wrap:wrap; }
+nav { background-color:#0047ab; padding:12px 20px; position:sticky; top:0; z-index:100; display:flex; flex-wrap:wrap; align-items:center; }
 nav a { color:white; text-decoration:none; margin-right:15px; font-weight:bold; padding:5px 0; }
 nav a:hover { text-decoration:underline; }
+nav img { height:40px; vertical-align:middle; margin-right:10px; }
 .banner { text-align:center; margin-top:20px; }
 .banner img { max-width:100%; height:auto; }
 h1 { text-align:center; color:#0047ab; font-size:36px; margin-top:40px; }
-
-/* Compteur en feu 3D */
-#visitor-counter {
-  text-align:center;
-  font-size:48px;
-  font-weight:bold;
-  color: #ff4500;
-  text-shadow: 
-    0 0 5px #ff0000,
-    0 0 10px #ff4000,
-    0 0 20px #ff8000,
-    0 0 40px #ffbf00,
-    0 0 60px #ffff00,
-    0 0 80px #ffffff;
-  animation: flame 1s infinite alternate;
-  margin:40px 0;
+.counter-container { text-align:center; margin:40px 0; }
+.visit-counter { font-size:48px; font-weight:bold; color:#ff4500; position:relative; display:inline-block; }
+.visit-counter::before,
+.visit-counter::after {
+    content: attr(data-number);
+    position: absolute;
+    left: 0; top: 0;
+    color: #ff8c00;
+    z-index: -1;
+    filter: blur(6px);
+    animation: flicker 1.5s infinite alternate;
 }
-
-@keyframes flame {
-  0% { text-shadow: 0 0 5px #ff0000,0 0 10px #ff4000,0 0 20px #ff8000,0 0 40px #ffbf00,0 0 60px #ffff00,0 0 80px #ffffff; }
-  50% { text-shadow: 0 0 10px #ff0000,0 0 15px #ff4000,0 0 30px #ff8000,0 0 60px #ffbf00,0 0 90px #ffff00,0 0 120px #ffffff; }
-  100% { text-shadow: 0 0 5px #ff0000,0 0 10px #ff4000,0 0 20px #ff8000,0 0 40px #ffbf00,0 0 60px #ffff00,0 0 80px #ffffff; }
+@keyframes flicker {
+    0% {opacity:0.7; transform:translate(1px,1px);}
+    50% {opacity:1; transform:translate(-1px,-1px);}
+    100% {opacity:0.8; transform:translate(0,1px);}
 }
-
-.counter-label { text-align:center; font-size:24px; font-weight:bold; color:#0047ab; margin-bottom:10px; }
-
+@media(max-width:640px){ h1{font-size:28px;} .visit-counter{font-size:36px;} nav{flex-direction:column;} nav a{margin-bottom:10px;} }
 </style>
 </head>
 <body>
 
 <nav>
-  <a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ" style="height:40px; vertical-align:middle; margin-right:10px;"></a>
+  <a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ"></a>
   <a href="index.html">Accueil</a>
   <a href="mission.html">Mission</a>
   <a href="constitution.html">Constitution</a>
@@ -59,29 +52,23 @@ h1 { text-align:center; color:#0047ab; font-size:36px; margin-top:40px; }
   <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
 </div>
 
-<h1>Bienvenue sur le site du SCQ</h1>
+<h1>Bienvenue sur le site officiel du SCQ</h1>
 
-<div class="counter-label">Nombre total de visites sur le site :</div>
-<div id="visitor-counter">0</div>
+<div class="counter-container">
+  <p>Nombre total de visites sur le site :</p>
+  <div class="visit-counter" id="visit-count" data-number="0">0</div>
+</div>
 
 <script>
-// --- Compteur de visiteurs réel via CountAPI ---
-const countElement = document.getElementById("visitor-counter");
-const namespace = "scq-officiel";
-const key = "visites_site";
-
-async function updateVisitorCounter() {
-    try {
-        const response = await fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`);
-        const data = await response.json();
-        countElement.textContent = data.value;
-    } catch (error) {
-        console.error("Erreur compteur visites :", error);
-        countElement.textContent = "N/A";
-    }
-}
-
-updateVisitorCounter();
+// --- Compteur réel avec CountAPI ---
+fetch('https://api.countapi.xyz/hit/scq-officiel/site')
+  .then(res => res.json())
+  .then(data => {
+    const countEl = document.getElementById('visit-count');
+    countEl.textContent = data.value;
+    countEl.setAttribute('data-number', data.value);
+  })
+  .catch(err => console.log("Erreur compteur: ", err));
 </script>
 
 </body>
