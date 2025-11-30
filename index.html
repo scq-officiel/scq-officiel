@@ -5,22 +5,150 @@
 <title>SCQ - Accueil</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f7f9fc; color:#222; line-height:1.6; }
-h1 { text-align:center; color:#0047ab; font-size:36px; margin-top:40px; }
-nav { background-color:#0047ab; padding:12px 20px; position:sticky; top:0; display:flex; flex-wrap:wrap; }
-nav a { color:white; text-decoration:none; margin-right:15px; font-weight:bold; padding:5px 0; }
-nav a:hover { text-decoration:underline; }
-.banner { text-align:center; margin-top:20px; }
-.banner img { max-width:100%; height:auto; }
-.counter { text-align:center; font-size:24px; font-weight:bold; color:#0047ab; margin:15px 0; }
-.content { max-width:900px; margin:30px auto; background:#fff; padding:25px; border-radius:10px; box-shadow:0 0 12px rgba(0,0,0,0.1); }
-@media(max-width:640px){ h1{font-size:28px;} nav{flex-direction:column;} nav a{margin-bottom:10px;} }
+/* --- Styles généraux --- */
+body {
+    font-family: Arial, sans-serif;
+    margin:0;
+    padding:0;
+    background:#f7f9fc;
+    color:#222;
+    line-height:1.6;
+}
+
+nav {
+    background-color:#0047ab;
+    padding:12px 20px;
+    position:sticky;
+    top:0;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+}
+
+nav a {
+    color:white;
+    text-decoration:none;
+    margin-right:15px;
+    font-weight:bold;
+    padding:5px 0;
+}
+
+nav a:hover {
+    text-decoration:underline;
+}
+
+nav img {
+    height:40px;
+    vertical-align:middle;
+    margin-right:10px;
+}
+
+.banner {
+    text-align:center;
+    margin-top:20px;
+}
+
+.banner img {
+    max-width:100%;
+    height:auto;
+    border-radius:10px;
+}
+
+/* --- Compteur flamme 3D --- */
+.flame-counter {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    color: #ff4500;
+    text-shadow:
+        0 0 5px #ff3,
+        0 0 10px #ff3,
+        0 0 20px #f80,
+        0 0 30px #f20,
+        0 0 40px #f00;
+    animation: flame 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes flame {
+    0% {
+        text-shadow:
+            0 0 5px #ff3,
+            0 0 10px #ff3,
+            0 0 20px #f80,
+            0 0 30px #f20,
+            0 0 40px #f00;
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        text-shadow:
+            0 0 10px #ff6,
+            0 0 15px #ff3,
+            0 0 25px #fa0,
+            0 0 35px #f60,
+            0 0 50px #f20;
+        transform: scale(1.05) rotate(1deg);
+    }
+    100% {
+        text-shadow:
+            0 0 7px #ff9,
+            0 0 12px #ff6,
+            0 0 22px #fa0,
+            0 0 32px #f40,
+            0 0 45px #f10;
+        transform: scale(0.98) rotate(-1deg);
+    }
+}
+
+.counter-box {
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 350px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+
+.counter-box h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+/* --- Contenu principal --- */
+.main-content {
+    max-width:900px;
+    margin:30px auto;
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 0 12px rgba(0,0,0,0.1);
+}
+
+.main-content h1 {
+    text-align:center;
+    color:#0047ab;
+    font-size:36px;
+    margin-bottom:20px;
+}
+
+.main-content p {
+    font-size:18px;
+    margin-bottom:15px;
+}
+
+@media(max-width:640px){
+    h1{font-size:28px;}
+    nav{flex-direction:column;}
+    nav a{margin-bottom:10px;}
+    .flame-counter{font-size:36px;}
+}
 </style>
 </head>
 <body>
 
 <nav>
-  <a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ" style="height:40px; vertical-align:middle; margin-right:10px;"></a>
+  <a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ"></a>
   <a href="index.html">Accueil</a>
   <a href="mission.html">Mission</a>
   <a href="constitution.html">Constitution</a>
@@ -36,37 +164,28 @@ nav a:hover { text-decoration:underline; }
   <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
 </div>
 
-<div class="counter">
-<h3>Nombre total de visites sur le site :</h3>
-<p id="visitor-count">0</p>
-<small id="visitor-last-update"></small>
+<div class="counter-box">
+    <h3>Nombre total de visites sur le site :</h3>
+    <div id="visit-counter" class="flame-counter">0</div>
 </div>
 
-<div class="content">
-<h1>Bienvenue sur le site officiel du SCQ</h1>
-<p>Le parti Souveraineté et Citoyenneté du Québec (SCQ) œuvre pour un Québec souverain, transparent et gouverné par ses citoyens. Explorez notre site pour découvrir notre mission, nos membres et nos initiatives.</p>
+<div class="main-content">
+    <h1>Bienvenue au Souveraineté et Citoyenneté du Québec (SCQ)</h1>
+    <p>Le SCQ est un mouvement citoyen dédié à la souveraineté du Québec et à la participation active de ses citoyens dans la gouvernance. Notre objectif est de construire un Québec plus fort, plus juste et véritablement démocratique, où chaque voix compte.</p>
+    <p>Explorez nos pages pour découvrir notre mission, notre constitution, nos réformes, et rencontrer les membres et l’équipe qui travaillent pour le futur de notre province.</p>
 </div>
 
 <script>
-// --- Compteur de visiteurs avec LocalStorage ---
-function updateVisitorCounter() {
-    let totalVisits = localStorage.getItem("scq_total_visits") || 0;
-    let hasVisited = localStorage.getItem("scq_visited");
-
-    if (!hasVisited) {
-        totalVisits++;
-        localStorage.setItem("scq_total_visits", totalVisits);
-        localStorage.setItem("scq_visited", "yes");
-        localStorage.setItem("scq_last_update", new Date().toLocaleString());
-    }
-
-    document.getElementById("visitor-count").textContent = totalVisits;
-    const lastUpdate = localStorage.getItem("scq_last_update");
-    if(lastUpdate){
-        document.getElementById("visitor-last-update").textContent = "Dernière mise à jour : " + lastUpdate;
-    }
-}
-updateVisitorCounter();
+// --- Compteur réel via CountAPI ---
+fetch("https://api.countapi.xyz/hit/scq_website_global_counter/visits")
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById("visit-counter").textContent = data.value;
+    })
+    .catch(err => {
+        console.error("Erreur compteur :", err);
+        document.getElementById("visit-counter").textContent = "Erreur";
+    });
 </script>
 
 </body>
