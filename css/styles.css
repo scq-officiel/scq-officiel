@@ -1,163 +1,44 @@
-/* ================================
-   Styles généraux du site
-================================ */
-body {
-    font-family: Arial, sans-serif;
-    margin:0;
-    padding:0;
-    background:#f7f9fc;
-    color:#222;
-    line-height:1.6;
-}
-
-nav {
-    background-color:#0047ab;
-    padding:12px 20px;
-    position:sticky;
-    top:0;
-    display:flex;
-    flex-wrap:wrap;
-    z-index:100;
-}
-
-nav a {
-    color:white;
-    text-decoration:none;
-    margin-right:15px;
-    font-weight:bold;
-    padding:5px 0;
-}
-
-nav a:hover {
-    text-decoration:underline;
-}
-
-.banner {
-    text-align:center;
-    margin-top:20px;
-}
-
-.banner img {
-    max-width:100%;
-    height:auto;
-}
-
-/* ================================
-   Section générale
-================================ */
-section {
-    max-width:900px;
-    margin:30px auto;
-    background:#fff;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 0 12px rgba(0,0,0,0.1);
-}
-
-/* ================================
-   Compteur en feu 3D
-================================ */
-.counter-fire {
-    font-size: 50px;
+/* Style de compteur en flammes bleues */
+.flame-counter {
+    font-size: 60px;
     font-weight: bold;
+    color: #00f; /* couleur principale */
     text-align: center;
-    color: #ff4a00;
-    position: relative;
-    display: inline-block;
     text-shadow:
-        0 0 5px #ff7f00,
-        0 0 10px #ff7f00,
-        0 0 15px #ff4a00,
-        0 0 20px #ff4a00,
-        0 0 30px #ff0000,
-        0 0 40px #ff0000,
-        0 0 50px #ff0000;
-    animation: flame 1s infinite;
+       0 0 5px #00f,
+       0 0 10px #00f,
+       0 0 20px #00bfff,
+       0 0 30px #1e90ff,
+       0 0 40px #00bfff,
+       0 0 50px #00f,
+       0 0 60px #1e90ff;
+    animation: flicker 1.2s infinite alternate;
 }
 
-@keyframes flame {
-    0% { text-shadow: 0 0 5px #ff7f00,0 0 10px #ff7f00,0 0 15px #ff4a00,0 0 20px #ff4a00,0 0 30px #ff0000,0 0 40px #ff0000,0 0 50px #ff0000; }
-    25% { text-shadow: 0 0 6px #ff7f00,0 0 12px #ff7f00,0 0 18px #ff4a00,0 0 24px #ff4a00,0 0 36px #ff0000,0 0 48px #ff0000,0 0 60px #ff0000; }
-    50% { text-shadow: 0 0 4px #ff7f00,0 0 8px #ff7f00,0 0 12px #ff4a00,0 0 16px #ff4a00,0 0 24px #ff0000,0 0 32px #ff0000,0 0 40px #ff0000; }
-    75% { text-shadow: 0 0 5px #ff7f00,0 0 10px #ff7f00,0 0 15px #ff4a00,0 0 20px #ff4a00,0 0 30px #ff0000,0 0 40px #ff0000,0 0 50px #ff0000; }
-    100% { text-shadow: 0 0 6px #ff7f00,0 0 12px #ff7f00,0 0 18px #ff4a00,0 0 24px #ff4a00,0 0 36px #ff0000,0 0 48px #ff0000,0 0 60px #ff0000; }
-}
-
-/* ================================
-   Compteur simple modifiable (membres)
-================================ */
-.counter-simple {
-    text-align: center;
-    font-size: 28px;
-    font-weight: bold;
-    color: #0047ab;
-    margin: 30px 0;
-}
-
-.counter-simple small {
-    display:block;
-    font-style: italic;
-    color:#555;
-    margin-top:5px;
-}
-
-/* ================================
-   Code de conduite
-================================ */
-.code-conduite {
-    max-width: 900px;
-    margin: 30px auto;
-    background: #fff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.7;
-    color: #222;
-}
-
-.code-conduite h2 {
-    text-align: center;
-    color: #0047ab;
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.code-conduite h3 {
-    color: #0047ab;
-    font-size: 22px;
-    margin-top: 25px;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #0047ab;
-    padding-bottom: 5px;
-}
-
-.code-conduite p {
-    margin-bottom: 15px;
-    font-size: 16px;
-    text-align: justify;
-}
-
-.code-conduite hr {
-    border: 0;
-    border-top: 2px dashed #0047ab;
-    margin: 25px 0;
-}
-
-.code-conduite small {
-    display: block;
-    text-align: right;
-    color: #555;
-    margin-top: 10px;
-    font-style: italic;
-}
-
-/* ================================
-   Responsive
-================================ */
-@media(max-width:640px){
-    nav{flex-direction:column;}
-    nav a{margin-bottom:10px;}
-    .counter-fire{font-size:36px;}
-    .counter-simple{font-size:22px;}
+/* Animation légère pour effet "flamme" */
+@keyframes flicker {
+    0% { text-shadow:
+        0 0 5px #00f,
+        0 0 10px #00f,
+        0 0 20px #00bfff,
+        0 0 30px #1e90ff,
+        0 0 40px #00bfff,
+        0 0 50px #00f,
+        0 0 60px #1e90ff; }
+    50% { text-shadow:
+        0 0 8px #00f,
+        0 0 16px #00f,
+        0 0 25px #00bfff,
+        0 0 35px #1e90ff,
+        0 0 45px #00bfff,
+        0 0 55px #00f,
+        0 0 65px #1e90ff; }
+    100% { text-shadow:
+        0 0 6px #00f,
+        0 0 12px #00f,
+        0 0 22px #00bfff,
+        0 0 32px #1e90ff,
+        0 0 42px #00bfff,
+        0 0 52px #00f,
+        0 0 62px #1e90ff; }
 }
