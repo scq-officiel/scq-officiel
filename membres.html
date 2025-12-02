@@ -4,17 +4,7 @@
 <meta charset="UTF-8">
 <title>SCQ - Membres</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles/code-conduite.css">
-<style>
-body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f7f9fc; color:#222; }
-nav { background-color:#0047ab; padding:12px 20px; position:sticky; top:0; display:flex; flex-wrap:wrap; }
-nav a { color:white; text-decoration:none; margin-right:15px; font-weight:bold; padding:5px 0; }
-nav a:hover { text-decoration:underline; }
-.banner { text-align:center; margin-top:20px; }
-.banner img { max-width:100%; height:auto; }
-.counter { text-align:center; font-size:28px; font-weight:bold; color:#0047ab; margin:30px 0; }
-@media(max-width:640px){ nav{flex-direction:column;} nav a{margin-bottom:10px;} }
-</style>
+<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
@@ -29,37 +19,52 @@ nav a:hover { text-decoration:underline; }
   <a href="equipe.html">Équipe</a>
   <a href="comptabilite.html">Comptabilité</a>
   <a href="contact.html">Contact</a>
+  <a href="code-conduite.html">Code de conduite</a>
 </nav>
 
 <div class="banner">
   <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
 </div>
 
+<!-- Compteur de membres -->
 <div class="counter">
   <h3>Total des membres du SCQ :</h3>
   <p id="member-count">0</p>
   <small id="member-last-update">Dernière mise à jour : N/A</small>
 </div>
 
-<section class="code-conduite">
-  <!-- Code de conduite intégré -->
-  <h2>Code de conduite du SCQ</h2>
-  <!-- Tout le texte du Code de conduite ici, comme dans le message précédent -->
-</section>
+<div class="content">
+<h1>Message aux membres</h1>
+
+<p>Cher(ère) membre,</p>
+<p>Au nom du parti Souveraineté et Citoyenneté du Québec (SCQ), je tiens à vous exprimer ma profonde reconnaissance pour votre engagement et la confiance que vous accordez à notre mouvement. Votre adhésion représente bien plus qu’un geste d’appui : elle témoigne d’une volonté claire de contribuer au renouveau démocratique et à la construction d’un Québec plus fort, plus juste et véritablement gouverné par ses citoyens.</p>
+
+<p>Aujourd’hui, chaque personne qui se joint à nous renforce l’énergie collective nécessaire pour bâtir un avenir où le Québec assume pleinement son pouvoir décisionnel, où nos institutions servent réellement la population, et où la souveraineté et la citoyenneté sont les fondements d’un projet national moderne.</p>
+
+<p>Je vous invite chaleureusement à visiter régulièrement notre site officiel afin de demeurer informé(e) des annonces, des actions et des prochaines étapes du SCQ. Vous y trouverez des informations cruciales pour mieux comprendre notre vision, nos priorités et les initiatives mises en place pour transformer durablement notre société.</p>
+
+<p><strong>Pour connaître les règles et principes de notre parti, consultez le <a href="code-conduite.html">Code de conduite officiel du SCQ</a>.</strong></p>
+
+<p>Votre engagement est précieux, et votre présence parmi nous fait une réelle différence. Ensemble, nous façonnons un mouvement fondé sur la transparence, la participation citoyenne et la volonté concrète de bâtir un Québec souverain et responsable.</p>
+
+<p>Avec toute ma gratitude,</p>
+<p>Le fondateur et porte-parole<br>Parti Souveraineté et Citoyenneté du Québec (SCQ)</p>
+
+</div>
 
 <script>
 // --- Compteur membres modifiable ---
 function updateMemberCounter() {
-    let totalMembers = localStorage.getItem("scq_total_members") || 14;
-    let lastUpdate = localStorage.getItem("scq_members_last_update") || "2025-11-28";
+    let totalMembers = localStorage.getItem("scq_total_members") || 0;
+    let lastUpdate = localStorage.getItem("scq_members_last_update") || "N/A";
 
     document.getElementById("member-count").textContent = totalMembers;
     document.getElementById("member-last-update").textContent = "Dernière mise à jour : " + lastUpdate;
 }
 updateMemberCounter();
 
-// Exemple pour modifier via console :
-// localStorage.setItem("scq_total_members", 25);
+// --- Exemple pour modifier manuellement via console ---
+// localStorage.setItem("scq_total_members", 14);
 // localStorage.setItem("scq_members_last_update", new Date().toLocaleString());
 </script>
 
