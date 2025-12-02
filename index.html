@@ -4,18 +4,17 @@
 <meta charset="UTF-8">
 <title>SCQ - Accueil</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/fire.css">
+<link rel="stylesheet" href="css/styles.css">
 <style>
-body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f7f9fc; color:#222; line-height:1.6; }
-h1 { text-align:center; color:#0047ab; font-size:36px; margin-top:40px; }
-nav { background-color:#0047ab; padding:12px 20px; position:sticky; top:0; display:flex; flex-wrap:wrap; z-index:100; }
+body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f7f9fc; color:#222; }
+nav { background-color:#0047ab; padding:12px 20px; display:flex; flex-wrap:wrap; }
 nav a { color:white; text-decoration:none; margin-right:15px; font-weight:bold; padding:5px 0; }
 nav a:hover { text-decoration:underline; }
 .banner { text-align:center; margin-top:20px; }
 .banner img { max-width:100%; height:auto; }
-.counter-section { text-align:center; margin:30px 0; }
-.counter-label { font-size:1.5rem; color:#0047ab; margin-bottom:10px; }
-@media(max-width:640px){ h1{font-size:28px;} nav{flex-direction:column;} nav a{margin-bottom:10px;} }
+.counter { text-align:center; font-size:60px; font-weight:bold; color:#ff4500; text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff4500, 0 0 30px #ff6347; margin:40px 0; }
+.counter h3 { font-size:28px; color:#0047ab; margin-bottom:20px; }
+@media(max-width:640px){ .counter { font-size:40px; } .counter h3{ font-size:22px; } nav{flex-direction:column;} nav a{margin-bottom:10px;} }
 </style>
 </head>
 <body>
@@ -37,29 +36,23 @@ nav a:hover { text-decoration:underline; }
   <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
 </div>
 
-<section class="counter-section">
-  <div class="counter-label">Nombre total de visites sur le site :</div>
-  <p class="fire-counter" id="visit-count">0</p>
-</section>
-
-<section>
-  <h1>Bienvenue au SCQ</h1>
-  <p style="max-width:800px; margin: 20px auto; text-align:center;">
-    Le parti Souveraineté et Citoyenneté du Québec (SCQ) œuvre pour un Québec souverain, responsable et transparent. Découvrez notre mission, rejoignez nos membres et suivez nos actions pour un avenir meilleur.
-  </p>
-</section>
+<div class="counter">
+<h3>Nombre total de visites sur le site :</h3>
+<p id="visit-count">0</p>
+</div>
 
 <script>
-// --- Compteur de visites automatique ---
-function updateVisitCounter() {
-    let count = parseInt(localStorage.getItem("scq_site_visits") || "0");
-    count += 1;
-    localStorage.setItem("scq_site_visits", count);
-    document.getElementById("visit-count").textContent = count.toLocaleString();
-}
-
-// Initialisation du compteur
-updateVisitCounter();
+// --- Compteur global via countapi.xyz ---
+const key = 'scq-site-visits';
+fetch(`https://api.countapi.xyz/hit/scq-officiel/${key}`)
+  .then(res => res.json())
+  .then(data => {
+      document.getElementById('visit-count').textContent = data.value;
+  })
+  .catch(err => {
+      console.error('Erreur compteur:', err);
+      document.getElementById('visit-count').textContent = "N/A";
+  });
 </script>
 
 </body>
