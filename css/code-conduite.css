@@ -1,0 +1,48 @@
+/* Styles pour la section Code de conduite */
+.code-conduite {
+    max-width: 900px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    color: #222;
+}
+
+.code-conduite h2 {
+    text-align: center;
+    color: #0047ab;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.code-conduite h3 {
+    color: #0047ab;
+    font-size: 22px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #0047ab;
+    padding-bottom: 5px;
+}
+
+.code-conduite p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.code-conduite hr {
+    border: 0;
+    border-top: 2px dashed #0047ab;
+    margin: 25px 0;
+}
+
+.code-conduite small {
+    display: block;
+    text-align: right;
+    color: #555;
+    margin-top: 10px;
+    font-style: italic;
+}
