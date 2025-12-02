@@ -90,8 +90,8 @@ p { font-size:18px; margin-bottom:20px; }
 <script>
 // --- Compteur de membres modifiable ---
 function updateMemberCounter() {
-    let totalMembers = localStorage.getItem("scq_total_members") || 0;
-    let lastUpdate = localStorage.getItem("scq_members_last_update") || "N/A";
+    let totalMembers = localStorage.getItem("scq_total_members") || 14;
+    let lastUpdate = localStorage.getItem("scq_members_last_update") || "2025-11-28";
 
     document.getElementById("member-count").textContent = totalMembers;
     document.getElementById("member-last-update").textContent = "Dernière mise à jour : " + lastUpdate;
