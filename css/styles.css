@@ -1,186 +1,163 @@
-/* =====================================
-   Styles généraux
-   ===================================== */
+/* ================================
+   Styles généraux du site
+================================ */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f8f9fa;
+    font-family: Arial, sans-serif;
+    margin:0;
+    padding:0;
+    background:#f7f9fc;
+    color:#222;
+    line-height:1.6;
+}
+
+nav {
+    background-color:#0047ab;
+    padding:12px 20px;
+    position:sticky;
+    top:0;
+    display:flex;
+    flex-wrap:wrap;
+    z-index:100;
+}
+
+nav a {
+    color:white;
+    text-decoration:none;
+    margin-right:15px;
+    font-weight:bold;
+    padding:5px 0;
+}
+
+nav a:hover {
+    text-decoration:underline;
+}
+
+.banner {
+    text-align:center;
+    margin-top:20px;
+}
+
+.banner img {
+    max-width:100%;
+    height:auto;
+}
+
+/* ================================
+   Section générale
+================================ */
+section {
+    max-width:900px;
+    margin:30px auto;
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 12px rgba(0,0,0,0.1);
+}
+
+/* ================================
+   Compteur en feu 3D
+================================ */
+.counter-fire {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    color: #ff4a00;
+    position: relative;
+    display: inline-block;
+    text-shadow:
+        0 0 5px #ff7f00,
+        0 0 10px #ff7f00,
+        0 0 15px #ff4a00,
+        0 0 20px #ff4a00,
+        0 0 30px #ff0000,
+        0 0 40px #ff0000,
+        0 0 50px #ff0000;
+    animation: flame 1s infinite;
+}
+
+@keyframes flame {
+    0% { text-shadow: 0 0 5px #ff7f00,0 0 10px #ff7f00,0 0 15px #ff4a00,0 0 20px #ff4a00,0 0 30px #ff0000,0 0 40px #ff0000,0 0 50px #ff0000; }
+    25% { text-shadow: 0 0 6px #ff7f00,0 0 12px #ff7f00,0 0 18px #ff4a00,0 0 24px #ff4a00,0 0 36px #ff0000,0 0 48px #ff0000,0 0 60px #ff0000; }
+    50% { text-shadow: 0 0 4px #ff7f00,0 0 8px #ff7f00,0 0 12px #ff4a00,0 0 16px #ff4a00,0 0 24px #ff0000,0 0 32px #ff0000,0 0 40px #ff0000; }
+    75% { text-shadow: 0 0 5px #ff7f00,0 0 10px #ff7f00,0 0 15px #ff4a00,0 0 20px #ff4a00,0 0 30px #ff0000,0 0 40px #ff0000,0 0 50px #ff0000; }
+    100% { text-shadow: 0 0 6px #ff7f00,0 0 12px #ff7f00,0 0 18px #ff4a00,0 0 24px #ff4a00,0 0 36px #ff0000,0 0 48px #ff0000,0 0 60px #ff0000; }
+}
+
+/* ================================
+   Compteur simple modifiable (membres)
+================================ */
+.counter-simple {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #0047ab;
+    margin: 30px 0;
+}
+
+.counter-simple small {
+    display:block;
+    font-style: italic;
+    color:#555;
+    margin-top:5px;
+}
+
+/* ================================
+   Code de conduite
+================================ */
+.code-conduite {
+    max-width: 900px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
     color: #222;
-    line-height: 1.6;
 }
 
-/* Wrapper */
-.wrap {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* =====================================
-   Header / Navigation
-   ===================================== */
-.site-header {
-    background-color: #002855; /* couleur du parti */
-    color: #fff;
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-}
-
-.site-header .logo {
-    height: 60px;
-    vertical-align: middle;
-}
-
-.site-header .brand-titles h1,
-.site-header .brand-titles p {
-    display: inline-block;
-    margin: 0 10px;
-    vertical-align: middle;
-    color: #fff;
-}
-
-.main-nav {
-    display: inline-block;
-    margin-left: 30px;
-}
-
-.main-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin-right: 20px;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.main-nav a:hover {
-    color: #00a1e4; /* bleu clair pour hover */
-}
-
-.main-nav a.active {
-    color: #ffcc00; /* accent pour page active */
-}
-
-.actions select {
-    padding: 5px;
-    border-radius: 4px;
-    border: none;
-    font-weight: bold;
-}
-
-/* =====================================
-   Section principale
-   ===================================== */
-.site-main .section {
-    padding: 50px 0;
-}
-
-.site-main h2 {
-    color: #002855;
+.code-conduite h2 {
+    text-align: center;
+    color: #0047ab;
+    font-size: 32px;
     margin-bottom: 20px;
 }
 
-.site-main ul {
-    list-style-type: disc;
-    margin-left: 20px;
+.code-conduite h3 {
+    color: #0047ab;
+    font-size: 22px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #0047ab;
+    padding-bottom: 5px;
 }
 
-/* Cards (utilisé sur certaines sections) */
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.card {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    flex: 1;
-    min-width: 250px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.card h3 {
-    margin-top: 0;
-    color: #002855;
-}
-
-.card a.link {
-    color: #00a1e4;
-    text-decoration: none;
-}
-
-.card a.link:hover {
-    text-decoration: underline;
-}
-
-/* =====================================
-   Footer
-   ===================================== */
-.site-footer {
-    background-color: #002855;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.site-footer a {
-    color: #ffcc00;
-    text-decoration: none;
-}
-
-.site-footer a:hover {
-    text-decoration: underline;
-}
-
-/* =====================================
-   Formulaires
-   ===================================== */
-form label {
-    display: block;
-    margin: 10px 0 5px;
-}
-
-form input, form select, form textarea {
-    width: 100%;
-    padding: 8px;
+.code-conduite p {
     margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    font-size: 16px;
+    text-align: justify;
 }
 
-form button {
-    background-color: #002855;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background 0.3s;
+.code-conduite hr {
+    border: 0;
+    border-top: 2px dashed #0047ab;
+    margin: 25px 0;
 }
 
-form button:hover {
-    background-color: #00a1e4;
+.code-conduite small {
+    display: block;
+    text-align: right;
+    color: #555;
+    margin-top: 10px;
+    font-style: italic;
 }
 
-/* =====================================
+/* ================================
    Responsive
-   ===================================== */
-@media (max-width: 768px) {
-    .main-nav {
-        display: block;
-        margin: 10px 0;
-    }
-    .main-nav a {
-        display: block;
-        margin: 10px 0;
-    }
-    .cards {
-        flex-direction: column;
-    }
+================================ */
+@media(max-width:640px){
+    nav{flex-direction:column;}
+    nav a{margin-bottom:10px;}
+    .counter-fire{font-size:36px;}
+    .counter-simple{font-size:22px;}
 }
