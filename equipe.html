@@ -5,6 +5,34 @@
 <title>SCQ - Équipe</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/styles.css">
+<style>
+body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f7f9fc; color:#222; line-height:1.6; }
+h1, h2 { color:#0047ab; }
+h1 { text-align:center; font-size:36px; margin-top:40px; }
+h2 { margin-top:30px; }
+nav { background-color:#0047ab; padding:12px 20px; position:sticky; top:0; display:flex; flex-wrap:wrap; }
+nav a { color:white; text-decoration:none; margin-right:15px; font-weight:bold; padding:5px 0; }
+nav a:hover { text-decoration:underline; }
+.banner { text-align:center; margin-top:20px; }
+.banner img { max-width:100%; height:auto; }
+.content { max-width:900px; margin:30px auto; background:#fff; padding:25px; border-radius:10px; box-shadow:0 0 12px rgba(0,0,0,0.1); }
+p { margin-bottom:15px; }
+a { color:#0047ab; text-decoration:none; }
+a:hover { text-decoration:underline; }
+.section { margin-top:40px; }
+.member-grid { display:flex; flex-wrap:wrap; gap:20px; justify-content:flex-start; }
+.member-card { display:flex; align-items:center; background:#e6f0ff; padding:10px; border-radius:10px; width:100%; max-width:400px; }
+.member-card img { width:80px; height:80px; object-fit:cover; border-radius:50%; margin-right:15px; }
+.separator { height:2px; background:#0047ab; margin:30px 0; border-radius:2px; }
+ul { margin-left:20px; margin-bottom:15px; }
+@media(max-width:640px){ 
+  h1{font-size:28px;} 
+  nav{flex-direction:column;} 
+  nav a{margin-bottom:10px;} 
+  .member-card { flex-direction:column; align-items:center; text-align:center; max-width:100%; }
+  .member-card img { margin-bottom:10px; margin-right:0; }
+}
+</style>
 </head>
 <body>
 
@@ -32,29 +60,29 @@
 
 <p>Pour connaître les règles et principes de notre parti, consultez le <a href="code-conduite.html">Code de conduite officiel du SCQ</a>.</p>
 
-<!-- Ajouter les profils ou photos de l'équipe ici -->
-
 <div class="section">
-<h1>Notre Équipe</h1>
-
 <h2>Chef du parti</h2>
-<div class="member-card">
-<img src="images/photo_vide.jpg" alt="Benoit Cantin">
-<div><strong>Benoit Cantin</strong><br>Québec - Chef du parti</div>
+<div class="member-grid">
+  <div class="member-card">
+    <img src="images/photo_vide.jpg" alt="Benoit Cantin">
+    <div><strong>Benoit Cantin</strong><br>Québec - Chef du parti</div>
+  </div>
 </div>
 
 <h2>Dirigeants et représentants officiels</h2>
-<div class="member-card">
-<img src="images/photo_vide.jpg" alt="Dirigeant 1">
-<div><strong>Nom 1</strong><br>Poste : Dirigeant 1</div>
-</div>
-<div class="member-card">
-<img src="images/photo_vide.jpg" alt="Dirigeant 2">
-<div><strong>Nom 2</strong><br>Poste : Dirigeant 2</div>
-</div>
-<div class="member-card">
-<img src="images/photo_vide.jpg" alt="Représentant officiel">
-<div><strong>Nom 3</strong><br>Poste : Représentant Officiel</div>
+<div class="member-grid">
+  <div class="member-card">
+    <img src="images/photo_vide.jpg" alt="Dirigeant 1">
+    <div><strong>Nom 1</strong><br>Poste : Dirigeant 1</div>
+  </div>
+  <div class="member-card">
+    <img src="images/photo_vide.jpg" alt="Dirigeant 2">
+    <div><strong>Nom 2</strong><br>Poste : Dirigeant 2</div>
+  </div>
+  <div class="member-card">
+    <img src="images/photo_vide.jpg" alt="Représentant officiel">
+    <div><strong>Nom 3</strong><br>Poste : Représentant officiel</div>
+  </div>
 </div>
 
 <div class="separator"></div>
@@ -70,16 +98,20 @@
 <div class="separator"></div>
 
 <h2>Représentants par municipalité</h2>
-<div class="member-card">
-<img src="images/photo_vide.jpg" alt="Municipalité 1">
-<div><strong>Nom</strong><br>Municipalité 1</div>
+<div class="member-grid">
+  <div class="member-card">
+    <img src="images/photo_vide.jpg" alt="Municipalité 1">
+    <div><strong>Nom</strong><br>Municipalité 1</div>
+  </div>
+  <div class="member-card">
+    <img src="images/photo_vide.jpg" alt="Municipalité 2">
+    <div><strong>Nom</strong><br>Municipalité 2</div>
+  </div>
+  <!-- Ajouter d'autres municipalités selon besoin -->
 </div>
-<div class="member-card">
-<img src="images/photo_vide.jpg" alt="Municipalité 2">
-<div><strong>Nom</strong><br>Municipalité 2</div>
-</div>
-<!-- Ajouter d'autres municipalités selon besoin -->
 
 </div>
+</div>
+
 </body>
 </html>
