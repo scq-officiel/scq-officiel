@@ -5,6 +5,29 @@
 <title>SCQ - Comptabilité</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/styles.css">
+<style>
+.compta-section {
+  max-width: 700px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+.compta-section input {
+  width: 150px;
+  padding: 5px;
+  margin: 5px 0;
+}
+.compta-section label {
+  font-weight: bold;
+}
+.compta-section .total {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #0047ab;
+}
+</style>
 </head>
 <body>
 
@@ -26,13 +49,30 @@
 </div>
 
 <div class="content">
-<h1>Comptabilité et Transparence</h1>
+<h1>Comptabilité du SCQ</h1>
 
-<p>Cette section détaille les finances du SCQ, incluant les dons et dépenses. La transparence financière est au cœur de nos valeurs.</p>
+<div class="compta-section">
+<h2>Enregistrer vos dons et dépenses</h2>
 
-<p>Pour connaître les règles et principes de notre parti, consultez le <a href="code-conduite.html">Code de conduite officiel du SCQ</a>.</p>
+<label for="don">Dons reçus :</label><br>
+<input type="number" id="don" value="0"><br>
 
-<!-- Ajouter le tableau des transactions ici -->
+<label for="depense">Dépenses :</label><br>
+<input type="number" id="depense" value="0"><br>
+
+<button onclick="calculTotal()">Calculer le total</button>
+
+<div class="total" id="total">Total : 0</div>
+</div>
+
+<script>
+function calculTotal() {
+    let dons = parseFloat(document.getElementById('don').value) || 0;
+    let depenses = parseFloat(document.getElementById('depense').value) || 0;
+    let total = dons - depenses;
+    document.getElementById('total').textContent = "Total : " + total.toFixed(2) + " $";
+}
+</script>
 
 </div>
 </body>
