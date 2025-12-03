@@ -1,153 +1,118 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SCQ – Membres</title>
-    <link rel="stylesheet" href="css/styles.css">
+<meta charset="UTF-8">
+<title>SCQ - Membres</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/flames.css">
+<style>
+body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f7f9fc; color:#222; line-height:1.6; }
+h1 { text-align:center; color:#0047ab; font-size:36px; margin-top:40px; }
+nav { background-color:#0047ab; padding:12px 20px; position:sticky; top:0; display:flex; flex-wrap:wrap; }
+nav a { color:white; text-decoration:none; margin-right:15px; font-weight:bold; padding:5px 0; }
+nav a:hover { text-decoration:underline; }
+.banner { text-align:center; margin-top:20px; }
+.banner img { max-width:100%; height:auto; }
+.content { max-width:900px; margin:30px auto; background:#fff; padding:25px; border-radius:10px; box-shadow:0 0 12px rgba(0,0,0,0.1); }
 
-    <style>
-        body {
-            background-color: #0a0a0a;
-            color: white;
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
+.counter {
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+.counter #member-count {
+  display: inline-block;
+  font-size: 72px;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+.counter .flame-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: 120px;
+  z-index: 1;
+  pointer-events: none;
+}
 
-        /* HEADER */
-        header {
-            background-color: #001133;
-            padding: 15px 0;
-        }
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            margin: 0 20px;
-            font-size: 18px;
-            font-weight: bold;
-        }
-        nav a:hover {
-            color: #66aaff;
-        }
+.counter small {
+  display: block;
+  margin-top: 10px;
+  color: #555;
+  font-size: 16px;
+}
 
-        h1 {
-            margin-top: 40px;
-        }
+p { margin-bottom: 15px; }
+a { color:#0047ab; text-decoration:none; }
+a:hover { text-decoration:underline; }
 
-        /* CONTENEUR DU COMPTEUR */
-        .counter-container {
-            margin-top: 40px;
-        }
-
-        .flame-wrapper {
-            position: relative;
-            display: inline-block;
-            padding-bottom: 40px; /* espace pour les flammes */
-        }
-
-        .flame-text {
-            font-size: 64px;
-            font-weight: bold;
-            color: #ffffff;
-            position: relative;
-            z-index: 2;
-        }
-
-        /* FLAMMES BLEUES AVEC *TON* GIF */
-        .flame {
-            position: absolute;
-            bottom: -45px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 140px;
-            height: 80px;
-            z-index: 1;
-            pointer-events: none;
-
-            background-image: url("images/hellfire.gif");
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            opacity: 0.85;
-            filter: hue-rotate(200deg); /* passe le feu en BLEU */
-        }
-
-        .member-message {
-            margin-top: 40px;
-            padding: 0 20px;
-            font-size: 20px;
-            line-height: 1.6;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .update-date {
-            margin-top: 15px;
-            font-size: 16px;
-            color: #cccccc;
-        }
-    </style>
+@media(max-width:640px){ 
+  h1{font-size:28px;} 
+  nav{flex-direction:column;} 
+  nav a{margin-bottom:10px;} 
+  .counter #member-count{font-size:48px;}
+  .counter .flame-bg{height:80px;}
+}
+</style>
 </head>
-
 <body>
 
-<header>
-    <nav>
-        <a href="index.html">Accueil</a>
-        <a href="mission.html">Mission</a>
-        <a href="membres.html">Membres</a>
-    </nav>
-</header>
+<nav>
+  <a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ" style="height:40px; vertical-align:middle; margin-right:10px;"></a>
+  <a href="index.html">Accueil</a>
+  <a href="mission.html">Mission</a>
+  <a href="constitution.html">Constitution</a>
+  <a href="reformes.html">Réformes</a>
+  <a href="comparatif.html">Comparatif</a>
+  <a href="membres.html">Membres</a>
+  <a href="equipe.html">Équipe</a>
+  <a href="comptabilite.html">Comptabilité</a>
+  <a href="contact.html">Contact</a>
+</nav>
 
-<h1>Membres du SCQ</h1>
-
-<div class="counter-container">
-
-    <div class="flame-wrapper">
-        <div id="memberCount" class="flame-text">0</div>
-        <div class="flame"></div>
-    </div>
-
-    <div class="update-date" id="updateDate">Mise à jour...</div>
-
+<div class="banner">
+  <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
 </div>
 
-<div class="member-message">
-    <h2>🙏 Merci à tous les membres du SCQ</h2>
+<div class="counter">
+  <img src="images/hellfire.gif" alt="Flammes" class="flame-bg">
+  <p id="member-count">0</p>
+  <small id="member-last-update">Dernière mise à jour : N/A</small>
+</div>
 
-    <p>
-        Votre soutien, votre confiance et votre engagement sont la force qui fait avancer
-        <strong>Souveraineté et citoyenneté du Québec (SCQ)</strong>.
-        Chaque membre représente une voix, une volonté, un espoir pour un Québec plus juste,
-        plus souverain et réellement gouverné par son peuple.
-    </p>
+<div class="content">
+<h1>Message à nos membres</h1>
 
-    <p>
-        🔔 <strong>Devenir membre est 100% gratuit</strong>.  
-        Ce que nous demandons en retour est simple :  
-        <strong>faites connaître le parti à votre entourage</strong> — famille, amis, collègues.  
-        Plus nous sommes nombreux, plus la voix du peuple devient impossible à ignorer.
-    </p>
+<p>Chers membres du SCQ,</p>
 
-    <p>
-        Ensemble, unis sous une même bannière,  
-        <strong>nous pouvons faire du SCQ la seule et véritable voix du peuple québécois.</strong>  
-        Un mouvement authentique, créé par le peuple et pour le peuple.
-    </p>
+<p>Nous vous remercions sincèrement pour votre engagement et votre soutien envers le Parti Souveraineté et Citoyenneté du Québec (SCQ). Chacun de vous contribue à faire vivre notre vision d’un Québec souverain et démocratiquement gouverné par et pour le peuple.</p>
 
-    <p><strong>💙 Rejoignez-nous. Rassemblons-nous. Construisons l’avenir du Québec.</strong></p>
+<p>Tout citoyen désirant devenir membre peut le faire sans frais. En échange, chaque membre est invité à faire connaître le parti auprès de son entourage, à partager nos idées et à recruter de nouveaux membres. Notre objectif est de rassembler tous les Québécois sous une seule bannière, afin que le SCQ devienne la voix forte et unie du peuple.</p>
+
+<p>Ensemble, nous construisons un mouvement citoyen, transparent et engagé. Votre participation active, votre énergie et votre volonté de contribuer font de nous une véritable force collective capable de transformer la société et de défendre les droits et libertés de tous.</p>
+
+<p>Pour connaître les règles et principes de notre parti, consultez le <a href="code-conduite.html">Code de conduite officiel du SCQ</a>.</p>
+
 </div>
 
 <script>
-    // Récupération depuis localStorage
-    const members = localStorage.getItem("scq_member_count") || 14;
-    const date = localStorage.getItem("scq_member_date") || "2025-11-28";
+// --- Compteur membres modifiable ---
+function updateMemberCounter() {
+    let totalMembers = localStorage.getItem("scq_total_members") || 14;
+    let lastUpdate = localStorage.getItem("scq_members_last_update") || "2025-11-28";
 
-    document.getElementById("memberCount").textContent = members;
-    document.getElementById("updateDate").textContent = "Dernière mise à jour : " + date;
+    document.getElementById("member-count").textContent = totalMembers;
+    document.getElementById("member-last-update").textContent = "Dernière mise à jour : " + lastUpdate;
+}
+updateMemberCounter();
+
+// --- Exemple pour modifier via console ---
+// localStorage.setItem("scq_total_members", 20);
+// localStorage.setItem("scq_members_last_update", new Date().toLocaleString());
 </script>
 
 </body>
