@@ -1,5 +1,5 @@
 /* ============================
-   Membres - flammes optimisées
+   Compteur - Flammes (taille normale)
    ============================ */
 
 .counter {
@@ -9,27 +9,25 @@
 
 .flames {
   position: relative;
-  display: inline-block;
   color: white;
   font-weight: bold;
-  font-size: 120px; /* chiffre x2 */
-  line-height: 1;
+  font-size: 60px; /* taille du chiffre */
   text-align: center;
-  margin: 0 auto;
-  padding: 10px; /* espace autour du chiffre */
+  width: 100%;
+  display: inline-block;
 }
 
 .flames::before {
   content: "";
   position: absolute;
-  top: 50%;
   left: 50%;
-  width: 213px;   /* taille stable du gif -> 2x */
-  height: 213px;
+  top: 50%;
+  width: 120%;   /* ancienne grandeur */
+  height: 120%;  /* ancienne grandeur */
   transform: translate(-50%, -50%);
   background: url('../images/hellfire.gif') no-repeat center center;
-  background-size: contain; /* aucune coupe */
+  background-size: cover;
   z-index: -1;
-  pointer-events: none;
   opacity: 1;
+  pointer-events: none;
 }
