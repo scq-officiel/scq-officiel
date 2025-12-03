@@ -6,23 +6,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/styles.css">
 <style>
-body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f7f9fc; color:#222; line-height:1.6; }
-h1 { text-align:center; color:#0047ab; font-size:36px; margin-top:40px; }
-nav { background-color:#0047ab; padding:12px 20px; position:sticky; top:0; display:flex; flex-wrap:wrap; }
-nav a { color:white; text-decoration:none; margin-right:15px; font-weight:bold; padding:5px 0; }
-nav a:hover { text-decoration:underline; }
-.banner { text-align:center; margin-top:20px; }
-.banner img { max-width:100%; height:auto; }
-.content { max-width:900px; margin:30px auto; background:#fff; padding:25px; border-radius:10px; box-shadow:0 0 12px rgba(0,0,0,0.1); }
-p, ul, label { margin-bottom:15px; }
-input[type="number"], input[type="text"] { width:100%; padding:8px; margin-top:5px; margin-bottom:15px; border-radius:5px; border:1px solid #ccc; }
-.total { font-weight:bold; font-size:20px; margin-top:15px; }
-a { color:#0047ab; text-decoration:none; }
-a:hover { text-decoration:underline; }
-.separator { height:2px; background:#0047ab; margin:30px 0; border-radius:2px; }
-button { padding:10px 20px; background:#0047ab; color:white; border:none; border-radius:5px; cursor:pointer; }
-button:hover { background:#003380; }
-@media(max-width:640px){ h1{font-size:28px;} nav{flex-direction:column;} nav a{margin-bottom:10px;} }
+.content-section { max-width:900px; margin:30px auto; background:#fff; padding:25px; border-radius:10px; box-shadow:0 0 12px rgba(0,0,0,0.1); }
+table { width:100%; border-collapse:collapse; margin-top:15px; }
+th, td { border:1px solid #ccc; padding:8px; text-align:left; }
+th { background:#0047ab; color:white; }
+input[type=number] { width:150px; padding:5px; margin-right:10px; }
+#total { font-weight:bold; margin-top:15px; }
 </style>
 </head>
 <body>
@@ -44,37 +33,36 @@ button:hover { background:#003380; }
   <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
 </div>
 
-<div class="content">
-<h1>Comptabilité du SCQ</h1>
+<div class="content-section">
+<h1>Comptabilité et Transparence</h1>
 
-<p>Cette section vous permet de suivre les **dons reçus** et les **dépenses** du parti. Vous pouvez également calculer le total facilement.</p>
+<h2>Dons et Dépenses</h2>
+<p>Vous pouvez modifier les montants ci-dessous pour afficher les chiffres des dons reçus et des dépenses.</p>
 
-<div class="separator"></div>
+<form id="finance-form">
+  <label>Dons reçus : $<input type="number" id="don_recus" value="5000"></label>
+  <label>Dépenses : $<input type="number" id="depenses" value="2300"></label>
+  <button type="button" onclick="calculerTotal()">Calculer total</button>
+</form>
 
-<h2>Dons reçus</h2>
-<label for="don_recus">Montant total des dons reçus :</label>
-<input type="number" id="don_recus" placeholder="Entrez le montant des dons reçus" value="0">
+<p id="total">Total : $7300</p>
 
-<h2>Dépenses</h2>
-<label for="depenses">Montant total des dépenses :</label>
-<input type="number" id="depenses" placeholder="Entrez le montant des dépenses" value="0">
-
-<button onclick="calculerTotal()">Calculer le total</button>
-
-<p class="total" id="total">Total : 0 $</p>
-
-<div class="separator"></div>
-
-<p>Pour plus d’informations sur la gestion responsable et transparente, consultez le <a href="code-conduite.html">Code de conduite officiel du SCQ</a>.</p>
+<h3>Historique des transactions</h3>
+<table>
+<tr><th>Date</th><th>Description</th><th>Montant</th><th>Type</th></tr>
+<tr><td>2025/11/21</td><td>Don citoyen</td><td>$500</td><td>Entrée</td></tr>
+<tr><td>2025/11/21</td><td>Dépenses</td><td>$200</td><td>Sortie</td></tr>
+<!-- Ajouter plus de lignes pour chaque transaction -->
+</table>
 </div>
 
 <script>
 function calculerTotal() {
-    let dons = parseFloat(document.getElementById("don_recus").value) || 0;
-    let depenses = parseFloat(document.getElementById("depenses").value) || 0;
-    let total = dons - depenses;
-    document.getElementById("total").textContent = "Total : " + total.toFixed(2) + " $";
+  let dons = parseFloat(document.getElementById('don_recus').value) || 0;
+  let depenses = parseFloat(document.getElementById('depenses').value) || 0;
+  document.getElementById('total').textContent = "Total : $" + (dons - depenses);
 }
+calculerTotal();
 </script>
 
 </body>
