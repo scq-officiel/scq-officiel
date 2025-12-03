@@ -1,35 +1,18 @@
-/* flames.css : Styles pour chiffres/texte en flammes bleues */
-
-.flames-container {
-  position: relative;
-  display: inline-block;
-  text-align: center;
-}
-
-.flames-container .flames-bg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: auto;
-  height: 120px; /* Ajuster selon la taille du texte */
-  z-index: 1;
-  pointer-events: none;
-}
-
-.flames-container .flames-text {
-  position: relative;
-  z-index: 2;
-  font-size: 72px; /* Taille par défaut */
+.flames-blue {
+  font-size: 60px;
   font-weight: bold;
-  color: white;
+  color: #00f; /* Bleu pour le Québec */
+  text-align: center;
+  text-shadow:
+     0 0 5px #00f,
+     0 0 10px #00f,
+     0 0 20px #0ff,
+     0 0 30px #0ff,
+     0 0 40px #0ff;
+  animation: flicker 1s infinite;
 }
 
-@media(max-width: 640px) {
-  .flames-container .flames-text {
-    font-size: 48px;
-  }
-  .flames-container .flames-bg {
-    height: 80px;
-  }
+@keyframes flicker {
+  0%, 100% { text-shadow: 0 0 5px #00f, 0 0 10px #00f, 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff; }
+  50% { text-shadow: 0 0 10px #0ff, 0 0 20px #00f, 0 0 30px #0ff, 0 0 40px #00f, 0 0 50px #0ff; }
 }
