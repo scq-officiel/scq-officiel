@@ -7,44 +7,28 @@
 <link rel="stylesheet" href="css/styles.css">
 <style>
 /* ============================
-   Compteur - Flammes (taille normale)
+   Barre de navigation inversée
    ============================ */
-.counter {
-  text-align: center;
-  width: 100%;
-  margin-bottom: 20px;
+nav {
+  background-color: #ffffff;  /* fond blanc */
+  padding: 12px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.counter #member-last-update {
-  display: block;
-  color: white;         /* texte en blanc */
-  font-size: 16px;
-  margin-bottom: 10px;  /* espace au-dessus du chiffre */
-}
-
-.flames {
-  position: relative;
-  color: white;         /* chiffre en blanc */
+nav a {
+  color: #0047ab;  /* texte bleu drapeau Québec */
+  text-decoration: none;
+  margin-right: 15px;
   font-weight: bold;
-  font-size: 60px;      /* taille du chiffre */
-  text-align: center;
-  width: 100%;
-  display: inline-block;
+  padding: 5px 0;
 }
 
-.flames::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 120%;           /* taille du feu */
-  height: 120%;
-  transform: translate(-50%, -50%);
-  background: url('../images/hellfire.gif') no-repeat center center;
-  background-size: cover;
-  z-index: -1;
-  opacity: 1;
-  pointer-events: none;
+nav a:hover {
+  text-decoration: underline;
 }
 
 /* ============================
@@ -52,16 +36,60 @@
    ============================ */
 .banner {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 0;
   width: 100%;
   overflow: hidden;
 }
 
 .banner img {
-  width: 100%;        /* largeur 100% de l'écran */
-  height: auto;       /* conserve les proportions */
-  max-height: 200px;  /* ajuste la hauteur */
-  object-fit: cover;  /* garde l'image centrée */
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+/* ============================
+   Compteur - Flammes avec carré
+   ============================ */
+.counter {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.counter #member-last-update {
+  display: block;
+  color: white;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Chiffre avec flammes carré derrière */
+.flames {
+  position: relative;
+  color: white;
+  font-weight: bold;
+  font-size: 60px;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  z-index: 1;
+}
+
+.flames::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 150px;       /* taille carrée appropriée */
+  height: 150px;      /* taille carrée appropriée */
+  transform: translate(-50%, -50%);
+  background: url('../images/hellfire.gif') no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: 10px;  /* optionnel : bords légèrement arrondis */
 }
 
 /* ============================
@@ -79,7 +107,6 @@
 
 h1 { font-size:36px; color:#0047ab; }
 p { margin-bottom:15px; font-size:18px; }
-nav a:hover { text-decoration:underline; }
 </style>
 </head>
 <body>
