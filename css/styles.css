@@ -1,198 +1,29 @@
 /* ============================
-   Styles généraux pour SCQ
+   Membres - flammes agrandies
    ============================ */
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f7f9fc;
-  color: #222;
-  line-height: 1.6;
-}
-
-h1 {
-  font-size: 36px;
-  color: #0047ab;
-  text-align: center;
-  margin-top: 20px;
-}
-
-h2 {
-  color: #0047ab;
-  margin-top: 20px;
-}
-
-p, ul {
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-
-ul {
-  margin-left: 20px;
-}
-
-a {
-  color: #0047ab;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* ============================
-   Barre de navigation
-   ============================ */
-
-nav {
-  background-color: #0047ab;
-  padding: 12px 20px;
-  display: flex;
-  flex-wrap: wrap;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-right: 15px;
-  font-weight: bold;
-  padding: 5px 0;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* ============================
-   Bannière
-   ============================ */
-
-.banner {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.banner img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* ============================
-   Contenu principal
-   ============================ */
-
-.content {
-  max-width: 900px;
-  margin: 30px auto;
-  background: #fff;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
-}
-
-/* ============================
-   Membres - compteur
-   ============================ */
-
-.counter {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.counter #member-count {
+.flames {
+  position: relative;
   display: inline-block;
-  font-size: 48px;
-  position: relative;
-  color: #0047ab; /* par défaut si pas de flammes */
-}
-
-.counter small {
-  display: block;
-  margin-top: 10px;
-  color: #555;
-  font-size: 16px;
-}
-
-/* ============================
-   Membres - flammes bleues
-   ============================ */
-
-.flames-blue {
-  position: relative;
-  color: white;
+  color: white;            /* chiffre blanc */
   font-weight: bold;
-  font-size: 48px;
+  font-size: 180px;        /* chiffre 3x plus gros */
+  text-align: center;
+  margin: 0 auto;
+  width: auto;
 }
 
-.flames-blue::before {
+.flames::before {
   content: "";
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 120%;
-  height: 120%;
+  width: 300%;             /* GIF 3x plus grand */
+  height: 300%;
   transform: translate(-50%, -50%);
   background: url('../images/hellfire.gif') no-repeat center center;
   background-size: cover;
   z-index: -1;
-}
-
-/* ============================
-   Équipe
-   ============================ */
-
-.member-card {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.member-card img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-right: 15px;
-}
-
-/* ============================
-   Comptabilité
-   ============================ */
-
-input[type=text], input[type=number] {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-button {
-  background-color: #0047ab;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #003580;
-}
-
-/* ============================
-   Responsive
-   ============================ */
-
-@media(max-width:640px) {
-  h1 { font-size: 28px; }
-  nav { flex-direction: column; }
-  nav a { margin-bottom: 10px; }
-  .counter #member-count { font-size: 36px; }
-  .member-card img { width: 80px; height: 80px; }
+  pointer-events: none;
+  opacity: 1;
 }
