@@ -1,17 +1,24 @@
 /* ============================
    Compteur - Flammes (taille normale)
    ============================ */
-
 .counter {
   text-align: center;
   width: 100%;
+  margin-bottom: 20px;
+}
+
+.counter #member-last-update {
+  display: block;
+  color: white;         /* texte en blanc */
+  font-size: 16px;
+  margin-bottom: 10px;  /* espace au-dessus du chiffre */
 }
 
 .flames {
   position: relative;
-  color: white;
+  color: white;         /* chiffre en blanc */
   font-weight: bold;
-  font-size: 60px; /* taille du chiffre */
+  font-size: 60px;      /* taille normale du chiffre */
   text-align: center;
   width: 100%;
   display: inline-block;
@@ -22,8 +29,8 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 120%;   /* ancienne grandeur */
-  height: 120%;  /* ancienne grandeur */
+  width: 120%;           /* ancienne grandeur du feu */
+  height: 120%;
   transform: translate(-50%, -50%);
   background: url('../images/hellfire.gif') no-repeat center center;
   background-size: cover;
@@ -31,21 +38,3 @@
   opacity: 1;
   pointer-events: none;
 }
-
-/* ============================
-   Bannière - largeur complète, hauteur réduite
-   ============================ */
-.banner {
-  text-align: center;
-  margin-top: 20px;
-  width: 100%;
-  overflow: hidden; /* évite que l'image déborde */
-}
-
-.banner img {
-  width: 100%;        /* largeur 100% de l'écran */
-  height: auto;       /* conserve les proportions */
-  max-height: 200px;  /* ajuste la hauteur pour qu'elle ne soit pas trop grande */
-  object-fit: cover;  /* garde l'image centrée et bien remplie */
-}
-
