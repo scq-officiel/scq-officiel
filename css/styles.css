@@ -31,3 +31,21 @@
   opacity: 1;
   pointer-events: none;
 }
+
+/* ============================
+   Bannière - largeur complète, hauteur réduite
+   ============================ */
+.banner {
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+  overflow: hidden; /* évite que l'image déborde */
+}
+
+.banner img {
+  width: 100%;        /* largeur 100% de l'écran */
+  height: auto;       /* conserve les proportions */
+  max-height: 200px;  /* ajuste la hauteur pour qu'elle ne soit pas trop grande */
+  object-fit: cover;  /* garde l'image centrée et bien remplie */
+}
+
