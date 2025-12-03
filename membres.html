@@ -1,58 +1,140 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <title>SCQ - Membres</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/styles.css">
+<style>
+/* Barre de navigation fixe */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0A2A66;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  font-weight: bold;
+  padding: 5px 0;
+}
+nav a:hover { text-decoration: underline; }
+
+/* Bannière */
+.banner {
+  text-align: center;
+  margin-top: 70px; /* espace pour nav fixe */
+  width: 100%;
+  overflow: hidden;
+}
+.banner img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+/* Contenu principal */
+.content {
+  max-width: 900px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Compteur membres */
+.counter {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+}
+.counter #member-last-update {
+  display: block;
+  color: #0A2A66;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.flames {
+  position: relative;
+  color: white;
+  font-weight: bold;
+  font-size: 60px;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+}
+.flames::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 120%;
+  height: 120%;
+  transform: translate(-50%, -50%);
+  background: url('../images/hellfire.gif') no-repeat center center;
+  background-size: contain;
+  z-index: -1;
+  opacity: 1;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media(max-width:640px) {
+  nav { flex-direction: column; padding: 10px; }
+  nav a { margin-bottom: 8px; }
+  .flames { font-size: 40px; }
+  .banner img { max-height: 150px; }
+  .content { padding: 15px; margin: 20px auto; }
+}
+</style>
 </head>
 <body>
+
 <nav>
-  <div class="logo"><a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ"></a></div>
-  <div class="menu">
-    <a href="index.html">Accueil</a>
-    <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
-    <a href="mission.html">Mission</a>
-    <a href="equipe.html">Équipe</a>
-    <a href="membres.html">Membres</a>
-    <a href="cadre.html">Cadre National</a>
-    <a href="comptabilite.html">Comptabilité</a>
-    <a href="contact.html">Contact</a>
-  </div>
+  <a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ" style="height:40px; margin-right:10px;"></a>
+  <a href="index.html">Accueil</a>
+  <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+  <a href="equipe.html">Équipe</a>
+  <a href="cadre.html">Cadre national</a>
+  <a href="membres.html">Membres</a>
+  <a href="comptabilite.html">Comptabilité</a>
+  <a href="contact.html">Contact</a>
 </nav>
 
-<div class="page-wrap">
-  <div class="banner"><img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ"></div>
+<div class="banner">
+  <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
+</div>
 
-      <div class="counter">
-        <div class="flame-wrap">
-          <div id="member-count" class="flame-number">14</div>
-           <div class="last-update">Dernière mise à jour : 2025-11-28</div>
-        </div>
-      </div>
-  
-  <main class="container">
-    <section class="card">
-      <h1>Message à nos membres</h1>
+<div class="counter">
+  <small id="member-last-update">Dernière mise à jour : 2025-11-28</small>
+  <p id="member-count" class="flames">14</p>
+</div>
 
-      <p>Chers membres du SCQ,</p>
-      <p>Nous vous remercions sincèrement pour votre engagement et votre soutien envers le Parti Souveraineté et Citoyenneté du Québec (SCQ). ...</p>
+<div class="content">
+<h1>Message à nos membres</h1>
 
-      <p>Tout citoyen désirant devenir membre peut le faire sans frais. En échange, chaque membre est invité à faire connaître le parti auprès de son entourage...</p>
-
-      <p>Pour connaître les règles et principes, consultez le <a class="inline" href="code-conduite.html">Code de conduite officiel du SCQ</a>.</p>
-    </section>
-  </main>
-  <div class="footer-spacer"></div>
+<p>Chers membres du SCQ,</p>
+<p>Nous vous remercions sincèrement pour votre engagement et votre soutien envers le Parti Souveraineté et Citoyenneté du Québec (SCQ)...</p>
+<!-- reste du contenu -->
 </div>
 
 <script>
-// compteur modifiable via localStorage (console)
-function updateMemberCounter(){
-  const n = localStorage.getItem('scq_total_members') || 14;
-  const date = localStorage.getItem('scq_members_last_update') || '2025-11-28';
-  document.getElementById('member-count').textContent = n;
-  document.querySelector('.last-update').textContent = 'Dernière mise à jour : ' + date;
+function updateMemberCounter() {
+    let totalMembers = localStorage.getItem("scq_total_members") || 14;
+    let lastUpdate = localStorage.getItem("scq_members_last_update") || "2025-11-28";
+    document.getElementById("member-count").textContent = totalMembers;
+    document.getElementById("member-last-update").textContent = "Dernière mise à jour : " + lastUpdate;
 }
 updateMemberCounter();
 </script>
