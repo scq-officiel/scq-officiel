@@ -74,35 +74,44 @@ p { margin-bottom:15px; font-size:18px; }
   position: relative;
 }
 
+/* Message "Dernière mise à jour" */
 #member-last-update {
   display: block;
   color: #0047ab;      /* bleu du drapeau */
   font-size: 18px;
   margin-bottom: 15px;
-  z-index: 2;
+  z-index: 3;
   position: relative;
+}
+
+/* Chiffre du compteur */
+.flames-container {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: auto;
 }
 
 .flames {
   position: relative;
-  color: white;         /* chiffre en blanc */
+  color: white;
   font-weight: bold;
-  font-size: 60px;
-  text-align: center;
-  display: inline-block;
+  font-size: 120px;      /* taille professionnelle */
   z-index: 2;
+  text-align: center;
 }
 
+/* Feu derrière le chiffre */
 .flames::before {
   content: "";
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 120%;         /* taille du feu */
-  height: 120%;
+  width: 150px;          /* taille professionnelle */
+  height: 150px;
   transform: translate(-50%, -50%);
   background: url('../images/hellfire.gif') no-repeat center center;
-  background-size: contain; /* pour garder proportions carrées */
+  background-size: contain; /* garde proportions carrées */
   z-index: 1;             /* derrière le chiffre */
   opacity: 1;
   pointer-events: none;
@@ -115,7 +124,8 @@ p { margin-bottom:15px; font-size:18px; }
   h1 { font-size:28px; }
   nav { flex-direction: column; }
   nav a { margin-bottom:10px; }
-  .flames { font-size:48px; }
+  .flames { font-size:80px; }
+  .flames::before { width:100px; height:100px; }
 }
 </style>
 </head>
@@ -138,7 +148,9 @@ p { margin-bottom:15px; font-size:18px; }
 
 <div class="counter">
   <small id="member-last-update">Dernière mise à jour : 2025-11-28</small>
-  <p id="member-count" class="flames">14</p>
+  <div class="flames-container">
+    <p id="member-count" class="flames">14</p>
+  </div>
 </div>
 
 <div class="content">
