@@ -54,14 +54,14 @@ nav a:hover {
   max-width: 500px;
   margin: 30px auto;
   background: #fff;
-  padding: 25px;
+  padding: 5px;
   border-radius: 10px;
   box-shadow: 0 0 12px rgba(0,0,0,0.1);
   text-align: center;
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 20px;
   color: #0047ab;
 }
 
@@ -126,7 +126,7 @@ p {
 /* ============================
    Responsive
    ============================ */
-@media(max-width:768px) {
+@media(max-width:500px) {
   h1 { font-size: 28px; }
   nav { flex-direction: column; }
   nav a { margin-bottom: 10px; }
@@ -134,7 +134,7 @@ p {
   .flames::before { width: 120px; height: 120px; }
 }
 
-@media(max-width:480px) {
+@media(max-width:400px) {
   .flames { font-size: 70px; }
   .flames::before { width: 100px; height: 100px; }
 }
@@ -187,7 +187,7 @@ p {
 <!-- Script compteur -->
 <script>
 function updateMemberCounter() {
-    let totalMembers = localStorage.getItem("scq_total_members") || 14;
+    let totalMembers = localStorage.getItem("scq_total_members") || "14";
     let lastUpdate = localStorage.getItem("scq_members_last_update") || "2025-11-28";
 
     document.getElementById("member-count").textContent = totalMembers;
