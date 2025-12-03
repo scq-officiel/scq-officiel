@@ -4,59 +4,19 @@
 <meta charset="UTF-8">
 <title>SCQ - Membres</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- CSS général du site -->
-<link rel="stylesheet" href="css/styles.css">
-
-<!-- CSS spécifique pour les flammes bleues -->
+<link rel="stylesheet" href="css/styles.css"> <!-- ton CSS général -->
+<link rel="stylesheet" href="css/flames.css"> <!-- CSS pour compteur en flammes -->
 <style>
 body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f7f9fc; color:#222; line-height:1.6; }
 h1 { text-align:center; color:#0047ab; font-size:36px; margin-top:40px; }
-nav { background-color:#0047ab; padding:12px 20px; position:sticky; top:0; z-index:100; display:flex; flex-wrap:wrap; }
+nav { background-color:#0047ab; padding:12px 20px; position:sticky; top:0; display:flex; flex-wrap:wrap; }
 nav a { color:white; text-decoration:none; margin-right:15px; font-weight:bold; padding:5px 0; }
 nav a:hover { text-decoration:underline; }
 .banner { text-align:center; margin-top:20px; }
 .banner img { max-width:100%; height:auto; }
-section { max-width:900px; margin:30px auto; background:#fff; padding:25px; border-radius:10px; box-shadow:0 0 12px rgba(0,0,0,0.1); text-align:center; }
-p { font-size:18px; margin-bottom:20px; }
-
-/* Compteur flamme bleue */
-.flame-counter {
-  font-size: 48px;
-  font-weight: bold;
-  color: #00f;
-  text-shadow:
-     0 0 5px #00f,
-     0 0 10px #00f,
-     0 0 20px #0ff,
-     0 0 30px #0ff,
-     0 0 40px #00f,
-     0 0 50px #0ff;
-  animation: flicker 1s infinite;
-}
-
-@keyframes flicker {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    text-shadow:
-      0 0 5px #00f,
-      0 0 10px #00f,
-      0 0 20px #0ff,
-      0 0 30px #0ff,
-      0 0 40px #00f,
-      0 0 50px #0ff;
-  }
-  20%, 22%, 24%, 55% {
-    text-shadow:
-      0 0 3px #0ff,
-      0 0 6px #00f,
-      0 0 10px #0ff,
-      0 0 20px #00f,
-      0 0 25px #0ff,
-      0 0 35px #00f;
-  }
-}
+.content { max-width:900px; margin:30px auto; background:#fff; padding:25px; border-radius:10px; box-shadow:0 0 12px rgba(0,0,0,0.1); }
+.counter { text-align:center; font-size:48px; font-weight:bold; margin-bottom:20px; }
 </style>
-
 </head>
 <body>
 
@@ -77,30 +37,30 @@ p { font-size:18px; margin-bottom:20px; }
   <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
 </div>
 
-<section>
-<h1>Nos Membres</h1>
-<p>Voici le nombre actuel de membres du <strong>Parti Souveraineté et Citoyenneté du Québec (SCQ)</strong>.</p>
+<div class="counter flames-blue">
+  <p id="member-count">0</p>
+</div>
 
-<div class="flame-counter" id="member-count">0</div>
-<small id="member-last-update" style="display:block; margin-top:10px; color:#555;">Dernière mise à jour : N/A</small>
-
-<p>Pour connaître les règles et principes de notre parti, consultez le <a href="code-conduite.html">Code de conduite officiel du SCQ</a>.</p>
-</section>
+<div class="content">
+<h1>Merci à tous nos membres</h1>
+<p>Chers membres du Souveraineté et Citoyenneté du Québec (SCQ),</p>
+<p>Nous vous remercions chaleureusement pour votre engagement et votre soutien. Chaque membre contribue à faire entendre **la véritable voix du peuple québécois** et à construire un Québec souverain et démocratique.</p>
+<p>Pour tous ceux qui souhaitent rejoindre le SCQ : <strong>l’adhésion est gratuite</strong>. En échange, chaque membre s’engage à **faire connaître le parti autour de lui**, à sa famille, ses amis et sa communauté. Notre objectif est de rassembler tous ceux qui partagent nos valeurs sous **une seule bannière** — le SCQ, la seule et véritable voix du peuple.</p>
+<p>Chaque action, chaque partage et chaque engagement compte. Ensemble, nous construisons un Québec où **le pouvoir appartient réellement à ses citoyens**. Plus nous sommes unis et nombreux, plus notre message résonnera dans toute la province et le futur pays que nous bâtissons.</p>
+<p>Ensemble, nous sommes le SCQ. Ensemble, nous sommes le peuple. Ensemble, nous faisons naître le Québec de demain.</p>
+</div>
 
 <script>
-// --- Compteur de membres modifiable ---
+// --- Compteur membres modifiable ---
 function updateMemberCounter() {
-    let totalMembers = localStorage.getItem("scq_total_members") || 14;
-    let lastUpdate = localStorage.getItem("scq_members_last_update") || "2025-11-28";
-
+    let totalMembers = localStorage.getItem("scq_total_members") || 0;
+    let lastUpdate = localStorage.getItem("scq_members_last_update") || "2025-11-28"
     document.getElementById("member-count").textContent = totalMembers;
-    document.getElementById("member-last-update").textContent = "Dernière mise à jour : " + lastUpdate;
 }
 updateMemberCounter();
 
-// Exemple pour mise à jour via console :
-// localStorage.setItem("scq_total_members", 25);
-// localStorage.setItem("scq_members_last_update", new Date().toLocaleString());
+// Exemple de mise à jour via console si nécessaire :
+// localStorage.setItem("scq_total_members", 120);
 </script>
 
 </body>
