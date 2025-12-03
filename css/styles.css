@@ -16,7 +16,7 @@
   line-height: 1;
   text-align: center;
   margin: 0 auto;
-  padding: 40px; /* espace autour du chiffre */
+  padding: 10px; /* espace autour du chiffre */
 }
 
 .flames::before {
