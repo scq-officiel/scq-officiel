@@ -1,5 +1,5 @@
 /* ============================
-   Compteur - Flammes bleues
+   Compteur - Flammes bleues agrandi
    ============================ */
 
 .counter {
@@ -8,14 +8,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;        /* centre verticalement */
-}
+} 
 
 .flames {
   position: relative;
-  color: #ffffff;             /* blanc */
+  color: white;       /* Chiffre en blanc */
   font-weight: bold;
-  font-size: 60px;            /* taille plus visible */
-  line-height: 1.2;
+  font-size: 180px;   /* 3x la taille précédente de 60px */
+  text-align: center;
 }
 
 .flames::before {
@@ -23,9 +23,9 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 150%;
-  height: 150%;
-  transform: translate(-45%, -45%);
+  width: 360%;        /* 3x la largeur précédente de 120% */
+  height: 360%;       /* 3x la hauteur précédente de 120% */
+  transform: translate(-50%, -50%);
   background: url('../images/hellfire.gif') no-repeat center center;
   background-size: cover;
   z-index: -1;
