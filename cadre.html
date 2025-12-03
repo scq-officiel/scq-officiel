@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadre national – SCQ</title>
+
+    <!-- Feuille de style principale -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        /* Style interne spécifique à cette page */
+
+        .page-container {
+            max-width: 1100px;
+            margin: 120px auto 40px;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0A2A66;
+            font-size: 2.4rem;
+            margin-bottom: 30px;
+        }
+
+        .intro-text {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .cards-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 330px;
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: 0.3s ease;
+            border: 2px solid #0A2A66;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            color: #0A2A66;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .card-desc {
+            color: #333;
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+        }
+
+        .card a {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #0A2A66;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .card a:hover {
+            background-color: #0C3C92;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- BARRE SUPÉRIEURE FIXE -->
+    <header class="top-bar">
+        <div class="top-bar-content">
+            <span class="top-bar-title">Souveraineté et Citoyenneté du Québec (SCQ)</span>
+        </div>
+    </header>
+
+    <div class="page-container">
+        <h1>Cadre national – Constitution & Réformes</h1>
+
+        <p class="intro-text">
+            Cette page regroupe les deux piliers structurels du projet national du SCQ.  
+            Sélectionnez une section pour consulter le contenu complet.
+        </p>
+
+        <div class="cards-container">
+
+            <!-- Carte Constitution -->
+            <div class="card">
+                <div class="card-title">Constitution</div>
+                <div class="card-desc">
+                    Ensemble des principes fondamentaux encadrant le futur Québec souverain :
+                    droits, institutions, souveraineté, éducation, démocratie citoyenne, etc.
+                </div>
+                <a href="constitution.html">Accéder à la Constitution</a>
+            </div>
+
+            <!-- Carte Réformes -->
+            <div class="card">
+                <div class="card-title">Réformes</div>
+                <div class="card-desc">
+                    Réformes législatives, mesures d’application, politiques publiques et
+                    transformations modernisant l’État québécois selon la vision du SCQ.
+                </div>
+                <a href="reformes.html">Accéder aux Réformes</a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
