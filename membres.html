@@ -5,15 +5,14 @@
 <title>SCQ - Membres</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/style.css">
-
 <style>
 body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f7f9fc; color:#222; }
-nav { background-color:#0047ab; padding:12px 20px; display:flex; flex-wrap:wrap; position:sticky; top:0; }
+nav { background-color:#0047ab; padding:12px 20px; display:flex; flex-wrap:wrap; position:sticky; top:0; z-index:1000; }
 nav a { color:white; text-decoration:none; margin-right:15px; font-weight:bold; padding:5px 0; }
 nav a:hover { text-decoration:underline; }
 
 .banner { text-align:center; margin-top:20px; }
-.banner img { max-width:100%; height:auto; }
+.banner img { max-width:50%; height:auto; } /* hauteur réduite de moitié */
 
 .content { 
     max-width:900px; 
@@ -28,39 +27,60 @@ nav a:hover { text-decoration:underline; }
 h1 { font-size:36px; color:#0047ab; }
 p { margin-bottom:15px; font-size:18px; }
 
-/* --- Le texte "Dernière mise à jour" --- */
+/* --- Dernière mise à jour centrée et blanche --- */
 .last-update {
     text-align:center;
     color:white;
     font-size:18px;
     font-weight:bold;
     margin-top:30px;
-    margin-bottom:5px;
+    margin-bottom:15px;
 }
 
-/* --- Compteur membres --- */
+/* --- Compteur membres avec flammes --- */
 .counter {
     text-align:center;
     margin-top:10px;
 }
 
 #member-count {
-    font-size:80px;
+    font-size:180px;  /* gros compteur */
     font-weight:bold;
     color:white;
+    position: relative;
 }
 
-/* Effet flamme si tu utilises hellfire.gif */
+/* Effet flamme derrière le chiffre */
 .flames {
-    background:url("images/hellfire.gif");
-    background-size:cover;
-    display:inline-block;
-    padding:40px 60px;
-    border-radius:10px;
+    position: relative;
+    display: inline-block;
+}
+
+.flames::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 360%;
+    height: 360%;
+    transform: translate(-50%, -50%);
+    background: url('images/hellfire.gif') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+    opacity: 1;
+    pointer-events: none;
+}
+
+/* Responsive */
+@media(max-width:640px) {
+  h1 { font-size:28px; }
+  nav { flex-direction:column; }
+  nav a { margin-bottom:10px; }
+  #member-count { font-size:120px; }
+  .banner img { max-width:70%; }
 }
 </style>
 </head>
-
 <body>
 
 <nav>
@@ -80,7 +100,7 @@ p { margin-bottom:15px; font-size:18px; }
   <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
 </div>
 
-<!-- Texte en blanc, centré, placé juste au-dessus du compteur -->
+<!-- Texte centrée au-dessus du compteur -->
 <div id="member-last-update" class="last-update">Dernière mise à jour : 2025-11-28</div>
 
 <div class="counter">
