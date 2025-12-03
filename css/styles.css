@@ -12,7 +12,7 @@
   display: inline-block;
   color: white;
   font-weight: bold;
-  font-size: 180px; /* chiffre x3 */
+  font-size: 120px; /* chiffre x2 */
   line-height: 1;
   text-align: center;
   margin: 0 auto;
@@ -24,8 +24,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 320px;   /* taille stable du gif -> 3x */
-  height: 320px;
+  width: 213px;   /* taille stable du gif -> 2x */
+  height: 213px;
   transform: translate(-50%, -50%);
   background: url('../images/hellfire.gif') no-repeat center center;
   background-size: contain; /* aucune coupe */
