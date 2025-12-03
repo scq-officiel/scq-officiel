@@ -1,18 +1,23 @@
+/* ============================
+   Compteur - Flammes bleues
+   ============================ */
+
 .flames-blue {
-  font-size: 60px;
+  position: relative;
+  color: white;
   font-weight: bold;
-  color: #00f; /* Bleu pour le Québec */
-  text-align: center;
-  text-shadow:
-     0 0 5px #00f,
-     0 0 10px #00f,
-     0 0 20px #0ff,
-     0 0 30px #0ff,
-     0 0 40px #0ff;
-  animation: flicker 1s infinite;
+  font-size: 48px;
 }
 
-@keyframes flicker {
-  0%, 100% { text-shadow: 0 0 5px #00f, 0 0 10px #00f, 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff; }
-  50% { text-shadow: 0 0 10px #0ff, 0 0 20px #00f, 0 0 30px #0ff, 0 0 40px #00f, 0 0 50px #0ff; }
+.flames-blue::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 120%;
+  height: 120%;
+  transform: translate(-50%, -50%);
+  background: url('../images/hellfire.gif') no-repeat center center;
+  background-size: cover;
+  z-index: -1;
 }
