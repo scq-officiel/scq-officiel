@@ -1,154 +1,50 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <title>SCQ - Mission</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="css/styles.css">
-<style>
-/* ============================
-   Bannière - largeur complète, hauteur réduite
-   ============================ */
-.banner {
-  text-align: center;
-  margin-top: 20px;
-  width: 100%;
-  overflow: hidden;
-}
-
-.banner img {
-  width: 100%;
-  height: auto;
-  max-height: 200px;
-  object-fit: cover;
-}
-
-/* ============================
-   Contenu principal
-   ============================ */
-.content {
-  max-width: 900px;
-  margin: 30px auto;
-  background: #fff;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
-  text-align: left;
-}
-
-h1 {
-  font-size: 36px;
-  color: #0047ab;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-h2 {
-  color: #0047ab;
-  margin-top: 20px;
-}
-
-p, ul {
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-
-ul {
-  margin-left: 20px;
-}
-
-a {
-  color: #0047ab;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* ============================
-   Barre de navigation
-   ============================ */
-nav {
-  background-color: #0047ab;
-  padding: 12px 20px;
-  display: flex;
-  flex-wrap: wrap;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-right: 15px;
-  font-weight: bold;
-  padding: 5px 0;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* ============================
-   Responsive
-   ============================ */
-@media(max-width:640px) {
-  h1 { font-size: 28px; }
-  nav { flex-direction: column; }
-  nav a { margin-bottom: 10px; }
-}
-</style>
 </head>
 <body>
-
 <nav>
-  <a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ" style="height:40px; vertical-align:middle; margin-right:10px;"></a>
-  <a href="index.html">Accueil</a>
-  <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
-  <a href="equipe.html">Équipe</a>
-  <a href="constitution.html">Constitution</a>
-  <a href="reformes.html">Réformes</a>
-  <a href="membres.html">Membres</a>
-  <a href="comptabilite.html">Comptabilité</a>
-  <a href="contact.html">Contact</a>
+  <div class="logo"><a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ"></a></div>
+  <div class="menu">
+    <a href="index.html">Accueil</a>
+    <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+    <a href="mission.html">Mission</a>
+    <a href="equipe.html">Équipe</a>
+    <a href="constitution.html">Constitution</a>
+    <a href="reformes.html">Réformes</a>
+    <a href="membres.html">Membres</a>
+    <a href="comptabilite.html">Comptabilité</a>
+    <a href="contact.html">Contact</a>
+  </div>
 </nav>
 
-<div class="banner">
-  <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
+<div class="page-wrap">
+  <div class="banner"><img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ"></div>
+
+  <main class="container">
+    <article class="card">
+      <h1>Mission du SCQ – Réveille-toi, Québec !</h1>
+      <p>Le Parti Souveraineté et Citoyenneté du Québec (SCQ) est le parti du peuple, créé par le peuple et pour le peuple. Nous sommes ici pour réveiller le Québec et le conduire vers une souveraineté réelle, une démocratie authentique et une société juste.</p>
+
+      <p>Nous refusons la corruption, les ingérences étrangères et les décisions imposées par d’autres. Le pouvoir doit revenir aux citoyens, et le SCQ est là pour que chaque Québécois retrouve sa voix et sa dignité.</p>
+
+      <h2>Nos 5 piliers</h2>
+      <ol>
+        <li><strong>Souveraineté et autodétermination</strong> — Le SCQ défend la pleine souveraineté du Québec...</li>
+        <li><strong>Démocratie participative</strong> — Référendums, initiatives populaires et transparence...</li>
+        <li><strong>Protection du français</strong> — Promouvoir notre langue et culture...</li>
+        <li><strong>Justice sociale et équité</strong> — Accès universel aux services essentiels...</li>
+        <li><strong>Intégrité</strong> — Transparence et lutte contre la corruption.</li>
+      </ol>
+
+      <p>Rejoins le mouvement — ensemble, faisons du Québec un État souverain, juste et fier.</p>
+    </article>
+  </main>
+  <div class="footer-spacer"></div>
 </div>
-
-<div class="content">
-<h1>Mission du SCQ – Réveille-toi, Québec !</h1>
-
-<p>Le Parti Souveraineté et Citoyenneté du Québec (SCQ) est le parti du peuple, créé par le peuple et pour le peuple. Nous sommes ici pour réveiller le Québec et le conduire vers une souveraineté réelle, une démocratie authentique et une société juste.</p>
-
-<p>Nous refusons la corruption, les ingérences étrangères et les décisions imposées par d’autres. Le pouvoir doit revenir aux citoyens, et le SCQ est là pour que chaque Québécois retrouve sa voix et sa dignité.</p>
-
-<p>Notre action repose sur cinq piliers fondamentaux :</p>
-
-<ol>
-<li><strong>Souveraineté et autodétermination</strong><br>
-Le SCQ défend la pleine souveraineté du Québec afin que les citoyens puissent décider de leur destin sans ingérence externe. La force d’un État réside dans sa capacité à se gérer lui-même et à protéger ses intérêts légitimes. Fini les ingérences du fédéral et des élites : c’est nous qui décidons de notre futur.</li>
-
-<li><strong>Démocratie participative et citoyenne</strong><br>
-Nous croyons en une démocratie où chaque citoyen est acteur et non spectateur. Référendums, initiatives populaires et transparence totale : la voix du peuple doit être entendue, respectée et traduite en action concrète.</li>
-
-<li><strong>Protection du français, de la culture et de l’identité québécoise</strong><br>
-La langue française et la culture du Québec sont notre identité, notre force. Nous affirmons notre volonté de les protéger et de les promouvoir, tout en favorisant un espace inclusif où chaque citoyen, quelles que soient ses origines, contribue à la richesse et à la diversité du Québec.</li>
-
-<li><strong>Justice sociale et équité</strong><br>
-Le SCQ s’engage à garantir l’accès universel aux services essentiels, y compris l’éducation numérique et la prise en charge des élèves à besoins particuliers. Tous les Québécois doivent bénéficier des mêmes chances et du même respect : personne ne doit être laissé pour compte.</li>
-
-<li><strong>Intégrité et lutte contre la corruption</strong><br>
-Nous érigeons la transparence et l’éthique en principes fondamentaux. Les institutions publiques doivent servir le peuple, et non des intérêts privés ou des influences extérieures. Le SCQ dit non à la corruption et aux abus de pouvoir, pour un gouvernement responsable et crédible.</li>
-</ol>
-
-<p>Rejoins le mouvement !<br>
-Le SCQ n’est pas un parti comme les autres : c’est une révolution citoyenne pacifique, mais déterminée. Ensemble, faisons du Québec un État souverain, juste et fier, où la voix du peuple est enfin respectée, où la démocratie est réelle, et où notre culture et notre langue sont protégées.</p>
-
-</div>
-
 </body>
 </html>
