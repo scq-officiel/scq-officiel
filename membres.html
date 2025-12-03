@@ -4,81 +4,82 @@
 <meta charset="UTF-8">
 <title>SCQ - Membres</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/styles.css">
 <style>
-body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f7f9fc; color:#222; }
-nav { background-color:#0047ab; padding:12px 20px; display:flex; flex-wrap:wrap; position:sticky; top:0; z-index:1000; }
-nav a { color:white; text-decoration:none; margin-right:15px; font-weight:bold; padding:5px 0; }
-nav a:hover { text-decoration:underline; }
+/* ============================
+   Compteur - Flammes (taille normale)
+   ============================ */
+.counter {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
 
-.banner { text-align:center; margin-top:20px; }
-.banner img { max-width:50%; height:auto; } /* hauteur réduite de moitié */
+.counter #member-last-update {
+  display: block;
+  color: white;         /* texte en blanc */
+  font-size: 16px;
+  margin-bottom: 10px;  /* espace au-dessus du chiffre */
+}
 
-.content { 
-    max-width:900px; 
-    margin:30px auto; 
-    background:#fff; 
-    padding:25px; 
-    border-radius:10px; 
-    box-shadow:0 0 12px rgba(0,0,0,0.1); 
-    text-align:center; 
+.flames {
+  position: relative;
+  color: white;         /* chiffre en blanc */
+  font-weight: bold;
+  font-size: 60px;      /* taille du chiffre */
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+}
+
+.flames::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 120%;           /* taille du feu */
+  height: 120%;
+  transform: translate(-50%, -50%);
+  background: url('../images/hellfire.gif') no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+  opacity: 1;
+  pointer-events: none;
+}
+
+/* ============================
+   Bannière - largeur complète, hauteur réduite
+   ============================ */
+.banner {
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;        /* largeur 100% de l'écran */
+  height: auto;       /* conserve les proportions */
+  max-height: 200px;  /* ajuste la hauteur */
+  object-fit: cover;  /* garde l'image centrée */
+}
+
+/* ============================
+   Contenu principal
+   ============================ */
+.content {
+  max-width: 900px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
 h1 { font-size:36px; color:#0047ab; }
 p { margin-bottom:15px; font-size:18px; }
-
-/* --- Dernière mise à jour centrée et blanche --- */
-.last-update {
-    text-align:center;
-    color:white;
-    font-size:18px;
-    font-weight:bold;
-    margin-top:30px;
-    margin-bottom:15px;
-}
-
-/* --- Compteur membres avec flammes --- */
-.counter {
-    text-align:center;
-    margin-top:10px;
-}
-
-#member-count {
-    font-size:180px;  /* gros compteur */
-    font-weight:bold;
-    color:white;
-    position: relative;
-}
-
-/* Effet flamme derrière le chiffre */
-.flames {
-    position: relative;
-    display: inline-block;
-}
-
-.flames::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 360%;
-    height: 360%;
-    transform: translate(-50%, -50%);
-    background: url('images/hellfire.gif') no-repeat center center;
-    background-size: cover;
-    z-index: -1;
-    opacity: 1;
-    pointer-events: none;
-}
-
-/* Responsive */
-@media(max-width:640px) {
-  h1 { font-size:28px; }
-  nav { flex-direction:column; }
-  nav a { margin-bottom:10px; }
-  #member-count { font-size:120px; }
-  .banner img { max-width:70%; }
-}
+nav a:hover { text-decoration:underline; }
 </style>
 </head>
 <body>
@@ -86,12 +87,11 @@ p { margin-bottom:15px; font-size:18px; }
 <nav>
   <a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ" style="height:40px; vertical-align:middle; margin-right:10px;"></a>
   <a href="index.html">Accueil</a>
-  <a href="mission.html">Mission</a>
+  <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+  <a href="equipe.html">Équipe</a>
   <a href="constitution.html">Constitution</a>
   <a href="reformes.html">Réformes</a>
-  <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
   <a href="membres.html">Membres</a>
-  <a href="equipe.html">Équipe</a>
   <a href="comptabilite.html">Comptabilité</a>
   <a href="contact.html">Contact</a>
 </nav>
@@ -100,10 +100,8 @@ p { margin-bottom:15px; font-size:18px; }
   <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
 </div>
 
-<!-- Texte centrée au-dessus du compteur -->
-<div id="member-last-update" class="last-update">Dernière mise à jour : 2025-11-28</div>
-
 <div class="counter">
+  <small id="member-last-update">Dernière mise à jour : 2025-11-28</small>
   <p id="member-count" class="flames">14</p>
 </div>
 
@@ -120,8 +118,7 @@ p { margin-bottom:15px; font-size:18px; }
 
 <p>Merci de croire en cette mission et de faire partie du SCQ. Chaque membre compte, chaque action compte, et c’est grâce à vous que notre parti peut avancer et inspirer le Québec tout entier.</p>
 
-<p>Pour connaître les règles et principes de notre parti, consultez le 
-<a href="code-conduite.html">Code de conduite officiel du SCQ</a>.</p>
+<p>Pour connaître les règles et principes de notre parti, consultez le <a href="code-conduite.html">Code de conduite officiel du SCQ</a>.</p>
 
 </div>
 
@@ -132,8 +129,7 @@ function updateMemberCounter() {
     let lastUpdate = localStorage.getItem("scq_members_last_update") || "2025-11-28";
 
     document.getElementById("member-count").textContent = totalMembers;
-    document.getElementById("member-last-update").textContent =
-        "Dernière mise à jour : " + lastUpdate;
+    document.getElementById("member-last-update").textContent = "Dernière mise à jour : " + lastUpdate;
 }
 updateMemberCounter();
 </script>
