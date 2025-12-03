@@ -5,9 +5,9 @@
 .flames {
   position: relative;
   display: inline-block;
-  color: white;            /* chiffre blanc */
+  color: white;
   font-weight: bold;
-  font-size: 180px;        /* chiffre 3x plus gros */
+  font-size: 180px; /* chiffre 3x plus gros */
   text-align: center;
   margin: 0 auto;
   width: auto;
@@ -18,7 +18,7 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 300%;             /* GIF 3x plus grand */
+  width: 300%;
   height: 300%;
   transform: translate(-50%, -50%);
   background: url('../images/hellfire.gif') no-repeat center center;
