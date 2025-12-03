@@ -4,60 +4,8 @@
 <meta charset="UTF-8">
 <title>SCQ - Membres</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="css/flames.css">
-<style>
-body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f7f9fc; color:#222; line-height:1.6; }
-h1 { text-align:center; color:#0047ab; font-size:36px; margin-top:40px; }
-nav { background-color:#0047ab; padding:12px 20px; position:sticky; top:0; display:flex; flex-wrap:wrap; }
-nav a { color:white; text-decoration:none; margin-right:15px; font-weight:bold; padding:5px 0; }
-nav a:hover { text-decoration:underline; }
-.banner { text-align:center; margin-top:20px; }
-.banner img { max-width:100%; height:auto; }
-.content { max-width:900px; margin:30px auto; background:#fff; padding:25px; border-radius:10px; box-shadow:0 0 12px rgba(0,0,0,0.1); }
-
-.counter {
-  text-align: center;
-  margin-bottom: 20px;
-  position: relative;
-}
-.counter #member-count {
-  display: inline-block;
-  font-size: 72px;
-  font-weight: bold;
-  color: white;
-  position: relative;
-  z-index: 2;
-}
-.counter .flame-bg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-45%, -45%);
-  width: auto;
-  height: 120px;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.counter small {
-  display: block;
-  margin-top: 10px;
-  color: #555;
-  font-size: 16px;
-}
-
-p { margin-bottom: 15px; }
-a { color:#0047ab; text-decoration:none; }
-a:hover { text-decoration:underline; }
-
-@media(max-width:640px){ 
-  h1{font-size:28px;} 
-  nav{flex-direction:column;} 
-  nav a{margin-bottom:10px;} 
-  .counter #member-count{font-size:48px;}
-  .counter .flame-bg{height:80px;}
-}
-</style>
 </head>
 <body>
 
@@ -67,7 +15,7 @@ a:hover { text-decoration:underline; }
   <a href="mission.html">Mission</a>
   <a href="constitution.html">Constitution</a>
   <a href="reformes.html">Réformes</a>
-  <a href="comparatif.html">Comparatif</a>
+  <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
   <a href="membres.html">Membres</a>
   <a href="equipe.html">Équipe</a>
   <a href="comptabilite.html">Comptabilité</a>
@@ -79,24 +27,15 @@ a:hover { text-decoration:underline; }
 </div>
 
 <div class="counter">
-  <img src="images/hellfire.gif" alt="Flammes" class="flame-bg">
-  <p id="member-count">0</p>
+  <p id="member-count" class="flames-blue">0</p>
   <small id="member-last-update">Dernière mise à jour : N/A</small>
 </div>
 
 <div class="content">
 <h1>Message à nos membres</h1>
-
 <p>Chers membres du SCQ,</p>
-
-<p>Nous vous remercions sincèrement pour votre engagement et votre soutien envers le Parti Souveraineté et Citoyenneté du Québec (SCQ). Chacun de vous contribue à faire vivre notre vision d’un Québec souverain et démocratiquement gouverné par et pour le peuple.</p>
-
-<p>Tout citoyen désirant devenir membre peut le faire sans frais. En échange, chaque membre est invité à faire connaître le parti auprès de son entourage, à partager nos idées et à recruter de nouveaux membres. Notre objectif est de rassembler tous les Québécois sous une seule bannière, afin que le SCQ devienne la voix forte et unie du peuple.</p>
-
-<p>Ensemble, nous construisons un mouvement citoyen, transparent et engagé. Votre participation active, votre énergie et votre volonté de contribuer font de nous une véritable force collective capable de transformer la société et de défendre les droits et libertés de tous.</p>
-
+<p>Nous vous remercions sincèrement pour votre engagement et votre soutien. Chaque citoyen désirant devenir membre peut le faire gratuitement. En échange, chaque membre contribue à faire connaître le parti et à recruter de nouveaux membres. Notre objectif est de rassembler tous les Québécois sous une seule bannière et de faire du SCQ la voix forte du peuple.</p>
 <p>Pour connaître les règles et principes de notre parti, consultez le <a href="code-conduite.html">Code de conduite officiel du SCQ</a>.</p>
-
 </div>
 
 <script>
@@ -109,10 +48,6 @@ function updateMemberCounter() {
     document.getElementById("member-last-update").textContent = "Dernière mise à jour : " + lastUpdate;
 }
 updateMemberCounter();
-
-// --- Exemple pour modifier via console ---
-// localStorage.setItem("scq_total_members", 20);
-// localStorage.setItem("scq_members_last_update", new Date().toLocaleString());
 </script>
 
 </body>
