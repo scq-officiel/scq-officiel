@@ -4,19 +4,63 @@
 <meta charset="UTF-8">
 <title>SCQ - Membres</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/style.css">
+
 <style>
-body { font-family: Arial,sans-serif; margin:0; padding:0; background:#f7f9fc; color:#222; }
+body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f7f9fc; color:#222; }
 nav { background-color:#0047ab; padding:12px 20px; display:flex; flex-wrap:wrap; position:sticky; top:0; }
 nav a { color:white; text-decoration:none; margin-right:15px; font-weight:bold; padding:5px 0; }
 nav a:hover { text-decoration:underline; }
+
 .banner { text-align:center; margin-top:20px; }
 .banner img { max-width:100%; height:auto; }
-.content { max-width:900px; margin:30px auto; background:#fff; padding:25px; border-radius:10px; box-shadow:0 0 12px rgba(0,0,0,0.1); text-align:center; }
+
+.content { 
+    max-width:900px; 
+    margin:30px auto; 
+    background:#fff; 
+    padding:25px; 
+    border-radius:10px; 
+    box-shadow:0 0 12px rgba(0,0,0,0.1); 
+    text-align:center; 
+}
+
 h1 { font-size:36px; color:#0047ab; }
 p { margin-bottom:15px; font-size:18px; }
+
+/* --- Le texte "Dernière mise à jour" --- */
+.last-update {
+    text-align:center;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    margin-top:30px;
+    margin-bottom:5px;
+}
+
+/* --- Compteur membres --- */
+.counter {
+    text-align:center;
+    margin-top:10px;
+}
+
+#member-count {
+    font-size:80px;
+    font-weight:bold;
+    color:white;
+}
+
+/* Effet flamme si tu utilises hellfire.gif */
+.flames {
+    background:url("images/hellfire.gif");
+    background-size:cover;
+    display:inline-block;
+    padding:40px 60px;
+    border-radius:10px;
+}
 </style>
 </head>
+
 <body>
 
 <nav>
@@ -36,9 +80,11 @@ p { margin-bottom:15px; font-size:18px; }
   <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
 </div>
 
+<!-- Texte en blanc, centré, placé juste au-dessus du compteur -->
+<div id="member-last-update" class="last-update">Dernière mise à jour : 2025-11-28</div>
+
 <div class="counter">
   <p id="member-count" class="flames">14</p>
-  <small id="member-last-update">Dernière mise à jour : 2025-11-14</small>
 </div>
 
 <div class="content">
@@ -54,7 +100,8 @@ p { margin-bottom:15px; font-size:18px; }
 
 <p>Merci de croire en cette mission et de faire partie du SCQ. Chaque membre compte, chaque action compte, et c’est grâce à vous que notre parti peut avancer et inspirer le Québec tout entier.</p>
 
-<p>Pour connaître les règles et principes de notre parti, consultez le <a href="code-conduite.html">Code de conduite officiel du SCQ</a>.</p>
+<p>Pour connaître les règles et principes de notre parti, consultez le 
+<a href="code-conduite.html">Code de conduite officiel du SCQ</a>.</p>
 
 </div>
 
@@ -65,13 +112,10 @@ function updateMemberCounter() {
     let lastUpdate = localStorage.getItem("scq_members_last_update") || "2025-11-28";
 
     document.getElementById("member-count").textContent = totalMembers;
-    document.getElementById("member-last-update").textContent = "Dernière mise à jour : " + lastUpdate;
+    document.getElementById("member-last-update").textContent =
+        "Dernière mise à jour : " + lastUpdate;
 }
 updateMemberCounter();
-
-// --- Exemple pour modifier via console ---
-// localStorage.setItem("scq_total_members", 14);
-// localStorage.setItem("scq_members_last_update", new Date().toLocaleString());
 </script>
 
 </body>
