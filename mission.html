@@ -2,51 +2,10 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>SCQ - Membres</title>
+<title>SCQ - Mission</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/styles.css">
 <style>
-/* ============================
-   Compteur - Flammes (taille normale)
-   ============================ */
-.counter {
-  text-align: center;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.counter #member-last-update {
-  display: block;
-  color: white;         /* texte en blanc */
-  font-size: 16px;
-  margin-bottom: 10px;  /* espace au-dessus du chiffre */
-}
-
-.flames {
-  position: relative;
-  color: white;         /* chiffre en blanc */
-  font-weight: bold;
-  font-size: 60px;      /* taille du chiffre */
-  text-align: center;
-  width: 100%;
-  display: inline-block;
-}
-
-.flames::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 120%;           /* taille du feu */
-  height: 120%;
-  transform: translate(-50%, -50%);
-  background: url('../images/hellfire.gif') no-repeat center center;
-  background-size: cover;
-  z-index: -1;
-  opacity: 1;
-  pointer-events: none;
-}
-
 /* ============================
    Bannière - largeur complète, hauteur réduite
    ============================ */
@@ -58,10 +17,10 @@
 }
 
 .banner img {
-  width: 100%;        /* largeur 100% de l'écran */
-  height: auto;       /* conserve les proportions */
-  max-height: 200px;  /* ajuste la hauteur */
-  object-fit: cover;  /* garde l'image centrée */
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
 }
 
 /* ============================
@@ -74,12 +33,72 @@
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0 0 12px rgba(0,0,0,0.1);
-  text-align: center;
+  text-align: left;
 }
 
-h1 { font-size:36px; color:#0047ab; }
-p { margin-bottom:15px; font-size:18px; }
-nav a:hover { text-decoration:underline; }
+h1 {
+  font-size: 36px;
+  color: #0047ab;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #0047ab;
+  margin-top: 20px;
+}
+
+p, ul {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+ul {
+  margin-left: 20px;
+}
+
+a {
+  color: #0047ab;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ============================
+   Barre de navigation
+   ============================ */
+nav {
+  background-color: #0047ab;
+  padding: 12px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ============================
+   Responsive
+   ============================ */
+@media(max-width:640px) {
+  h1 { font-size: 28px; }
+  nav { flex-direction: column; }
+  nav a { margin-bottom: 10px; }
+}
 </style>
 </head>
 <body>
@@ -100,39 +119,36 @@ nav a:hover { text-decoration:underline; }
   <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
 </div>
 
-<div class="counter">
-  <small id="member-last-update">Dernière mise à jour : 2025-11-28</small>
-  <p id="member-count" class="flames">14</p>
-</div>
-
 <div class="content">
-<h1>Message à nos membres</h1>
+<h1>Mission du SCQ – Réveille-toi, Québec !</h1>
 
-<p>Chers membres du SCQ,</p>
+<p>Le Parti Souveraineté et Citoyenneté du Québec (SCQ) est le parti du peuple, créé par le peuple et pour le peuple. Nous sommes ici pour réveiller le Québec et le conduire vers une souveraineté réelle, une démocratie authentique et une société juste.</p>
 
-<p>Nous vous remercions sincèrement pour votre engagement et votre soutien envers le Parti Souveraineté et Citoyenneté du Québec (SCQ). Chacun de vous contribue à faire vivre notre vision d’un Québec souverain et démocratiquement gouverné par et pour le peuple.</p>
+<p>Nous refusons la corruption, les ingérences étrangères et les décisions imposées par d’autres. Le pouvoir doit revenir aux citoyens, et le SCQ est là pour que chaque Québécois retrouve sa voix et sa dignité.</p>
 
-<p>Tout citoyen désirant devenir membre peut le faire sans frais. En échange, chaque membre est invité à faire connaître le parti auprès de son entourage, à partager nos idées et à recruter de nouveaux membres. Notre objectif est de rassembler tous les Québécois sous une seule bannière, afin que le SCQ devienne la voix forte et unie du peuple.</p>
+<p>Notre action repose sur cinq piliers fondamentaux :</p>
 
-<p>Ensemble, nous construisons un mouvement citoyen, transparent et engagé. Votre participation active, votre énergie et votre volonté de contribuer font de nous une véritable force collective capable de transformer la société et de défendre les droits et libertés de tous.</p>
+<ol>
+<li><strong>Souveraineté et autodétermination</strong><br>
+Le SCQ défend la pleine souveraineté du Québec afin que les citoyens puissent décider de leur destin sans ingérence externe. La force d’un État réside dans sa capacité à se gérer lui-même et à protéger ses intérêts légitimes. Fini les ingérences du fédéral et des élites : c’est nous qui décidons de notre futur.</li>
 
-<p>Merci de croire en cette mission et de faire partie du SCQ. Chaque membre compte, chaque action compte, et c’est grâce à vous que notre parti peut avancer et inspirer le Québec tout entier.</p>
+<li><strong>Démocratie participative et citoyenne</strong><br>
+Nous croyons en une démocratie où chaque citoyen est acteur et non spectateur. Référendums, initiatives populaires et transparence totale : la voix du peuple doit être entendue, respectée et traduite en action concrète.</li>
 
-<p>Pour connaître les règles et principes de notre parti, consultez le <a href="code-conduite.html">Code de conduite officiel du SCQ</a>.</p>
+<li><strong>Protection du français, de la culture et de l’identité québécoise</strong><br>
+La langue française et la culture du Québec sont notre identité, notre force. Nous affirmons notre volonté de les protéger et de les promouvoir, tout en favorisant un espace inclusif où chaque citoyen, quelles que soient ses origines, contribue à la richesse et à la diversité du Québec.</li>
+
+<li><strong>Justice sociale et équité</strong><br>
+Le SCQ s’engage à garantir l’accès universel aux services essentiels, y compris l’éducation numérique et la prise en charge des élèves à besoins particuliers. Tous les Québécois doivent bénéficier des mêmes chances et du même respect : personne ne doit être laissé pour compte.</li>
+
+<li><strong>Intégrité et lutte contre la corruption</strong><br>
+Nous érigeons la transparence et l’éthique en principes fondamentaux. Les institutions publiques doivent servir le peuple, et non des intérêts privés ou des influences extérieures. Le SCQ dit non à la corruption et aux abus de pouvoir, pour un gouvernement responsable et crédible.</li>
+</ol>
+
+<p>Rejoins le mouvement !<br>
+Le SCQ n’est pas un parti comme les autres : c’est une révolution citoyenne pacifique, mais déterminée. Ensemble, faisons du Québec un État souverain, juste et fier, où la voix du peuple est enfin respectée, où la démocratie est réelle, et où notre culture et notre langue sont protégées.</p>
 
 </div>
-
-<script>
-// --- Compteur membres modifiable ---
-function updateMemberCounter() {
-    let totalMembers = localStorage.getItem("scq_total_members") || 14;
-    let lastUpdate = localStorage.getItem("scq_members_last_update") || "2025-11-28";
-
-    document.getElementById("member-count").textContent = totalMembers;
-    document.getElementById("member-last-update").textContent = "Dernière mise à jour : " + lastUpdate;
-}
-updateMemberCounter();
-</script>
 
 </body>
 </html>
