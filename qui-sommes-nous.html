@@ -2,29 +2,68 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Qui sommes-nous – SCQ</title>
+<title>SCQ - Qui sommes-nous ?</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/styles.css">
 <style>
-  .content img.boussole {
-    float: right;
-    width: 150px;
-    margin-left: 20px;
-    margin-bottom: 15px;
-  }
-  .mission-link {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #0047ab;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-  }
-  .mission-link:hover {
-    background-color: #003580;
-  }
+/* ============================
+   Barre de navigation inversée
+   ============================ */
+nav {
+  background-color: #ffffff;  /* fond blanc */
+  padding: 12px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: #0047ab;  /* texte bleu drapeau Québec */
+  text-decoration: none;
+  margin-right: 15px;
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ============================
+   Bannière - largeur complète, hauteur réduite
+   ============================ */
+.banner {
+  text-align: center;
+  margin-top: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+/* ============================
+   Contenu principal
+   ============================ */
+.content {
+  max-width: 900px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+
+h1 { font-size:36px; color:#0047ab; text-align:center; }
+p { margin-bottom:15px; font-size:18px; text-align:justify; }
+a { color: #0047ab; }
+a:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
@@ -33,6 +72,7 @@
   <a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ" style="height:40px; vertical-align:middle; margin-right:10px;"></a>
   <a href="index.html">Accueil</a>
   <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+  <a href="mission.html">Mission</a>
   <a href="equipe.html">Équipe</a>
   <a href="constitution.html">Constitution</a>
   <a href="reformes.html">Réformes</a>
@@ -46,63 +86,13 @@
 </div>
 
 <div class="content">
-<h1>Qui sommes-nous – Souveraineté et Citoyenneté du Québec (SCQ)</h1>
+<h1>Qui sommes-nous ?</h1>
 
-<img src="images/boussole.png" alt="Boussole SCQ" class="boussole">
+<p>Le Parti Souveraineté et Citoyenneté du Québec (SCQ) est un mouvement politique fondé par le peuple et pour le peuple. Notre objectif est de réveiller le Québec et de guider la province vers une souveraineté réelle, une démocratie authentique et une société juste et équitable.</p>
 
-<p>Le Québec a besoin d’un vrai changement. Nous sommes ce changement.</p>
+<p>Nous croyons en la participation active des citoyens, en la transparence et en l’intégrité des institutions. Chacun de nos membres contribue à bâtir un Québec où la voix du peuple est respectée, où la culture et la langue française sont protégées, et où chaque citoyen a la possibilité de s’impliquer dans le processus démocratique.</p>
 
-<p>Le SCQ est un parti par le peuple et pour le peuple, né de la conviction que le Québec mérite d’être souverain, éthique et démocratique. Nous refusons la corruption, l’ingérence extérieure et les promesses vides. Ici, chaque citoyen a sa place et chaque voix compte.</p>
-
-<h2>Notre mission</h2>
-<p>Construire un Québec souverain, maître de son destin et de ses décisions.</p>
-<p>Assurer une participation citoyenne réelle, où les Québécois influencent directement les politiques qui les concernent.</p>
-<p>Promouvoir transparence, intégrité et justice sociale à tous les niveaux du gouvernement.</p>
-<p>Défendre les droits et la dignité de chaque Québécois, pour un Québec inclusif et équitable.</p>
-
-<h2>Ce que nous défendons</h2>
-<p><strong>1. Souveraineté et autonomie</strong><br>
-Nous croyons fermement que le Québec doit décider de ses affaires sans ingérence fédérale. Chaque citoyen doit pouvoir choisir l’avenir de son pays.</p>
-
-<p><strong>2. Participation citoyenne</strong><br>
-Le SCQ crée des plateformes et outils concrets pour que chaque voix compte et que chaque citoyen puisse influer sur les décisions.</p>
-
-<p><strong>3. Éthique et intégrité</strong><br>
-Les représentants du SCQ respectent un code strict de conduite. Nous combattons toute forme de corruption et de mauvaise gestion des fonds publics.</p>
-
-<p><strong>4. Éducation et inclusion</strong><br>
-Nous garantissons :
-<ul>
-  <li>Un accès minimal à l’éducation numérique pour tous.</li>
-  <li>Une prise en charge des élèves à besoins particuliers dans le système public.</li>
-  <li>Une formation professionnelle (DEP) réfléchie pour équilibrer qualité et accessibilité.</li>
-</ul>
-</p>
-
-<p><strong>5. Prospérité et justice économique</strong><br>
-Le SCQ réorganise les institutions inefficaces, redistribue les ressources au peuple et met l’économie au service des Québécois et non d’une minorité privilégiée.</p>
-
-<h2>Nos engagements</h2>
-<ul>
-  <li>Réformer les institutions publiques pour plus de transparence et d’efficacité.</li>
-  <li>Mobiliser les citoyens pour une participation active et continue dans les décisions politiques.</li>
-  <li>Défendre la souveraineté et la liberté du Québec contre toute ingérence extérieure.</li>
-</ul>
-
-<h2>Notre vision</h2>
-<p>Un Québec :</p>
-<ul>
-  <li>Libre et souverain, maître de son destin.</li>
-  <li>Éthique et transparent, où chaque décision est rendue au peuple.</li>
-  <li>Éduqué et inclusif, prêt pour les défis du XXIᵉ siècle.</li>
-  <li>Prospère et juste, avec une économie au service de tous.</li>
-</ul>
-
-<h2>Rejoignez le mouvement</h2>
-<p>Le SCQ n’attend pas. Nous sommes déjà en action. Chaque citoyen engagé, chaque voix consciente, chaque geste compte.</p>
-
-<p><a href="mission.html" class="mission-link">Voir la Mission complète du SCQ</a></p>
-
+<p>Pour en savoir plus sur notre mission, consultez la section <a href="mission.html">Mission du SCQ</a>.</p>
 </div>
 
 </body>
