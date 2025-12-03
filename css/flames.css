@@ -14,7 +14,7 @@
   position: relative;
   color: white;       /* Chiffre en blanc */
   font-weight: bold;
-  font-size: 180px;   /* 3x la taille précédente de 60px */
+  font-size: 120px;   /* 2x la taille précédente de 60px */
   text-align: center;
 }
 
@@ -23,8 +23,8 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 360%;        /* 3x la largeur précédente de 120% */
-  height: 360%;       /* 3x la hauteur précédente de 120% */
+  width: 213%;        /* 2x la largeur précédente de 120% */
+  height: 213%;       /* 2x la hauteur précédente de 120% */
   transform: translate(-50%, -50%);
   background: url('../images/hellfire.gif') no-repeat center center;
   background-size: cover;
