@@ -1,103 +1,85 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <title>SCQ - Comptabilité</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="css/styles.css">
-<style>
-body {
-    font-family: Arial, sans-serif;
-    margin:0; padding:0;
-    background:#f7f9fc;
-    color:#222;
-    line-height:1.6;
-}
-nav {
-    background-color:#0047ab; padding:12px 20px;
-    display:flex; flex-wrap:wrap;
-}
-nav a {
-    color:white; text-decoration:none; margin-right:15px; font-weight:bold; padding:5px 0;
-}
-nav a:hover { text-decoration:underline; }
-.banner { text-align:center; margin-top:20px; }
-.banner img { max-width:100%; height:auto; }
-.content {
-    max-width:900px;
-    margin:30px auto;
-    background:#fff;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 0 12px rgba(0,0,0,0.1);
-}
-h1,h2 { color:#0047ab; }
-ul { padding-left:20px; }
-.total { font-weight:bold; margin-top:10px; }
-</style>
 </head>
 <body>
-
 <nav>
-  <a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ" style="height:40px; vertical-align:middle; margin-right:10px;"></a>
-  <a href="index.html">Accueil</a>
-  <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
-  <a href="equipe.html">Équipe</a>
-  <a href="constitution.html">Constitution</a>
-  <a href="reformes.html">Réformes</a>
-  <a href="membres.html">Membres</a>
-  <a href="comptabilite.html">Comptabilité</a>
-  <a href="contact.html">Contact</a>
+  <div class="logo"><a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ"></a></div>
+  <div class="menu">
+    <a href="index.html">Accueil</a>
+    <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+    <a href="mission.html">Mission</a>
+    <a href="equipe.html">Équipe</a>
+    <a href="constitution.html">Constitution</a>
+    <a href="reformes.html">Réformes</a>
+    <a href="membres.html">Membres</a>
+    <a href="comptabilite.html">Comptabilité</a>
+    <a href="contact.html">Contact</a>
+  </div>
 </nav>
 
-<div class="banner">
-  <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
-</div>
+<div class="page-wrap">
+  <div class="banner"><img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ"></div>
 
-<div class="content">
-<h1>Comptabilité et Transparence</h1>
-<p>Vous pouvez mettre à jour directement les dons et les dépenses en modifiant la liste ci-dessous. Les totaux se recalculent automatiquement.</p>
+  <main class="container">
+    <section class="card">
+      <h1>Comptabilité et Transparence</h1>
 
-<h2>Dons reçus</h2>
-<ul id="don-list">
-    <li data-montant="0">Don de citoyen – $0</li>
-    <li data-montant="0">Don des Membres – $0</li>
-    <li data-montant="0">Don d'anonyme – $0</li>
-    <!-- Ajouter d'autres dons ici -->
-</ul>
-<p class="total">Total des dons : $<span id="total-dons">0</span></p>
+      <p>Sur cette page vous pouvez ajouter manuellement les dons reçus et les dépenses. Les totaux s'ajusteront automatiquement si vous utilisez l'édition dans le code (ou via un futur back-end).</p>
 
-<h2>Dépenses</h2>
-<ul id="depense-list">
-    <li data-montant="0"> n/a – $0</li>
-    <!-- Ajouter d'autres dépenses ici -->
-</ul>
-<p class="total">Total des dépenses : $<span id="total-depenses">0</span></p>
+      <h2>Dons (ex. 2025)</h2>
+      <table class="table">
+        <thead><tr><th>Date</th><th>Description</th><th>Montant</th></tr></thead>
+        <tbody id="don-list">
+          <tr><td>date</td><td>Don citoyen</td><td>$0.00</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><th colspan="2">Total Dons</th><th id="total-dons">$0.00</th></tr>
+        </tfoot>
+      </table>
 
-<p class="total">Solde restant : $<span id="solde-restant">0</span></p>
+      <h2>Dépenses (ex. 2025)</h2>
+      <table class="table">
+        <thead><tr><th>Date</th><th>Description</th><th>Montant</th></tr></thead>
+        <tbody id="depense-list">
+          <tr><td>date</td><td>Dépense initiale</td><td>$0.00</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><th colspan="2">Total Dépenses</th><th id="total-depenses">$0.00</th></tr>
+        </tfoot>
+      </table>
+
+      <p class="small">(Tu peux modifier ces lignes directement dans le HTML pour ajouter/éditer des transactions. Les totaux visibles ici sont calculés côté client pour faciliter la présentation.)</p>
+
+    </section>
+  </main>
+  <div class="footer-spacer"></div>
 </div>
 
 <script>
-function calculerTotaux() {
-    // Dons
-    let dons = document.querySelectorAll('#don-list li');
-    let totalDons = 0;
-    dons.forEach(d => totalDons += parseFloat(d.dataset.montant));
-    document.getElementById('total-dons').textContent = totalDons;
-
-    // Dépenses
-    let depenses = document.querySelectorAll('#depense-list li');
-    let totalDepenses = 0;
-    depenses.forEach(d => totalDepenses += parseFloat(d.dataset.montant));
-    document.getElementById('total-depenses').textContent = totalDepenses;
-
-    // Solde restant
-    document.getElementById('solde-restant').textContent = (totalDons - totalDepenses);
+// Calculs simples côté client (lisibles / modifiables)
+function parseMoney(str){
+  return Number(String(str).replace(/[^0-9.-]+/g,"")) || 0;
 }
-
-// Calculer à l'ouverture de la page
-calculerTotaux();
+function formatMoney(n){
+  return '$' + n.toFixed(2);
+}
+function calcTotals(){
+  let dons = 0, deps = 0;
+  document.querySelectorAll('#don-list tr').forEach(tr=>{
+    const m = parseMoney(tr.cells[2].textContent); dons += m;
+  });
+  document.querySelectorAll('#depense-list tr').forEach(tr=>{
+    const m = parseMoney(tr.cells[2].textContent); deps += m;
+  });
+  document.getElementById('total-dons').textContent = formatMoney(dons);
+  document.getElementById('total-depenses').textContent = formatMoney(deps);
+}
+calcTotals();
 </script>
-
 </body>
 </html>
