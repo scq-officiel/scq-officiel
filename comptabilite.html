@@ -6,12 +6,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/styles.css">
 <style>
-.content-section { max-width:900px; margin:30px auto; background:#fff; padding:25px; border-radius:10px; box-shadow:0 0 12px rgba(0,0,0,0.1); }
-table { width:100%; border-collapse:collapse; margin-top:15px; }
-th, td { border:1px solid #ccc; padding:8px; text-align:left; }
-th { background:#0047ab; color:white; }
-input[type=number] { width:150px; padding:5px; margin-right:10px; }
-#total { font-weight:bold; margin-top:15px; }
+body { font-family: Arial,sans-serif; margin:0; padding:0; background:#f7f9fc; color:#222; }
+nav { background-color:#0047ab; padding:12px 20px; display:flex; flex-wrap:wrap; position:sticky; top:0; }
+nav a { color:white; text-decoration:none; margin-right:15px; font-weight:bold; padding:5px 0; }
+nav a:hover { text-decoration:underline; }
+.banner { text-align:center; margin-top:20px; }
+.banner img { max-width:100%; height:auto; }
+.content { max-width:900px; margin:30px auto; background:#fff; padding:25px; border-radius:10px; box-shadow:0 0 12px rgba(0,0,0,0.1); }
+h1 { font-size:36px; color:#0047ab; text-align:center; }
+h2 { color:#0047ab; margin-top:20px; }
+p, ul { font-size:18px; margin-bottom:15px; }
+input[type=text], input[type=number] { width:100%; padding:8px; margin-bottom:15px; border-radius:5px; border:1px solid #ccc; }
+a { color:#0047ab; text-decoration:none; }
+a:hover { text-decoration:underline; }
 </style>
 </head>
 <body>
@@ -33,37 +40,30 @@ input[type=number] { width:150px; padding:5px; margin-right:10px; }
   <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
 </div>
 
-<div class="content-section">
-<h1>Comptabilité et Transparence</h1>
+<div class="content">
+<h1>Comptabilité SCQ</h1>
 
-<h2>Dons et Dépenses</h2>
-<p>Vous pouvez modifier les montants ci-dessous pour afficher les chiffres des dons reçus et des dépenses.</p>
+<p>Section transparente pour suivre les dons reçus et les dépenses du parti.</p>
 
-<form id="finance-form">
-  <label>Dons reçus : $<input type="number" id="don_recus" value="5000"></label>
-  <label>Dépenses : $<input type="number" id="depenses" value="2300"></label>
-  <button type="button" onclick="calculerTotal()">Calculer total</button>
-</form>
+<h2>Dons reçus</h2>
+<input type="number" id="dons" placeholder="Entrez le total des dons reçus">
 
-<p id="total">Total : $7300</p>
+<h2>Dépenses</h2>
+<input type="number" id="depenses" placeholder="Entrez le total des dépenses">
 
-<h3>Historique des transactions</h3>
-<table>
-<tr><th>Date</th><th>Description</th><th>Montant</th><th>Type</th></tr>
-<tr><td>2025/11/21</td><td>Don citoyen</td><td>$500</td><td>Entrée</td></tr>
-<tr><td>2025/11/21</td><td>Dépenses</td><td>$200</td><td>Sortie</td></tr>
-<!-- Ajouter plus de lignes pour chaque transaction -->
-</table>
-</div>
+<h2>Total</h2>
+<input type="text" id="total" placeholder="Total (dons - dépenses)" readonly>
+
+<button onclick="calculTotal()">Calculer le total</button>
 
 <script>
-function calculerTotal() {
-  let dons = parseFloat(document.getElementById('don_recus').value) || 0;
+function calculTotal() {
+  let dons = parseFloat(document.getElementById('dons').value) || 0;
   let depenses = parseFloat(document.getElementById('depenses').value) || 0;
-  document.getElementById('total').textContent = "Total : $" + (dons - depenses);
+  document.getElementById('total').value = dons - depenses;
 }
-calculerTotal();
 </script>
 
+</div>
 </body>
 </html>
