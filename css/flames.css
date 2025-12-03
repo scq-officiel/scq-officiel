@@ -2,21 +2,20 @@
    Compteur - Flammes bleues
    ============================ */
 
+.counter {
+  text-align: center;         /* centre le contenu horizontalement */
+  margin: 50px auto;          /* espace autour du compteur */
+  display: flex;
+  flex-direction: column;
+  align-items: center;        /* centre le chiffre verticalement */
+}
+
 .flames-blue {
   position: relative;
-  color: #0055A4; /* Bleu officiel du Québec */
+  color: #0066cc;             /* Bleu du drapeau du Québec */
   font-weight: bold;
-  font-size: 60px; /* ajustable selon besoin */
-  text-align: center;
-  text-shadow: 
-        0 0 5px #0055A4,
-        0 0 10px #0055A4,
-        0 0 15px #00aaff,
-        0 0 20px #00aaff,
-        0 0 30px #00ccff,
-        0 0 40px #00ccff,
-        0 0 55px #00ccff,
-        0 0 75px #00ccff;
+  font-size: 60px;            /* un peu plus grand pour impact */
+  line-height: 1.2;
 }
 
 .flames-blue::before {
@@ -24,9 +23,9 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 120%;
-  height: 120%;
-  transform: translate(-45%, -45%);
+  width: 150%;
+  height: 150%;
+  transform: translate(-50%, -50%);
   background: url('../images/hellfire.gif') no-repeat center center;
   background-size: cover;
   z-index: -1;
