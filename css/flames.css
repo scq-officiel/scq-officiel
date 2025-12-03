@@ -12,10 +12,12 @@
 
 .flames {
   position: relative;
-  color: white;       /* Chiffre en blanc */
+  color: white;
   font-weight: bold;
-  font-size: 120px;   /* 2x la taille précédente de 60px */
+  font-size: 60px; /* taille du chiffre */
   text-align: center;
+  width: 100%;
+  display: inline-block;
 }
 
 .flames::before {
@@ -23,10 +25,12 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 213%;        /* 2x la largeur précédente de 120% */
-  height: 213%;       /* 2x la hauteur précédente de 120% */
+  width: 120%;   /* ancienne grandeur */
+  height: 120%;  /* ancienne grandeur */
   transform: translate(-50%, -50%);
   background: url('../images/hellfire.gif') no-repeat center center;
   background-size: cover;
   z-index: -1;
+  opacity: 1;
+  pointer-events: none;
 }
