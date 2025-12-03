@@ -1,99 +1,52 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <title>SCQ - Qui sommes-nous ?</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="css/styles.css">
-<style>
-/* ============================
-   Barre de navigation inversée
-   ============================ */
-nav {
-  background-color: #ffffff;  /* fond blanc */
-  padding: 12px 20px;
-  display: flex;
-  flex-wrap: wrap;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-nav a {
-  color: #0047ab;  /* texte bleu drapeau Québec */
-  text-decoration: none;
-  margin-right: 15px;
-  font-weight: bold;
-  padding: 5px 0;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* ============================
-   Bannière - largeur complète, hauteur réduite
-   ============================ */
-.banner {
-  text-align: center;
-  margin-top: 0;
-  width: 100%;
-  overflow: hidden;
-}
-
-.banner img {
-  width: 100%;
-  height: auto;
-  max-height: 200px;
-  object-fit: cover;
-}
-
-/* ============================
-   Contenu principal
-   ============================ */
-.content {
-  max-width: 900px;
-  margin: 30px auto;
-  background: #fff;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
-}
-
-h1 { font-size:36px; color:#0047ab; text-align:center; }
-p { margin-bottom:15px; font-size:18px; text-align:justify; }
-a { color: #0047ab; }
-a:hover { text-decoration: underline; }
-</style>
 </head>
 <body>
-
 <nav>
-  <a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ" style="height:40px; vertical-align:middle; margin-right:10px;"></a>
-  <a href="index.html">Accueil</a>
-  <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
-  <a href="mission.html">Mission</a>
-  <a href="equipe.html">Équipe</a>
-  <a href="constitution.html">Constitution</a>
-  <a href="reformes.html">Réformes</a>
-  <a href="membres.html">Membres</a>
-  <a href="comptabilite.html">Comptabilité</a>
-  <a href="contact.html">Contact</a>
+  <div class="logo"><a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ"></a></div>
+  <div class="menu">
+    <a href="index.html">Accueil</a>
+    <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+    <a href="mission.html">Mission</a>
+    <a href="equipe.html">Équipe</a>
+    <a href="constitution.html">Constitution</a>
+    <a href="reformes.html">Réformes</a>
+    <a href="membres.html">Membres</a>
+    <a href="comptabilite.html">Comptabilité</a>
+    <a href="contact.html">Contact</a>
+  </div>
 </nav>
 
-<div class="banner">
-  <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
+<div class="page-wrap">
+  <div class="banner"><img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ"></div>
+
+  <main class="container">
+    <article class="card">
+      <h1>Qui sommes-nous – Souveraineté et Citoyenneté du Québec (SCQ)</h1>
+      <img src="images/boussole.png" alt="Boussole" style="display:block;margin:12px auto 18px;max-width:200px">
+      <p>Le Québec a besoin d’un vrai changement. Nous sommes ce changement.</p>
+
+      <h2>Notre mission</h2>
+      <p>Construire un Québec souverain, maître de son destin et de ses décisions. Assurer une participation citoyenne réelle...</p>
+
+      <h2>Ce que nous défendons</h2>
+      <ol>
+        <li><strong>Souveraineté et autonomie</strong> — Le Québec décide de ses affaires.</li>
+        <li><strong>Participation citoyenne</strong> — Outils et plateformes pour impliquer les citoyens.</li>
+        <li><strong>Éthique et intégrité</strong> — Code strict de conduite et lutte contre la corruption.</li>
+        <li><strong>Éducation et inclusion</strong> — Accès numérique, prise en charge élèves à besoins particuliers.</li>
+        <li><strong>Prospérité et justice économique</strong> — Réorganisation des institutions inefficaces.</li>
+      </ol>
+
+      <p>Pour en savoir plus, consultez la <a class="inline" href="mission.html">Mission du SCQ</a>.</p>
+    </article>
+  </main>
+  <div class="footer-spacer"></div>
 </div>
-
-<div class="content">
-<h1>Qui sommes-nous ?</h1>
-
-<p>Le Parti Souveraineté et Citoyenneté du Québec (SCQ) est un mouvement politique fondé par le peuple et pour le peuple. Notre objectif est de réveiller le Québec et de guider la province vers une souveraineté réelle, une démocratie authentique et une société juste et équitable.</p>
-
-<p>Nous croyons en la participation active des citoyens, en la transparence et en l’intégrité des institutions. Chacun de nos membres contribue à bâtir un Québec où la voix du peuple est respectée, où la culture et la langue française sont protégées, et où chaque citoyen a la possibilité de s’impliquer dans le processus démocratique.</p>
-
-<p>Pour en savoir plus sur notre mission, consultez la section <a href="mission.html">Mission du SCQ</a>.</p>
-</div>
-
 </body>
 </html>
