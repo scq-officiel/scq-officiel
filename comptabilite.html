@@ -6,19 +6,34 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/styles.css">
 <style>
-body { font-family: Arial,sans-serif; margin:0; padding:0; background:#f7f9fc; color:#222; }
-nav { background-color:#0047ab; padding:12px 20px; display:flex; flex-wrap:wrap; position:sticky; top:0; }
-nav a { color:white; text-decoration:none; margin-right:15px; font-weight:bold; padding:5px 0; }
+body {
+    font-family: Arial, sans-serif;
+    margin:0; padding:0;
+    background:#f7f9fc;
+    color:#222;
+    line-height:1.6;
+}
+nav {
+    background-color:#0047ab; padding:12px 20px;
+    display:flex; flex-wrap:wrap;
+}
+nav a {
+    color:white; text-decoration:none; margin-right:15px; font-weight:bold; padding:5px 0;
+}
 nav a:hover { text-decoration:underline; }
 .banner { text-align:center; margin-top:20px; }
 .banner img { max-width:100%; height:auto; }
-.content { max-width:900px; margin:30px auto; background:#fff; padding:25px; border-radius:10px; box-shadow:0 0 12px rgba(0,0,0,0.1); }
-h1 { font-size:36px; color:#0047ab; text-align:center; }
-h2 { color:#0047ab; margin-top:20px; }
-p, ul { font-size:18px; margin-bottom:15px; }
-input[type=text], input[type=number] { width:100%; padding:8px; margin-bottom:15px; border-radius:5px; border:1px solid #ccc; }
-a { color:#0047ab; text-decoration:none; }
-a:hover { text-decoration:underline; }
+.content {
+    max-width:900px;
+    margin:30px auto;
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 12px rgba(0,0,0,0.1);
+}
+h1,h2 { color:#0047ab; }
+ul { padding-left:20px; }
+.total { font-weight:bold; margin-top:10px; }
 </style>
 </head>
 <body>
@@ -41,29 +56,49 @@ a:hover { text-decoration:underline; }
 </div>
 
 <div class="content">
-<h1>Comptabilité SCQ</h1>
-
-<p>Section transparente pour suivre les dons reçus et les dépenses du parti.</p>
+<h1>Comptabilité et Transparence</h1>
+<p>Vous pouvez mettre à jour directement les dons et les dépenses en modifiant la liste ci-dessous. Les totaux se recalculent automatiquement.</p>
 
 <h2>Dons reçus</h2>
-<input type="number" id="dons" placeholder="Entrez le total des dons reçus">
+<ul id="don-list">
+    <li data-montant="100">Don citoyen – $100</li>
+    <li data-montant="50">Don anonyme – $50</li>
+    <!-- Ajouter d'autres dons ici -->
+</ul>
+<p class="total">Total des dons : $<span id="total-dons">0</span></p>
 
 <h2>Dépenses</h2>
-<input type="number" id="depenses" placeholder="Entrez le total des dépenses">
+<ul id="depense-list">
+    <li data-montant="30">Achat matériel – $30</li>
+    <li data-montant="20">Frais imprimerie – $20</li>
+    <!-- Ajouter d'autres dépenses ici -->
+</ul>
+<p class="total">Total des dépenses : $<span id="total-depenses">0</span></p>
 
-<h2>Total</h2>
-<input type="text" id="total" placeholder="Total (dons - dépenses)" readonly>
-
-<button onclick="calculTotal()">Calculer le total</button>
+<p class="total">Solde restant : $<span id="solde-restant">0</span></p>
+</div>
 
 <script>
-function calculTotal() {
-  let dons = parseFloat(document.getElementById('dons').value) || 0;
-  let depenses = parseFloat(document.getElementById('depenses').value) || 0;
-  document.getElementById('total').value = dons - depenses;
+function calculerTotaux() {
+    // Dons
+    let dons = document.querySelectorAll('#don-list li');
+    let totalDons = 0;
+    dons.forEach(d => totalDons += parseFloat(d.dataset.montant));
+    document.getElementById('total-dons').textContent = totalDons;
+
+    // Dépenses
+    let depenses = document.querySelectorAll('#depense-list li');
+    let totalDepenses = 0;
+    depenses.forEach(d => totalDepenses += parseFloat(d.dataset.montant));
+    document.getElementById('total-depenses').textContent = totalDepenses;
+
+    // Solde restant
+    document.getElementById('solde-restant').textContent = (totalDons - totalDepenses);
 }
+
+// Calculer à l'ouverture de la page
+calculerTotaux();
 </script>
 
-</div>
 </body>
 </html>
