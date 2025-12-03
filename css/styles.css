@@ -1,28 +1,34 @@
 /* ============================
-   Membres - flammes agrandies
+   Membres - flammes optimisées
    ============================ */
+
+.counter {
+  text-align: center;
+  width: 100%;
+}
 
 .flames {
   position: relative;
   display: inline-block;
   color: white;
   font-weight: bold;
-  font-size: 180px; /* chiffre 3x plus gros */
+  font-size: 180px; /* chiffre x3 */
+  line-height: 1;
   text-align: center;
   margin: 0 auto;
-  width: auto;
+  padding: 40px; /* espace autour du chiffre */
 }
 
 .flames::before {
   content: "";
   position: absolute;
-  left: 50%;
   top: 50%;
-  width: 300%;
-  height: 300%;
+  left: 50%;
+  width: 320px;   /* taille stable du gif -> 3x */
+  height: 320px;
   transform: translate(-50%, -50%);
   background: url('../images/hellfire.gif') no-repeat center center;
-  background-size: cover;
+  background-size: contain; /* aucune coupe */
   z-index: -1;
   pointer-events: none;
   opacity: 1;
