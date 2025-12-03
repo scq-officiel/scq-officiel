@@ -3,22 +3,22 @@
    ============================ */
 
 .counter {
-  text-align: center;         /* centre le contenu horizontalement */
+  text-align: center;         /* centre horizontalement */
   margin: 50px auto;          /* espace autour du compteur */
   display: flex;
   flex-direction: column;
-  align-items: center;        /* centre le chiffre verticalement */
+  align-items: center;        /* centre verticalement */
 }
 
-.flames-blue {
+.flames {
   position: relative;
-  color: #0066cc;             /* Bleu du drapeau du Québec */
+  color: #0066cc;             /* bleu du drapeau du Québec */
   font-weight: bold;
-  font-size: 60px;            /* un peu plus grand pour impact */
+  font-size: 60px;            /* taille plus visible */
   line-height: 1.2;
 }
 
-.flames-blue::before {
+.flames::before {
   content: "";
   position: absolute;
   left: 50%;
