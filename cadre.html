@@ -2,53 +2,116 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
+<title>SCQ - Cadre</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cadre national – SCQ</title>
 <link rel="stylesheet" href="css/styles.css">
 <style>
-/* Page cadre.html */
-.page-container { max-width:1100px; margin:120px auto 40px; padding:20px; }
-h1 { text-align:center; color:#0A2A66; font-size:2.4rem; margin-bottom:30px; }
-.intro-text { text-align:center; font-size:1.2rem; margin-bottom:40px; color:#333; }
-.cards-container { display:flex; justify-content:center; gap:40px; flex-wrap:wrap; }
-.card { width:330px; background:white; border-radius:12px; padding:25px; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,0.15); transition:0.3s ease; border:2px solid #0A2A66; }
-.card:hover { transform:scale(1.05); box-shadow:0 6px 18px rgba(0,0,0,0.25); }
-.card-title { font-size:1.5rem; color:#0A2A66; margin-bottom:10px; font-weight:bold; }
-.card-desc { color:#333; font-size:1.05rem; margin-bottom:20px; }
-.card a { display:inline-block; padding:12px 20px; background-color:#0A2A66; color:white; text-decoration:none; border-radius:8px; font-weight:bold; transition:0.3s ease; }
-.card a:hover { background-color:#0C3C92; }
+/* ============================
+   Barre de navigation fixe
+   ============================ */
+nav {
+  background-color: #0A2A66; /* bleu foncé */
+  padding: 12px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ============================
+   Bannière
+   ============================ */
+.banner {
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+/* ============================
+   Contenu principal
+   ============================ */
+.content {
+  max-width: 900px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+h1 { font-size:36px; color:#0047ab; }
+h2 { font-size:28px; color:#0047ab; margin-top:20px; }
+p, ul { font-size:18px; margin-bottom:15px; }
+ul { margin-left:20px; }
+a { color:#0047ab; text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+/* ============================
+   Responsive
+   ============================ */
+@media(max-width:640px) {
+  h1 { font-size:28px; }
+  h2 { font-size:22px; }
+  nav { flex-direction: column; }
+  nav a { margin-bottom:10px; }
+}
 </style>
 </head>
 <body>
+
+<!-- Barre de navigation fixe -->
 <nav>
   <a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ" style="height:40px; vertical-align:middle; margin-right:10px;"></a>
   <a href="index.html">Accueil</a>
   <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
-  <a href="equipe.html">Équipe</a>
-  <a href="cadre.html">Cadre National</a>
+  <a href="cadre.html">Cadre</a>
   <a href="membres.html">Membres</a>
+  <a href="equipe.html">Équipe</a>
   <a href="comptabilite.html">Comptabilité</a>
   <a href="contact.html">Contact</a>
 </nav>
 
-<div class="page-container">
-<h1>Cadre national – Constitution & Réformes</h1>
-<p class="intro-text">
-Cette page regroupe les deux piliers structurels du projet national du SCQ.  
-Sélectionnez une section pour consulter le contenu complet.
-</p>
-<div class="cards-container">
-  <div class="card">
-    <div class="card-title">Constitution</div>
-    <div class="card-desc">Ensemble des principes fondamentaux encadrant le futur Québec souverain : droits, institutions, souveraineté, éducation, démocratie citoyenne, etc.</div>
-    <a href="constitution.html">Accéder à la Constitution</a>
-  </div>
-  <div class="card">
-    <div class="card-title">Réformes</div>
-    <div class="card-desc">Réformes législatives, mesures d’application, politiques publiques et transformations modernisant l’État québécois selon la vision du SCQ.</div>
-    <a href="reformes.html">Accéder aux Réformes</a>
-  </div>
+<!-- Bannière -->
+<div class="banner">
+  <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
 </div>
+
+<!-- Contenu principal -->
+<div class="content">
+<h1>Cadre du SCQ</h1>
+
+<p>Bienvenue dans la section Cadre du Parti Souveraineté et Citoyenneté du Québec (SCQ). Ici, vous trouverez les accès directs vers nos documents essentiels : la Constitution et les Réformes. Cette section permet de centraliser les informations importantes pour simplifier la navigation et rendre notre site plus clair et professionnel.</p>
+
+<h2>Accès à la Constitution</h2>
+<p>Découvrez le document officiel de la <a href="constitution.html">Constitution du Québec souverain</a> avec tous les principes fondamentaux et articles qui régissent notre vision d’un Québec libre et démocratique.</p>
+
+<h2>Accès aux Réformes</h2>
+<p>Consultez nos <a href="reformes.html">Réformes</a> détaillant les lois d’application et les projets en cours pour le développement et la modernisation du Québec.</p>
+
+<p>Cette page centralise ces documents pour vous permettre d’accéder rapidement à toutes les informations essentielles et de suivre nos actions de manière transparente.</p>
 </div>
+
 </body>
 </html>
