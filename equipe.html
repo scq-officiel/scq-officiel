@@ -1,70 +1,68 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <title>SCQ - Équipe</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="css/styles.css">
-<style>
-body { font-family: Arial,sans-serif; margin:0; padding:0; background:#f7f9fc; color:#222; }
-nav { background-color:#0047ab; padding:12px 20px; display:flex; flex-wrap:wrap; position:sticky; top:0; }
-nav a { color:white; text-decoration:none; margin-right:15px; font-weight:bold; padding:5px 0; }
-nav a:hover { text-decoration:underline; }
-.banner { text-align:center; margin-top:20px; }
-.banner img { max-width:100%; height:auto; }
-.content { max-width:900px; margin:30px auto; background:#fff; padding:25px; border-radius:10px; box-shadow:0 0 12px rgba(0,0,0,0.1); }
-h1 { font-size:36px; color:#0047ab; text-align:center; }
-h2 { color:#0047ab; margin-top:20px; }
-p, ul { font-size:18px; margin-bottom:15px; }
-.member-card { display:flex; align-items:center; margin-bottom:15px; }
-.member-card img { width:100px; height:100px; object-fit:cover; border-radius:10px; margin-right:15px; }
-a { color:#0047ab; text-decoration:none; }
-a:hover { text-decoration:underline; }
-</style>
 </head>
 <body>
-
 <nav>
-  <a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ" style="height:40px; vertical-align:middle; margin-right:10px;"></a>
-  <a href="index.html">Accueil</a>
-  <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
-  <a href="equipe.html">Équipe</a>
-  <a href="constitution.html">Constitution</a>
-  <a href="reformes.html">Réformes</a>
-  <a href="membres.html">Membres</a>
-  <a href="comptabilite.html">Comptabilité</a>
-  <a href="contact.html">Contact</a>
+  <div class="logo"><a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ"></a></div>
+  <div class="menu">
+    <a href="index.html">Accueil</a>
+    <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+    <a href="mission.html">Mission</a>
+    <a href="equipe.html">Équipe</a>
+    <a href="constitution.html">Constitution</a>
+    <a href="reformes.html">Réformes</a>
+    <a href="membres.html">Membres</a>
+    <a href="comptabilite.html">Comptabilité</a>
+    <a href="contact.html">Contact</a>
+  </div>
 </nav>
 
-<div class="banner">
-  <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
-</div>
+<div class="page-wrap">
+  <div class="banner"><img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ"></div>
 
-<div class="content">
-<h1>Équipe du SCQ</h1>
+  <main class="container">
+    <section class="card">
+      <h1>Notre Équipe</h1>
 
-<p>Découvrez les membres clés et bénévoles qui font vivre le SCQ. Chaque personne contribue activement à notre mission.</p>
+      <div class="team-list">
+        <div class="member">
+          <img src="images/photo_vide.jpg" alt="Benoit Cantin">
+          <div class="meta">
+            <strong>Benoit Cantin</strong>
+            <span>Chef du parti — Québec</span>
+          </div>
+        </div>
 
-<div class="member-card">
-<img src="images/photo_vide.jpg" alt="Benoit Cantin">
-<div><strong>Benoit Cantin</strong><br>Québec - Chef du parti</div>
-</div>
+        <!-- dirigeants / représentants -->
+        <div class="member">
+          <img src="images/photo_vide.jpg" alt="Dirigeant 1">
+          <div class="meta"><strong>Nom 1</strong><span>Dirigeant</span></div>
+        </div>
 
-<div class="member-card">
-<img src="images/photo_vide.jpg" alt="Dirigeant 1">
-<div><strong>Nom 1</strong><br>Dirigeant</div>
-</div>
+        <div class="member">
+          <img src="images/photo_vide.jpg" alt="Dirigeant 2">
+          <div class="meta"><strong>Nom 2</strong><span>Dirigeant</span></div>
+        </div>
 
-<div class="member-card">
-<img src="images/photo_vide.jpg" alt="Dirigeant 2">
-<div><strong>Nom 2</strong><br>Dirigeant</div>
-</div>
+      </div>
 
-<div class="member-card">
-<img src="images/photo_vide.jpg" alt="Représentant officiel">
-<div><strong>Nom 3</strong><br>Représentant officiel</div>
-</div>
+      <h2>Postes disponibles</h2>
+      <ul>
+        <li>Comptable</li>
+        <li>Secrétaire</li>
+        <li>Chargé de communication</li>
+      </ul>
 
+      <h2>Représentants par municipalité</h2>
+      <p class="small">Ajoutez ici la liste des représentants par municipalité (nom — poste — contact).</p>
+    </section>
+  </main>
+  <div class="footer-spacer"></div>
 </div>
 </body>
 </html>
