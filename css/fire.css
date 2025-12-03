@@ -1,65 +1,50 @@
-/* Fire Counter CSS - Texte en flammes 3D animé */
+/* Effet FLAMMES BLEUES pour chiffres et texte */
 
-.fire-counter {
-  font-size: 4rem;              /* Taille du texte */
-  font-weight: bold;
-  color: #ff4500;               /* Couleur de base du feu */
-  text-align: center;
-  text-shadow:
-    0 0 5px #ff6a00,
-    0 0 10px #ff6a00,
-    0 0 20px #ff0000,
-    0 0 30px #ff0000,
-    0 0 40px #ff0000,
-    0 0 50px #ff8c00,
-    0 0 60px #ff8c00,
-    0 0 70px #ff4500;
-  animation: flame 1s infinite alternate;
+.flames-blue {
+    font-weight: bold;
+    color: #4dcaff;
+    text-shadow:
+        0 0 10px #4dcaff,
+        0 0 20px #4dcaff,
+        0 0 30px #00aaff,
+        0 0 40px #0088ff,
+        0 0 70px #0055ff;
+    animation: blueflame 2.5s infinite alternate ease-in-out;
 }
 
-/* Animation de mouvement du feu */
-@keyframes flame {
-  0% {
-    text-shadow:
-      0 0 5px #ff6a00,
-      0 0 10px #ff6a00,
-      0 0 20px #ff0000,
-      0 0 30px #ff0000,
-      0 0 40px #ff0000,
-      0 0 50px #ff8c00,
-      0 0 60px #ff8c00,
-      0 0 70px #ff4500;
-    transform: scale(1) rotate(0deg);
-  }
-  50% {
-    text-shadow:
-      0 0 7px #ff8c00,
-      0 0 14px #ff8c00,
-      0 0 28px #ff4500,
-      0 0 42px #ff4500,
-      0 0 56px #ff6347,
-      0 0 70px #ff8c00,
-      0 0 84px #ff8c00,
-      0 0 98px #ff6347;
-    transform: scale(1.05) rotate(-1deg);
-  }
-  100% {
-    text-shadow:
-      0 0 5px #ff6a00,
-      0 0 10px #ff6a00,
-      0 0 20px #ff0000,
-      0 0 30px #ff0000,
-      0 0 40px #ff0000,
-      0 0 50px #ff8c00,
-      0 0 60px #ff8c00,
-      0 0 70px #ff4500;
-    transform: scale(1) rotate(1deg);
-  }
+@keyframes blueflame {
+    0% {
+        text-shadow:
+            0 0 10px #66e0ff,
+            0 0 20px #33ccff,
+            0 0 30px #00aaff,
+            0 0 50px #0088ff,
+            0 0 80px #0055ff,
+            0 0 120px #0044ff;
+        transform: scale(1);
+    }
+    50% {
+        text-shadow:
+            0 0 15px #88f0ff,
+            0 0 30px #55ddff,
+            0 0 45px #22bbff,
+            0 0 70px #0099ff,
+            0 0 110px #0066ff,
+            0 0 150px #0044ff;
+        transform: scale(1.05);
+    }
+    100% {
+        text-shadow:
+            0 0 10px #55ddff,
+            0 0 25px #33ccff,
+            0 0 35px #0099ff,
+            0 0 60px #0077ff,
+            0 0 90px #0055ff,
+            0 0 130px #0033ff;
+        transform: scale(1);
+    }
 }
 
-/* Pour les écrans mobiles : réduire la taille */
-@media(max-width:640px){
-  .fire-counter {
-    font-size: 2.5rem;
-  }
+.flames-blue {
+    display: inline-block;
 }
