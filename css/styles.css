@@ -1,40 +1,162 @@
 /* ============================
-   Compteur - Flammes (taille normale)
+   Styles généraux pour SCQ
+   ============================ */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f9fc;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* ============================
+   Barre de navigation fixe et uniforme
+   ============================ */
+nav {
+    background-color: #0047ab;   /* bleu drapeau Québec */
+    padding: 10px 20px;           /* taille professionnelle */
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;              /* barre fixe en haut */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* logo */
+nav img {
+    height: 40px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* ============================
+   Bannière responsive
+   ============================ */
+.banner {
+    margin-top: 70px;  /* laisse de l'espace pour nav fixe */
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;         /* largeur écran */
+    height: auto;        /* conserve proportions */
+    max-height: 200px;   /* hauteur professionnelle */
+    object-fit: cover;   /* centre et ajuste l'image */
+    display: block;
+    margin: 0 auto;
+}
+
+/* ============================
+   Contenu principal
+   ============================ */
+.content {
+    max-width: 900px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    color: #0047ab;
+    text-align: center;
+    margin-top: 0;
+}
+
+h2 {
+    color: #0047ab;
+    margin-top: 20px;
+}
+
+p, ul {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+a {
+    color: white;   /* texte blanc si dans nav ou bleu ailleurs selon contexte */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ============================
+   Compteur - Flammes (exemple)
    ============================ */
 .counter {
-  text-align: center;
-  width: 100%;
-  margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .counter #member-last-update {
-  display: block;
-  color: white;         /* texte en blanc */
-  font-size: 16px;
-  margin-bottom: 10px;  /* espace au-dessus du chiffre */
+    display: block;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
 .flames {
-  position: relative;
-  color: white;         /* chiffre en blanc */
-  font-weight: bold;
-  font-size: 60px;      /* taille normale du chiffre */
-  text-align: center;
-  width: 100%;
-  display: inline-block;
+    position: relative;
+    color: white;
+    font-weight: bold;
+    font-size: 60px;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
 }
 
 .flames::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 120%;           /* ancienne grandeur du feu */
-  height: 120%;
-  transform: translate(-50%, -50%);
-  background: url('../images/hellfire.gif') no-repeat center center;
-  background-size: cover;
-  z-index: -1;
-  opacity: 1;
-  pointer-events: none;
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 120%;
+    height: 120%;
+    transform: translate(-50%, -50%);
+    background: url('../images/hellfire.gif') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+    opacity: 1;
+    pointer-events: none;
+}
+
+/* ============================
+   Responsive pour mobile/tablette
+   ============================ */
+@media(max-width:1024px) {
+    nav { flex-direction: column; padding: 8px 15px; }
+    nav a { margin-bottom: 8px; }
+    .banner img { max-height: 180px; }
+}
+
+@media(max-width:640px) {
+    h1 { font-size: 28px; }
+    .content { padding: 15px; margin: 20px auto; }
+    nav img { height: 35px; margin-bottom: 5px; }
+    .banner img { max-height: 150px; }
 }
