@@ -16,7 +16,7 @@
             text-align: center;
         }
 
-        /* HEADER (comme les autres pages) */
+        /* HEADER */
         header {
             background-color: #001133;
             padding: 15px 0;
@@ -32,15 +32,19 @@
             color: #66aaff;
         }
 
+        h1 {
+            margin-top: 40px;
+        }
+
         /* CONTENEUR DU COMPTEUR */
         .counter-container {
-            margin-top: 60px;
+            margin-top: 40px;
         }
 
         .flame-wrapper {
             position: relative;
             display: inline-block;
-            padding-bottom: 20px;
+            padding-bottom: 40px; /* espace pour les flammes */
         }
 
         .flame-text {
@@ -51,19 +55,23 @@
             z-index: 2;
         }
 
-        /* FLAMMES BLEUES (GIF Base64 intégrée, pas besoin de fichier externe !) */
+        /* FLAMMES BLEUES AVEC *TON* GIF */
         .flame {
             position: absolute;
-            bottom: -40px;
+            bottom: -45px;
             left: 50%;
             transform: translateX(-50%);
-            width: 120px;
-            height: 60px;
-            background-size: cover;
-            opacity: 0.9;
+            width: 140px;
+            height: 80px;
             z-index: 1;
             pointer-events: none;
-            background-image: url('data:image/gif;base64,R0lGODlhEAAQAMQfAFdZWXh8gYqSlY6QkpKRlpOWmJmXmp2eoJ+go6WmqKusrLO0tbi5u7y8vsHBwdHS0tTU1NnZ2eDg4OLi4uXl5ebm5unp6erq6uzs7O3t7e/v7/Dw8P///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAB8ALAAAAAAQABAAAAW74CeOZGmeaKqubOtCzPMxDs8EylJAgZGIJpcJ6t2Z8u94nEJwkQgkEAMUsXiJhDnE5MWZ0RhAMnI4dHZJeTU1PUEUHBx0iY3pidnQ2Njk8OkEBAw4pi4qLjI6Lj4+PkJGRkpOSlZiZmpucnZ6foKGio6SlpqeoqaqrrLCys7S1trq7vL2+wMLCy8zNzs/Q0dLT1NXW19jZ2tvc3d7f4OHi4+Tl5ufo6err7O3u7/Dx8vP09fb3+Pn6+/z9/v8AACH5BAEAAB8ALAAAAAAQABAAAAW74CeOZGmeaKqubOtCzPMxDs8EylJAgZGIJpcJ6t2Z8u94nEJwkQgkEAMUsXiJhDnE5MWZ0RhAMnI4dHZJeTU1PUEUHBx0iY3pidnQ2Njk8OkEBAw4pi4qLjI6Lj4+PkJGRkpOSlZiZmpucnZ6foKGio6SlpqeoqaqrrLCys7S1trq7vL2+wMLCy8zNzs/Q0dLT1NXW19jZ2tvc3d7f4OHi4+Tl5ufo6err7O3u7/Dx8vP09fb3+Pn6+/z9/v8A');
+
+            background-image: url("images/hellfire.gif");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.85;
+            filter: hue-rotate(200deg); /* passe le feu en BLEU */
         }
 
         .member-message {
@@ -77,7 +85,7 @@
         }
 
         .update-date {
-            margin-top: 10px;
+            margin-top: 15px;
             font-size: 16px;
             color: #cccccc;
         }
@@ -112,8 +120,9 @@
 
     <p>
         Votre soutien, votre confiance et votre engagement sont la force qui fait avancer
-        <strong>Souveraineté et citoyenneté du Québec (SCQ)</strong>.  
-        Chaque membre représente une voix, une volonté, un espoir pour un Québec plus juste, plus souverain et réellement gouverné par son peuple.
+        <strong>Souveraineté et citoyenneté du Québec (SCQ)</strong>.
+        Chaque membre représente une voix, une volonté, un espoir pour un Québec plus juste,
+        plus souverain et réellement gouverné par son peuple.
     </p>
 
     <p>
