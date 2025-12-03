@@ -1,4 +1,4 @@
-/* Effet FLAMMES BLEUES pour texto ou chiffres */
+/* Effet FLAMMES BLEUES pour chiffres et texte */
 
 .flames-blue {
     font-weight: bold;
@@ -45,7 +45,6 @@
     }
 }
 
-/* S'assure que l'effet marche sur les grands chiffres */
 .flames-blue {
     display: inline-block;
 }
