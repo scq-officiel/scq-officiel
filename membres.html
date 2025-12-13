@@ -10,13 +10,12 @@
    Barre de navigation fixe
    ============================ */
 nav {
-  background-color: #0047ab;
-  padding: 10px 20px;
+  background-color: #0A2A66; /* bleu foncé */
+  padding: 12px 20px;
   display: flex;
   flex-wrap: wrap;
-  position: fixed;
+  position: sticky;
   top: 0;
-  width: 100%;
   z-index: 1000;
 }
 
@@ -37,9 +36,9 @@ nav a:hover {
    ============================ */
 .banner {
   text-align: center;
+  margin-top: 20px;
   width: 100%;
   overflow: hidden;
-  margin-top: 60px; /* espace pour nav fixe */
 }
 
 .banner img {
@@ -59,74 +58,48 @@ nav a:hover {
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0 0 12px rgba(0,0,0,0.1);
-}
-
-/* Titre de section et compteur côte à côte */
-.section-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.section-header h1 {
-  font-size: 36px;
-  color: #0047ab;
-  margin: 0;
-}
-
-#member-count {
-  font-size: 28px;
-  color: #0047ab; /* compteur en bleu */
-  font-weight: bold;
-}
-
-/* Texte général */
-p {
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-
-/* Dernière mise à jour en bas */
-#member-last-update {
-  color: #0047ab;
-  font-size: 16px;
   text-align: center;
-  margin-top: 40px;
 }
+
+h1 { font-size:36px; color:#0047ab; }
+h2 { font-size:28px; color:#0047ab; margin-top:20px; }
+p, ul { font-size:18px; margin-bottom:15px; }
+ul { margin-left:20px; }
+a { color:#0047ab; text-decoration:none; }
+a:hover { text-decoration:underline; }
 
 /* ============================
    Responsive
    ============================ */
 @media(max-width:640px) {
+  h1 { font-size:28px; }
+  h2 { font-size:22px; }
   nav { flex-direction: column; }
-  nav a { margin-bottom: 10px; }
-  .section-header { flex-direction: column; align-items: flex-start; }
-  #member-count { font-size: 24px; margin-top: 10px; }
-  .banner img { max-height: 150px; }
+  nav a { margin-bottom:10px; }
 }
 </style>
 </head>
 <body>
 
+<!-- Barre de navigation fixe -->
 <nav>
-  <div class="logo"><a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ"></a></div>
-  <div class="menu">
-    <a href="index.html">Accueil</a>
-    <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
-    <a href="NotreVision.html">Notre Vision</a>
-    <a href="equipe.html">Équipe</a>
-    <a href="membres.html">Membres</a>
-    <a href="cadre.html">Cadre National</a>
-    <a href="comptabilite.html">Comptabilité</a>
-    <a href="contact.html">Contact</a>
+  <a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ" style="height:40px; vertical-align:middle; margin-right:10px;"></a>
+  <a href="index.html">Accueil</a>
+  <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+  <a href="cadre.html">Cadre National</a>
+  <a href="membres.html">Membres</a>
+  <a href="equipe.html">Équipe</a>
+  <a href="comptabilite.html">Comptabilité</a>
+  <a href="contact.html">Contact</a>
 </nav>
 
+<!-- Bannière -->
 <div class="banner">
   <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
 </div>
 
-<div class="content">
+<!-- Contenu principal -->
+   <div class="content">
   <div class="section-header">
     <h1>Message à nos membres</h1>
     <span id="member-count">14</span>
