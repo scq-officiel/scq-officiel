@@ -1,215 +1,171 @@
-/* ===========================
-   Styles généraux – SCQ
-   Professionnel, institutionnel
-   =========================== */
+/* =====================================================
+   STYLES OFFICIELS – SCQ
+   Inspiré des standards des sites gouvernementaux
+   Sobriété – Clarté – Accessibilité – Crédibilité
+   ===================================================== */
 
-/* -------------------------
-   Global
--------------------------- */
+/* -------- Reset & base -------- */
+* {
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f5f6f7;
-    color: #1a1a1a;
-    line-height: 1.65;
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #1f2933;
+  line-height: 1.7;
 }
 
-a {
-    text-decoration: none;
-    color: #0055aa;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-a:hover, a:focus {
-    color: #003366;
-}
-
-/* -------------------------
-   Navigation
--------------------------- */
+/* -------- Navigation -------- */
 nav {
-    background-color: #0044cc;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 24px;
+  background-color: #0b3c6d; /* bleu institutionnel */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 28px;
+  border-bottom: 4px solid #092f55;
 }
 
 nav .logo img {
-    max-height: 60px;
+  max-height: 60px;
 }
 
 nav .menu a {
-    color: #ffffff;
-    margin-left: 20px;
-    font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
 }
 
-nav .menu a:hover {
-    text-decoration: underline;
+nav .menu a:hover,
+nav .menu a:focus {
+  text-decoration: underline;
 }
 
-/* -------------------------
-   Page wrapper et bannière
--------------------------- */
+/* -------- Structure générale -------- */
 .page-wrap {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .banner img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-bottom: 4px solid #0044cc;
-    border-radius: 0 0 6px 6px;
+  width: 100%;
+  height: auto;
+  border-bottom: 5px solid #0b3c6d;
 }
 
-/* -------------------------
-   Main content
--------------------------- */
 main.container {
-    padding: 30px 24px 60px;
+  padding: 32px 24px 48px;
 }
 
-article.card, section.card {
-    background-color: #ffffff;
-    padding: 28px;
-    border-radius: 8px;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-    margin-bottom: 32px;
+/* -------- Cartes institutionnelles -------- */
+article.card,
+section.card {
+  background-color: #ffffff;
+  border: 1px solid #d0d7de;
+  border-radius: 4px;
+  padding: 32px;
+  margin-bottom: 32px;
 }
 
-/* Titres */
-h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #002766;
-    margin-bottom: 24px;
-    text-align: center;
+/* -------- Titres -------- */
+article.card h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #0b3c6d;
 }
 
-h2 {
-    font-size: 1.85rem;
-    font-weight: 700;
-    margin-top: 28px;
-    margin-bottom: 14px;
-    color: #0044cc;
-    border-bottom: 2px solid #c7d8ff;
-    padding-bottom: 6px;
+article.card h2,
+section.card h2 {
+  font-size: 1.55rem;
+  font-weight: 700;
+  margin-top: 28px;
+  margin-bottom: 12px;
+  color: #0b3c6d;
+  border-left: 5px solid #0b3c6d;
+  padding-left: 12px;
 }
 
-h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-top: 20px;
-    margin-bottom: 10px;
+/* -------- Texte -------- */
+article.card p,
+section.card p {
+  font-size: 1rem;
+  margin-bottom: 16px;
 }
 
-/* Paragraphes et textes */
-p {
-    font-size: 1.05rem;
-    margin-bottom: 16px;
-    color: #1a1a1a;
+article.card ul,
+article.card ol {
+  margin-left: 20px;
+  margin-bottom: 18px;
 }
 
-ul, ol {
-    margin-left: 24px;
-    margin-bottom: 18px;
-}
-
-ul li, ol li {
-    margin-bottom: 12px;
-    font-size: 1.03rem;
-    color: #262626;
+article.card li {
+  margin-bottom: 10px;
 }
 
 strong {
-    color: #003366;
+  font-weight: 700;
 }
 
-/* Images spécifiques */
-article.card img, section.card img {
-    display: block;
-    margin: 16px auto 24px;
-    max-width: 220px;
-    border-radius: 6px;
+/* -------- Liens -------- */
+a.inline {
+  color: #0b3c6d;
+  font-weight: 600;
+  text-decoration: underline;
 }
 
-/* -------------------------
-   Code de conduite
--------------------------- */
+a.inline:hover {
+  color: #092f55;
+}
+
+/* -------- Section Code de conduite (mise en valeur) -------- */
 .code-conduite-preview {
-    border-left: 4px solid #0044cc;
-    padding-left: 16px;
-    background-color: #f0f4f8;
+  background-color: #f1f5f9;
+  border-left: 6px solid #0b3c6d;
 }
 
-.code-conduite-preview h2 {
-    color: #003366;
-}
-
-.code-conduite-preview a.inline {
-    color: #0044cc;
-    font-weight: bold;
-    border-bottom: 1px solid #0044cc;
-}
-
-.code-conduite-preview a.inline:hover {
-    color: #002766;
-    border-color: #002766;
-}
-
-/* -------------------------
-   Footer spacing
--------------------------- */
+/* -------- Footer spacer -------- */
 .footer-spacer {
-    height: 80px;
+  height: 80px;
 }
 
-/* -------------------------
-   Responsive
--------------------------- */
-@media (max-width: 1024px) {
-    main.container {
-        padding: 24px 18px 48px;
-    }
+/* -------- Responsive -------- */
+@media (max-width: 900px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav .menu {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav .menu a {
+    margin: 6px 0;
+  }
+
+  article.card h1 {
+    font-size: 1.9rem;
+  }
+
+  article.card h2,
+  section.card h2 {
+    font-size: 1.35rem;
+  }
 }
 
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav .menu {
-        margin-top: 12px;
-        display: flex;
-        flex-direction: column;
-    }
-
-    nav .menu a {
-        margin: 6px 0;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    p, ul li, ol li {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    h2 {
-        font-size: 1.35rem;
-    }
+@media (max-width: 600px) {
+  main.container {
+    padding: 20px 16px 32px;
+  }
 }
