@@ -1,218 +1,103 @@
-/* ============================
-   STYLES GLOBAUX - SCQ
-   ============================ */
-:root{
-  --scq-blue: #003f8a;   /* bleu foncé principal */
-  --scq-light: #0047ab;  /* bleu secondaire */
-  --content-max: 1100px;
-  --nav-height: 55px;
+/* ===========================
+   Styles améliorés – Qui sommes-nous
+   =========================== */
+
+/* Conteneur du texte principal */
+main.container {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.7;
+  color: #333333;
+  padding: 0 24px 40px;
 }
 
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  font-family: Arial, sans-serif;
-  margin:0;
-  padding:0;
-  background:#f7f9fc;
-  color:#222;
-  line-height:1.6;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  font-size:16px;
+/* Titres principaux */
+article.card h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 18px;
+  color: #1a1a1a;
 }
 
-/* ============================
-   NAV FIXE UNIFORME
-   ============================ */
-nav{
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  height:var(--nav-height);
-  background:var(--scq-blue);
-  display:flex;
-  align-items:center;
-  gap:12px;
-  padding:0 18px;
-  z-index:1100;
-  box-shadow:0 2px 6px rgba(0,0,0,0.08);
+/* Bannière image réduite pour meilleure mise en page */
+.banner img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-bottom: 4px solid #005aff;
 }
-nav .logo{display:flex; align-items:center; gap:10px}
-nav .logo img{height:38px; width:auto; display:block}
-nav .menu{display:flex; gap:12px; align-items:center; margin-left:6px; flex-wrap:wrap}
-nav a{
-  color:#fff;
-  text-decoration:none;
-  font-weight:700;
-  padding:6px 6px;
-  font-size:15px;
-}
-nav a:hover{opacity:0.92; text-decoration:underline}
 
-/* small screens - stack menu items */
-@media(max-width:760px){
-  nav{
-    height:auto;
-    padding:10px 14px;
-    flex-direction:column;
-    align-items:flex-start;
+/* Amélioration des sous‑titres */
+article.card h2 {
+  font-size: 1.85rem;
+  font-weight: 700;
+  margin-top: 28px;
+  margin-bottom: 12px;
+  color: #005aff;
+  border-bottom: 2px solid #c7d8ff;
+  padding-bottom: 6px;
+}
+
+/* Paragraphe principal */
+article.card p {
+  font-size: 1.05rem;
+  margin-bottom: 16px;
+  color: #2d2d2d;
+}
+
+/* Style pour l’illustration centrale */
+article.card img[alt="Boussole"] {
+  margin: 18px auto 22px;
+  max-width: 220px;
+  border-radius: 6px;
+  display: block;
+}
+
+/* Liste ordonnée améliorée */
+article.card ol {
+  margin: 0 0 18px 20px;
+  padding: 0;
+  list-style: decimal;
+}
+
+article.card ol li {
+  margin-bottom: 12px;
+  font-size: 1.03rem;
+  padding-left: 6px;
+  color: #262626;
+}
+
+/* Style accentué pour éléments forts */
+article.card strong {
+  color: #0044cc;
+}
+
+/* Lien interne esthétique */
+.article a.inline {
+  text-decoration: none;
+  color: #005aff;
+  font-weight: bold;
+  border-bottom: 1px solid #005aff;
+  padding-bottom: 2px;
+}
+
+.article a.inline:hover {
+  color: #003bb3;
+  border-color: #003bb3;
+}
+
+/* Responsive – petit écran */
+@media (max-width: 768px) {
+  article.card h1 {
+    font-size: 2rem;
   }
-  nav .menu{flex-direction:column; width:100%}
-  nav .menu a{padding:8px 0}
+
+  article.card h2 {
+    font-size: 1.6rem;
+  }
+
+  article.card p,
+  article.card ol li {
+    font-size: 1rem;
+  }
 }
-
-/* push content under fixed nav */
-.page-wrap{padding-top:calc(var(--nav-height) + 8px)}
-
-/* ============================
-   BANNIERE UNIFORME
-   ============================ */
-.banner{
-  width:100%;
-  overflow:hidden;
-  display:block;
-  margin:12px 0 18px 0;
-}
-.banner img{
-  width:100%;
-  height:auto;
-  max-height:200px;
-  object-fit:cover;
-  display:block;
-  margin:0 auto;
-}
-
-/* ============================
-   CONTENU PRINCIPAL
-   ============================ */
-.container{
-  max-width:var(--content-max);
-  margin: 0 auto 40px;
-  padding: 12px 18px;
-}
-.card{
-  background:#fff;
-  padding:22px;
-  border-radius:10px;
-  box-shadow:0 6px 22px rgba(0,0,0,0.06);
-  margin-bottom:20px;
-}
-
-/* typographie */
-h1{font-size:32px; color:var(--scq-light); margin:0 0 14px}
-h2{font-size:20px; color:var(--scq-light); margin:18px 0 10px}
-p, li{font-size:16px; color:#222}
-a.inline{color:var(--scq-light); text-decoration:none}
-a.inline:hover{text-decoration:underline}
-
-/* ============================
-   COMPTEUR MEMBRES - GENERIQUE
-   ============================ */
-.counter{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-  margin: 8px 0 18px;
-}
-
-/* Dernière mise à jour */
-.counter .last-update{
-  color:var(--scq-blue);    /* texte bleu (drapeau QC) */
-  font-weight:700;
-  font-size:15px;
-  text-align:center;
-}
-
-/* zone du chiffre */
-.counter .flame-wrap{
-  position:relative;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  width:auto;
-  padding:12px;
-}
-
-/* chiffre (blanc) */
-.counter .flame-number{
-  position:relative;
-  z-index:2;
-  color:#fff;
-  font-weight:900;
-  font-size:60px;
-  line-height:1;
-  text-align:center;
-  padding:6px 12px;
-  letter-spacing:1px;
-}
-
-/* image de feu carrée professionnelle */
-.counter .flame-wrap::before{
-  content:"";
-  position:absolute;
-  left:50%;
-  top:50%;
-  transform:translate(-50%,-50%);
-  width:150px;
-  height:150px;
-  background:url('../images/hellfire.gif') no-repeat center center;
-  background-size:cover;
-  z-index:1;
-  border-radius:10px;
-}
-
-/* responsive ajustements */
-@media(max-width:900px){
-  .counter .flame-wrap::before{width:130px;height:130px}
-  .counter .flame-number{font-size:52px}
-}
-@media(max-width:640px){
-  .counter .flame-wrap::before{width:110px;height:110px}
-  .counter .flame-number{font-size:38px}
-  h1{font-size:24px}
-  .card{padding:14px}
-  .container{padding:10px}
-}
-
-/* ============================
-   EQUIPE - cartes
-   ============================ */
-.team-list{display:flex;flex-wrap:wrap;gap:18px;justify-content:center}
-.member{
-  display:flex;
-  gap:12px;
-  align-items:center;
-  width:100%;
-  max-width:520px;
-  padding:10px;
-  border-radius:8px;
-  background:#fff;
-  box-shadow:0 4px 12px rgba(0,0,0,0.04);
-}
-.member img{width:84px;height:84px;object-fit:cover;border-radius:8px}
-.member .meta{display:flex;flex-direction:column}
-.member .meta strong{font-size:16px;color:var(--scq-blue)}
-
-/* ============================
-   TABLEAU - Comptabilité (simple)
-   ============================ */
-.table{width:100%;border-collapse:collapse;margin-top:12px}
-.table th,.table td{border:1px solid #e6e6e6;padding:8px;text-align:left}
-.table th{background:var(--scq-blue);color:#fff}
-
-/* petits formulaires */
-.input-row{display:flex;gap:8px;flex-wrap:wrap}
-.input-row input[type="text"], .input-row input[type="number"], textarea{
-  flex:1; padding:8px;border-radius:6px;border:1px solid #ddd;
-}
-
-/* footer spacing */
-.footer-spacer{height:40px}
-
-/* utilities */
-.center{text-align:center}
-.small{font-size:13px;color:#666}
