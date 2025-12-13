@@ -1,103 +1,155 @@
 /* ===========================
-   Styles améliorés – Qui sommes-nous
+   Styles généraux SCQ
    =========================== */
-
-/* Conteneur du texte principal */
-main.container {
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.7;
-  color: #333333;
-  padding: 0 24px 40px;
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
-/* Titres principaux */
-article.card h1 {
-  font-size: 2.4rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 18px;
-  color: #1a1a1a;
+nav {
+    background-color: #005aff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
 }
 
-/* Bannière image réduite pour meilleure mise en page */
+nav .logo img {
+    max-height: 60px;
+}
+
+nav .menu a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 18px;
+    font-weight: 600;
+}
+
+nav .menu a:hover {
+    text-decoration: underline;
+}
+
+.page-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .banner img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-bottom: 4px solid #005aff;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-bottom: 4px solid #005aff;
 }
 
-/* Amélioration des sous‑titres */
+main.container {
+    padding: 24px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333333;
+}
+
+article.card {
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 32px;
+}
+
+article.card h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 18px;
+    color: #1a1a1a;
+}
+
 article.card h2 {
-  font-size: 1.85rem;
-  font-weight: 700;
-  margin-top: 28px;
-  margin-bottom: 12px;
-  color: #005aff;
-  border-bottom: 2px solid #c7d8ff;
-  padding-bottom: 6px;
+    font-size: 1.85rem;
+    font-weight: 700;
+    margin-top: 28px;
+    margin-bottom: 12px;
+    color: #005aff;
+    border-bottom: 2px solid #c7d8ff;
+    padding-bottom: 6px;
 }
 
-/* Paragraphe principal */
 article.card p {
-  font-size: 1.05rem;
-  margin-bottom: 16px;
-  color: #2d2d2d;
+    font-size: 1.05rem;
+    margin-bottom: 16px;
+    color: #2d2d2d;
 }
 
-/* Style pour l’illustration centrale */
 article.card img[alt="Boussole"] {
-  margin: 18px auto 22px;
-  max-width: 220px;
-  border-radius: 6px;
-  display: block;
+    margin: 18px auto 22px;
+    max-width: 220px;
+    border-radius: 6px;
+    display: block;
 }
 
-/* Liste ordonnée améliorée */
 article.card ol {
-  margin: 0 0 18px 20px;
-  padding: 0;
-  list-style: decimal;
+    margin: 0 0 18px 20px;
+    padding: 0;
+    list-style: decimal;
 }
 
 article.card ol li {
-  margin-bottom: 12px;
-  font-size: 1.03rem;
-  padding-left: 6px;
-  color: #262626;
+    margin-bottom: 12px;
+    font-size: 1.03rem;
+    padding-left: 6px;
+    color: #262626;
 }
 
-/* Style accentué pour éléments forts */
 article.card strong {
-  color: #0044cc;
+    color: #0044cc;
 }
 
-/* Lien interne esthétique */
-.article a.inline {
-  text-decoration: none;
-  color: #005aff;
-  font-weight: bold;
-  border-bottom: 1px solid #005aff;
-  padding-bottom: 2px;
+article.card a.inline {
+    text-decoration: none;
+    color: #005aff;
+    font-weight: bold;
+    border-bottom: 1px solid #005aff;
+    padding-bottom: 2px;
 }
 
-.article a.inline:hover {
-  color: #003bb3;
-  border-color: #003bb3;
+article.card a.inline:hover {
+    color: #003bb3;
+    border-color: #003bb3;
 }
 
-/* Responsive – petit écran */
+.footer-spacer {
+    height: 80px;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  article.card h1 {
-    font-size: 2rem;
-  }
+    article.card h1 {
+        font-size: 2rem;
+    }
 
-  article.card h2 {
-    font-size: 1.6rem;
-  }
+    article.card h2 {
+        font-size: 1.6rem;
+    }
 
-  article.card p,
-  article.card ol li {
-    font-size: 1rem;
-  }
+    article.card p,
+    article.card ol li {
+        font-size: 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav .menu {
+        margin-top: 12px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav .menu a {
+        margin: 6px 0;
+    }
 }
