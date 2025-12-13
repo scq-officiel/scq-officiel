@@ -3,83 +3,102 @@
 <head>
 <meta charset="utf-8">
 <title>SCQ – Comptabilité et transparence</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/styles.css">
-
 <style>
 /* ============================
-   Tableaux financiers
+   Barre de navigation fixe
    ============================ */
+nav {
+  background-color: #0A2A66; /* bleu foncé */
+  padding: 12px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-.table {
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ============================
+   Bannière
+   ============================ */
+.banner {
+  text-align: center;
+  margin-top: 20px;
   width: 100%;
-  border-collapse: collapse;
-  margin-top: 16px;
-  margin-bottom: 32px;
-  font-size: 0.95rem;
+  overflow: hidden;
 }
 
-.table thead th {
-  background-color: #0b3c6d;
-  color: #ffffff;
-  text-align: left;
-  padding: 12px 10px;
-  font-weight: 700;
+.banner img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
 }
 
-.table tbody td {
-  padding: 10px;
-  border-bottom: 1px solid #d0d7de;
+/* ============================
+   Contenu principal
+   ============================ */
+.content {
+  max-width: 900px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
-.table tbody tr:nth-child(even) {
-  background-color: #f4f6f8;
-}
+h1 { font-size:36px; color:#0047ab; }
+h2 { font-size:28px; color:#0047ab; margin-top:20px; }
+p, ul { font-size:18px; margin-bottom:15px; }
+ul { margin-left:20px; }
+a { color:#0047ab; text-decoration:none; }
+a:hover { text-decoration:underline; }
 
-.table tfoot th {
-  padding: 12px 10px;
-  font-weight: 700;
-  border-top: 2px solid #0b3c6d;
-  background-color: #f1f5f9;
-}
-
-.table th:last-child,
-.table td:last-child {
-  text-align: right;
-  white-space: nowrap;
-}
-
-.small {
-  font-size: 0.9rem;
-  color: #4b5563;
+/* ============================
+   Responsive
+   ============================ */
+@media(max-width:640px) {
+  h1 { font-size:28px; }
+  h2 { font-size:22px; }
+  nav { flex-direction: column; }
+  nav a { margin-bottom:10px; }
 }
 </style>
 </head>
-
 <body>
 
-<!-- NAVIGATION -->
+<!-- Barre de navigation fixe -->
 <nav>
-  <div class="logo">
-    <a href="index.html">
-      <img src="images/logo_scq.jpg" alt="Logo SCQ">
-    </a>
-  </div>
-  <div class="menu">
-    <a href="index.html">Accueil</a>
-    <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
-    <a href="NotreVision.html">Notre Vision</a>
-    <a href="equipe.html">Équipe</a>
-    <a href="membres.html">Membres</a>
-    <a href="cadre.html">Cadre National</a>
-    <a href="comptabilite.html">Comptabilité</a>
-    <a href="contact.html">Contact</a>
-  </div>
+  <a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ" style="height:40px; vertical-align:middle; margin-right:10px;"></a>
+  <a href="index.html">Accueil</a>
+  <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+  <a href="cadre.html">Cadre National</a>
+  <a href="membres.html">Membres</a>
+  <a href="equipe.html">Équipe</a>
+  <a href="comptabilite.html">Comptabilité</a>
+  <a href="contact.html">Contact</a>
 </nav>
 
-<!-- CONTENU -->
-<div class="page-wrap">
+<!-- Bannière -->
+<div class="banner">
+  <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
+</div>
 
+<!-- Contenu principal -->
   <main class="container">
     <section class="card">
 
