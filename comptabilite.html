@@ -2,140 +2,161 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<title>SCQ - Comptabilité</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SCQ – Comptabilité et transparence</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/styles.css">
+
 <style>
 /* ============================
-   Barre de navigation fixe
+   Tableaux financiers
    ============================ */
-nav {
-  background-color: #0A2A66; /* bleu foncé */
-  padding: 12px 20px;
-  display: flex;
-  flex-wrap: wrap;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-right: 15px;
-  font-weight: bold;
-  padding: 5px 0;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* ============================
-   Bannière
-   ============================ */
-.banner {
-  text-align: center;
-  margin-top: 20px;
+.table {
   width: 100%;
-  overflow: hidden;
+  border-collapse: collapse;
+  margin-top: 16px;
+  margin-bottom: 32px;
+  font-size: 0.95rem;
 }
 
-.banner img {
-  width: 100%;
-  height: auto;
-  max-height: 200px;
-  object-fit: cover;
+.table thead th {
+  background-color: #0b3c6d;
+  color: #ffffff;
+  text-align: left;
+  padding: 12px 10px;
+  font-weight: 700;
 }
 
-/* ============================
-   Contenu principal
-   ============================ */
-.content {
-  max-width: 900px;
-  margin: 30px auto;
-  background: #fff;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
-  text-align: center;
+.table tbody td {
+  padding: 10px;
+  border-bottom: 1px solid #d0d7de;
 }
 
-h1 { font-size:36px; color:#0047ab; }
-h2 { font-size:28px; color:#0047ab; margin-top:20px; }
-p, ul { font-size:18px; margin-bottom:15px; }
-ul { margin-left:20px; }
-a { color:#0047ab; text-decoration:none; }
-a:hover { text-decoration:underline; }
+.table tbody tr:nth-child(even) {
+  background-color: #f4f6f8;
+}
 
-/* ============================
-   Responsive
-   ============================ */
-@media(max-width:640px) {
-  h1 { font-size:28px; }
-  h2 { font-size:22px; }
-  nav { flex-direction: column; }
-  nav a { margin-bottom:10px; }
+.table tfoot th {
+  padding: 12px 10px;
+  font-weight: 700;
+  border-top: 2px solid #0b3c6d;
+  background-color: #f1f5f9;
+}
+
+.table th:last-child,
+.table td:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.small {
+  font-size: 0.9rem;
+  color: #4b5563;
 }
 </style>
 </head>
+
 <body>
 
-<!-- Barre de navigation fixe -->
+<!-- NAVIGATION -->
 <nav>
-  <a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ" style="height:40px; vertical-align:middle; margin-right:10px;"></a>
-  <a href="index.html">Accueil</a>
-  <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
-  <a href="cadre.html">Cadre National</a>
-  <a href="membres.html">Membres</a>
-  <a href="equipe.html">Équipe</a>
-  <a href="comptabilite.html">Comptabilité</a>
-  <a href="contact.html">Contact</a>
+  <div class="logo">
+    <a href="index.html">
+      <img src="images/logo_scq.jpg" alt="Logo SCQ">
+    </a>
+  </div>
+  <div class="menu">
+    <a href="index.html">Accueil</a>
+    <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+    <a href="NotreVision.html">Notre Vision</a>
+    <a href="equipe.html">Équipe</a>
+    <a href="membres.html">Membres</a>
+    <a href="cadre.html">Cadre National</a>
+    <a href="comptabilite.html">Comptabilité</a>
+    <a href="contact.html">Contact</a>
+  </div>
 </nav>
 
-<!-- Bannière -->
-<div class="banner">
-  <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
-</div>
+<!-- CONTENU -->
+<div class="page-wrap">
 
-<!-- Contenu principal -->
   <main class="container">
     <section class="card">
-      <h1>Comptabilité et Transparence</h1>
 
-      <p>Sur cette page vous pouvez ajouter manuellement les dons reçus et les dépenses. Les totaux s'ajusteront automatiquement si vous utilisez l'édition dans le code (ou via un futur back-end).</p>
+      <h1>Comptabilité et transparence</h1>
 
-      <h2>Dons (ex. 2025)</h2>
+      <p>
+        Le Parti Souveraineté et Citoyenneté du Québec (SCQ) s’engage à une
+        transparence financière complète. Cette page présente les dons reçus
+        et les dépenses effectuées, conformément à nos principes d’intégrité
+        et de responsabilité publique.
+      </p>
+
+      <!-- DONS -->
+      <h2>Dons (exercice 2025)</h2>
+
       <table class="table">
-        <thead><tr><th>Date</th><th>Description</th><th>Montant</th></tr></thead>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Montant</th>
+          </tr>
+        </thead>
         <tbody id="don-list">
-          <tr><td>date</td><td>Don citoyen</td><td>$0.00</td></tr>
+          <tr>
+            <td>—</td>
+            <td>Don citoyen</td>
+            <td>$0.00</td>
+          </tr>
         </tbody>
         <tfoot>
-          <tr><th colspan="2">Total Dons</th><th id="total-dons">$0.00</th></tr>
+          <tr>
+            <th colspan="2">Total des dons</th>
+            <th id="total-dons">$0.00</th>
+          </tr>
         </tfoot>
       </table>
 
-      <h2>Dépenses (ex. 2025)</h2>
+      <!-- DÉPENSES -->
+      <h2>Dépenses (exercice 2025)</h2>
+
       <table class="table">
-        <thead><tr><th>Date</th><th>Description</th><th>Montant</th></tr></thead>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Montant</th>
+          </tr>
+        </thead>
         <tbody id="depense-list">
-          <tr><td>date</td><td>Dépense initiale</td><td>$0.00</td></tr>
+          <tr>
+            <td>—</td>
+            <td>Dépense initiale</td>
+            <td>$0.00</td>
+          </tr>
         </tbody>
         <tfoot>
-          <tr><th colspan="2">Total Dépenses</th><th id="total-depenses">$0.00</th></tr>
+          <tr>
+            <th colspan="2">Total des dépenses</th>
+            <th id="total-depenses">$0.00</th>
+          </tr>
         </tfoot>
       </table>
 
-      <p class="small">(Tu peux modifier ces lignes directement dans le HTML pour ajouter/éditer des transactions. Les totaux visibles ici sont calculés côté client pour faciliter la présentation.)</p>
+      <p class="small">
+        Les montants peuvent être mis à jour directement dans le code HTML.
+        Les totaux sont calculés automatiquement côté client afin de faciliter
+        la consultation publique.
+      </p>
 
     </section>
   </main>
+
   <div class="footer-spacer"></div>
 </div>
 
 <script>
-// Calculs simples côté client (lisibles / modifiables)
 function parseMoney(str){
   return Number(String(str).replace(/[^0-9.-]+/g,"")) || 0;
 }
@@ -145,15 +166,16 @@ function formatMoney(n){
 function calcTotals(){
   let dons = 0, deps = 0;
   document.querySelectorAll('#don-list tr').forEach(tr=>{
-    const m = parseMoney(tr.cells[2].textContent); dons += m;
+    dons += parseMoney(tr.cells[2].textContent);
   });
   document.querySelectorAll('#depense-list tr').forEach(tr=>{
-    const m = parseMoney(tr.cells[2].textContent); deps += m;
+    deps += parseMoney(tr.cells[2].textContent);
   });
   document.getElementById('total-dons').textContent = formatMoney(dons);
   document.getElementById('total-depenses').textContent = formatMoney(deps);
 }
 calcTotals();
 </script>
+
 </body>
 </html>
