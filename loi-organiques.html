@@ -1,108 +1,205 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Constitution – SCQ</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/styles.css">
-<style>
-/* ============================
-   Barre de navigation fixe
-   ============================ */
-nav {
-  background-color: #0A2A66; /* bleu foncé */
-  padding: 12px 20px;
-  display: flex;
-  flex-wrap: wrap;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lois organiques – SCQ</title>
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-right: 15px;
-  font-weight: bold;
-  padding: 5px 0;
-}
+  <link rel="stylesheet" href="css/styles.css">
 
-nav a:hover {
-  text-decoration: underline;
-}
+  <style>
+    nav{
+      background:#0A2A66;
+      padding:12px 16px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      font-weight:700;
+      padding:6px 8px;
+      border-radius:10px;
+      white-space:nowrap;
+    }
+    nav a:hover{ text-decoration:underline; }
+    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; }
+    nav .logo img{ height:40px; width:auto; border-radius:10px; display:block; }
 
-/* ============================
-   Bannière
-   ============================ */
-.banner {
-  text-align: center;
-  margin-top: 20px;
-  width: 100%;
-  overflow: hidden;
-}
+    .banner{
+      text-align:center;
+      margin-top:16px;
+      width:100%;
+      overflow:hidden;
+      padding:0 16px;
+    }
+    .banner img{
+      width:100%;
+      max-width:1100px;
+      height:auto;
+      max-height:260px;
+      object-fit:cover;
+      border-radius:16px;
+      box-shadow:0 0 12px rgba(0,0,0,0.10);
+    }
 
-.banner img {
-  width: 65%;
-  height: auto;
-  max-height: 225px;
-  object-fit: cover;
-}
-   
-/* ============================
-   Contenu principal
-   ============================ */
-.content {
-  max-width: 900px;
-  margin: 30px auto;
-  background: #fff;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
-  text-align: center;
-}
+    main{
+      max-width:980px;
+      margin:22px auto 50px;
+      background:#fff;
+      padding:26px;
+      border-radius:14px;
+      box-shadow:0 0 12px rgba(0,0,0,0.10);
+    }
 
-h1 { font-size:36px; color:#0047ab; }
-h2 { font-size:28px; color:#0047ab; margin-top:20px; }
-p, ul { font-size:18px; margin-bottom:15px; }
-ul { margin-left:20px; }
-a { color:#0047ab; text-decoration:none; }
-a:hover { text-decoration:underline; }
+    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; }
+    h2{ font-size:24px; color:#0047ab; margin:22px 0 10px; }
+    p, li{ font-size:17px; margin:0 0 12px; line-height:1.65; color:#0f172a; }
 
-/* ============================
-   Responsive
-   ============================ */
-@media(max-width:640px) {
-  h1 { font-size:28px; }
-  h2 { font-size:22px; }
-  nav { flex-direction: column; }
-  nav a { margin-bottom:10px; }
-}
-</style>
+    .box{
+      margin:18px 0;
+      padding:14px 16px;
+      border-radius:14px;
+      background:rgba(0,71,171,0.06);
+      border:1px solid rgba(0,71,171,0.14);
+    }
+
+    .toc{
+      margin:14px 0 0;
+      padding:14px 16px;
+      border:1px solid rgba(0,0,0,0.10);
+      border-radius:14px;
+      background:#fff;
+    }
+    .toc a{ color:#0A2A66; font-weight:700; text-decoration:none; }
+    .toc a:hover{ text-decoration:underline; }
+    .toc ul{ margin:8px 0 0 18px; }
+
+    .actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:12px;
+    }
+    .btn{
+      display:inline-block;
+      background:#0A2A66;
+      color:#fff;
+      padding:10px 12px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:700;
+      font-size:14px;
+    }
+    .btn:hover{ text-decoration:underline; }
+    .btn.secondary{ background:#0f172a; }
+
+    @media (max-width:760px){
+      h1{ font-size:28px; }
+      h2{ font-size:20px; }
+      nav{ flex-direction:column; align-items:flex-start; }
+      main{ margin:18px 12px 40px; padding:18px; }
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- Barre de navigation fixe -->
-<nav>
-  <a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ" style="height:40px; vertical-align:middle; margin-right:10px;"></a>
-  <a href="index.html">Accueil</a>
-  <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
-  <a href="cadre.html">Cadre National</a>
-  <a href="membres.html">Membres</a>
-  <a href="equipe.html">Équipe</a>
-  <a href="comptabilite.html">Comptabilité</a>
-  <a href="contact.html">Contact</a>
-  <a href="doc.html">Documents</a> 
-</nav>
+  <nav>
+    <a class="logo" href="index.html" aria-label="Retour à l’accueil">
+      <img src="images/logo_scq.jpg" alt="Logo SCQ">
+    </a>
 
-<!-- Bannière -->
-<div class="banner">
-  <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
-</div>
+    <a href="index.html">Accueil</a>
+    <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+    <a href="cadre.html">Cadre National</a>
+    <a href="membres.html">Membres</a>
+    <a href="equipe.html">Équipe</a>
+    <a href="comptabilite.html">Comptabilité</a>
+    <a href="contact.html">Contact</a>
+    <a href="doc.html">Documents</a>
+  </nav>
 
-<!-- Contenu principal -->
-<div class="content">
-<h1>Lois organiques</h1>
-</div>
+  <div class="banner">
+    <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
+  </div>
+
+  <main>
+    <h1>Lois organiques</h1>
+
+    <div class="box">
+      <p>
+        Les <strong>lois organiques</strong> sont des lois structurantes qui organisent
+        le fonctionnement fondamental de l’État. Elles traduisent directement la Constitution
+        en règles institutionnelles obligatoires (gouvernance, démocratie, justice, finances publiques,
+        administration, mécanismes de contrôle).
+      </p>
+      <p>
+        <strong>Principe d’autorité :</strong> une loi organique ne peut contredire la Constitution.
+        Toute loi ordinaire, règlement ou pratique administrative doit respecter les lois organiques.
+      </p>
+
+      <div class="actions">
+        <a class="btn" href="cadre.html">Retour au Cadre National</a>
+        <!-- Optionnel : lien de téléchargement si tu publies la version DOCX/PDF -->
+        <!-- <a class="btn secondary" href="docs/lois-organiques-quebec-souverain.docx">Télécharger (DOCX)</a> -->
+      </div>
+    </div>
+
+    <div class="toc" aria-label="Sommaire">
+      <p><strong>Sommaire (navigation interne)</strong></p>
+      <ul>
+        <li><a href="#definition">Définition et rôle</a></li>
+        <li><a href="#domaines">Domaines typiques</a></li>
+        <li><a href="#limites">Limites juridiques</a></li>
+        <li><a href="#effets">Effets sur les autres normes</a></li>
+        <li><a href="#qualite">Exigences de qualité</a></li>
+      </ul>
+    </div>
+
+    <h2 id="definition">Définition et rôle</h2>
+    <p>
+      Une loi organique fixe les règles essentielles qui rendent l’État fonctionnel et contrôlable.
+      Elle vise la stabilité institutionnelle, la cohérence démocratique et la prévisibilité des pouvoirs publics.
+    </p>
+
+    <h2 id="domaines">Domaines typiques</h2>
+    <p>
+      Les lois organiques portent notamment sur :
+    </p>
+    <ul>
+      <li>les institutions (assemblée, exécutif, justice, autorités indépendantes);</li>
+      <li>l’architecture démocratique (processus électoraux, mécanismes de participation, révocation, etc.);</li>
+      <li>les finances publiques (budget, contrôle, audit, règles d’intégrité);</li>
+      <li>l’organisation administrative (statut, responsabilités, reddition de comptes);</li>
+      <li>les garanties d’indépendance et de transparence (anti-ingérence, conflits d’intérêts, accès à l’information).</li>
+    </ul>
+
+    <h2 id="limites">Limites juridiques</h2>
+    <p>
+      Les lois organiques sont subordonnées à la Constitution et doivent respecter les droits fondamentaux,
+      la séparation des pouvoirs et les garanties démocratiques. Elles ne peuvent pas servir à contourner
+      une procédure constitutionnelle.
+    </p>
+
+    <h2 id="effets">Effets sur les autres normes</h2>
+    <p>
+      Toute loi ordinaire doit être conforme aux lois organiques. Un règlement ne peut ni modifier
+      une loi organique ni en élargir la portée. Les pratiques administratives sont purement opérationnelles
+      et ne peuvent pas remplacer une loi organique.
+    </p>
+
+    <h2 id="qualite">Exigences de qualité</h2>
+    <p>
+      Une loi organique doit être rédigée de façon claire, accessible et vérifiable : définitions nettes,
+      obligations explicites, mécanismes de contrôle identifiables, publication et traçabilité des modifications.
+    </p>
+  </main>
+
 </body>
 </html>
