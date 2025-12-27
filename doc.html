@@ -1,133 +1,193 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<title>SCQ - Documents officiels</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/styles.css">
-<style>
-/* Barre de navigation fixe */
-nav {
-  background-color: #0A2A66; /* bleu foncé */
-  padding: 12px 20px;
-  display: flex;
-  flex-wrap: wrap;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCQ - Documents officiels</title>
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-right: 15px;
-  font-weight: bold;
-  padding: 5px 0;
-}
+  <link rel="stylesheet" href="css/styles.css">
 
-nav a:hover {
-  text-decoration: underline;
-}
+  <style>
+    nav {
+      background-color: #0A2A66;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-/* ============================
-   Bannière
-   ============================ */
-.banner {
-  text-align: center;
-  margin-top: 20px;
-  width: 100%;
-  overflow: hidden;
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 6px 8px;
+      border-radius: 10px;
+      white-space: nowrap;
+    }
+    nav a:hover { text-decoration: underline; }
 
-.banner img {
-  width: 65%;
-  height: auto;
-  max-height: 225px;
-  object-fit: cover;
-}
+    nav .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-right: 6px;
+      padding: 0;
+    }
+    nav .logo img {
+      height: 40px;
+      width: auto;
+      vertical-align: middle;
+      border-radius: 10px;
+      display: block;
+    }
 
-/* Contenu principal */
-.content {
-  max-width: 900px;
-  margin: 30px auto;
-  background: #fff;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
-  text-align: center;
-}
+    .banner {
+      text-align: center;
+      margin-top: 16px;
+      width: 100%;
+      overflow: hidden;
+      padding: 0 16px;
+    }
+    .banner img {
+      width: 100%;
+      max-width: 1100px;
+      height: auto;
+      max-height: 225px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.10);
+    }
 
-h1 { font-size:36px; color:#0047ab; }
-h2 { font-size:28px; color:#0047ab; margin-top:30px; }
-p, ul { font-size:18px; margin-bottom:15px; }
-ul { margin-left:20px; text-align:left; }
-li { margin-bottom:10px; }
-a { color:#0047ab; text-decoration:none; }
-a:hover { text-decoration:underline; }
+    .content {
+      max-width: 900px;
+      margin: 30px auto 50px;
+      background: #fff;
+      padding: 25px;
+      border-radius: 14px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.10);
+      text-align: left;
+    }
 
-/* Responsive */
-@media(max-width:640px) {
-  h1 { font-size:28px; }
-  h2 { font-size:22px; }
-  nav { flex-direction: column; }
-  nav a { margin-bottom:10px; }
-}
-</style>
+    h1 { font-size: 34px; color: #0047ab; margin: 0 0 10px; }
+    h2 { font-size: 24px; color: #0047ab; margin: 26px 0 12px; }
+    p, ul { font-size: 17px; margin: 0 0 14px; line-height: 1.65; }
+    ul { margin-left: 18px; }
+    li { margin-bottom: 10px; }
+
+    a { color: #0047ab; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .box {
+      margin: 14px 0 18px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: rgba(0,71,171,0.06);
+      border: 1px solid rgba(0,71,171,0.14);
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 6px 8px 0 0;
+      background: #0A2A66;
+      color: #fff;
+      padding: 10px 12px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .btn:hover { text-decoration: underline; }
+    .btn.secondary { background: #0f172a; }
+
+    .small {
+      margin-top: 18px;
+      font-size: 14px;
+      color: #0f172a;
+    }
+
+    @media (max-width: 640px) {
+      h1 { font-size: 28px; }
+      h2 { font-size: 20px; }
+      nav { flex-direction: column; align-items: flex-start; }
+      .content { margin: 20px 12px 40px; padding: 18px; }
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- Barre de navigation -->
-<nav>
-  <a href="index.html">
-    <img src="images/logo_scq.jpg" alt="Logo SCQ" style="height:40px; vertical-align:middle; margin-right:10px;">
-  </a>
-  <a href="index.html">Accueil</a>
-  <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
-  <a href="cadre.html">Cadre National</a>
-  <a href="membres.html">Membres</a>
-  <a href="equipe.html">Équipe</a>
-  <a href="comptabilite.html">Comptabilité</a>
-  <a href="contact.html">Contact</a>
-  <a href="doc.html">Documents</a>
-</nav>
+  <nav>
+    <a class="logo" href="index.html" aria-label="Retour à l’accueil">
+      <img src="images/logo_scq.jpg" alt="Logo SCQ">
+    </a>
 
-<!-- Bannière -->
-<div class="banner">
-  <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
-</div>
+    <a href="index.html">Accueil</a>
+    <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+    <a href="cadre.html">Cadre National</a>
+    <a href="membres.html">Membres</a>
+    <a href="equipe.html">Équipe</a>
+    <a href="comptabilite.html">Comptabilité</a>
+    <a href="contact.html">Contact</a>
+    <a href="doc.html" aria-current="page">Documents</a>
+  </nav>
 
-<!-- Contenu principal -->
-<main class="content">
-  <h1>Documents officiels</h1>
-  <p>
-    Cette section regroupe l’ensemble des documents officiels du Parti Souveraineté et Citoyenneté du Québec (SCQ).
-    Tous les documents ci-dessous sont accessibles librement afin d’assurer la transparence, l’information citoyenne
-    et la participation démocratique.
-  </p>
+  <div class="banner">
+    <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
+  </div>
 
-  <h2>Documents publics</h2>
-  <ul>
-    <li><a href="Doc/FICHE_DE_SIGNATURE_D_APPUI.docx" download>Fiche de signature d'appui (DOCX)</a></li>
-    <li><a href="Doc/CODE_DE_CONDUITE_SCQ.docx" download>Code de conduite du SCQ (DOCX)</a></li>
-    <li><a href="Doc/Scq — Doctrine Fondatrice Et Architecture Politique Complète.pdf" download>Scq — Doctrine Fondatrice Et Architecture Politique Complète (PDF)</a></li>    
-  </ul>
+  <main class="content">
+    <h1>Documents officiels</h1>
+    <p>
+      Cette section regroupe l’ensemble des documents officiels du Parti Souveraineté et Citoyenneté du Québec (SCQ).
+      Tous les documents ci-dessous sont accessibles afin d’assurer la transparence, l’information citoyenne et la participation démocratique.
+    </p>
 
-  <h2>Documents pour les membres</h2>
-  <ul>
-    <li><a href="Doc/FORMULAIRE_ENGAGEMENT_MEMBRE_SCQ.docx" download>Formulaire d'engagement du membre – SCQ (DOCX)</a></li>
-    <li><a href="Doc/POLITIQUE_CONTRIBUTIONS_VOLONTAIRES_SCQ.docx" download>Politique de contributions volontaires et d’implication du membre – SCQ (DOCX)</a></li>
-    <li><a href="Doc/LETTRE_REMERCIEMENT_SCQ.docx" download>Lettre officielle de remerciement – SCQ (DOCX)</a></li>
-    <li><a href="Doc/CARTE_MEMBRE_SCQ.jpg" download>Carte de membre (JPEG)</a></li>
-  </ul>
+    <div class="box">
+      <p style="margin-bottom:10px;">
+        <strong>Accès rapide (version web HTML)</strong>
+      </p>
+      <a class="btn" href="loi-constitution.html">Constitution (HTML)</a>
+      <a class="btn" href="loi-organiques.html">Lois organiques (HTML)</a>
+      <a class="btn" href="loi-ordinaires.html">Lois ordinaires (HTML)</a>
+      <a class="btn" href="loi-Reglements.html">Règlements (HTML)</a>
+      <a class="btn" href="loi-administratif.html">Pratiques administratives (HTML)</a>
+      <a class="btn secondary" href="loi-scq-otc.html">SCQ – OTC (HTML)</a>
+    </div>
 
-  <p class="small">
-    Tous les documents sont mis à jour régulièrement.  
-    Pour toute question ou demande de document supplémentaire, veuillez nous contacter à
-    <strong>contact@scq-officiel.ca</strong>.
-  </p>
-</main>
+    <h2>Documents des lois (DOCX)</h2>
+    <ul>
+      <li><a href="Doc/lois/Constitution_du_Quebec_souverain.docx" download>Constitution du Québec souverain (DOCX)</a></li>
+      <li><a href="Doc/lois/Lois_organiques_du_Quebec_souverain.docx" download>Lois organiques du Québec souverain (DOCX)</a></li>
+      <li><a href="Doc/lois/Lois_ordinaires_du_Quebec_souverain.docx" download>Lois ordinaires du Québec souverain (DOCX)</a></li>
+      <li><a href="Doc/lois/Lois_administratives_du_quebec.docx" download>Lois administratives du Québec (DOCX)</a></li>
+      <li><a href="Doc/lois/Reglements_du_Quebec_souverain.docx" download>Règlements du Québec souverain (DOCX)</a></li>
+      <li><a href="Doc/lois/SCQ_Outil_de_transition_constitutionnelle.docx" download>SCQ – Outil de transition constitutionnelle (DOCX)</a></li>
+    </ul>
 
-<div class="footer-spacer"></div>
+    <h2>Documents publics</h2>
+    <ul>
+      <li><a href="Doc/FICHE_DE_SIGNATURE_D_APPUI.docx" download>Fiche de signature d'appui (DOCX)</a></li>
+      <li><a href="Doc/CODE_DE_CONDUITE_SCQ.docx" download>Code de conduite du SCQ (DOCX)</a></li>
+      <li><a href="Doc/Scq — Doctrine Fondatrice Et Architecture Politique Complète.pdf" download>SCQ — Doctrine fondatrice et architecture politique complète (PDF)</a></li>
+    </ul>
+
+    <h2>Documents pour les membres</h2>
+    <ul>
+      <li><a href="Doc/FORMULAIRE_ENGAGEMENT_MEMBRE_SCQ.docx" download>Formulaire d'engagement du membre – SCQ (DOCX)</a></li>
+      <li><a href="Doc/POLITIQUE_CONTRIBUTIONS_VOLONTAIRES_SCQ.docx" download>Politique de contributions volontaires et d’implication du membre – SCQ (DOCX)</a></li>
+      <li><a href="Doc/LETTRE_REMERCIEMENT_SCQ.docx" download>Lettre officielle de remerciement – SCQ (DOCX)</a></li>
+      <li><a href="Doc/CARTE_MEMBRE_SCQ.jpg" download>Carte de membre (JPEG)</a></li>
+    </ul>
+
+    <p class="small">
+      Pour toute question ou demande de document supplémentaire, veuillez nous contacter à
+      <strong>contact@scq-officiel.ca</strong>.
+    </p>
+  </main>
 
 </body>
 </html>
