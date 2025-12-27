@@ -1,110 +1,212 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Constitution – SCQ</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/styles.css">
-<style>
-/* ============================
-   Barre de navigation fixe
-   ============================ */
-nav {
-  background-color: #0A2A66; /* bleu foncé */
-  padding: 12px 20px;
-  display: flex;
-  flex-wrap: wrap;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Constitution – SCQ</title>
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-right: 15px;
-  font-weight: bold;
-  padding: 5px 0;
-}
+  <link rel="stylesheet" href="css/styles.css">
 
-nav a:hover {
-  text-decoration: underline;
-}
+  <style>
+    nav{
+      background:#0A2A66;
+      padding:12px 16px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      font-weight:700;
+      padding:6px 8px;
+      border-radius:10px;
+      white-space:nowrap;
+    }
+    nav a:hover{ text-decoration:underline; }
+    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; }
+    nav .logo img{ height:40px; width:auto; border-radius:10px; display:block; }
 
-/* ============================
-   Bannière
-   ============================ */
-.banner {
-  text-align: center;
-  margin-top: 20px;
-  width: 100%;
-  overflow: hidden;
-}
+    .banner{
+      text-align:center;
+      margin-top:16px;
+      width:100%;
+      overflow:hidden;
+      padding:0 16px;
+    }
+    .banner img{
+      width:100%;
+      max-width:1100px;
+      height:auto;
+      max-height:260px;
+      object-fit:cover;
+      border-radius:16px;
+      box-shadow:0 0 12px rgba(0,0,0,0.10);
+    }
 
-.banner img {
-  width: 65%;
-  height: auto;
-  max-height: 225px;
-  object-fit: cover;
-}
-   
-/* ============================
-   Contenu principal
-   ============================ */
-.content {
-  max-width: 900px;
-  margin: 30px auto;
-  background: #fff;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
-  text-align: center;
-}
+    main{
+      max-width:980px;
+      margin:22px auto 50px;
+      background:#fff;
+      padding:26px;
+      border-radius:14px;
+      box-shadow:0 0 12px rgba(0,0,0,0.10);
+    }
 
-h1 { font-size:36px; color:#0047ab; }
-h2 { font-size:28px; color:#0047ab; margin-top:20px; }
-p, ul { font-size:18px; margin-bottom:15px; }
-ul { margin-left:20px; }
-a { color:#0047ab; text-decoration:none; }
-a:hover { text-decoration:underline; }
+    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; }
+    h2{ font-size:24px; color:#0047ab; margin:22px 0 10px; }
+    p, li{ font-size:17px; margin:0 0 12px; line-height:1.65; color:#0f172a; }
 
-/* ============================
-   Responsive
-   ============================ */
-@media(max-width:640px) {
-  h1 { font-size:28px; }
-  h2 { font-size:22px; }
-  nav { flex-direction: column; }
-  nav a { margin-bottom:10px; }
-}
-</style>
+    .box{
+      margin:18px 0;
+      padding:14px 16px;
+      border-radius:14px;
+      background:rgba(0,71,171,0.06);
+      border:1px solid rgba(0,71,171,0.14);
+    }
+
+    .toc{
+      margin:14px 0 0;
+      padding:14px 16px;
+      border:1px solid rgba(0,0,0,0.10);
+      border-radius:14px;
+      background:#fff;
+    }
+    .toc a{ color:#0A2A66; font-weight:700; text-decoration:none; }
+    .toc a:hover{ text-decoration:underline; }
+    .toc ul{ margin:8px 0 0 18px; }
+
+    .actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:12px;
+    }
+    .btn{
+      display:inline-block;
+      background:#0A2A66;
+      color:#fff;
+      padding:10px 12px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:700;
+      font-size:14px;
+    }
+    .btn:hover{ text-decoration:underline; }
+    .btn.secondary{
+      background:#0f172a;
+    }
+
+    @media (max-width:760px){
+      h1{ font-size:28px; }
+      h2{ font-size:20px; }
+      nav{ flex-direction:column; align-items:flex-start; }
+      main{ margin:18px 12px 40px; padding:18px; }
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- Barre de navigation fixe -->
-<nav>
-  <a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ" style="height:40px; vertical-align:middle; margin-right:10px;"></a>
-  <a href="index.html">Accueil</a>
-  <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
-  <a href="cadre.html">Cadre National</a>
-  <a href="membres.html">Membres</a>
-  <a href="equipe.html">Équipe</a>
-  <a href="comptabilite.html">Comptabilité</a>
-  <a href="contact.html">Contact</a>
-  <a href="doc.html">Documents</a> 
-</nav>
+  <nav>
+    <a class="logo" href="index.html" aria-label="Retour à l’accueil">
+      <img src="images/logo_scq.jpg" alt="Logo SCQ">
+    </a>
 
-<!-- Bannière -->
-<div class="banner">
-  <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
-</div>
+    <a href="index.html">Accueil</a>
+    <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+    <a href="cadre.html">Cadre National</a>
+    <a href="membres.html">Membres</a>
+    <a href="equipe.html">Équipe</a>
+    <a href="comptabilite.html">Comptabilité</a>
+    <a href="contact.html">Contact</a>
+    <a href="doc.html">Documents</a>
+  </nav>
 
-<!-- Contenu principal -->
-<div class="content">
-<h1>Constitution du Québec Souverain</h1>
-<p>Ici, vous trouverez l’ensemble des principes fondamentaux encadrant le Québec souverain, y compris : droits et libertés, institutions, principes de souveraineté, éducation, démocratie participative, intégrité et lutte contre la corruption.</p>
-<p>Le texte complet de la Constitution sera publié et mis à jour pour assurer transparence et cohérence avec notre vision du Québec.</p>
-</div>
+  <div class="banner">
+    <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
+  </div>
+
+  <main>
+    <h1>Constitution du Québec souverain</h1>
+
+    <div class="box">
+      <p>
+        Cette page présente la <strong>Constitution</strong> comme norme suprême de l’État.
+        Elle fixe les <strong>droits fondamentaux</strong>, l’architecture des <strong>institutions</strong>,
+        la <strong>souveraineté</strong>, la hiérarchie des normes et les mécanismes de protection
+        contre l’arbitraire et l’ingérence.
+      </p>
+      <p>
+        <strong>Principe d’autorité :</strong> aucune loi, aucun règlement, aucune pratique administrative
+        ne peut contredire la Constitution. Toute contradiction est nulle de plein droit.
+      </p>
+
+      <div class="actions">
+        <a class="btn" href="cadre.html">Retour au Cadre National</a>
+        <!-- Optionnel : si tu publies aussi le document complet téléchargeable, mets ici un lien stable -->
+        <!-- <a class="btn secondary" href="docs/constitution-quebec-souverain.docx">Télécharger (DOCX)</a> -->
+      </div>
+    </div>
+
+    <div class="toc" aria-label="Sommaire">
+      <p><strong>Sommaire (navigation interne)</strong></p>
+      <ul>
+        <li><a href="#role">Rôle et portée</a></li>
+        <li><a href="#hierarchie">Hiérarchie des normes</a></li>
+        <li><a href="#verrous">Verrous constitutionnels</a></li>
+        <li><a href="#revision">Révision constitutionnelle</a></li>
+        <li><a href="#publication">Publication et accès</a></li>
+      </ul>
+    </div>
+
+    <h2 id="role">Rôle et portée</h2>
+    <p>
+      La Constitution est l’acte fondateur de l’État. Elle établit les règles supérieures qui s’imposent
+      à toutes les autorités publiques, ainsi qu’aux personnes agissant au nom de l’État.
+    </p>
+
+    <h2 id="hierarchie">Hiérarchie des normes</h2>
+    <p>
+      La hiérarchie des normes est la règle d’ordre public suivante :
+    </p>
+    <ul>
+      <li><strong>1) Constitution</strong> (norme suprême)</li>
+      <li><strong>2) Lois organiques</strong> (organisation fondamentale de l’État)</li>
+      <li><strong>3) Lois ordinaires</strong> (règles sectorielles)</li>
+      <li><strong>4) Règlements</strong> (modalités techniques d’application)</li>
+      <li><strong>5) Pratiques administratives</strong> (procédures internes sans valeur normative autonome)</li>
+    </ul>
+    <p>
+      Toute norme inférieure doit être conforme à la norme supérieure; à défaut, elle est inopposable
+      et doit être corrigée ou annulée.
+    </p>
+
+    <h2 id="verrous">Verrous constitutionnels</h2>
+    <p>
+      La Constitution comprend des protections visant à empêcher les contournements :
+      elle impose des limites matérielles et procédurales aux pouvoirs publics, et encadre strictement
+      tout changement qui affecte les principes fondamentaux, les droits et l’équilibre institutionnel.
+    </p>
+
+    <h2 id="revision">Révision constitutionnelle</h2>
+    <p>
+      Toute modification constitutionnelle doit suivre une procédure distincte, transparente et renforcée
+      (exigences de forme, délais, publication, seuils). Aucune révision “par simple loi” n’est permise.
+    </p>
+
+    <h2 id="publication">Publication et accès</h2>
+    <p>
+      La Constitution doit être accessible au public, dans une version officielle unique, tenue à jour,
+      et dont l’historique de révision est traçable. Toute version non officielle ne peut remplacer
+      le texte publié par l’État.
+    </p>
+
+  </main>
+
 </body>
 </html>
