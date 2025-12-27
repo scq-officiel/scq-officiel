@@ -1,0 +1,110 @@
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Constitution – SCQ</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+/* ============================
+   Barre de navigation fixe
+   ============================ */
+nav {
+  background-color: #0A2A66; /* bleu foncé */
+  padding: 12px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ============================
+   Bannière
+   ============================ */
+.banner {
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 65%;
+  height: auto;
+  max-height: 225px;
+  object-fit: cover;
+}
+   
+/* ============================
+   Contenu principal
+   ============================ */
+.content {
+  max-width: 900px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+h1 { font-size:36px; color:#0047ab; }
+h2 { font-size:28px; color:#0047ab; margin-top:20px; }
+p, ul { font-size:18px; margin-bottom:15px; }
+ul { margin-left:20px; }
+a { color:#0047ab; text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+/* ============================
+   Responsive
+   ============================ */
+@media(max-width:640px) {
+  h1 { font-size:28px; }
+  h2 { font-size:22px; }
+  nav { flex-direction: column; }
+  nav a { margin-bottom:10px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Barre de navigation fixe -->
+<nav>
+  <a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ" style="height:40px; vertical-align:middle; margin-right:10px;"></a>
+  <a href="index.html">Accueil</a>
+  <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+  <a href="cadre.html">Cadre National</a>
+  <a href="membres.html">Membres</a>
+  <a href="equipe.html">Équipe</a>
+  <a href="comptabilite.html">Comptabilité</a>
+  <a href="contact.html">Contact</a>
+  <a href="doc.html">Documents</a> 
+</nav>
+
+<!-- Bannière -->
+<div class="banner">
+  <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
+</div>
+
+<!-- Contenu principal -->
+<div class="content">
+<h1>SCQ – Outil de transition constitutionnelle</h1>
+</div>
+</body>
+</html>
