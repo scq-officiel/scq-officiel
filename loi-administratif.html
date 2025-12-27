@@ -1,88 +1,24 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Constitution – SCQ</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/styles.css">
-<style>
-/* ============================
-   Barre de navigation fixe
-   ============================ */
-nav {
-  background-color: #0A2A66; /* bleu foncé */
-  padding: 12px 20px;
-  display: flex;
-  flex-wrap: wrap;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-right: 15px;
-  font-weight: bold;
-  padding: 5px 0;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* ============================
-   Bannière
-   ============================ */
-.banner {
-  text-align: center;
-  margin-top: 20px;
-  width: 100%;
-  overflow: hidden;
-}
-
-.banner img {
-  width: 65%;
-  height: auto;
-  max-height: 225px;
-  object-fit: cover;
-}
-   
-/* ============================
-   Contenu principal
-   ============================ */
-.content {
-  max-width: 900px;
-  margin: 30px auto;
-  background: #fff;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
-  text-align: center;
-}
-
-h1 { font-size:36px; color:#0047ab; }
-h2 { font-size:28px; color:#0047ab; margin-top:20px; }
-p, ul { font-size:18px; margin-bottom:15px; }
-ul { margin-left:20px; }
-a { color:#0047ab; text-decoration:none; }
-a:hover { text-decoration:underline; }
-
-/* ============================
-   Responsive
-   ============================ */
-@media(max-width:640px) {
-  h1 { font-size:28px; }
-  h2 { font-size:22px; }
-  nav { flex-direction: column; }
-  nav a { margin-bottom:10px; }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pratiques administratives – SCQ</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    nav{ background:#0A2A66; padding:12px 20px; display:flex; flex-wrap:wrap; position:sticky; top:0; z-index:1000; }
+    nav a{ color:#fff; text-decoration:none; margin-right:15px; font-weight:700; padding:5px 0; }
+    nav a:hover{ text-decoration:underline; }
+    .banner{ text-align:center; margin-top:20px; width:100%; overflow:hidden; }
+    .banner img{ width:65%; height:auto; max-height:225px; object-fit:cover; }
+    .content{ max-width:900px; margin:30px auto; background:#fff; padding:25px; border-radius:10px; box-shadow:0 0 12px rgba(0,0,0,0.10); text-align:left; }
+    h1{ font-size:36px; color:#0047ab; margin:0 0 12px; }
+    p, ul{ font-size:18px; margin:0 0 14px; line-height:1.65; }
+    @media(max-width:640px){ h1{ font-size:28px; } nav{ flex-direction:column; } nav a{ margin-bottom:10px; } .banner img{ width:92%; } .content{ text-align:left; } }
+  </style>
 </head>
 <body>
 
-<!-- Barre de navigation fixe -->
 <nav>
   <a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ" style="height:40px; vertical-align:middle; margin-right:10px;"></a>
   <a href="index.html">Accueil</a>
@@ -92,17 +28,35 @@ a:hover { text-decoration:underline; }
   <a href="equipe.html">Équipe</a>
   <a href="comptabilite.html">Comptabilité</a>
   <a href="contact.html">Contact</a>
-  <a href="doc.html">Documents</a> 
+  <a href="doc.html">Documents</a>
 </nav>
 
-<!-- Bannière -->
 <div class="banner">
   <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
 </div>
 
-<!-- Contenu principal -->
-<div class="content">
-<h1>Pratiques administratives</h1>
-</div>
+<main class="content">
+  <h1>Pratiques administratives</h1>
+
+  <p>
+    Les pratiques administratives désignent l’ensemble des directives, procédures internes,
+    guides d’application et méthodes de gestion utilisés par l’administration publique
+    pour exécuter les lois et les règlements.
+  </p>
+
+  <p>
+    Elles n’ont <strong>aucune valeur normative autonome</strong> : elles ne peuvent ni créer de droits,
+    ni imposer d’obligations nouvelles, ni modifier l’interprétation d’une norme supérieure.
+  </p>
+
+  <p>
+    Toute pratique administrative doit respecter, en tout temps, la hiérarchie des normes :
+    <strong>Constitution</strong> → <strong>lois organiques</strong> → <strong>lois ordinaires</strong> → <strong>règlements</strong>.
+    En cas de contradiction, la norme supérieure prévaut automatiquement.
+  </p>
+
+  <p><a href="cadre.html">Retour au Cadre National</a></p>
+</main>
+
 </body>
 </html>
