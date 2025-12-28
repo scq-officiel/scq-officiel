@@ -1,137 +1,217 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>SCQ - Membres</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/styles.css">
-<style>
-/* ============================
-   Barre de navigation fixe
-   ============================ */
-nav {
-  background-color: #0A2A66; /* bleu foncé */
-  padding: 12px 20px;
-  display: flex;
-  flex-wrap: wrap;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCQ - Membres</title>
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-right: 15px;
-  font-weight: bold;
-  padding: 5px 0;
-}
+  <link rel="stylesheet" href="css/styles.css" />
 
-nav a:hover {
-  text-decoration: underline;
-}
+  <style>
+    nav{
+      background:#0A2A66;
+      padding:12px 16px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      font-weight:700;
+      padding:6px 8px;
+      border-radius:10px;
+      white-space:nowrap;
+    }
+    nav a:hover{ text-decoration:underline; }
+    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; margin-right:6px; }
+    nav .logo img{ height:40px; width:auto; border-radius:10px; display:block; }
 
-/* ============================
-   Bannière
-   ============================ */
-.banner {
-  text-align: center;
-  margin-top: 20px;
-  width: 100%;
-  overflow: hidden;
-}
+    .banner{
+      text-align:center;
+      margin-top:16px;
+      width:100%;
+      overflow:hidden;
+      padding:0 16px;
+    }
+    .banner img{
+      width:100%;
+      max-width:1100px;
+      height:auto;
+      max-height:260px;
+      object-fit:cover;
+      border-radius:16px;
+      box-shadow:0 0 12px rgba(0,0,0,0.10);
+    }
 
-.banner img {
-  width: 65%;
-  height: auto;
-  max-height: 225px;
-  object-fit: cover;
-}
-   
-/* ============================
-   Contenu principal
-   ============================ */
-.content {
-  max-width: 900px;
-  margin: 30px auto;
-  background: #fff;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
-  text-align: center;
-}
+    main{
+      max-width:980px;
+      margin:22px auto 50px;
+      background:#fff;
+      padding:26px;
+      border-radius:14px;
+      box-shadow:0 0 12px rgba(0,0,0,0.10);
+    }
 
-h1 { font-size:36px; color:#0047ab; }
-h2 { font-size:28px; color:#0047ab; margin-top:20px; }
-p, ul { font-size:18px; margin-bottom:15px; }
-ul { margin-left:20px; }
-a { color:#0047ab; text-decoration:none; }
-a:hover { text-decoration:underline; }
+    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; }
+    h2{ font-size:24px; color:#0047ab; margin:22px 0 10px; }
+    p, li{ font-size:17px; margin:0 0 12px; line-height:1.65; color:#0f172a; }
 
-/* ============================
-   Responsive
-   ============================ */
-@media(max-width:640px) {
-  h1 { font-size:28px; }
-  h2 { font-size:22px; }
-  nav { flex-direction: column; }
-  nav a { margin-bottom:10px; }
-}
-</style>
+    .box{
+      margin:18px 0;
+      padding:14px 16px;
+      border-radius:14px;
+      background:rgba(0,71,171,0.06);
+      border:1px solid rgba(0,71,171,0.14);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap:14px;
+      margin-top:14px;
+    }
+
+    .card{
+      border:1px solid rgba(0,0,0,0.10);
+      border-radius:14px;
+      padding:16px;
+      background:#fff;
+      box-shadow:0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .btnrow{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+
+    .btn{
+      display:inline-block;
+      background:#0A2A66;
+      color:#fff;
+      padding:10px 12px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:700;
+      font-size:14px;
+    }
+    .btn:hover{ text-decoration:underline; }
+    .btn.secondary{ background:#0f172a; }
+
+    .note{
+      margin-top:18px;
+      padding:14px 16px;
+      border-radius:14px;
+      background:rgba(15,23,42,0.04);
+      border:1px solid rgba(15,23,42,0.10);
+      font-size:15px;
+      color:#0f172a;
+      line-height:1.6;
+    }
+
+    @media (max-width:760px){
+      nav{ flex-direction:column; align-items:flex-start; }
+      main{ margin:18px 12px 40px; padding:18px; }
+      h1{ font-size:28px; }
+      h2{ font-size:20px; }
+      .grid{ grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- Barre de navigation fixe -->
-<nav>
-  <a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ" style="height:40px; vertical-align:middle; margin-right:10px;"></a>
-  <a href="index.html">Accueil</a>
-  <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
-  <a href="cadre.html">Cadre National</a>
-  <a href="membres.html">Membres</a>
-  <a href="equipe.html">Équipe</a>
-  <a href="comptabilite.html">Comptabilité</a>
-  <a href="contact.html">Contact</a>
-  <a href="doc.html">Documents</a> 
-</nav>
+  <nav>
+    <a class="logo" href="index.html" aria-label="Retour à l’accueil">
+      <img src="images/logo_scq.jpg" alt="Logo SCQ">
+    </a>
 
-<!-- Bannière -->
-<div class="banner">
-  <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
-</div>
+    <a href="index.html">Accueil</a>
+    <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+    <a href="cadre.html">Cadre National</a>
+    <a href="membres.html" aria-current="page">Membres</a>
+    <a href="equipe.html">Équipe</a>
+    <a href="comptabilite.html">Comptabilité</a>
+    <a href="contact.html">Contact</a>
+    <a href="doc.html">Documents</a>
+  </nav>
 
-<!-- Contenu principal -->
-   <div class="content">
-  <div class="section-header">
-    <h1>Message à nos membres</h1>
-    <span id="member-count">14</span>
+  <div class="banner">
+    <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
   </div>
 
-  <p>Chers membres du SCQ,</p>
+  <main>
+    <h1>Membres du SCQ</h1>
 
-  <p>Nous vous remercions sincèrement pour votre engagement et votre soutien envers le Parti Souveraineté et Citoyenneté du Québec (SCQ). Chacun de vous contribue à faire vivre notre vision d’un Québec souverain et démocratiquement gouverné par et pour le peuple.</p>
+    <div class="box">
+      <p>
+        Être membre du <strong>Parti Souveraineté et Citoyenneté du Québec (SCQ)</strong> signifie
+        participer à une organisation fondée sur la transparence, la responsabilité et le respect
+        du cadre normatif publié.
+      </p>
+      <p>
+        L’adhésion repose sur un engagement volontaire, clair et documenté,
+        encadré par des règles accessibles à tous.
+      </p>
+    </div>
 
-  <p>Tout citoyen désirant devenir membre peut le faire sans frais. En échange, chaque membre est invité à faire connaître le parti auprès de son entourage, à partager nos idées et à recruter de nouveaux membres. Notre objectif est de rassembler tous les Québécois sous une seule bannière, afin que le SCQ devienne la voix forte et unie du peuple.</p>
+    <div class="grid">
+      <div class="card">
+        <h2>Droits des membres</h2>
+        <ul>
+          <li>accéder aux documents officiels et aux règles internes;</li>
+          <li>participer aux consultations et aux mécanismes démocratiques prévus;</li>
+          <li>exprimer une opinion dans le respect du cadre établi;</li>
+          <li>recevoir une information complète, claire et vérifiable.</li>
+        </ul>
+      </div>
 
-  <p>Ensemble, nous construisons un mouvement citoyen, transparent et engagé. Votre participation active, votre énergie et votre volonté de contribuer font de nous une véritable force collective capable de transformer la société et de défendre les droits et libertés de tous.</p>
+      <div class="card">
+        <h2>Responsabilités des membres</h2>
+        <ul>
+          <li>respecter la Constitution, les lois et les règles internes du SCQ;</li>
+          <li>agir avec intégrité, respect et transparence;</li>
+          <li>éviter toute forme d’ingérence, de pression ou de conflit d’intérêts;</li>
+          <li>se conformer au code de conduite publié.</li>
+        </ul>
+      </div>
 
-  <p>Merci de croire en cette mission et de faire partie du SCQ. Chaque membre compte, chaque action compte, et c’est grâce à vous que notre parti peut avancer et inspirer le Québec tout entier.</p>
+      <div class="card">
+        <h2>Adhésion</h2>
+        <p>
+          L’adhésion se fait par le dépôt d’un formulaire officiel et l’acceptation
+          des règles applicables. Toute adhésion est volontaire et révocable selon
+          les modalités prévues.
+        </p>
+        <div class="btnrow">
+          <a class="btn" href="Doc/FORMULAIRE_ENGAGEMENT_MEMBRE_SCQ.docx" download>Formulaire d’adhésion (DOCX)</a>
+        </div>
+      </div>
 
-  <p>Pour connaître les règles et principes de notre parti, consultez le <a href="code-conduite.html">Code de conduite officiel du SCQ</a>.</p>
+      <div class="card">
+        <h2>Documents de référence</h2>
+        <p>
+          Les membres sont invités à consulter régulièrement les documents suivants :
+        </p>
+        <div class="btnrow">
+          <a class="btn" href="doc.html">Documents officiels</a>
+          <a class="btn secondary" href="Doc/CODE_DE_CONDUITE_SCQ.docx" download>Code de conduite (DOCX)</a>
+        </div>
+      </div>
+    </div>
 
-  <small id="member-last-update">Dernière mise à jour : 2025-11-28</small>
-</div>
+    <div class="note">
+      <strong>Principe fondamental :</strong> aucune règle interne non publiée ne peut être imposée
+      aux membres. Toute obligation doit être accessible, compréhensible et vérifiable.
+    </div>
 
-<script>
-// --- Compteur membres modifiable ---
-function updateMemberCounter() {
-    let totalMembers = localStorage.getItem("scq_total_members") || 18;
-    let lastUpdate = localStorage.getItem("scq_members_last_update") || "2025-12-12";
-
-    document.getElementById("member-count").textContent = totalMembers;
-    document.getElementById("member-last-update").textContent = "Dernière mise à jour : " + lastUpdate;
-}
-updateMemberCounter();
-</script>
+  </main>
 
 </body>
 </html>
