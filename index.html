@@ -1,155 +1,227 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<title>SCQ - Accueil</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/styles.css">
-<style>
-/* ============================
-   Barre de navigation fixe
-   ============================ */
-nav {
-  background-color: #0A2A66; /* bleu foncé */
-  padding: 12px 20px;
-  display: flex;
-  flex-wrap: wrap;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCQ - Accueil</title>
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-right: 15px;
-  font-weight: bold;
-  padding: 5px 0;
-}
+  <link rel="stylesheet" href="css/styles.css" />
 
-nav a:hover {
-  text-decoration: underline;
-}
+  <style>
+    nav{
+      background:#0A2A66;
+      padding:12px 16px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      font-weight:700;
+      padding:6px 8px;
+      border-radius:10px;
+      white-space:nowrap;
+    }
+    nav a:hover{ text-decoration:underline; }
+    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; margin-right:6px; }
+    nav .logo img{ height:40px; width:auto; border-radius:10px; display:block; }
 
-/* ============================
-   Bannière
-   ============================ */
-.banner {
-  text-align: center;
-  margin-top: 20px;
-  width: 100%;
-  overflow: hidden;
-}
+    .banner{
+      text-align:center;
+      margin-top:16px;
+      width:100%;
+      overflow:hidden;
+      padding:0 16px;
+    }
+    .banner img{
+      width:100%;
+      max-width:1100px;
+      height:auto;
+      max-height:260px;
+      object-fit:cover;
+      border-radius:16px;
+      box-shadow:0 0 12px rgba(0,0,0,0.10);
+    }
 
-.banner img {
-  width: 65%;
-  height: auto;
-  max-height: 225px;
-  object-fit: cover;
-}
+    main{
+      max-width:980px;
+      margin:22px auto 50px;
+      background:#fff;
+      padding:26px;
+      border-radius:14px;
+      box-shadow:0 0 12px rgba(0,0,0,0.10);
+    }
 
-/* ============================
-   Contenu principal
-   ============================ */
-.content {
-  max-width: 900px;
-  margin: 30px auto;
-  background: #fff;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
-  text-align: center;
-}
+    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; }
+    h2{ font-size:24px; color:#0047ab; margin:22px 0 10px; }
+    p{ font-size:17px; margin:0 0 12px; line-height:1.65; color:#0f172a; }
 
-h1 { font-size:36px; color:#0047ab; }
-h2 { font-size:28px; color:#0047ab; margin-top:20px; }
-p, ul { font-size:18px; margin-bottom:15px; }
-ul { margin-left:20px; }
-a { color:#0047ab; text-decoration:none; }
-a:hover { text-decoration:underline; }
+    .hero{
+      display:grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap:14px;
+      margin-top:14px;
+      align-items:start;
+    }
 
-/* ============================
-   Responsive
-   ============================ */
-@media(max-width:640px) {
-  h1 { font-size:28px; }
-  h2 { font-size:22px; }
-  nav { flex-direction: column; }
-  nav a { margin-bottom:10px; }
-}
-</style>
+    .card{
+      border:1px solid rgba(0,0,0,0.10);
+      border-radius:14px;
+      padding:16px;
+      background:#fff;
+      box-shadow:0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .btnrow{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:12px;
+    }
+
+    .btn{
+      display:inline-block;
+      background:#0A2A66;
+      color:#fff;
+      padding:10px 12px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:700;
+      font-size:14px;
+    }
+    .btn:hover{ text-decoration:underline; }
+    .btn.secondary{ background:#0f172a; }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap:14px;
+      margin-top:14px;
+    }
+
+    .meta{
+      margin-top:18px;
+      padding:14px 16px;
+      border-radius:14px;
+      background:rgba(0,71,171,0.06);
+      border:1px solid rgba(0,71,171,0.14);
+      color:#0f172a;
+      font-size:15px;
+      line-height:1.6;
+    }
+
+    .small{
+      margin-top:16px;
+      font-size:14px;
+      color:#334155;
+    }
+
+    @media (max-width: 760px){
+      nav{ flex-direction:column; align-items:flex-start; }
+      main{ margin:18px 12px 40px; padding:18px; }
+      h1{ font-size:28px; }
+      h2{ font-size:20px; }
+      .hero{ grid-template-columns: 1fr; }
+      .grid{ grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- Barre de navigation fixe -->
-<nav>
-  <a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ" style="height:40px; vertical-align:middle; margin-right:10px;"></a>
-  <a href="index.html">Accueil</a>
-  <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
-  <a href="cadre.html">Cadre National</a>
-  <a href="membres.html">Membres</a>
-  <a href="equipe.html">Équipe</a>
-  <a href="comptabilite.html">Comptabilité</a>
-  <a href="contact.html">Contact</a>
-  <a href="doc.html">Documents</a> 
-</nav>
+  <nav>
+    <a class="logo" href="index.html" aria-label="Retour à l’accueil">
+      <img src="images/logo_scq.jpg" alt="Logo SCQ">
+    </a>
 
-<!-- Bannière -->
-<div class="banner">
-  <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
-</div>
+    <a href="index.html" aria-current="page">Accueil</a>
+    <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+    <a href="cadre.html">Cadre National</a>
+    <a href="membres.html">Membres</a>
+    <a href="equipe.html">Équipe</a>
+    <a href="comptabilite.html">Comptabilité</a>
+    <a href="contact.html">Contact</a>
+    <a href="doc.html">Documents</a>
+  </nav>
 
-<!-- Contenu principal -->
-  <main class="container">
-<section class="card">
-  <h1>Bienvenue au Parti Souveraineté et Citoyenneté du Québec</h1>
-  <p>
-    Nous sommes bien plus qu’un simple parti politique : nous sommes un mouvement citoyen véritablement ancré dans les valeurs du peuple québécois, un mouvement qui place la souveraineté, la transparence et la participation directe des citoyens au cœur de toutes ses actions.<br><br>
-    Ici, chaque voix compte, chaque opinion est précieuse, et chaque action que vous entreprenez contribue à construire un Québec indépendant, fort et juste. Notre objectif est clair : créer un système politique où les décisions sont prises avec le peuple et pour le peuple, loin des pratiques politiciennes traditionnelles et des influences extérieures.<br><br>
-    Que vous soyez ici pour vous informer, rejoindre nos rangs, ou participer activement à nos initiatives, vous faites partie intégrante d’un projet ambitieux et historique. Ensemble, nous pouvons bâtir une société où la démocratie participative, la transparence et l’intégrité sont la norme, et où chaque citoyen peut réellement influer sur l’avenir de notre nation.<br><br>
-    Rejoignez-nous dès aujourd’hui pour être acteur du changement. Votre engagement, votre énergie et votre voix sont les piliers d’un Québec souverain et pleinement autonome. Le moment de participer est maintenant — et votre contribution peut faire toute la différence.
-  </p>
-  <p class="small">Pour nous joindre : scqofficiel@gmail.com</p>
-</section>
-<section class="card">
-  <h2>Nos priorités</h2>
-  <ul>
-    <li>
-      <strong>Souveraineté et Autodétermination :</strong>
-      Indépendance politique, institutionnelle et constitutionnelle; gestion autonome des affaires internes et externes du Québec.
-    </li>
-    <li>
-      <strong>Démocratie Participative :</strong>
-      Référendums d’initiative citoyenne et élus directement responsables devant les citoyens, pour une gouvernance réelle et transparente.
-    </li>
-    <li>
-      <strong>Transparence et Lutte contre la Corruption :</strong>
-      Gestion transparente des ressources publiques, interdiction des financements opaques et sanctions claires pour les manquements.
-    </li>
-    <li>
-      <strong>Proche du Peuple :</strong>
-      Communication directe avec les citoyens, écoute active et mobilisation populaire pour construire les politiques avec le peuple.
-    </li>
-    <li>
-      <strong>Éducation Civique et Politique :</strong>
-      Formation et information accessibles pour tous, afin de renforcer l’engagement citoyen et la compréhension des institutions.
-    </li>
-    <li>
-      <strong>Système Bancaire et Économique Public :</strong>
-      Création et contrôle d’une Banque nationale du Québec et des institutions financières pour servir l’intérêt collectif.
-    </li>
-    <li>
-      <strong>Laïcité et Libertés :</strong>
-      Laïcité stricte dans les espaces publics et liberté religieuse et culturelle complète dans les espaces privés.
-    </li>
-    <li>
-      <strong>Protection de la Culture et des Premières Nations :</strong>
-      Conservation du patrimoine culturel et respect des droits et traditions des peuples autochtones.
-    </li>
-  </ul>
-</section>
+  <div class="banner">
+    <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
+  </div>
+
+  <main>
+    <h1>Parti Souveraineté et Citoyenneté du Québec (SCQ)</h1>
+    <p>
+      Bienvenue sur l’espace officiel du SCQ. Cette plateforme présente notre cadre, nos documents et nos outils
+      de transparence. L’objectif est de rendre l’information accessible, structurée et vérifiable.
+    </p>
+
+    <section class="hero">
+      <div class="card">
+        <h2>Accès rapide</h2>
+        <p>
+          Consulte le cadre national (hiérarchie des normes) et accède directement aux documents officiels.
+        </p>
+        <div class="btnrow">
+          <a class="btn" href="cadre.html">Cadre National</a>
+          <a class="btn secondary" href="doc.html">Documents officiels</a>
+          <a class="btn" href="contact.html">Nous contacter</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Liens essentiels</h2>
+        <p style="margin-bottom:10px;">
+          Versions web (HTML) des textes structurants :
+        </p>
+        <div class="btnrow">
+          <a class="btn" href="loi-constitution.html">Constitution</a>
+          <a class="btn" href="loi-organiques.html">Lois organiques</a>
+          <a class="btn" href="loi-ordinaires.html">Lois ordinaires</a>
+          <a class="btn" href="loi-Reglements.html">Règlements</a>
+          <a class="btn" href="loi-administratif.html">Pratiques admin.</a>
+          <a class="btn secondary" href="loi-scq-otc.html">SCQ – OTC</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Transparence</h2>
+        <p>
+          Les documents officiels sont publiés pour consultation et téléchargement, afin de garantir une source unique
+          et stable. La page <strong>Documents</strong> regroupe les versions DOCX/PDF.
+        </p>
+        <div class="btnrow">
+          <a class="btn" href="doc.html">Ouvrir Documents</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Organisation</h2>
+        <p>
+          La page <strong>Cadre National</strong> présente l’ordre des normes et les accès directs aux textes (HTML et DOCX),
+          pour éviter la confusion et les erreurs de liens.
+        </p>
+        <div class="btnrow">
+          <a class="btn" href="cadre.html">Ouvrir Cadre National</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="meta">
+      <strong>Note technique :</strong> sur certains hébergements (ex. GitHub Pages), la casse des dossiers et fichiers est
+      sensible (ex. <strong>Doc</strong> ≠ <strong>doc</strong>). Garde des noms simples et cohérents pour réduire les erreurs 404.
+    </div>
+
+    <p class="small">
+      Pour toute question ou demande : <strong>contact@scq-officiel.ca</strong>
+    </p>
   </main>
-  <div class="footer-spacer"></div>
-</div>
+
 </body>
 </html>
