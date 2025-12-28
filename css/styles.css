@@ -1,7 +1,268 @@
 /* =====================================================
-   ÉQUIPE – PROFILS HORIZONTAUX OFFICIELS SCQ
+   SCQ – STYLES GLOBAUX (OFFICIEL)
+   Objectif: uniformiser toutes les pages (nav, bannière,
+   conteneurs, typographie, boutons, cartes, responsive)
    ===================================================== */
 
+/* ---------- Reset de base ---------- */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #0f172a;
+  background: #f6f8fb;
+  line-height: 1.6;
+}
+img { max-width: 100%; height: auto; }
+a { color: inherit; }
+
+/* ---------- Variables (facile à ajuster) ---------- */
+:root{
+  --scq-blue: #0A2A66;
+  --scq-blue-2: #0047ab;
+  --scq-dark: #0f172a;
+
+  --radius: 14px;
+  --radius-lg: 16px;
+
+  --shadow: 0 0 12px rgba(0,0,0,0.10);
+  --shadow-soft: 0 0 10px rgba(0,0,0,0.05);
+
+  --border: 1px solid rgba(0,0,0,0.10);
+  --pad: 16px;
+
+  /* Bannière: -35% par rapport à 1100px = 715px */
+  --banner-max: 715px;
+  --page-max: 980px;
+}
+
+/* =====================================================
+   NAVIGATION (uniforme partout)
+   ===================================================== */
+nav{
+  background: var(--scq-blue);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+nav a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 6px 8px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+nav a:hover{ text-decoration: underline; }
+nav .logo{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+  margin-right: 6px;
+}
+nav .logo img{
+  height: 40px;
+  width: auto;
+  border-radius: 10px;
+  display: block;
+}
+
+/* =====================================================
+   BANNIÈRE (uniforme + centrée + image complète)
+   ===================================================== */
+.banner{
+  width: 100%;
+  margin-top: 16px;
+  padding: 0 16px;
+  display: flex;
+  justify-content: center; /* centre le bloc image */
+}
+.banner img{
+  width: 100%;
+  max-width: var(--banner-max);
+  height: auto;
+  object-fit: contain;     /* ne coupe rien */
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  display: block;
+  background: var(--scq-blue); /* optionnel si bandes */
+}
+
+/* =====================================================
+   CONTENEUR PRINCIPAL
+   (tu peux l’utiliser via <main class="content"> ou <main>)
+   ===================================================== */
+main, .content{
+  max-width: var(--page-max);
+  margin: 22px auto 50px;
+  background: #fff;
+  padding: 26px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Titres et texte */
+h1{
+  font-size: 34px;
+  color: var(--scq-blue-2);
+  margin: 0 0 10px;
+}
+h2{
+  font-size: 24px;
+  color: var(--scq-blue-2);
+  margin: 22px 0 10px;
+}
+h3{
+  margin: 0 0 8px;
+  font-size: 18px;
+  color: var(--scq-blue);
+}
+p{
+  font-size: 17px;
+  margin: 0 0 12px;
+  color: var(--scq-dark);
+}
+
+/* Petits textes */
+.small{
+  font-size: 14px;
+  color: #334155;
+}
+
+/* =====================================================
+   CARTES / GRILLES / SECTIONS
+   ===================================================== */
+.card{
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+}
+
+/* Grille 2 colonnes (comme tes pages) */
+.grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
+/* Bloc “hero” (accueil) */
+.hero{
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 14px;
+  margin-top: 14px;
+  align-items: start;
+}
+
+/* Bloc “note / info” */
+.note, .meta, .box{
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-radius: var(--radius);
+  background: rgba(0,71,171,0.06);
+  border: 1px solid rgba(0,71,171,0.14);
+  color: var(--scq-dark);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* =====================================================
+   BOUTONS
+   ===================================================== */
+.btnrow{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+.btn{
+  display: inline-block;
+  background: var(--scq-blue);
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover{ text-decoration: underline; }
+.btn.secondary{ background: var(--scq-dark); }
+
+/* =====================================================
+   LISTES / TABLES (pages docs et autres)
+   ===================================================== */
+ul{
+  margin: 0 0 12px;
+  padding-left: 18px;
+}
+li{
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: var(--scq-dark);
+}
+
+.tablewrap{
+  margin-top: 12px;
+  overflow: auto;
+  border: var(--border);
+  border-radius: var(--radius);
+}
+table{
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+  background: #fff;
+}
+th, td{
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  font-size: 14px;
+  color: var(--scq-dark);
+  vertical-align: top;
+}
+th{
+  background: rgba(10,42,102,0.06);
+  color: var(--scq-blue);
+  font-weight: 800;
+}
+
+/* =====================================================
+   FORMULAIRES (contact)
+   ===================================================== */
+label{
+  display: block;
+  font-weight: 800;
+  color: var(--scq-blue);
+  margin: 12px 0 6px;
+  font-size: 14px;
+}
+input, textarea, select{
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.15);
+  font-size: 15px;
+  outline: none;
+}
+textarea{ min-height: 140px; resize: vertical; }
+
+/* =====================================================
+   ÉQUIPE – PROFILS HORIZONTAUX OFFICIELS SCQ
+   (repris de ton fichier actuel, intégré)
+   ===================================================== */
 .membre-ligne {
   display: flex;
   align-items: center;
@@ -37,9 +298,26 @@
   color: #475569;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .membre-ligne {
-    flex-direction: row;
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+@media (max-width: 760px){
+  nav{ flex-direction: column; align-items: flex-start; }
+
+  main, .content{
+    margin: 18px 12px 40px;
+    padding: 18px;
   }
+
+  h1{ font-size: 28px; }
+  h2{ font-size: 20px; }
+
+  .hero{ grid-template-columns: 1fr; }
+  .grid{ grid-template-columns: 1fr; }
+
+  table{ min-width: 520px; }
+}
+
+@media (max-width: 600px){
+  .membre-ligne { flex-direction: row; }
 }
