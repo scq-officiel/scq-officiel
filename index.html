@@ -42,10 +42,12 @@
       width: 100%;
       max-width: 1100px;
       height: auto;
-      object-fit: contain; /* IMPORTANT : affiche l’image au complet */
+      object-fit:contain;      /* affiche l'image au complet */
+      max-height:none;         /* empêche la coupe */
       border-radius: 16px;
       box-shadow: 0 0 12px rgba(0,0,0,0.10);
       background: #0A2A66; /* optionnel : évite les bandes blanches */
+      display:block;
     }
 
     main{
