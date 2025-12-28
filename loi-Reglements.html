@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Règlements – SCQ</title>
 
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css" />
 
   <style>
     nav{
@@ -28,7 +28,7 @@
       white-space:nowrap;
     }
     nav a:hover{ text-decoration:underline; }
-    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; }
+    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; margin-right:6px; }
     nav .logo img{ height:40px; width:auto; border-radius:10px; display:block; }
 
     .banner{
@@ -96,8 +96,18 @@
       font-weight:700;
       font-size:14px;
     }
-    .btn:hover{ text-decoration:underline; }
+    .btn:hover{ text-decoration: underline; }
     .btn.secondary{ background:#0f172a; }
+
+    .note{
+      margin-top:18px;
+      padding:14px 16px;
+      border-radius:14px;
+      background:rgba(15,23,42,0.04);
+      border:1px solid rgba(15,23,42,0.10);
+      font-size:14px;
+      color:#0f172a;
+    }
 
     @media (max-width:760px){
       h1{ font-size:28px; }
@@ -134,41 +144,39 @@
 
     <div class="box">
       <p>
-        Les <strong>règlements</strong> précisent les modalités techniques nécessaires à
-        l’application des lois. Ils déterminent les procédures, normes, délais, formats
-        et mécanismes opérationnels permettant l’exécution concrète des politiques publiques.
+        Les <strong>règlements</strong> précisent les modalités techniques nécessaires à l’application des lois.
+        Ils déterminent les procédures, normes, délais, formats et mécanismes opérationnels permettant
+        l’exécution concrète des politiques publiques.
       </p>
       <p>
-        <strong>Principe d’autorité :</strong> un règlement ne peut ni créer un droit nouveau,
-        ni imposer une obligation qui ne trouve pas directement son fondement dans une loi.
+        <strong>Effet juridique :</strong> un règlement ne peut ni modifier une loi, ni contredire la Constitution,
+        ni créer un droit ou une obligation sans fondement législatif clair. En cas de conflit, la norme supérieure prévaut.
       </p>
 
       <div class="actions">
         <a class="btn" href="cadre.html">Retour au Cadre National</a>
-        <!-- Optionnel : téléchargement -->
-        <!-- <a class="btn secondary" href="docs/reglements-quebec-souverain.docx">Télécharger (DOCX)</a> -->
+        <a class="btn secondary" href="Doc/lois/Reglements_du_Quebec_souverain.docx" download>Télécharger (DOCX)</a>
       </div>
     </div>
 
     <div class="toc" aria-label="Sommaire">
-      <p><strong>Sommaire (navigation interne)</strong></p>
+      <p><strong>Sommaire</strong></p>
       <ul>
         <li><a href="#role">Rôle des règlements</a></li>
-        <li><a href="#base">Base légale</a></li>
+        <li><a href="#base">Base légale (habilitation)</a></li>
         <li><a href="#limites">Limites juridiques</a></li>
         <li><a href="#controle">Contrôle et annulation</a></li>
-        <li><a href="#publication">Publication et accessibilité</a></li>
+        <li><a href="#publication">Publication et opposabilité</a></li>
       </ul>
     </div>
 
     <h2 id="role">Rôle des règlements</h2>
     <p>
-      Les règlements servent à rendre les lois applicables dans la pratique. Ils traduisent
-      des obligations législatives générales en prescriptions techniques adaptées à la gestion
-      quotidienne de l’administration publique.
+      Les règlements servent à rendre les lois applicables dans la pratique. Ils traduisent des obligations
+      législatives générales en prescriptions techniques adaptées à la gestion quotidienne de l’administration.
     </p>
 
-    <h2 id="base">Base légale</h2>
+    <h2 id="base">Base légale (habilitation)</h2>
     <p>
       Tout règlement doit reposer sur une habilitation explicite prévue par une loi.
       En l’absence de fondement légal clair, le règlement est nul ou inapplicable.
@@ -177,23 +185,26 @@
     <h2 id="limites">Limites juridiques</h2>
     <p>
       Un règlement ne peut pas modifier l’objet, l’esprit ou la portée d’une loi.
-      Il ne peut pas non plus restreindre un droit ou étendre une obligation
-      au-delà de ce que la loi autorise expressément.
+      Il ne peut pas restreindre un droit ou étendre une obligation au-delà de ce que la loi autorise expressément.
     </p>
 
     <h2 id="controle">Contrôle et annulation</h2>
     <p>
-      Les règlements sont soumis à un contrôle de légalité. En cas d’illégalité,
-      ils peuvent être suspendus, modifiés ou annulés par l’autorité compétente
-      ou par les tribunaux.
+      Les règlements sont soumis à un contrôle de légalité. En cas d’illégalité, ils peuvent être suspendus,
+      modifiés ou annulés par l’autorité compétente ou par les tribunaux.
     </p>
 
-    <h2 id="publication">Publication et accessibilité</h2>
+    <h2 id="publication">Publication et opposabilité</h2>
     <p>
-      Tout règlement doit être publié de manière officielle, accessible au public
-      et accompagné de son fondement légal. Aucune règle non publiée ne peut
-      être opposée aux citoyens.
+      Tout règlement doit être publié de manière officielle, accessible au public, et accompagné de son fondement légal.
+      Aucune règle non publiée ne peut être opposée aux citoyens.
     </p>
+
+    <div class="note">
+      <strong>Conseil technique :</strong> si le téléchargement donne 404, vérifie la casse exacte du dossier
+      (<strong>Doc</strong> ≠ <strong>doc</strong>) et du nom de fichier.
+    </div>
+
   </main>
 
 </body>
