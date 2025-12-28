@@ -28,8 +28,19 @@
       white-space:nowrap;
     }
     nav a:hover{ text-decoration:underline; }
-    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; margin-right:6px; }
-    nav .logo img{ height:40px; width:auto; border-radius:10px; display:block; }
+    nav .logo{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:0;
+      margin-right:6px;
+    }
+    nav .logo img{
+      height:40px;
+      width:auto;
+      border-radius:10px;
+      display:block;
+    }
 
     .banner{
       text-align:center;
@@ -60,6 +71,14 @@
     h1{ font-size:34px; color:#0047ab; margin:0 0 10px; }
     h2{ font-size:24px; color:#0047ab; margin:22px 0 10px; }
     p{ font-size:17px; margin:0 0 12px; line-height:1.65; color:#0f172a; }
+
+    .box{
+      margin:18px 0;
+      padding:14px 16px;
+      border-radius:14px;
+      background:rgba(0,71,171,0.06);
+      border:1px solid rgba(0,71,171,0.14);
+    }
 
     .grid{
       display:grid;
@@ -118,14 +137,6 @@
     .btn:hover{ text-decoration:underline; }
     .btn.secondary{ background:#0f172a; }
 
-    .box{
-      margin:18px 0;
-      padding:14px 16px;
-      border-radius:14px;
-      background:rgba(0,71,171,0.06);
-      border:1px solid rgba(0,71,171,0.14);
-    }
-
     .note{
       margin-top:14px;
       padding:14px 16px;
@@ -180,8 +191,9 @@
 
     <div class="box">
       <p>
-        Pour toute question, demande d’information ou demande de document, tu peux nous écrire.
-        Nous privilégions des messages clairs et structurés afin de répondre de manière précise.
+        Pour toute question, demande d’information ou demande de document, vous pouvez nous écrire via le formulaire ci-dessous.
+        Les messages envoyés par ce formulaire sont transmis directement à l’adresse officielle :
+        <strong>scqofficiel@gmail.com</strong>.
       </p>
     </div>
 
@@ -190,16 +202,16 @@
         <h2>Écrire au SCQ</h2>
 
         <p class="small">
-          Ce formulaire ouvre ton application de courriel et prépare un message.  
-          Adresse officielle : <strong>contact@scq-officiel.ca</strong>
+          Remplissez le formulaire et cliquez sur <strong>Envoyer le message</strong>.
+          Si c’est votre première utilisation, Formspree peut demander une confirmation côté compte administrateur.
         </p>
 
-        <form id="contactForm">
+        <form action="https://formspree.io/f/mjgvryza" method="POST">
           <label for="nom">Nom</label>
-          <input id="nom" name="nom" type="text" placeholder="Ton nom" required>
+          <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
 
           <label for="email">Courriel</label>
-          <input id="email" name="email" type="email" placeholder="ton@email.com" required>
+          <input type="email" id="email" name="email" placeholder="votre@email.com" required>
 
           <label for="objet">Objet</label>
           <select id="objet" name="objet" required>
@@ -212,64 +224,48 @@
           </select>
 
           <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Explique ta demande de façon claire et précise…" required></textarea>
+          <textarea id="message" name="message" placeholder="Expliquez votre demande de façon claire et précise…" required></textarea>
+
+          <!-- Options Formspree -->
+          <input type="hidden" name="_subject" value="[SCQ] Nouveau message depuis le site officiel">
+          <input type="hidden" name="_template" value="table">
 
           <div class="btnrow">
-            <button type="submit" class="btn">Préparer le courriel</button>
+            <button type="submit" class="btn">Envoyer le message</button>
             <a class="btn secondary" href="doc.html">Documents</a>
             <a class="btn" href="cadre.html">Cadre National</a>
           </div>
         </form>
 
         <div class="note">
-          <strong>Conseil :</strong> si ta demande concerne un document précis, indique le nom du fichier ou la page
+          <strong>Conseil :</strong> si votre demande concerne un document précis, indiquez le nom de la page ou du fichier
           (ex. <em>loi-constitution.html</em> ou <em>Doc/lois/Constitution_du_Quebec_souverain.docx</em>).
         </div>
       </section>
 
       <section class="card" aria-label="Coordonnées">
         <h2>Coordonnées</h2>
-        <p><strong>Courriel :</strong> contact@scq-officiel.ca</p>
+        <p><strong>Courriel officiel :</strong> scqofficiel@gmail.com</p>
 
         <h2>Références utiles</h2>
         <p class="small">
-          Pour consulter les textes officiels :
+          Pour consulter les textes officiels et le cadre :
         </p>
+
         <div class="btnrow">
           <a class="btn" href="cadre.html">Cadre National</a>
           <a class="btn secondary" href="doc.html">Documents officiels</a>
         </div>
 
         <div class="note">
-          <strong>Important :</strong> sur certains hébergements, les liens sont sensibles à la casse.
-          Garde <strong>Doc</strong> exactement comme dans le dépôt (Doc ≠ doc).
+          <strong>Note technique :</strong> sur certains hébergements, la casse des dossiers et fichiers est sensible
+          (ex. <strong>Doc</strong> ≠ <strong>doc</strong>). Assurez-vous que les liens correspondent exactement
+          aux noms présents dans le dépôt.
         </div>
       </section>
     </div>
+
   </main>
-
-  <script>
-    (function () {
-      const form = document.getElementById("contactForm");
-      if (!form) return;
-
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        const nom = document.getElementById("nom").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const objet = document.getElementById("objet").value.trim();
-        const message = document.getElementById("message").value.trim();
-
-        const subject = encodeURIComponent(`[SCQ] ${objet || "Message"}`);
-        const body = encodeURIComponent(
-          `Nom: ${nom}\nCourriel: ${email}\nObjet: ${objet}\n\nMessage:\n${message}\n`
-        );
-
-        window.location.href = `mailto:contact@scq-officiel.ca?subject=${subject}&body=${body}`;
-      });
-    })();
-  </script>
 
 </body>
 </html>
