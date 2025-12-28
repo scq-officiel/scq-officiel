@@ -1,201 +1,297 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<title>SCQ – Comptabilité et transparence</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/styles.css">
-<style>
-/* ============================
-   Barre de navigation fixe
-   ============================ */
-nav {
-  background-color: #0A2A66; /* bleu foncé */
-  padding: 12px 20px;
-  display: flex;
-  flex-wrap: wrap;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCQ - Comptabilité</title>
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-right: 15px;
-  font-weight: bold;
-  padding: 5px 0;
-}
+  <link rel="stylesheet" href="css/styles.css" />
 
-nav a:hover {
-  text-decoration: underline;
-}
+  <style>
+    nav{
+      background:#0A2A66;
+      padding:12px 16px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      font-weight:700;
+      padding:6px 8px;
+      border-radius:10px;
+      white-space:nowrap;
+    }
+    nav a:hover{ text-decoration:underline; }
+    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; margin-right:6px; }
+    nav .logo img{ height:40px; width:auto; border-radius:10px; display:block; }
 
-/* ============================
-   Bannière
-   ============================ */
-.banner {
-  text-align: center;
-  margin-top: 20px;
-  width: 100%;
-  overflow: hidden;
-}
+    .banner{
+      text-align:center;
+      margin-top:16px;
+      width:100%;
+      overflow:hidden;
+      padding:0 16px;
+    }
+    .banner img{
+      width:100%;
+      max-width:1100px;
+      height:auto;
+      max-height:260px;
+      object-fit:cover;
+      border-radius:16px;
+      box-shadow:0 0 12px rgba(0,0,0,0.10);
+    }
 
-.banner img {
-  width: 65%;
-  height: auto;
-  max-height: 225px;
-  object-fit: cover;
-}
+    main{
+      max-width:980px;
+      margin:22px auto 50px;
+      background:#fff;
+      padding:26px;
+      border-radius:14px;
+      box-shadow:0 0 12px rgba(0,0,0,0.10);
+    }
 
-/* ============================
-   Contenu principal
-   ============================ */
-.content {
-  max-width: 900px;
-  margin: 30px auto;
-  background: #fff;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
-  text-align: center;
-}
+    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; }
+    h2{ font-size:24px; color:#0047ab; margin:22px 0 10px; }
+    p, li{ font-size:17px; margin:0 0 12px; line-height:1.65; color:#0f172a; }
 
-h1 { font-size:36px; color:#0047ab; }
-h2 { font-size:28px; color:#0047ab; margin-top:20px; }
-p, ul { font-size:18px; margin-bottom:15px; }
-ul { margin-left:20px; }
-a { color:#0047ab; text-decoration:none; }
-a:hover { text-decoration:underline; }
+    .box{
+      margin:18px 0;
+      padding:14px 16px;
+      border-radius:14px;
+      background:rgba(0,71,171,0.06);
+      border:1px solid rgba(0,71,171,0.14);
+    }
 
-/* ============================
-   Responsive
-   ============================ */
-@media(max-width:640px) {
-  h1 { font-size:28px; }
-  h2 { font-size:22px; }
-  nav { flex-direction: column; }
-  nav a { margin-bottom:10px; }
-}
-</style>
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap:14px;
+      margin-top:14px;
+    }
+
+    .card{
+      border:1px solid rgba(0,0,0,0.10);
+      border-radius:14px;
+      padding:16px;
+      background:#fff;
+      box-shadow:0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .kpi{
+      font-size:14px;
+      color:#334155;
+      margin:0 0 8px;
+      font-weight:700;
+    }
+
+    .value{
+      font-size:20px;
+      font-weight:800;
+      color:#0A2A66;
+      margin:0 0 8px;
+    }
+
+    .muted{
+      color:#334155;
+      font-size:14px;
+      margin:0;
+      line-height:1.6;
+    }
+
+    .btnrow{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+
+    .btn{
+      display:inline-block;
+      background:#0A2A66;
+      color:#fff;
+      padding:10px 12px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:700;
+      font-size:14px;
+    }
+    .btn:hover{ text-decoration:underline; }
+    .btn.secondary{ background:#0f172a; }
+
+    .note{
+      margin-top:18px;
+      padding:14px 16px;
+      border-radius:14px;
+      background:rgba(15,23,42,0.04);
+      border:1px solid rgba(15,23,42,0.10);
+      font-size:15px;
+      color:#0f172a;
+      line-height:1.6;
+    }
+
+    .list{
+      margin:0;
+      padding-left:18px;
+    }
+
+    .tablewrap{
+      margin-top:12px;
+      overflow:auto;
+      border:1px solid rgba(0,0,0,0.10);
+      border-radius:14px;
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      min-width:640px;
+      background:#fff;
+    }
+
+    th, td{
+      text-align:left;
+      padding:12px 12px;
+      border-bottom:1px solid rgba(0,0,0,0.08);
+      font-size:14px;
+      color:#0f172a;
+      vertical-align:top;
+    }
+
+    th{
+      background:rgba(10,42,102,0.06);
+      color:#0A2A66;
+      font-weight:800;
+    }
+
+    @media (max-width:760px){
+      nav{ flex-direction:column; align-items:flex-start; }
+      main{ margin:18px 12px 40px; padding:18px; }
+      h1{ font-size:28px; }
+      h2{ font-size:20px; }
+      .grid{ grid-template-columns: 1fr; }
+      table{ min-width:520px; }
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- Barre de navigation fixe -->
-<nav>
-  <a href="index.html"><img src="images/logo_scq.jpg" alt="Logo SCQ" style="height:40px; vertical-align:middle; margin-right:10px;"></a>
-  <a href="index.html">Accueil</a>
-  <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
-  <a href="cadre.html">Cadre National</a>
-  <a href="membres.html">Membres</a>
-  <a href="equipe.html">Équipe</a>
-  <a href="comptabilite.html">Comptabilité</a>
-  <a href="contact.html">Contact</a>
-  <a href="doc.html">Documents</a> 
-</nav>
+  <nav>
+    <a class="logo" href="index.html" aria-label="Retour à l’accueil">
+      <img src="images/logo_scq.jpg" alt="Logo SCQ">
+    </a>
 
-<!-- Bannière -->
-<div class="banner">
-  <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
-</div>
+    <a href="index.html">Accueil</a>
+    <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+    <a href="cadre.html">Cadre National</a>
+    <a href="membres.html">Membres</a>
+    <a href="equipe.html">Équipe</a>
+    <a href="comptabilite.html" aria-current="page">Comptabilité</a>
+    <a href="contact.html">Contact</a>
+    <a href="doc.html">Documents</a>
+  </nav>
 
-<!-- Contenu principal -->
-  <main class="container">
-    <section class="card">
+  <div class="banner">
+    <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
+  </div>
 
-      <h1>Comptabilité et transparence</h1>
+  <main>
+    <h1>Comptabilité et transparence</h1>
 
+    <div class="box">
       <p>
-        Le Parti Souveraineté et Citoyenneté du Québec (SCQ) s’engage à une
-        transparence financière complète. Cette page présente les dons reçus
-        et les dépenses effectuées, conformément à nos principes d’intégrité
-        et de responsabilité publique.
+        Cette page vise à présenter de façon claire et accessible les informations financières du SCQ.
+        L’objectif est d’assurer une <strong>traçabilité</strong>, une <strong>reddition de comptes</strong>
+        et une <strong>transparence</strong> cohérentes avec les documents officiels publiés.
       </p>
+      <div class="btnrow">
+        <a class="btn" href="doc.html">Documents officiels</a>
+        <a class="btn secondary" href="Doc/POLITIQUE_CONTRIBUTIONS_VOLONTAIRES_SCQ.docx" download>Politique de contributions (DOCX)</a>
+      </div>
+    </div>
 
-      <!-- DONS -->
-      <h2>Dons (exercice 2025)</h2>
+    <h2>Résumé (à compléter)</h2>
+    <div class="grid">
+      <div class="card">
+        <p class="kpi">Solde actuel</p>
+        <p class="value">À publier</p>
+        <p class="muted">Montant total disponible après les dépenses.</p>
+      </div>
+      <div class="card">
+        <p class="kpi">Contributions (période)</p>
+        <p class="value">À publier</p>
+        <p class="muted">Total des contributions reçues sur la période indiquée.</p>
+      </div>
+      <div class="card">
+        <p class="kpi">Dépenses (période)</p>
+        <p class="value">À publier</p>
+        <p class="muted">Total des dépenses engagées sur la période indiquée.</p>
+      </div>
+      <div class="card">
+        <p class="kpi">Dernière mise à jour</p>
+        <p class="value">À publier</p>
+        <p class="muted">Date de publication du dernier état.</p>
+      </div>
+    </div>
 
-      <table class="table">
+    <h2>Règles de transparence</h2>
+    <ul class="list">
+      <li>toute entrée et sortie de fonds doit être documentée;</li>
+      <li>les dépenses doivent être justifiées et rattachées à un objectif identifiable;</li>
+      <li>les documents publiés doivent être datés et traçables;</li>
+      <li>aucune règle financière non publiée ne peut être imposée aux membres.</li>
+    </ul>
+
+    <h2>Registre (exemple de tableau)</h2>
+    <p>
+      Tu peux utiliser ce tableau comme modèle. Remplace les lignes “Exemple” par tes vraies données.
+      Si tu ne veux pas afficher certains détails, tu peux publier des versions agrégées (totaux) mais
+      garde une trace interne complète.
+    </p>
+
+    <div class="tablewrap" aria-label="Registre des opérations">
+      <table>
         <thead>
           <tr>
             <th>Date</th>
+            <th>Type</th>
             <th>Description</th>
             <th>Montant</th>
+            <th>Référence</th>
           </tr>
         </thead>
-        <tbody id="don-list">
+        <tbody>
           <tr>
-            <td>—</td>
-            <td>Don citoyen</td>
-            <td>$0.00</td>
+            <td>AAAA-MM-JJ</td>
+            <td>Contribution</td>
+            <td>Exemple : contribution volontaire</td>
+            <td>0,00 $</td>
+            <td>Exemple : reçu / ID</td>
+          </tr>
+          <tr>
+            <td>AAAA-MM-JJ</td>
+            <td>Dépense</td>
+            <td>Exemple : frais de fonctionnement</td>
+            <td>0,00 $</td>
+            <td>Exemple : facture / ID</td>
           </tr>
         </tbody>
-        <tfoot>
-          <tr>
-            <th colspan="2">Total des dons</th>
-            <th id="total-dons">$0.00</th>
-          </tr>
-        </tfoot>
       </table>
+    </div>
 
-      <!-- DÉPENSES -->
-      <h2>Dépenses (exercice 2025)</h2>
+    <div class="note">
+      <strong>Conseil :</strong> publie un état périodique (mensuel ou trimestriel) et conserve un registre interne complet.
+      Si tu ajoutes un fichier PDF/Excel de rapport, mets-le dans le dossier <strong>Doc/</strong> et ajoute un lien ici.
+    </div>
 
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Description</th>
-            <th>Montant</th>
-          </tr>
-        </thead>
-        <tbody id="depense-list">
-          <tr>
-            <td>2025-11-21</td>
-            <td>Site Web (scq-officiel.ca)</td>
-            <td>$16.48</td>             
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <th colspan="2">Total des dépenses</th>
-            <th id="total-depenses">$0.00</th>
-          </tr>
-        </tfoot>
-      </table>
-
-      <p class="small">
-        Les montants peuvent être mis à jour directement dans le code HTML.
-        Les totaux sont calculés automatiquement côté client afin de faciliter
-        la consultation publique.
-      </p>
-
-    </section>
   </main>
-
-  <div class="footer-spacer"></div>
-</div>
-
-<script>
-function parseMoney(str){
-  return Number(String(str).replace(/[^0-9.-]+/g,"")) || 0;
-}
-function formatMoney(n){
-  return '$' + n.toFixed(2);
-}
-function calcTotals(){
-  let dons = 0, deps = 0;
-  document.querySelectorAll('#don-list tr').forEach(tr=>{
-    dons += parseMoney(tr.cells[2].textContent);
-  });
-  document.querySelectorAll('#depense-list tr').forEach(tr=>{
-    deps += parseMoney(tr.cells[2].textContent);
-  });
-  document.getElementById('total-dons').textContent = formatMoney(dons);
-  document.getElementById('total-depenses').textContent = formatMoney(deps);
-}
-calcTotals();
-</script>
 
 </body>
 </html>
