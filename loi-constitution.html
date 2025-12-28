@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Constitution – SCQ</title>
 
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css" />
 
   <style>
     nav{
@@ -28,7 +28,7 @@
       white-space:nowrap;
     }
     nav a:hover{ text-decoration:underline; }
-    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; }
+    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; margin-right:6px; }
     nav .logo img{ height:40px; width:auto; border-radius:10px; display:block; }
 
     .banner{
@@ -96,9 +96,17 @@
       font-weight:700;
       font-size:14px;
     }
-    .btn:hover{ text-decoration:underline; }
-    .btn.secondary{
-      background:#0f172a;
+    .btn:hover{ text-decoration: underline; }
+    .btn.secondary{ background:#0f172a; }
+
+    .note{
+      margin-top:18px;
+      padding:14px 16px;
+      border-radius:14px;
+      background:rgba(15,23,42,0.04);
+      border:1px solid rgba(15,23,42,0.10);
+      font-size:14px;
+      color:#0f172a;
     }
 
     @media (max-width:760px){
@@ -136,29 +144,28 @@
 
     <div class="box">
       <p>
-        Cette page présente la <strong>Constitution</strong> comme norme suprême de l’État.
-        Elle fixe les <strong>droits fondamentaux</strong>, l’architecture des <strong>institutions</strong>,
-        la <strong>souveraineté</strong>, la hiérarchie des normes et les mécanismes de protection
-        contre l’arbitraire et l’ingérence.
+        La <strong>Constitution</strong> est la norme suprême de l’État. Elle fixe les droits fondamentaux,
+        les principes de souveraineté, l’architecture institutionnelle, la hiérarchie des normes et
+        les mécanismes de contrôle destinés à prévenir l’arbitraire et l’ingérence.
       </p>
       <p>
-        <strong>Principe d’autorité :</strong> aucune loi, aucun règlement, aucune pratique administrative
-        ne peut contredire la Constitution. Toute contradiction est nulle de plein droit.
+        <strong>Effet juridique :</strong> aucune loi, aucun règlement, aucune pratique administrative,
+        ni aucun acte de l’État ne peut contredire la Constitution. Toute contradiction est nulle
+        ou inopposable selon le mécanisme de contrôle applicable.
       </p>
 
       <div class="actions">
         <a class="btn" href="cadre.html">Retour au Cadre National</a>
-        <!-- Optionnel : si tu publies aussi le document complet téléchargeable, mets ici un lien stable -->
-        <!-- <a class="btn secondary" href="docs/constitution-quebec-souverain.docx">Télécharger (DOCX)</a> -->
+        <a class="btn secondary" href="Doc/lois/Constitution_du_Quebec_souverain.docx" download>Télécharger (DOCX)</a>
       </div>
     </div>
 
     <div class="toc" aria-label="Sommaire">
-      <p><strong>Sommaire (navigation interne)</strong></p>
+      <p><strong>Sommaire</strong></p>
       <ul>
         <li><a href="#role">Rôle et portée</a></li>
         <li><a href="#hierarchie">Hiérarchie des normes</a></li>
-        <li><a href="#verrous">Verrous constitutionnels</a></li>
+        <li><a href="#garanties">Garanties et verrous</a></li>
         <li><a href="#revision">Révision constitutionnelle</a></li>
         <li><a href="#publication">Publication et accès</a></li>
       </ul>
@@ -166,45 +173,49 @@
 
     <h2 id="role">Rôle et portée</h2>
     <p>
-      La Constitution est l’acte fondateur de l’État. Elle établit les règles supérieures qui s’imposent
-      à toutes les autorités publiques, ainsi qu’aux personnes agissant au nom de l’État.
+      La Constitution établit les règles supérieures qui s’imposent à toutes les autorités publiques,
+      ainsi qu’aux personnes qui exercent une fonction publique ou agissent au nom de l’État.
     </p>
 
     <h2 id="hierarchie">Hiérarchie des normes</h2>
     <p>
-      La hiérarchie des normes est la règle d’ordre public suivante :
+      La hiérarchie des normes s’applique comme suit :
     </p>
     <ul>
-      <li><strong>1) Constitution</strong> (norme suprême)</li>
-      <li><strong>2) Lois organiques</strong> (organisation fondamentale de l’État)</li>
-      <li><strong>3) Lois ordinaires</strong> (règles sectorielles)</li>
-      <li><strong>4) Règlements</strong> (modalités techniques d’application)</li>
-      <li><strong>5) Pratiques administratives</strong> (procédures internes sans valeur normative autonome)</li>
+      <li><strong>1) Constitution</strong></li>
+      <li><strong>2) Lois organiques</strong></li>
+      <li><strong>3) Lois ordinaires</strong></li>
+      <li><strong>4) Règlements</strong></li>
+      <li><strong>5) Pratiques administratives</strong> (sans valeur normative autonome)</li>
     </ul>
     <p>
-      Toute norme inférieure doit être conforme à la norme supérieure; à défaut, elle est inopposable
-      et doit être corrigée ou annulée.
+      Toute norme inférieure doit être conforme à la norme supérieure; en cas de conflit,
+      la norme supérieure prévaut automatiquement.
     </p>
 
-    <h2 id="verrous">Verrous constitutionnels</h2>
+    <h2 id="garanties">Garanties et verrous</h2>
     <p>
-      La Constitution comprend des protections visant à empêcher les contournements :
-      elle impose des limites matérielles et procédurales aux pouvoirs publics, et encadre strictement
-      tout changement qui affecte les principes fondamentaux, les droits et l’équilibre institutionnel.
+      La Constitution comprend des garanties destinées à protéger les principes fondamentaux
+      et à empêcher les contournements. Elle encadre les pouvoirs publics, impose des limites
+      matérielles et procédurales, et prévoit des mécanismes de contrôle et de responsabilité.
     </p>
 
     <h2 id="revision">Révision constitutionnelle</h2>
     <p>
-      Toute modification constitutionnelle doit suivre une procédure distincte, transparente et renforcée
-      (exigences de forme, délais, publication, seuils). Aucune révision “par simple loi” n’est permise.
+      Toute modification constitutionnelle doit suivre une procédure distincte, renforcée et transparente.
+      Aucune révision ne peut être effectuée par simple loi ou par règlement.
     </p>
 
     <h2 id="publication">Publication et accès</h2>
     <p>
-      La Constitution doit être accessible au public, dans une version officielle unique, tenue à jour,
-      et dont l’historique de révision est traçable. Toute version non officielle ne peut remplacer
-      le texte publié par l’État.
+      La version officielle doit être accessible au public, tenue à jour et traçable. Toute version non officielle
+      ne peut remplacer le texte publié par l’autorité compétente.
     </p>
+
+    <div class="note">
+      <strong>Conseil technique :</strong> si un lien de téléchargement donne 404 sur GitHub Pages,
+      vérifie la casse exacte du dossier (<strong>Doc</strong> ≠ <strong>doc</strong>) et du nom de fichier.
+    </div>
 
   </main>
 
