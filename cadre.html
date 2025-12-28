@@ -2,11 +2,15 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>SCQ - Cadre</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/styles.css">
+  <title>SCQ - Cadre National</title>
+
+  <link rel="stylesheet" href="css/styles.css" />
 
   <style>
+    /* ============================
+       Navigation
+       ============================ */
     nav {
       background-color: #0A2A66;
       padding: 12px 16px;
@@ -18,15 +22,18 @@
       top: 0;
       z-index: 1000;
     }
+
     nav a {
-      color: white;
+      color: #fff;
       text-decoration: none;
       font-weight: bold;
       padding: 6px 8px;
       border-radius: 10px;
       white-space: nowrap;
     }
+
     nav a:hover { text-decoration: underline; }
+
     nav .logo {
       display: inline-flex;
       align-items: center;
@@ -34,6 +41,7 @@
       margin-right: 6px;
       padding: 0;
     }
+
     nav .logo img {
       height: 40px;
       width: auto;
@@ -42,6 +50,9 @@
       display: block;
     }
 
+    /* ============================
+       Bannière
+       ============================ */
     .banner {
       text-align: center;
       margin-top: 16px;
@@ -49,6 +60,7 @@
       overflow: hidden;
       padding: 0 16px;
     }
+
     .banner img {
       width: 100%;
       max-width: 1100px;
@@ -59,6 +71,9 @@
       box-shadow: 0 0 12px rgba(0,0,0,0.10);
     }
 
+    /* ============================
+       Contenu
+       ============================ */
     .content {
       max-width: 980px;
       margin: 22px auto 50px;
@@ -71,8 +86,11 @@
 
     h1 { font-size: 36px; color: #0047ab; margin: 0 0 10px; }
     h2 { font-size: 26px; color: #0047ab; margin: 22px 0 10px; }
-    p { font-size: 18px; margin: 0 0 14px; line-height: 1.65; }
+    p  { font-size: 18px; margin: 0 0 14px; line-height: 1.65; }
 
+    /* ============================
+       Cartes (niveaux)
+       ============================ */
     .cadre-niveaux {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -88,20 +106,29 @@
       background: #fff;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
+
     .niveau h3 {
       margin: 0 0 8px;
       font-size: 18px;
       color: #0A2A66;
     }
+
     .niveau p {
       margin: 0 0 12px;
       font-size: 16px;
       color: #111827;
+      line-height: 1.6;
     }
 
-    .niveau .btn {
+    .btnrow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .btn {
       display: inline-block;
-      margin-top: 4px;
       background: #0A2A66;
       color: #fff;
       padding: 10px 12px;
@@ -110,8 +137,28 @@
       font-weight: bold;
       font-size: 14px;
     }
-    .niveau .btn:hover { text-decoration: underline; }
 
+    .btn:hover { text-decoration: underline; }
+
+    .btn.secondary {
+      background: #0f172a;
+    }
+
+    .note {
+      margin-top: 18px;
+      text-align: left;
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: rgba(0,71,171,0.06);
+      border: 1px solid rgba(0,71,171,0.14);
+      font-size: 15px;
+      color: #0f172a;
+      line-height: 1.6;
+    }
+
+    /* ============================
+       Responsive
+       ============================ */
     @media (max-width: 760px) {
       h1 { font-size: 28px; }
       h2 { font-size: 22px; }
@@ -122,6 +169,8 @@
 </head>
 
 <body>
+
+  <!-- Navigation -->
   <nav>
     <a class="logo" href="index.html" aria-label="Retour à l’accueil">
       <img src="images/logo_scq.jpg" alt="Logo SCQ">
@@ -137,10 +186,12 @@
     <a href="doc.html">Documents</a>
   </nav>
 
+  <!-- Bannière -->
   <div class="banner">
     <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
   </div>
 
+  <!-- Contenu -->
   <main class="content">
     <h1>Cadre du SCQ</h1>
 
@@ -152,58 +203,93 @@
 
     <h2>Règle de base à retenir</h2>
     <p>
-      Le cadre juridique du Québec souverain repose sur une hiérarchie claire des normes.
-      Chaque niveau a un rôle précis et garantit la stabilité démocratique de l’État.
+      Le cadre juridique repose sur une hiérarchie claire : chaque niveau doit respecter le niveau supérieur.
+      En cas de contradiction, la norme supérieure prévaut automatiquement.
     </p>
 
     <div class="cadre-niveaux">
 
       <div class="niveau">
         <h3>1. Constitution</h3>
-        <p>Texte suprême de l’État : droits fondamentaux, souveraineté, institutions et verrous.</p>
-        <a class="btn" href="loi-constitution.html">Lire le document</a>
+        <p>
+          Texte suprême de l’État : droits fondamentaux, souveraineté, institutions et mécanismes de protection.
+          Aucun changement sans procédure constitutionnelle.
+        </p>
+        <div class="btnrow">
+          <a class="btn" href="loi-constitution.html">Lire (HTML)</a>
+          <a class="btn secondary" href="Doc/lois/Constitution_du_Quebec_souverain.docx" download>Télécharger (DOCX)</a>
+        </div>
       </div>
 
       <div class="niveau">
         <h3>2. Lois organiques</h3>
-        <p>Lois structurantes qui organisent l’État et appliquent directement la Constitution.</p>
-        <a class="btn" href="loi-organiques.html">Lire le document</a>
+        <p>
+          Lois structurantes qui organisent l’État (démocratie, institutions, finances publiques, administration, contrôle).
+          Elles appliquent directement la Constitution.
+        </p>
+        <div class="btnrow">
+          <a class="btn" href="loi-organiques.html">Lire (HTML)</a>
+          <a class="btn secondary" href="Doc/lois/Lois_organiques_du_Quebec_souverain.docx" download>Télécharger (DOCX)</a>
+        </div>
       </div>
 
       <div class="niveau">
         <h3>3. Lois ordinaires</h3>
-        <p>Lois d’application sectorielle. Elles doivent respecter Constitution et lois organiques.</p>
-        <a class="btn" href="loi-ordinaires.html">Lire le document</a>
+        <p>
+          Lois d’application sectorielle (logement, transport, culture, environnement, programmes publics).
+          Elles doivent respecter la Constitution et les lois organiques.
+        </p>
+        <div class="btnrow">
+          <a class="btn" href="loi-ordinaires.html">Lire (HTML)</a>
+          <a class="btn secondary" href="Doc/lois/Lois_ordinaires_du_Quebec_souverain.docx" download>Télécharger (DOCX)</a>
+        </div>
       </div>
 
       <div class="niveau">
         <h3>4. Règlements</h3>
-        <p>Modalités techniques et procédures d’application : formats, délais, normes, protocoles.</p>
-        <a class="btn" href="loi-Reglements.html">Lire le document</a>
+        <p>
+          Modalités techniques d’application : formats, délais, normes, protocoles.
+          Aucun règlement ne peut contredire une loi ni créer une obligation sans base légale.
+        </p>
+        <div class="btnrow">
+          <a class="btn" href="loi-Reglements.html">Lire (HTML)</a>
+          <a class="btn secondary" href="Doc/lois/Reglements_du_Quebec_souverain.docx" download>Télécharger (DOCX)</a>
+        </div>
       </div>
 
       <div class="niveau">
         <h3>5. Pratiques administratives</h3>
-       <p>Ensemble des directives, procédures internes et méthodes d’application utilisées par
-          l’administration publique pour exécuter les lois et règlements.  
-          Les pratiques administratives n’ont aucune valeur normative autonome :
-          elles ne peuvent ni créer de droits, ni imposer d’obligations nouvelles,
-          et doivent toujours respecter la Constitution, les lois organiques,
-          les lois ordinaires et les règlements en vigueur.
-       </p>
-         <a class="btn" href="loi-administratif.html">Lire le document</a>
+        <p>
+          Directives internes, procédures et guides d’application utilisés par l’administration.
+          Elles n’ont aucune valeur normative autonome : elles ne peuvent ni créer de droits ni imposer d’obligations nouvelles.
+        </p>
+        <div class="btnrow">
+          <a class="btn" href="loi-administratif.html">Lire (HTML)</a>
+          <a class="btn secondary" href="Doc/lois/Lois_administratives_du_quebec.docx" download>Télécharger (DOCX)</a>
+        </div>
       </div>
 
       <div class="niveau">
         <h3>6. SCQ – Outil de transition constitutionnelle</h3>
         <p>
-          Document transitoire : informer, organiser la transition et protéger l’intégrité
-          du processus démocratique, strictement subordonné à la Constitution.
+          Cadre transitoire encadrant l’organisation, la conduite et la communication du SCQ pendant une transition.
+          Strictement subordonné aux normes supérieures, sans légitimité autonome.
         </p>
-        <a class="btn" href="loi-scq-otc.html">Lire le document</a>
+        <div class="btnrow">
+          <a class="btn" href="loi-scq-otc.html">Lire (HTML)</a>
+          <a class="btn secondary" href="Doc/lois/SCQ_Outil_de_transition_constitutionnelle.docx" download>Télécharger (DOCX)</a>
+        </div>
       </div>
-     
+
     </div>
+
+    <div class="note">
+      <strong>Conseil technique :</strong> sur GitHub Pages, la casse et les caractères spéciaux comptent.
+      Assure-toi que les dossiers et fichiers s’appellent exactement pareil (ex. <strong>Doc</strong> ≠ <strong>doc</strong>).
+      Évite les accents/espaces dans les noms de fichiers pour réduire les erreurs 404.
+    </div>
+
   </main>
+
 </body>
 </html>
