@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pratiques administratives – SCQ</title>
 
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css" />
 
   <style>
     nav{
@@ -28,7 +28,7 @@
       white-space:nowrap;
     }
     nav a:hover{ text-decoration:underline; }
-    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; }
+    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; margin-right:6px; }
     nav .logo img{ height:40px; width:auto; border-radius:10px; display:block; }
 
     .banner{
@@ -96,8 +96,28 @@
       font-weight:700;
       font-size:14px;
     }
-    .btn:hover{ text-decoration:underline; }
+    .btn:hover{ text-decoration: underline; }
     .btn.secondary{ background:#0f172a; }
+
+    .warn{
+      margin-top:18px;
+      padding:14px 16px;
+      border-radius:14px;
+      background:rgba(239,68,68,0.06);
+      border:1px solid rgba(239,68,68,0.20);
+      color:#7f1d1d;
+      font-size:14px;
+    }
+
+    .note{
+      margin-top:18px;
+      padding:14px 16px;
+      border-radius:14px;
+      background:rgba(15,23,42,0.04);
+      border:1px solid rgba(15,23,42,0.10);
+      font-size:14px;
+      color:#0f172a;
+    }
 
     @media (max-width:760px){
       h1{ font-size:28px; }
@@ -135,81 +155,46 @@
     <div class="box">
       <p>
         Les <strong>pratiques administratives</strong> regroupent l’ensemble des directives internes,
-        procédures opérationnelles, guides d’application et méthodes de gestion utilisés par
-        l’administration publique pour exécuter les lois et les règlements.
+        procédures opérationnelles, guides d’application et méthodes de gestion utilisées par l’administration publique
+        pour exécuter les lois et les règlements.
       </p>
       <p>
-        <strong>Principe fondamental :</strong> les pratiques administratives n’ont
-        <strong>aucune valeur normative autonome</strong>. Elles ne peuvent ni créer de droits,
-        ni imposer d’obligations nouvelles, ni restreindre des droits existants.
+        <strong>Effet juridique :</strong> les pratiques administratives n’ont <strong>aucune valeur normative autonome</strong>.
+        Elles ne peuvent ni créer de droits, ni imposer d’obligations nouvelles, ni restreindre un droit existant.
+        Toute pratique contraire à une norme supérieure doit être modifiée ou annulée.
       </p>
 
       <div class="actions">
         <a class="btn" href="cadre.html">Retour au Cadre National</a>
+        <a class="btn secondary" href="Doc/lois/Lois_administratives_du_quebec.docx" download>Télécharger (DOCX)</a>
       </div>
     </div>
 
+    <div class="warn">
+      <strong>Interdiction stricte :</strong> aucune directive interne secrète ou non publiée ne peut être opposée aux citoyens.
+      L’administration doit pouvoir démontrer, à tout moment, le fondement légal de ses décisions.
+    </div>
+
     <div class="toc" aria-label="Sommaire">
-      <p><strong>Sommaire (navigation interne)</strong></p>
+      <p><strong>Sommaire</strong></p>
       <ul>
         <li><a href="#definition">Définition</a></li>
-        <li><a href="#position">Position dans la hiérarchie</a></li>
+        <li><a href="#hierarchie">Position dans la hiérarchie</a></li>
         <li><a href="#limites">Limites juridiques strictes</a></li>
         <li><a href="#controle">Contrôle et responsabilité</a></li>
-        <li><a href="#publication">Transparence et accessibilité</a></li>
+        <li><a href="#transparence">Transparence et accessibilité</a></li>
       </ul>
     </div>
 
     <h2 id="definition">Définition</h2>
     <p>
-        Les pratiques administratives sont des instruments d’exécution interne.
-        Elles servent uniquement à organiser le travail de l’administration et à
-        assurer une application uniforme des normes supérieures.
+      Les pratiques administratives sont des instruments d’exécution interne. Elles servent à organiser le travail de l’administration
+      et à assurer une application uniforme des normes supérieures, sans modifier le droit.
     </p>
 
-    <h2 id="position">Position dans la hiérarchie</h2>
+    <h2 id="hierarchie">Position dans la hiérarchie</h2>
     <p>
-        Les pratiques administratives se situent au <strong>dernier niveau</strong>
-        de la hiérarchie des normes :
+      Les pratiques administratives se situent au dernier niveau de la hiérarchie des normes :
     </p>
     <ul>
       <li>Constitution</li>
-      <li>Lois organiques</li>
-      <li>Lois ordinaires</li>
-      <li>Règlements</li>
-      <li><strong>Pratiques administratives</strong></li>
-    </ul>
-    <p>
-        En cas de contradiction, la norme supérieure prévaut automatiquement
-        et la pratique administrative doit être modifiée ou annulée sans délai.
-    </p>
-
-    <h2 id="limites">Limites juridiques strictes</h2>
-    <p>
-        Il est formellement interdit d’utiliser une pratique administrative pour :
-    </p>
-    <ul>
-      <li>contourner une loi ou un règlement;</li>
-      <li>imposer une obligation non prévue par une norme supérieure;</li>
-      <li>restreindre l’exercice d’un droit;</li>
-      <li>substituer une décision administrative à une règle de droit.</li>
-    </ul>
-
-    <h2 id="controle">Contrôle et responsabilité</h2>
-    <p>
-        Les pratiques administratives sont soumises au contrôle hiérarchique,
-        administratif et judiciaire. Toute personne lésée peut en contester
-        l’application lorsqu’elle excède le cadre légal.
-    </p>
-
-    <h2 id="publication">Transparence et accessibilité</h2>
-    <p>
-        Toute pratique administrative d’application générale doit être rendue
-        accessible au public. Aucune directive interne secrète ne peut être
-        opposée aux citoyens.
-    </p>
-
-  </main>
-
-</body>
-</html>
