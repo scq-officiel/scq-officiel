@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
   <title>SCQ - Documents officiels</title>
-
-  <link rel="stylesheet" href="css/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/styles.css" />
 
   <style>
+    /* ============================
+       Navigation (cohérente + stable)
+       ============================ */
     nav {
       background-color: #0A2A66;
       padding: 12px 16px;
@@ -21,13 +23,14 @@
     }
 
     nav a {
-      color: white;
+      color: #fff;
       text-decoration: none;
       font-weight: bold;
       padding: 6px 8px;
       border-radius: 10px;
       white-space: nowrap;
     }
+
     nav a:hover { text-decoration: underline; }
 
     nav .logo {
@@ -37,6 +40,7 @@
       margin-right: 6px;
       padding: 0;
     }
+
     nav .logo img {
       height: 40px;
       width: auto;
@@ -45,6 +49,9 @@
       display: block;
     }
 
+    /* ============================
+       Bannière
+       ============================ */
     .banner {
       text-align: center;
       margin-top: 16px;
@@ -52,74 +59,90 @@
       overflow: hidden;
       padding: 0 16px;
     }
+
     .banner img {
       width: 100%;
       max-width: 1100px;
       height: auto;
-      max-height: 225px;
+      max-height: 260px;
       object-fit: cover;
       border-radius: 16px;
       box-shadow: 0 0 12px rgba(0,0,0,0.10);
     }
 
+    /* ============================
+       Contenu
+       ============================ */
     .content {
-      max-width: 900px;
-      margin: 30px auto 50px;
+      max-width: 980px;
+      margin: 22px auto 50px;
       background: #fff;
-      padding: 25px;
+      padding: 26px;
       border-radius: 14px;
       box-shadow: 0 0 12px rgba(0,0,0,0.10);
-      text-align: left;
     }
 
-    h1 { font-size: 34px; color: #0047ab; margin: 0 0 10px; }
-    h2 { font-size: 24px; color: #0047ab; margin: 26px 0 12px; }
-    p, ul { font-size: 17px; margin: 0 0 14px; line-height: 1.65; }
-    ul { margin-left: 18px; }
-    li { margin-bottom: 10px; }
+    h1 { font-size: 36px; color: #0047ab; margin: 0 0 10px; text-align: center; }
+    h2 { font-size: 26px; color: #0047ab; margin: 22px 0 10px; }
 
-    a { color: #0047ab; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    p {
+      font-size: 18px;
+      margin: 0 0 14px;
+      line-height: 1.65;
+    }
 
-    .box {
-      margin: 14px 0 18px;
+    .intro {
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 18px;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    li { margin: 8px 0; }
+
+    .doclist a {
+      color: #0047ab;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .doclist a:hover { text-decoration: underline; }
+
+    .note {
+      margin-top: 18px;
       padding: 14px 16px;
       border-radius: 14px;
       background: rgba(0,71,171,0.06);
       border: 1px solid rgba(0,71,171,0.14);
+      font-size: 15px;
+      color: #0f172a;
     }
-
-    .btn {
-      display: inline-block;
-      margin: 6px 8px 0 0;
-      background: #0A2A66;
-      color: #fff;
-      padding: 10px 12px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 14px;
-    }
-    .btn:hover { text-decoration: underline; }
-    .btn.secondary { background: #0f172a; }
 
     .small {
       margin-top: 18px;
       font-size: 14px;
-      color: #0f172a;
+      color: #334155;
     }
 
-    @media (max-width: 640px) {
+    /* ============================
+       Responsive
+       ============================ */
+    @media (max-width: 760px) {
       h1 { font-size: 28px; }
-      h2 { font-size: 20px; }
+      h2 { font-size: 22px; }
       nav { flex-direction: column; align-items: flex-start; }
-      .content { margin: 20px 12px 40px; padding: 18px; }
+      .content { padding: 18px; }
     }
   </style>
 </head>
 
 <body>
 
+  <!-- Navigation -->
   <nav>
     <a class="logo" href="index.html" aria-label="Retour à l’accueil">
       <img src="images/logo_scq.jpg" alt="Logo SCQ">
@@ -135,56 +158,54 @@
     <a href="doc.html" aria-current="page">Documents</a>
   </nav>
 
+  <!-- Bannière -->
   <div class="banner">
     <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
   </div>
 
+  <!-- Contenu -->
   <main class="content">
     <h1>Documents officiels</h1>
-    <p>
+
+    <p class="intro">
       Cette section regroupe l’ensemble des documents officiels du Parti Souveraineté et Citoyenneté du Québec (SCQ).
-      Tous les documents ci-dessous sont accessibles afin d’assurer la transparence, l’information citoyenne et la participation démocratique.
+      Les documents ci-dessous sont accessibles librement afin d’assurer la transparence, l’information citoyenne
+      et la participation démocratique.
     </p>
 
-    <div class="box">
-      <p style="margin-bottom:10px;">
-        <strong>Accès rapide (version web HTML)</strong>
-      </p>
-      <a class="btn" href="loi-constitution.html">Constitution (HTML)</a>
-      <a class="btn" href="loi-organiques.html">Lois organiques (HTML)</a>
-      <a class="btn" href="loi-ordinaires.html">Lois ordinaires (HTML)</a>
-      <a class="btn" href="loi-Reglements.html">Règlements (HTML)</a>
-      <a class="btn" href="loi-administratif.html">Pratiques administratives (HTML)</a>
-      <a class="btn secondary" href="loi-scq-otc.html">SCQ – OTC (HTML)</a>
-    </div>
-
-    <h2>Documents des lois (DOCX)</h2>
-    <ul>
+    <h2>Documents des lois</h2>
+    <ul class="doclist">
+      <!-- Dossier: Doc/lois/ (selon tes nouveaux fichiers) -->
       <li><a href="Doc/lois/Constitution_du_Quebec_souverain.docx" download>Constitution du Québec souverain (DOCX)</a></li>
       <li><a href="Doc/lois/Lois_organiques_du_Quebec_souverain.docx" download>Lois organiques du Québec souverain (DOCX)</a></li>
       <li><a href="Doc/lois/Lois_ordinaires_du_Quebec_souverain.docx" download>Lois ordinaires du Québec souverain (DOCX)</a></li>
       <li><a href="Doc/lois/Lois_administratives_du_quebec.docx" download>Lois administratives du Québec (DOCX)</a></li>
       <li><a href="Doc/lois/Reglements_du_Quebec_souverain.docx" download>Règlements du Québec souverain (DOCX)</a></li>
-      <li><a href="Doc/lois/SCQ_Outil_de_transition_constitutionnelle.docx" download>SCQ – Outil de transition constitutionnelle (DOCX)</a></li>
+      <li><a href="Doc/lois/SCQ_Outil_de_transition_constitutionnelle.docx" download>SCQ — Outil de transition constitutionnelle (DOCX)</a></li>
     </ul>
 
     <h2>Documents publics</h2>
-    <ul>
-      <li><a href="Doc/FICHE_DE_SIGNATURE_D_APPUI.docx" download>Fiche de signature d'appui (DOCX)</a></li>
+    <ul class="doclist">
+      <li><a href="Doc/FICHE_DE_SIGNATURE_D_APPUI.docx" download>Fiche de signature d’appui (DOCX)</a></li>
       <li><a href="Doc/CODE_DE_CONDUITE_SCQ.docx" download>Code de conduite du SCQ (DOCX)</a></li>
       <li><a href="Doc/Scq — Doctrine Fondatrice Et Architecture Politique Complète.pdf" download>SCQ — Doctrine fondatrice et architecture politique complète (PDF)</a></li>
     </ul>
 
     <h2>Documents pour les membres</h2>
-    <ul>
-      <li><a href="Doc/FORMULAIRE_ENGAGEMENT_MEMBRE_SCQ.docx" download>Formulaire d'engagement du membre – SCQ (DOCX)</a></li>
-      <li><a href="Doc/POLITIQUE_CONTRIBUTIONS_VOLONTAIRES_SCQ.docx" download>Politique de contributions volontaires et d’implication du membre – SCQ (DOCX)</a></li>
-      <li><a href="Doc/LETTRE_REMERCIEMENT_SCQ.docx" download>Lettre officielle de remerciement – SCQ (DOCX)</a></li>
-      <li><a href="Doc/CARTE_MEMBRE_SCQ.jpg" download>Carte de membre (JPEG)</a></li>
+    <ul class="doclist">
+      <li><a href="Doc/FORMULAIRE_ENGAGEMENT_MEMBRE_SCQ.docx" download>Formulaire d’engagement du membre — SCQ (DOCX)</a></li>
+      <li><a href="Doc/POLITIQUE_CONTRIBUTIONS_VOLONTAIRES_SCQ.docx" download>Politique de contributions volontaires et d’implication du membre — SCQ (DOCX)</a></li>
+      <li><a href="Doc/LETTRE_REMERCIEMENT_SCQ.docx" download>Lettre officielle de remerciement — SCQ (DOCX)</a></li>
+      <li><a href="Doc/CARTE_MEMBRE_SCQ.jpg" download>Carte de membre (JPG)</a></li>
     </ul>
 
+    <div class="note">
+      <strong>Important :</strong> sur GitHub Pages, les noms de dossiers et fichiers sont sensibles à la casse
+      (ex. <strong>Doc</strong> ≠ <strong>doc</strong>). Tes liens utilisent <strong>Doc/...</strong> comme dans ton dépôt.
+    </div>
+
     <p class="small">
-      Pour toute question ou demande de document supplémentaire, veuillez nous contacter à
+      Pour toute question ou demande de document supplémentaire, veuillez nous contacter à :
       <strong>contact@scq-officiel.ca</strong>.
     </p>
   </main>
