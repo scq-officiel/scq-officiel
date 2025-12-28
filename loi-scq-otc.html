@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SCQ – Outil de transition constitutionnelle – SCQ</title>
 
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css" />
 
   <style>
     nav{
@@ -28,7 +28,7 @@
       white-space:nowrap;
     }
     nav a:hover{ text-decoration:underline; }
-    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; }
+    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; margin-right:6px; }
     nav .logo img{ height:40px; width:auto; border-radius:10px; display:block; }
 
     .banner{
@@ -96,15 +96,27 @@
       font-weight:700;
       font-size:14px;
     }
-    .btn:hover{ text-decoration:underline; }
+    .btn:hover{ text-decoration: underline; }
     .btn.secondary{ background:#0f172a; }
 
     .warn{
-      margin:18px 0;
+      margin-top:18px;
       padding:14px 16px;
       border-radius:14px;
-      border:1px solid rgba(239,68,68,0.25);
       background:rgba(239,68,68,0.06);
+      border:1px solid rgba(239,68,68,0.20);
+      color:#7f1d1d;
+      font-size:14px;
+    }
+
+    .note{
+      margin-top:18px;
+      padding:14px 16px;
+      border-radius:14px;
+      background:rgba(15,23,42,0.04);
+      border:1px solid rgba(15,23,42,0.10);
+      font-size:14px;
+      color:#0f172a;
     }
 
     @media (max-width:760px){
@@ -142,34 +154,28 @@
 
     <div class="box">
       <p>
-        Ce document définit un <strong>cadre transitoire</strong> de conduite et d’organisation
-        applicable au SCQ dans un contexte de transition institutionnelle. Il vise à encadrer
-        l’action, la communication et la préparation, afin de protéger l’intégrité du processus
-        démocratique et d’assurer une continuité administrative responsable.
+        Ce document définit un <strong>cadre transitoire</strong> applicable au SCQ dans un contexte de transition institutionnelle.
+        Il encadre l’action, la communication et la préparation afin de protéger l’intégrité du processus démocratique et d’assurer
+        une continuité administrative responsable.
       </p>
       <p>
-        <strong>Principe d’autorité :</strong> cet outil transitoire est strictement subordonné
-        à la Constitution, aux lois organiques, aux lois ordinaires et aux règlements.
-        Il ne crée aucune légitimité autonome et ne peut en aucun cas remplacer une norme supérieure.
+        <strong>Effet juridique :</strong> l’outil de transition est strictement subordonné à la Constitution, aux lois organiques,
+        aux lois ordinaires et aux règlements. Il ne crée aucune légitimité autonome et ne peut en aucun cas remplacer une norme supérieure.
       </p>
 
       <div class="actions">
         <a class="btn" href="cadre.html">Retour au Cadre National</a>
-        <!-- Optionnel : téléchargement si tu publies une version DOCX/PDF -->
-        <!-- <a class="btn secondary" href="docs/scq-otc.docx">Télécharger (DOCX)</a> -->
+        <a class="btn secondary" href="Doc/lois/SCQ_Outil_de_transition_constitutionnelle.docx" download>Télécharger (DOCX)</a>
       </div>
     </div>
 
     <div class="warn">
-      <p>
-        <strong>Interdiction stricte :</strong> aucune disposition de ce document ne peut être utilisée
-        pour justifier une action contraire à la Constitution, ni pour contourner une procédure
-        démocratique, électorale, judiciaire ou administrative.
-      </p>
+      <strong>Interdiction stricte :</strong> aucune disposition de ce document ne peut être utilisée pour justifier une action contraire
+      à la Constitution, ni pour contourner une procédure démocratique, électorale, judiciaire ou administrative.
     </div>
 
     <div class="toc" aria-label="Sommaire">
-      <p><strong>Sommaire (navigation interne)</strong></p>
+      <p><strong>Sommaire</strong></p>
       <ul>
         <li><a href="#objet">Objet</a></li>
         <li><a href="#portee">Portée et limites</a></li>
@@ -182,20 +188,15 @@
 
     <h2 id="objet">Objet</h2>
     <p>
-      L’outil de transition constitutionnelle encadre l’organisation interne et la conduite publique
-      du SCQ pendant la transition, afin d’assurer :
+      L’outil de transition constitutionnelle encadre l’organisation interne et la conduite publique du SCQ pendant la transition,
+      afin d’assurer : la protection de l’intégrité démocratique, la continuité administrative et documentaire, la transparence,
+      la traçabilité, la responsabilité et la conformité stricte à la hiérarchie des normes.
     </p>
-    <ul>
-      <li>la protection de l’intégrité démocratique;</li>
-      <li>la continuité administrative et documentaire;</li>
-      <li>la transparence, la traçabilité et la responsabilité;</li>
-      <li>la conformité stricte à la hiérarchie des normes.</li>
-    </ul>
 
     <h2 id="portee">Portée et limites</h2>
     <p>
-      Ce document est un cadre de conduite et de méthode. Il ne constitue ni une loi, ni un règlement,
-      ni une norme autonome. Il ne peut pas :
+      Ce document est un cadre de conduite et de méthode. Il ne constitue ni une loi, ni un règlement, ni une norme autonome.
+      Il ne peut pas :
     </p>
     <ul>
       <li>créer un droit ou une obligation applicable aux citoyens;</li>
@@ -205,37 +206,38 @@
     </ul>
 
     <h2 id="principes">Principes directeurs</h2>
-    <p>
-      Pendant la transition, le SCQ agit selon les principes suivants :
-    </p>
+    <p>Pendant la transition, le SCQ agit selon les principes suivants :</p>
     <ul>
       <li><strong>Légalité</strong> : conformité à la hiérarchie des normes, sans exception.</li>
       <li><strong>Neutralité institutionnelle</strong> : aucune appropriation des institutions par un groupe.</li>
       <li><strong>Transparence</strong> : décisions traçables, documents accessibles, justifications publiques.</li>
-      <li><strong>Intégrité</strong> : prévention des conflits d’intérêts, des influences et des contournements.</li>
+      <li><strong>Intégrité</strong> : prévention des conflits d’intérêts, de l’influence indue et des contournements.</li>
       <li><strong>Protection du processus démocratique</strong> : aucune manipulation, intimidation ou désinformation.</li>
     </ul>
 
     <h2 id="transparence">Transparence et reddition de comptes</h2>
     <p>
-      Toute action transitoire doit être documentée : objectifs, base légale, responsables, échéanciers,
-      coûts prévus et mécanismes de contrôle. Les informations d’intérêt public doivent être publiées
-      de manière accessible, sauf exceptions strictement encadrées (ex. sécurité légitime et proportionnée).
+      Toute action transitoire doit être documentée (objectifs, base, responsables, échéanciers, coûts, mécanismes de contrôle).
+      Les informations d’intérêt public doivent être publiées de manière accessible, sauf exceptions strictement justifiées.
     </p>
 
     <h2 id="antiingerence">Protection contre l’ingérence</h2>
     <p>
       Le SCQ applique des mesures préventives contre l’ingérence et l’influence indue :
-      traçabilité des contacts, registre des communications d’intérêt public, règles strictes de conflits
-      d’intérêts, et obligation de signalement interne des pressions ou tentatives de manipulation.
+      traçabilité des contacts d’intérêt public, règles strictes de conflits d’intérêts et obligation de signalement des pressions.
     </p>
 
     <h2 id="communication">Communication publique</h2>
     <p>
-      La communication publique doit être factuelle, vérifiable et directement pertinente.
-      Toute affirmation sur une règle, une procédure ou un engagement doit renvoyer à un document publié.
-      Les informations trompeuses, ambiguës ou volontairement evasives sont interdites.
+      La communication publique doit être factuelle, vérifiable et directement pertinente. Toute affirmation sur une règle,
+      une procédure ou un engagement doit pouvoir être rattachée à un document publié. Les communications trompeuses, ambiguës
+      ou volontairement evasives sont interdites.
     </p>
+
+    <div class="note">
+      <strong>Conseil technique :</strong> si le téléchargement donne 404, vérifie la casse exacte du dossier
+      (<strong>Doc</strong> ≠ <strong>doc</strong>) et du nom de fichier.
+    </div>
 
   </main>
 
