@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lois organiques – SCQ</title>
 
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css" />
 
   <style>
     nav{
@@ -28,7 +28,7 @@
       white-space:nowrap;
     }
     nav a:hover{ text-decoration:underline; }
-    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; }
+    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; margin-right:6px; }
     nav .logo img{ height:40px; width:auto; border-radius:10px; display:block; }
 
     .banner{
@@ -96,8 +96,18 @@
       font-weight:700;
       font-size:14px;
     }
-    .btn:hover{ text-decoration:underline; }
+    .btn:hover{ text-decoration: underline; }
     .btn.secondary{ background:#0f172a; }
+
+    .note{
+      margin-top:18px;
+      padding:14px 16px;
+      border-radius:14px;
+      background:rgba(15,23,42,0.04);
+      border:1px solid rgba(15,23,42,0.10);
+      font-size:14px;
+      color:#0f172a;
+    }
 
     @media (max-width:760px){
       h1{ font-size:28px; }
@@ -134,27 +144,25 @@
 
     <div class="box">
       <p>
-        Les <strong>lois organiques</strong> sont des lois structurantes qui organisent
-        le fonctionnement fondamental de l’État. Elles traduisent directement la Constitution
-        en règles institutionnelles obligatoires (gouvernance, démocratie, justice, finances publiques,
-        administration, mécanismes de contrôle).
+        Les <strong>lois organiques</strong> sont des lois structurantes qui organisent le fonctionnement fondamental de l’État.
+        Elles traduisent directement la Constitution en règles institutionnelles obligatoires (gouvernance, démocratie,
+        justice, finances publiques, administration, mécanismes de contrôle).
       </p>
       <p>
-        <strong>Principe d’autorité :</strong> une loi organique ne peut contredire la Constitution.
-        Toute loi ordinaire, règlement ou pratique administrative doit respecter les lois organiques.
+        <strong>Effet juridique :</strong> une loi organique ne peut contredire la Constitution. Toute loi ordinaire,
+        tout règlement et toute pratique administrative doivent respecter les lois organiques.
       </p>
 
       <div class="actions">
         <a class="btn" href="cadre.html">Retour au Cadre National</a>
-        <!-- Optionnel : lien de téléchargement si tu publies la version DOCX/PDF -->
-        <!-- <a class="btn secondary" href="docs/lois-organiques-quebec-souverain.docx">Télécharger (DOCX)</a> -->
+        <a class="btn secondary" href="Doc/lois/Lois_organiques_du_Quebec_souverain.docx" download>Télécharger (DOCX)</a>
       </div>
     </div>
 
     <div class="toc" aria-label="Sommaire">
-      <p><strong>Sommaire (navigation interne)</strong></p>
+      <p><strong>Sommaire</strong></p>
       <ul>
-        <li><a href="#definition">Définition et rôle</a></li>
+        <li><a href="#role">Définition et rôle</a></li>
         <li><a href="#domaines">Domaines typiques</a></li>
         <li><a href="#limites">Limites juridiques</a></li>
         <li><a href="#effets">Effets sur les autres normes</a></li>
@@ -162,43 +170,46 @@
       </ul>
     </div>
 
-    <h2 id="definition">Définition et rôle</h2>
+    <h2 id="role">Définition et rôle</h2>
     <p>
       Une loi organique fixe les règles essentielles qui rendent l’État fonctionnel et contrôlable.
       Elle vise la stabilité institutionnelle, la cohérence démocratique et la prévisibilité des pouvoirs publics.
     </p>
 
     <h2 id="domaines">Domaines typiques</h2>
-    <p>
-      Les lois organiques portent notamment sur :
-    </p>
+    <p>Les lois organiques portent notamment sur :</p>
     <ul>
       <li>les institutions (assemblée, exécutif, justice, autorités indépendantes);</li>
-      <li>l’architecture démocratique (processus électoraux, mécanismes de participation, révocation, etc.);</li>
+      <li>l’architecture démocratique (élections, participation, mécanismes de contrôle et de reddition de comptes);</li>
       <li>les finances publiques (budget, contrôle, audit, règles d’intégrité);</li>
-      <li>l’organisation administrative (statut, responsabilités, reddition de comptes);</li>
-      <li>les garanties d’indépendance et de transparence (anti-ingérence, conflits d’intérêts, accès à l’information).</li>
+      <li>l’organisation administrative (responsabilités, procédures, obligations de transparence);</li>
+      <li>la prévention de l’ingérence et des conflits d’intérêts.</li>
     </ul>
 
     <h2 id="limites">Limites juridiques</h2>
     <p>
-      Les lois organiques sont subordonnées à la Constitution et doivent respecter les droits fondamentaux,
-      la séparation des pouvoirs et les garanties démocratiques. Elles ne peuvent pas servir à contourner
-      une procédure constitutionnelle.
+      Les lois organiques sont subordonnées à la Constitution. Elles ne peuvent pas servir à contourner une procédure
+      constitutionnelle ni à réduire des droits fondamentaux par des moyens indirects.
     </p>
 
     <h2 id="effets">Effets sur les autres normes</h2>
     <p>
-      Toute loi ordinaire doit être conforme aux lois organiques. Un règlement ne peut ni modifier
-      une loi organique ni en élargir la portée. Les pratiques administratives sont purement opérationnelles
-      et ne peuvent pas remplacer une loi organique.
+      Toute loi ordinaire doit être conforme aux lois organiques. Un règlement ne peut ni modifier une loi organique
+      ni en élargir la portée. Les pratiques administratives sont strictement opérationnelles et ne peuvent pas remplacer
+      une loi organique.
     </p>
 
     <h2 id="qualite">Exigences de qualité</h2>
     <p>
-      Une loi organique doit être rédigée de façon claire, accessible et vérifiable : définitions nettes,
-      obligations explicites, mécanismes de contrôle identifiables, publication et traçabilité des modifications.
+      Une loi organique doit être rédigée de manière claire, accessible et vérifiable : définitions nettes, obligations
+      explicites, mécanismes de contrôle identifiables, publication et traçabilité des modifications.
     </p>
+
+    <div class="note">
+      <strong>Conseil technique :</strong> si un lien de téléchargement donne 404, vérifie la casse exacte du dossier
+      (<strong>Doc</strong> ≠ <strong>doc</strong>) et du nom de fichier.
+    </div>
+
   </main>
 
 </body>
