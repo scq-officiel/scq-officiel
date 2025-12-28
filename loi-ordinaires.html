@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lois ordinaires – SCQ</title>
 
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css" />
 
   <style>
     nav{
@@ -28,7 +28,7 @@
       white-space:nowrap;
     }
     nav a:hover{ text-decoration:underline; }
-    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; }
+    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; margin-right:6px; }
     nav .logo img{ height:40px; width:auto; border-radius:10px; display:block; }
 
     .banner{
@@ -96,8 +96,18 @@
       font-weight:700;
       font-size:14px;
     }
-    .btn:hover{ text-decoration:underline; }
+    .btn:hover{ text-decoration: underline; }
     .btn.secondary{ background:#0f172a; }
+
+    .note{
+      margin-top:18px;
+      padding:14px 16px;
+      border-radius:14px;
+      background:rgba(15,23,42,0.04);
+      border:1px solid rgba(15,23,42,0.10);
+      font-size:14px;
+      color:#0f172a;
+    }
 
     @media (max-width:760px){
       h1{ font-size:28px; }
@@ -134,72 +144,75 @@
 
     <div class="box">
       <p>
-        Les <strong>lois ordinaires</strong> constituent les règles générales applicables
-        aux secteurs spécifiques de la vie collective. Elles mettent en œuvre, de manière
-        concrète, les orientations fixées par la Constitution et les lois organiques.
+        Les <strong>lois ordinaires</strong> encadrent les domaines sectoriels de la vie collective.
+        Elles mettent en œuvre, de manière concrète, les orientations fixées par la Constitution
+        et les lois organiques (droits, services publics, programmes, obligations, règles de fonctionnement).
       </p>
       <p>
-        <strong>Principe d’autorité :</strong> une loi ordinaire ne peut ni modifier la Constitution
-        ni contredire une loi organique. Toute disposition incompatible est inopposable.
+        <strong>Effet juridique :</strong> une loi ordinaire ne peut ni modifier la Constitution ni contredire
+        une loi organique. En cas d’incompatibilité, la norme supérieure prévaut automatiquement.
       </p>
 
       <div class="actions">
         <a class="btn" href="cadre.html">Retour au Cadre National</a>
-        <!-- Optionnel : lien de téléchargement -->
-        <!-- <a class="btn secondary" href="docs/lois-ordinaires-quebec-souverain.docx">Télécharger (DOCX)</a> -->
+        <a class="btn secondary" href="Doc/lois/Lois_ordinaires_du_Quebec_souverain.docx" download>Télécharger (DOCX)</a>
       </div>
     </div>
 
     <div class="toc" aria-label="Sommaire">
-      <p><strong>Sommaire (navigation interne)</strong></p>
+      <p><strong>Sommaire</strong></p>
       <ul>
         <li><a href="#role">Rôle des lois ordinaires</a></li>
         <li><a href="#domaines">Domaines d’application</a></li>
         <li><a href="#limites">Limites juridiques</a></li>
+        <li><a href="#delegation">Délégation réglementaire</a></li>
         <li><a href="#controle">Contrôle et conformité</a></li>
-        <li><a href="#evolution">Évolution et modification</a></li>
       </ul>
     </div>
 
     <h2 id="role">Rôle des lois ordinaires</h2>
     <p>
-      Les lois ordinaires servent à encadrer les politiques publiques et les activités
-      sociales, économiques, culturelles et environnementales. Elles traduisent les
-      objectifs de l’État en obligations et droits concrets.
+      Les lois ordinaires traduisent les objectifs de l’État en règles applicables :
+      elles définissent les droits et obligations, établissent des cadres d’action,
+      et structurent les services et programmes publics.
     </p>
 
     <h2 id="domaines">Domaines d’application</h2>
-    <p>
-      Les lois ordinaires peuvent notamment porter sur :
-    </p>
+    <p>Les lois ordinaires peuvent notamment porter sur :</p>
     <ul>
       <li>le logement, l’aménagement du territoire et l’urbanisme;</li>
       <li>les transports et les infrastructures;</li>
       <li>la culture, la langue et le patrimoine;</li>
-      <li>l’environnement et la transition écologique;</li>
-      <li>les programmes sociaux et économiques.</li>
+      <li>l’environnement et la transition;</li>
+      <li>les programmes sociaux, économiques et communautaires.</li>
     </ul>
 
     <h2 id="limites">Limites juridiques</h2>
     <p>
-      Une loi ordinaire ne peut créer de mécanisme qui relève du domaine constitutionnel
-      ou organique. Elle ne peut pas non plus déléguer à un règlement un pouvoir qui
-      modifierait l’essence de la loi.
+      Une loi ordinaire ne peut pas modifier l’architecture constitutionnelle, ni prendre la place
+      d’une loi organique. Elle ne peut pas non plus restreindre un droit fondamental autrement
+      que selon les conditions strictes prévues par la Constitution.
+    </p>
+
+    <h2 id="delegation">Délégation réglementaire</h2>
+    <p>
+      Une loi ordinaire peut habiliter un règlement pour préciser des modalités techniques.
+      Toutefois, elle ne peut pas déléguer l’essence de la loi : un règlement ne peut pas inventer
+      une obligation ou un droit qui n’a pas de base claire dans la loi.
     </p>
 
     <h2 id="controle">Contrôle et conformité</h2>
     <p>
       Les lois ordinaires sont soumises au contrôle de constitutionnalité et de légalité.
-      En cas de conflit avec une norme supérieure, la disposition fautive doit être
-      modifiée ou abrogée.
+      Toute disposition incompatible avec une norme supérieure doit être corrigée, suspendue
+      ou abrogée selon les mécanismes applicables.
     </p>
 
-    <h2 id="evolution">Évolution et modification</h2>
-    <p>
-      Les lois ordinaires peuvent être modifiées par la procédure législative régulière,
-      dans le respect des règles de transparence, de publicité et de participation
-      démocratique prévues par les lois organiques.
-    </p>
+    <div class="note">
+      <strong>Conseil technique :</strong> si le téléchargement donne 404, vérifie la casse exacte du dossier
+      (<strong>Doc</strong> ≠ <strong>doc</strong>) et du nom de fichier.
+    </div>
+
   </main>
 
 </body>
