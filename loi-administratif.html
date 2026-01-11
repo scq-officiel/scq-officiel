@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pratiques administratives – SCQ</title>
+  <title>SCQ - Pratiques administratives</title>
 
   <link rel="stylesheet" href="css/styles.css" />
 
@@ -28,24 +28,33 @@
       white-space:nowrap;
     }
     nav a:hover{ text-decoration:underline; }
-    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; margin-right:6px; }
-    nav .logo img{ height:40px; width:auto; border-radius:10px; display:block; }
+    nav .logo{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:0;
+      margin-right:6px;
+    }
+    nav .logo img{
+      height:40px;
+      width:auto;
+      border-radius:10px;
+      display:block;
+    }
 
     .banner{
       text-align:center;
       margin-top:16px;
-      width:100%;
-      overflow:hidden;
       padding:0 16px;
     }
     .banner img{
       width:100%;
-      max-width:1100px;
+      max-width:715px;
       height:auto;
-      max-height:260px;
-      object-fit:cover;
       border-radius:16px;
       box-shadow:0 0 12px rgba(0,0,0,0.10);
+      display:block;
+      margin:0 auto;
     }
 
     main{
@@ -57,84 +66,85 @@
       box-shadow:0 0 12px rgba(0,0,0,0.10);
     }
 
-    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; }
-    h2{ font-size:24px; color:#0047ab; margin:22px 0 10px; }
-    p, li{ font-size:17px; margin:0 0 12px; line-height:1.65; color:#0f172a; }
+    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; text-align:center; }
+    h2{ font-size:24px; color:#0047ab; margin:26px 0 10px; }
+    p{ font-size:17px; margin:0 0 14px; line-height:1.65; color:#0f172a; }
+
+    ul{ margin:10px 0 16px 18px; color:#0f172a; }
+    li{ margin:8px 0; line-height:1.55; }
 
     .box{
       margin:18px 0;
-      padding:14px 16px;
+      padding:16px;
       border-radius:14px;
       background:rgba(0,71,171,0.06);
       border:1px solid rgba(0,71,171,0.14);
     }
 
-    .toc{
-      margin:14px 0 0;
-      padding:14px 16px;
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+      margin-top:14px;
+      align-items:start;
+    }
+
+    .card{
       border:1px solid rgba(0,0,0,0.10);
       border-radius:14px;
+      padding:16px;
       background:#fff;
+      box-shadow:0 0 10px rgba(0,0,0,0.05);
     }
-    .toc a{ color:#0A2A66; font-weight:700; text-decoration:none; }
-    .toc a:hover{ text-decoration:underline; }
-    .toc ul{ margin:8px 0 0 18px; }
 
-    .actions{
+    .btnrow{
       display:flex;
       gap:10px;
       flex-wrap:wrap;
-      margin-top:12px;
+      margin-top:14px;
     }
+
     .btn{
-      display:inline-block;
       background:#0A2A66;
       color:#fff;
-      padding:10px 12px;
-      border-radius:12px;
+      padding:10px 14px;
+      border-radius:999px;
       text-decoration:none;
       font-weight:700;
       font-size:14px;
+      display:inline-block;
     }
-    .btn:hover{ text-decoration: underline; }
     .btn.secondary{ background:#0f172a; }
-
-    .warn{
-      margin-top:18px;
-      padding:14px 16px;
-      border-radius:14px;
-      background:rgba(239,68,68,0.06);
-      border:1px solid rgba(239,68,68,0.20);
-      color:#7f1d1d;
-      font-size:14px;
-    }
+    .btn:hover{ text-decoration:underline; }
 
     .note{
-      margin-top:18px;
+      margin-top:22px;
       padding:14px 16px;
       border-radius:14px;
       background:rgba(15,23,42,0.04);
       border:1px solid rgba(15,23,42,0.10);
       font-size:14px;
       color:#0f172a;
+      line-height:1.6;
     }
 
-    @media (max-width:760px){
-      h1{ font-size:28px; }
-      h2{ font-size:20px; }
+    @media(max-width:760px){
       nav{ flex-direction:column; align-items:flex-start; }
       main{ margin:18px 12px 40px; padding:18px; }
+      h1{ font-size:28px; }
+      h2{ font-size:20px; }
+      .grid{ grid-template-columns: 1fr; }
     }
   </style>
 </head>
 
 <body>
 
+  <!-- Navigation -->
   <nav>
-    <a class="logo" href="index.html" aria-label="Retour à l’accueil">
+    <a class="logo" href="index.html">
       <img src="images/logo_scq.jpg" alt="Logo SCQ">
     </a>
-
     <a href="index.html">Accueil</a>
     <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
     <a href="cadre.html">Cadre National</a>
@@ -145,56 +155,75 @@
     <a href="doc.html">Documents</a>
   </nav>
 
+  <!-- Bannière -->
   <div class="banner">
     <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
   </div>
 
   <main>
+
     <h1>Pratiques administratives</h1>
 
     <div class="box">
       <p>
-        Les <strong>pratiques administratives</strong> regroupent l’ensemble des directives internes,
-        procédures opérationnelles, guides d’application et méthodes de gestion utilisées par l’administration publique
-        pour exécuter les lois et les règlements.
+        Les <strong>pratiques administratives</strong> regroupent les directives internes, guides, procédures,
+        formulaires et méthodes de travail utilisés par l’administration pour appliquer les lois et règlements.
+        Elles existent pour assurer la cohérence et la qualité des services publics.
       </p>
-      <p>
-        <strong>Effet juridique :</strong> les pratiques administratives n’ont <strong>aucune valeur normative autonome</strong>.
-        Elles ne peuvent ni créer de droits, ni imposer d’obligations nouvelles, ni restreindre un droit existant.
-        Toute pratique contraire à une norme supérieure doit être modifiée ou annulée.
-      </p>
+    </div>
 
-      <div class="actions">
-        <a class="btn" href="cadre.html">Retour au Cadre National</a>
-        <a class="btn secondary" href="Doc/lois/Lois_administratives_du_quebec.docx" download>Télécharger (DOCX)</a>
+    <h2>À quoi ça sert</h2>
+    <p>
+      Ce niveau sert à encadrer le fonctionnement quotidien de l’État :
+      gestion des dossiers, standards de service, étapes de traitement, modèles de documents,
+      protocoles internes, et lignes directrices pour les employés.
+    </p>
+
+    <div class="grid">
+
+      <div class="card">
+        <h2>Ce que ça peut faire</h2>
+        <ul>
+          <li>Standardiser les procédures (délais, étapes, formulaires)</li>
+          <li>Clarifier l’application d’une loi ou d’un règlement</li>
+          <li>Améliorer la qualité, la transparence et la traçabilité</li>
+          <li>Définir des méthodes internes (sans effet juridique externe)</li>
+        </ul>
       </div>
+
+      <div class="card">
+        <h2>Ce que ça ne peut PAS faire</h2>
+        <ul>
+          <li>Créer un nouveau droit ou une nouvelle obligation</li>
+          <li>Remplacer une loi, une loi organique ou la Constitution</li>
+          <li>Restreindre un droit fondamental par une simple directive</li>
+          <li>Imposer une sanction sans base légale</li>
+        </ul>
+      </div>
+
     </div>
 
-    <div class="warn">
-      <strong>Interdiction stricte :</strong> aucune directive interne secrète ou non publiée ne peut être opposée aux citoyens.
-      L’administration doit pouvoir démontrer, à tout moment, le fondement légal de ses décisions.
-    </div>
-
-    <div class="toc" aria-label="Sommaire">
-      <p><strong>Sommaire</strong></p>
-      <ul>
-        <li><a href="#definition">Définition</a></li>
-        <li><a href="#hierarchie">Position dans la hiérarchie</a></li>
-        <li><a href="#limites">Limites juridiques strictes</a></li>
-        <li><a href="#controle">Contrôle et responsabilité</a></li>
-        <li><a href="#transparence">Transparence et accessibilité</a></li>
-      </ul>
-    </div>
-
-    <h2 id="definition">Définition</h2>
+    <h2>Principe de transparence</h2>
     <p>
-      Les pratiques administratives sont des instruments d’exécution interne. Elles servent à organiser le travail de l’administration
-      et à assurer une application uniforme des normes supérieures, sans modifier le droit.
+      Les pratiques administratives doivent être publiées lorsqu’elles ont un impact sur le public
+      (ex. formulaires, processus de demande, délais, critères de traitement), afin d’éviter l’arbitraire
+      et de garantir l’égalité de traitement.
     </p>
 
-    <h2 id="hierarchie">Position dans la hiérarchie</h2>
-    <p>
-      Les pratiques administratives se situent au dernier niveau de la hiérarchie des normes :
-    </p>
-    <ul>
-      <li>Constitution</li>
+    <div class="btnrow">
+      <a class="btn" href="cadre.html">Retour au Cadre National</a>
+      <a class="btn secondary" href="Doc/lois/Lois_administratives_du_quebec.docx" download>
+        Télécharger (DOCX)
+      </a>
+    </div>
+
+    <div class="note">
+      <strong>Rappel hiérarchique :</strong> une pratique administrative est toujours subordonnée aux règlements,
+      aux lois ordinaires, aux lois organiques et à la Constitution. En cas de contradiction, la norme supérieure
+      prévaut automatiquement.
+    </div>
+
+  </main>
+
+</body>
+</html>
