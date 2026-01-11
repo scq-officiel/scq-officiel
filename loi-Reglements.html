@@ -8,9 +8,6 @@
   <link rel="stylesheet" href="css/styles.css" />
 
   <style>
-    /* ============================
-       Navigation
-       ============================ */
     nav{
       background:#0A2A66;
       padding:12px 16px;
@@ -31,13 +28,12 @@
       white-space:nowrap;
     }
     nav a:hover{ text-decoration:underline; }
-    nav a[aria-current="page"]{ background:rgba(255,255,255,0.15); }
     nav .logo{
       display:inline-flex;
       align-items:center;
       gap:10px;
-      margin-right:6px;
       padding:0;
+      margin-right:6px;
     }
     nav .logo img{
       height:40px;
@@ -46,31 +42,21 @@
       display:block;
     }
 
-    /* ============================
-       Bannière uniforme
-       ============================ */
     .banner{
       text-align:center;
       margin-top:16px;
-      width:100%;
-      overflow:hidden;
       padding:0 16px;
     }
     .banner img{
       width:100%;
       max-width:715px;
       height:auto;
-      max-height:260px;
-      object-fit:cover;
       border-radius:16px;
       box-shadow:0 0 12px rgba(0,0,0,0.10);
       display:block;
       margin:0 auto;
     }
 
-    /* ============================
-       Contenu
-       ============================ */
     main{
       max-width:980px;
       margin:22px auto 50px;
@@ -81,88 +67,52 @@
     }
 
     h1{ font-size:34px; color:#0047ab; margin:0 0 10px; text-align:center; }
-    h2{ font-size:22px; color:#0047ab; margin:22px 0 10px; }
-    h3{ font-size:18px; color:#0A2A66; margin:0 0 8px; }
-    p{ font-size:17px; margin:0 0 12px; line-height:1.65; color:#0f172a; }
-
-    .intro{
-      text-align:center;
-      max-width:880px;
-      margin:0 auto;
-    }
+    h2{ font-size:24px; color:#0047ab; margin:26px 0 10px; }
+    p{ font-size:17px; margin:0 0 14px; line-height:1.65; color:#0f172a; }
 
     .box{
-      margin-top:18px;
-      padding:14px 16px;
+      margin:18px 0;
+      padding:16px;
       border-radius:14px;
       background:rgba(0,71,171,0.06);
       border:1px solid rgba(0,71,171,0.14);
-      font-size:15px;
-      line-height:1.6;
-      color:#0f172a;
     }
-
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(2, minmax(0,1fr));
-      gap:14px;
-      margin-top:18px;
-    }
-
-    .card{
-      border:1px solid rgba(0,0,0,0.10);
-      border-radius:14px;
-      padding:16px;
-      background:#fff;
-      box-shadow:0 0 10px rgba(0,0,0,0.05);
-    }
-
-    ul{
-      margin:0;
-      padding-left:18px;
-      font-size:16px;
-      line-height:1.6;
-      color:#0f172a;
-    }
-    li{ margin-bottom:8px; }
 
     .btnrow{
       display:flex;
-      flex-wrap:wrap;
       gap:10px;
-      margin-top:12px;
+      flex-wrap:wrap;
+      margin-top:14px;
     }
 
     .btn{
-      display:inline-block;
       background:#0A2A66;
       color:#fff;
-      padding:10px 12px;
-      border-radius:12px;
+      padding:10px 14px;
+      border-radius:999px;
       text-decoration:none;
       font-weight:700;
       font-size:14px;
     }
-    .btn:hover{ text-decoration:underline; }
     .btn.secondary{ background:#0f172a; }
+    .btn:hover{ text-decoration:underline; }
 
     .note{
-      margin-top:18px;
+      margin-top:22px;
       padding:14px 16px;
       border-radius:14px;
       background:rgba(15,23,42,0.04);
       border:1px solid rgba(15,23,42,0.10);
       font-size:14px;
-      line-height:1.6;
       color:#0f172a;
+      line-height:1.6;
     }
 
-    @media (max-width:760px){
+    @media(max-width:760px){
       nav{ flex-direction:column; align-items:flex-start; }
       main{ margin:18px 12px 40px; padding:18px; }
       h1{ font-size:28px; }
       h2{ font-size:20px; }
-      .grid{ grid-template-columns:1fr; }
     }
   </style>
 </head>
@@ -174,10 +124,8 @@
     <a class="logo" href="index.html">
       <img src="images/logo_scq.jpg" alt="Logo SCQ">
     </a>
-
     <a href="index.html">Accueil</a>
     <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
-    <a href="NotreVision.html">Notre vision</a>
     <a href="cadre.html">Cadre National</a>
     <a href="membres.html">Membres</a>
     <a href="equipe.html">Équipe</a>
@@ -191,74 +139,46 @@
     <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
   </div>
 
-  <!-- Contenu -->
   <main>
 
     <h1>Règlements</h1>
 
-    <div class="intro">
-      <p>
-        Les règlements constituent le <strong>niveau technique d’application</strong> des lois.
-        Ils précisent les modalités pratiques sans jamais créer de droits ni d’obligations nouvelles.
-      </p>
-
-      <div class="btnrow" style="justify-content:center;">
-        <a class="btn secondary" href="Doc/lois/Reglements_du_Quebec_souverain.docx" download>
-          Télécharger le document officiel (DOCX)
-        </a>
-        <a class="btn" href="cadre.html">Retour au Cadre National</a>
-      </div>
-    </div>
-
     <div class="box">
-      <strong>Principe fondamental :</strong> un règlement ne peut jamais contredire une loi,
-      ni élargir une obligation au-delà de ce que la loi autorise explicitement.
+      <p>
+        Les <strong>règlements</strong> constituent le quatrième niveau de la hiérarchie normative
+        du Québec souverain. Ils précisent l’application concrète des lois, sans jamais pouvoir
+        les contredire ni créer de nouvelles obligations sans base légale.
+      </p>
     </div>
 
     <h2>Rôle des règlements</h2>
+    <p>
+      Les règlements servent à définir les modalités techniques d’exécution des lois :
+      délais, formulaires, normes administratives, procédures et protocoles.
+      Ils sont adoptés par l’autorité exécutive dans un cadre strictement encadré.
+    </p>
 
-    <div class="grid">
-      <section class="card">
-        <h3>Application technique</h3>
-        <ul>
-          <li>Définir des formats, délais et procédures.</li>
-          <li>Préciser des normes techniques ou administratives.</li>
-          <li>Faciliter l’exécution concrète des lois existantes.</li>
-        </ul>
-      </section>
+    <h2>Limites juridiques</h2>
+    <p>
+      Aucun règlement ne peut :
+    </p>
+    <ul>
+      <li>Contredire une loi ou la Constitution</li>
+      <li>Créer une obligation sans autorisation législative</li>
+      <li>Restreindre un droit fondamental</li>
+    </ul>
 
-      <section class="card">
-        <h3>Limites strictes</h3>
-        <ul>
-          <li>Aucune création de droits nouveaux.</li>
-          <li>Aucune obligation sans base légale.</li>
-          <li>Subordination complète aux lois ordinaires et organiques.</li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h3>Contrôle et validité</h3>
-        <ul>
-          <li>Invalidation automatique en cas de contradiction.</li>
-          <li>Contrôle juridictionnel possible.</li>
-          <li>Publication obligatoire pour être applicable.</li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h3>Objectif démocratique</h3>
-        <ul>
-          <li>Éviter l’arbitraire administratif.</li>
-          <li>Assurer la prévisibilité des règles.</li>
-          <li>Garantir la transparence des mécanismes d’État.</li>
-        </ul>
-      </section>
+    <div class="btnrow">
+      <a class="btn" href="doc.html">Retour aux documents</a>
+      <a class="btn secondary" href="Doc/lois/Reglements_du_Quebec_souverain.docx" download>
+        Télécharger les règlements (DOCX)
+      </a>
     </div>
 
     <div class="note">
-      <strong>Note :</strong> cette page est une version explicative publique.
-      Le texte juridiquement opposable demeure la version officielle publiée en document DOCX
-      dans la section <a href="doc.html">Documents</a>.
+      <strong>Transparence :</strong> tous les règlements sont rendus publics,
+      vérifiables et subordonnés à la hiérarchie constitutionnelle.
+      Aucun règlement secret ou implicite n’est reconnu.
     </div>
 
   </main>
