@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Règlements – SCQ</title>
+  <title>SCQ - Règlements</title>
 
   <link rel="stylesheet" href="css/styles.css" />
 
   <style>
+    /* ============================
+       Navigation
+       ============================ */
     nav{
       background:#0A2A66;
       padding:12px 16px;
@@ -28,9 +31,24 @@
       white-space:nowrap;
     }
     nav a:hover{ text-decoration:underline; }
-    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; margin-right:6px; }
-    nav .logo img{ height:40px; width:auto; border-radius:10px; display:block; }
+    nav a[aria-current="page"]{ background:rgba(255,255,255,0.15); }
+    nav .logo{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      margin-right:6px;
+      padding:0;
+    }
+    nav .logo img{
+      height:40px;
+      width:auto;
+      border-radius:10px;
+      display:block;
+    }
 
+    /* ============================
+       Bannière uniforme
+       ============================ */
     .banner{
       text-align:center;
       margin-top:16px;
@@ -40,14 +58,19 @@
     }
     .banner img{
       width:100%;
-      max-width:1100px;
+      max-width:715px;
       height:auto;
       max-height:260px;
       object-fit:cover;
       border-radius:16px;
       box-shadow:0 0 12px rgba(0,0,0,0.10);
+      display:block;
+      margin:0 auto;
     }
 
+    /* ============================
+       Contenu
+       ============================ */
     main{
       max-width:980px;
       margin:22px auto 50px;
@@ -57,35 +80,59 @@
       box-shadow:0 0 12px rgba(0,0,0,0.10);
     }
 
-    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; }
-    h2{ font-size:24px; color:#0047ab; margin:22px 0 10px; }
-    p, li{ font-size:17px; margin:0 0 12px; line-height:1.65; color:#0f172a; }
+    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; text-align:center; }
+    h2{ font-size:22px; color:#0047ab; margin:22px 0 10px; }
+    h3{ font-size:18px; color:#0A2A66; margin:0 0 8px; }
+    p{ font-size:17px; margin:0 0 12px; line-height:1.65; color:#0f172a; }
+
+    .intro{
+      text-align:center;
+      max-width:880px;
+      margin:0 auto;
+    }
 
     .box{
-      margin:18px 0;
+      margin-top:18px;
       padding:14px 16px;
       border-radius:14px;
       background:rgba(0,71,171,0.06);
       border:1px solid rgba(0,71,171,0.14);
+      font-size:15px;
+      line-height:1.6;
+      color:#0f172a;
     }
 
-    .toc{
-      margin:14px 0 0;
-      padding:14px 16px;
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap:14px;
+      margin-top:18px;
+    }
+
+    .card{
       border:1px solid rgba(0,0,0,0.10);
       border-radius:14px;
+      padding:16px;
       background:#fff;
+      box-shadow:0 0 10px rgba(0,0,0,0.05);
     }
-    .toc a{ color:#0A2A66; font-weight:700; text-decoration:none; }
-    .toc a:hover{ text-decoration:underline; }
-    .toc ul{ margin:8px 0 0 18px; }
 
-    .actions{
+    ul{
+      margin:0;
+      padding-left:18px;
+      font-size:16px;
+      line-height:1.6;
+      color:#0f172a;
+    }
+    li{ margin-bottom:8px; }
+
+    .btnrow{
       display:flex;
-      gap:10px;
       flex-wrap:wrap;
+      gap:10px;
       margin-top:12px;
     }
+
     .btn{
       display:inline-block;
       background:#0A2A66;
@@ -96,7 +143,7 @@
       font-weight:700;
       font-size:14px;
     }
-    .btn:hover{ text-decoration: underline; }
+    .btn:hover{ text-decoration:underline; }
     .btn.secondary{ background:#0f172a; }
 
     .note{
@@ -106,27 +153,31 @@
       background:rgba(15,23,42,0.04);
       border:1px solid rgba(15,23,42,0.10);
       font-size:14px;
+      line-height:1.6;
       color:#0f172a;
     }
 
     @media (max-width:760px){
-      h1{ font-size:28px; }
-      h2{ font-size:20px; }
       nav{ flex-direction:column; align-items:flex-start; }
       main{ margin:18px 12px 40px; padding:18px; }
+      h1{ font-size:28px; }
+      h2{ font-size:20px; }
+      .grid{ grid-template-columns:1fr; }
     }
   </style>
 </head>
 
 <body>
 
+  <!-- Navigation -->
   <nav>
-    <a class="logo" href="index.html" aria-label="Retour à l’accueil">
+    <a class="logo" href="index.html">
       <img src="images/logo_scq.jpg" alt="Logo SCQ">
     </a>
 
     <a href="index.html">Accueil</a>
     <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+    <a href="NotreVision.html">Notre vision</a>
     <a href="cadre.html">Cadre National</a>
     <a href="membres.html">Membres</a>
     <a href="equipe.html">Équipe</a>
@@ -135,74 +186,79 @@
     <a href="doc.html">Documents</a>
   </nav>
 
+  <!-- Bannière -->
   <div class="banner">
     <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
   </div>
 
+  <!-- Contenu -->
   <main>
+
     <h1>Règlements</h1>
 
-    <div class="box">
+    <div class="intro">
       <p>
-        Les <strong>règlements</strong> précisent les modalités techniques nécessaires à l’application des lois.
-        Ils déterminent les procédures, normes, délais, formats et mécanismes opérationnels permettant
-        l’exécution concrète des politiques publiques.
-      </p>
-      <p>
-        <strong>Effet juridique :</strong> un règlement ne peut ni modifier une loi, ni contredire la Constitution,
-        ni créer un droit ou une obligation sans fondement législatif clair. En cas de conflit, la norme supérieure prévaut.
+        Les règlements constituent le <strong>niveau technique d’application</strong> des lois.
+        Ils précisent les modalités pratiques sans jamais créer de droits ni d’obligations nouvelles.
       </p>
 
-      <div class="actions">
+      <div class="btnrow" style="justify-content:center;">
+        <a class="btn secondary" href="Doc/lois/Reglements_du_Quebec_souverain.docx" download>
+          Télécharger le document officiel (DOCX)
+        </a>
         <a class="btn" href="cadre.html">Retour au Cadre National</a>
-        <a class="btn secondary" href="Doc/lois/Reglements_du_Quebec_souverain.docx" download>Télécharger (DOCX)</a>
       </div>
     </div>
 
-    <div class="toc" aria-label="Sommaire">
-      <p><strong>Sommaire</strong></p>
-      <ul>
-        <li><a href="#role">Rôle des règlements</a></li>
-        <li><a href="#base">Base légale (habilitation)</a></li>
-        <li><a href="#limites">Limites juridiques</a></li>
-        <li><a href="#controle">Contrôle et annulation</a></li>
-        <li><a href="#publication">Publication et opposabilité</a></li>
-      </ul>
+    <div class="box">
+      <strong>Principe fondamental :</strong> un règlement ne peut jamais contredire une loi,
+      ni élargir une obligation au-delà de ce que la loi autorise explicitement.
     </div>
 
-    <h2 id="role">Rôle des règlements</h2>
-    <p>
-      Les règlements servent à rendre les lois applicables dans la pratique. Ils traduisent des obligations
-      législatives générales en prescriptions techniques adaptées à la gestion quotidienne de l’administration.
-    </p>
+    <h2>Rôle des règlements</h2>
 
-    <h2 id="base">Base légale (habilitation)</h2>
-    <p>
-      Tout règlement doit reposer sur une habilitation explicite prévue par une loi.
-      En l’absence de fondement légal clair, le règlement est nul ou inapplicable.
-    </p>
+    <div class="grid">
+      <section class="card">
+        <h3>Application technique</h3>
+        <ul>
+          <li>Définir des formats, délais et procédures.</li>
+          <li>Préciser des normes techniques ou administratives.</li>
+          <li>Faciliter l’exécution concrète des lois existantes.</li>
+        </ul>
+      </section>
 
-    <h2 id="limites">Limites juridiques</h2>
-    <p>
-      Un règlement ne peut pas modifier l’objet, l’esprit ou la portée d’une loi.
-      Il ne peut pas restreindre un droit ou étendre une obligation au-delà de ce que la loi autorise expressément.
-    </p>
+      <section class="card">
+        <h3>Limites strictes</h3>
+        <ul>
+          <li>Aucune création de droits nouveaux.</li>
+          <li>Aucune obligation sans base légale.</li>
+          <li>Subordination complète aux lois ordinaires et organiques.</li>
+        </ul>
+      </section>
 
-    <h2 id="controle">Contrôle et annulation</h2>
-    <p>
-      Les règlements sont soumis à un contrôle de légalité. En cas d’illégalité, ils peuvent être suspendus,
-      modifiés ou annulés par l’autorité compétente ou par les tribunaux.
-    </p>
+      <section class="card">
+        <h3>Contrôle et validité</h3>
+        <ul>
+          <li>Invalidation automatique en cas de contradiction.</li>
+          <li>Contrôle juridictionnel possible.</li>
+          <li>Publication obligatoire pour être applicable.</li>
+        </ul>
+      </section>
 
-    <h2 id="publication">Publication et opposabilité</h2>
-    <p>
-      Tout règlement doit être publié de manière officielle, accessible au public, et accompagné de son fondement légal.
-      Aucune règle non publiée ne peut être opposée aux citoyens.
-    </p>
+      <section class="card">
+        <h3>Objectif démocratique</h3>
+        <ul>
+          <li>Éviter l’arbitraire administratif.</li>
+          <li>Assurer la prévisibilité des règles.</li>
+          <li>Garantir la transparence des mécanismes d’État.</li>
+        </ul>
+      </section>
+    </div>
 
     <div class="note">
-      <strong>Conseil technique :</strong> si le téléchargement donne 404, vérifie la casse exacte du dossier
-      (<strong>Doc</strong> ≠ <strong>doc</strong>) et du nom de fichier.
+      <strong>Note :</strong> cette page est une version explicative publique.
+      Le texte juridiquement opposable demeure la version officielle publiée en document DOCX
+      dans la section <a href="doc.html">Documents</a>.
     </div>
 
   </main>
