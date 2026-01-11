@@ -1,141 +1,170 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <title>SCQ - Documents officiels</title>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCQ - Documents officiels</title>
+
   <link rel="stylesheet" href="css/styles.css" />
 
   <style>
     /* ============================
-       Navigation (cohérente + stable)
+       Navigation
        ============================ */
-    nav {
-      background-color: #0A2A66;
-      padding: 12px 16px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+    nav{
+      background:#0A2A66;
+      padding:12px 16px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      position:sticky;
+      top:0;
+      z-index:1000;
     }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 6px 8px;
-      border-radius: 10px;
-      white-space: nowrap;
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      font-weight:700;
+      padding:6px 8px;
+      border-radius:10px;
+      white-space:nowrap;
     }
-
-    nav a:hover { text-decoration: underline; }
-
-    nav .logo {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      margin-right: 6px;
-      padding: 0;
+    nav a:hover{ text-decoration:underline; }
+    nav a[aria-current="page"]{ background:rgba(255,255,255,0.15); }
+    nav .logo{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:0;
+      margin-right:6px;
     }
-
-    nav .logo img {
-      height: 40px;
-      width: auto;
-      vertical-align: middle;
-      border-radius: 10px;
-      display: block;
+    nav .logo img{
+      height:40px;
+      width:auto;
+      border-radius:10px;
+      display:block;
     }
 
     /* ============================
-       Bannière
+       Bannière (uniforme)
        ============================ */
-    .banner {
-      text-align: center;
-      margin-top: 16px;
-      width: 100%;
-      overflow: hidden;
-      padding: 0 16px;
+    .banner{
+      text-align:center;
+      margin-top:16px;
+      width:100%;
+      overflow:hidden;
+      padding:0 16px;
     }
-
-    .banner img {
-      width: 100%;
+    .banner img{
+      width:100%;
       max-width:715px;
-      height: auto;
-      max-height: 260px;
-      object-fit: cover;
-      border-radius: 16px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.10);
+      height:auto;
+      max-height:260px;
+      object-fit:cover;
+      border-radius:16px;
+      box-shadow:0 0 12px rgba(0,0,0,0.10);
+      display:block;
+      margin:0 auto;
     }
 
     /* ============================
        Contenu
        ============================ */
-    .content {
-      max-width: 980px;
-      margin: 22px auto 50px;
-      background: #fff;
-      padding: 26px;
-      border-radius: 14px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.10);
+    main{
+      max-width:980px;
+      margin:22px auto 50px;
+      background:#fff;
+      padding:26px;
+      border-radius:14px;
+      box-shadow:0 0 12px rgba(0,0,0,0.10);
     }
 
-    h1 { font-size: 36px; color: #0047ab; margin: 0 0 10px; text-align: center; }
-    h2 { font-size: 26px; color: #0047ab; margin: 22px 0 10px; }
+    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; text-align:center; }
+    h2{ font-size:22px; color:#0047ab; margin:22px 0 10px; }
+    p{ font-size:17px; margin:0 0 12px; line-height:1.65; color:#0f172a; }
 
-    p {
-      font-size: 18px;
-      margin: 0 0 14px;
-      line-height: 1.65;
+    .intro{
+      text-align:center;
+      max-width:880px;
+      margin:0 auto;
     }
 
-    .intro {
-      text-align: center;
-      margin-bottom: 8px;
+    .box{
+      margin-top:18px;
+      padding:14px 16px;
+      border-radius:14px;
+      background:rgba(0,71,171,0.06);
+      border:1px solid rgba(0,71,171,0.14);
+      color:#0f172a;
+      line-height:1.6;
+      font-size:15px;
     }
 
-    ul {
-      margin: 0;
-      padding-left: 18px;
-      font-size: 17px;
-      line-height: 1.6;
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap:14px;
+      margin-top:18px;
+      align-items:start;
     }
 
-    li { margin: 8px 0; }
-
-    .doclist a {
-      color: #0047ab;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .doclist a:hover { text-decoration: underline; }
-
-    .note {
-      margin-top: 18px;
-      padding: 14px 16px;
-      border-radius: 14px;
-      background: rgba(0,71,171,0.06);
-      border: 1px solid rgba(0,71,171,0.14);
-      font-size: 15px;
-      color: #0f172a;
+    .card{
+      border:1px solid rgba(0,0,0,0.10);
+      border-radius:14px;
+      padding:16px;
+      background:#fff;
+      box-shadow:0 0 10px rgba(0,0,0,0.05);
     }
 
-    .small {
-      margin-top: 18px;
-      font-size: 14px;
-      color: #334155;
+    .card h3{
+      margin:0 0 8px;
+      font-size:18px;
+      color:#0A2A66;
     }
 
-    /* ============================
-       Responsive
-       ============================ */
-    @media (max-width: 760px) {
-      h1 { font-size: 28px; }
-      h2 { font-size: 22px; }
-      nav { flex-direction: column; align-items: flex-start; }
-      .content { padding: 18px; }
+    .list{
+      margin:0;
+      padding-left:18px;
+      font-size:16px;
+      line-height:1.6;
+      color:#0f172a;
+    }
+    .list li{ margin-bottom:8px; }
+
+    .btnrow{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:12px;
+    }
+
+    .btn{
+      display:inline-block;
+      background:#0A2A66;
+      color:#fff;
+      padding:10px 12px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:700;
+      font-size:14px;
+    }
+    .btn:hover{ text-decoration:underline; }
+    .btn.secondary{ background:#0f172a; }
+
+    .small{
+      font-size:14px;
+      color:#334155;
+      line-height:1.6;
+      margin-top:10px;
+    }
+
+    @media (max-width:760px){
+      nav{ flex-direction:column; align-items:flex-start; }
+      main{ margin:18px 12px 40px; padding:18px; }
+      h1{ font-size:28px; }
+      h2{ font-size:20px; }
+      .grid{ grid-template-columns:1fr; }
     }
   </style>
 </head>
@@ -150,6 +179,7 @@
 
     <a href="index.html">Accueil</a>
     <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+    <a href="NotreVision.html">Notre vision</a>
     <a href="cadre.html">Cadre National</a>
     <a href="membres.html">Membres</a>
     <a href="equipe.html">Équipe</a>
@@ -164,58 +194,185 @@
   </div>
 
   <!-- Contenu -->
-  <main class="content">
+  <main>
     <h1>Documents officiels</h1>
 
-    <p class="intro">
-      Cette section regroupe l’ensemble des documents officiels du Parti Souveraineté et Citoyenneté du Québec (SCQ).
-      Les documents ci-dessous sont accessibles librement afin d’assurer la transparence, l’information citoyenne
-      et la participation démocratique.
-    </p>
+    <div class="intro">
+      <p>
+        Cette section regroupe l’ensemble des documents officiels du Parti Souveraineté et Citoyenneté du Québec (SCQ).
+        Tous les documents sont accessibles librement afin d’assurer la transparence, l’information citoyenne
+        et la participation démocratique.
+      </p>
 
-    <h2>Documents des lois</h2>
-    <ul class="doclist">
-      <!-- Dossier: Doc/lois/ (selon tes nouveaux fichiers) -->
-      <li><a href="Doc/lois/Constitution_du_Quebec_souverain.docx" download>Constitution du Québec souverain (DOCX)</a></li>
-      <li><a href="Doc/lois/Lois_organiques_du_Quebec_souverain.docx" download>Lois organiques du Québec souverain (DOCX)</a></li>
-      <li><a href="Doc/lois/Lois_ordinaires_du_Quebec_souverain.docx" download>Lois ordinaires du Québec souverain (DOCX)</a></li>
-      <li><a href="Doc/lois/Lois_administratives_du_quebec.docx" download>Lois administratives du Québec (DOCX)</a></li>
-      <li><a href="Doc/lois/Reglements_du_Quebec_souverain.docx" download>Règlements du Québec souverain (DOCX)</a></li>
-      <li><a href="Doc/lois/SCQ_Outil_de_transition_constitutionnelle.docx" download>SCQ — Outil de transition constitutionnelle (DOCX)</a></li>
-    </ul>
+      <div class="btnrow" style="justify-content:center;">
+        <a class="btn" href="cadre.html">Cadre National</a>
+        <a class="btn secondary" href="contact.html">Nous contacter</a>
+      </div>
+    </div>
 
-    <h2>Documents des Volet</h2>
-    <ul class="doclist">
-      <!-- Dossier: Doc/lois/ (selon tes nouveaux fichiers) -->
-      <li><a href="Doc/lois/VOLET/VOLET 1 - QUÉBEC DANS LE CANADA.docx" download>QUÉBEC DANS LE CANADA (DOCX)</a></li>
-      <li><a href="Doc/lois/VOLET/VOLET 2 - QUÉBEC EN TRANSITION CONSTITUTIONNELLE.docx" download>QUÉBEC EN TRANSITION CONSTITUTIONNELLE (DOCX)</a></li>
-      <li><a href="Doc/lois/VOLET/VOLET 3 - QUÉBEC PAYS SOUVERAIN.docx" download>QUÉBEC PAYS SOUVERAIN (DOCX)</a></li>
-    </ul>
+    <div class="box">
+      <strong>Note :</strong> Les liens utilisent la structure du dépôt GitHub Pages.
+      Sur certains hébergements, la casse est sensible (ex. <strong>Doc</strong> ≠ <strong>doc</strong>).
+      Gardez des noms simples et cohérents pour réduire les erreurs 404.
+    </div>
 
-    <h2>Documents publics</h2>
-    <ul class="doclist">
-      <li><a href="Doc/FICHE_DE_SIGNATURE_D_APPUI.docx" download>Fiche de signature d’appui (DOCX)</a></li>
-      <li><a href="Doc/CODE_DE_CONDUITE_SCQ.docx" download>Code de conduite du SCQ (DOCX)</a></li>
-      <li><a href="Doc/Scq — Doctrine Fondatrice Et Architecture Politique Complète.pdf" download>SCQ — Doctrine fondatrice et architecture politique complète (PDF)</a></li>
-    </ul>
+    <div class="grid">
 
-    <h2>Documents pour les membres</h2>
-    <ul class="doclist">
-      <li><a href="Doc/FORMULAIRE_ENGAGEMENT_MEMBRE_SCQ.docx" download>Formulaire d’engagement du membre — SCQ (DOCX)</a></li>
-      <li><a href="Doc/POLITIQUE_CONTRIBUTIONS_VOLONTAIRES_SCQ.docx" download>Politique de contributions volontaires et d’implication du membre — SCQ (DOCX)</a></li>
-      <li><a href="Doc/LETTRE_REMERCIEMENT_SCQ.docx" download>Lettre officielle de remerciement — SCQ (DOCX)</a></li>
-      <li><a href="Doc/CARTE_MEMBRE_SCQ.jpg" download>Carte de membre (JPG)</a></li>
-    </ul>
+      <!-- Lois / Cadre -->
+      <section class="card" aria-label="Documents des lois">
+        <h2>Documents des lois</h2>
+        <ul class="list">
+          <li>
+            <a class="btn" href="Doc/lois/Constitution_du_Quebec_souverain.docx" download>
+              Télécharger — Constitution (DOCX)
+            </a>
+            <div class="small">Texte suprême : droits, institutions, souveraineté, verrous.</div>
+          </li>
 
-    <div class="note">
-      <strong>Important :</strong> sur GitHub Pages, les noms de dossiers et fichiers sont sensibles à la casse
-      (ex. <strong>Doc</strong> ≠ <strong>doc</strong>). Tes liens utilisent <strong>Doc/...</strong> comme dans ton dépôt.
+          <li>
+            <a class="btn" href="Doc/lois/Lois_organiques_du_Quebec_souverain.docx" download>
+              Télécharger — Lois organiques (DOCX)
+            </a>
+            <div class="small">Lois structurantes organisant l’État et appliquant la Constitution.</div>
+          </li>
+
+          <li>
+            <a class="btn" href="Doc/lois/Lois_ordinaires_du_Quebec_souverain.docx" download>
+              Télécharger — Lois ordinaires (DOCX)
+            </a>
+            <div class="small">Lois sectorielles : logement, transport, environnement, programmes, etc.</div>
+          </li>
+
+          <li>
+            <a class="btn" href="Doc/lois/Lois_administratives_du_quebec.docx" download>
+              Télécharger — Pratiques administratives (DOCX)
+            </a>
+            <div class="small">Directives et procédures internes (sans valeur normative autonome).</div>
+          </li>
+
+          <li>
+            <a class="btn" href="Doc/lois/Reglements_du_Quebec_souverain.docx" download>
+              Télécharger — Règlements (DOCX)
+            </a>
+            <div class="small">Modalités techniques d’application : formats, délais, normes, protocoles.</div>
+          </li>
+
+          <li>
+            <a class="btn" href="Doc/lois/SCQ_Outil_de_transition_constitutionnelle.docx" download>
+              Télécharger — SCQ (Outil de transition constitutionnelle) (DOCX)
+            </a>
+            <div class="small">Cadre transitoire encadrant l’organisation et la conduite du SCQ.</div>
+          </li>
+        </ul>
+
+        <div class="btnrow">
+          <a class="btn secondary" href="cadre.html">Voir le Cadre (HTML)</a>
+        </div>
+      </section>
+
+      <!-- Volets -->
+      <section class="card" aria-label="Documents des volets">
+        <h2>Documents des volets</h2>
+        <ul class="list">
+          <li>
+            <a class="btn" href="Doc/VOLET/VOLET%201%20-%20QU%C3%89BEC%20DANS%20LE%20CANADA.docx" download>
+              Télécharger — Volet 1 (DOCX)
+            </a>
+            <div class="small">Québec dans le Canada : approche immédiate, limites du cadre actuel.</div>
+          </li>
+
+          <li>
+            <a class="btn" href="Doc/VOLET/VOLET%202%20-%20QU%C3%89BEC%20EN%20TRANSITION%20CONSTITUTIONNELLE.docx" download>
+              Télécharger — Volet 2 (DOCX)
+            </a>
+            <div class="small">Transition constitutionnelle : cadre, limites, garanties, continuité.</div>
+          </li>
+
+          <li>
+            <a class="btn" href="Doc/VOLET/VOLET%203%20-%20QU%C3%89BEC%20PAYS%20SOUVERAIN.docx" download>
+              Télécharger — Volet 3 (DOCX)
+            </a>
+            <div class="small">Québec pays souverain : structure finale, institutions, droits, garde-fous.</div>
+          </li>
+        </ul>
+
+        <div class="btnrow">
+          <a class="btn" href="Volet1.html">Volet 1 (HTML)</a>
+          <a class="btn" href="Volet2.html">Volet 2 (HTML)</a>
+          <a class="btn secondary" href="Volet3.html">Volet 3 (HTML)</a>
+        </div>
+      </section>
+
+      <!-- Public -->
+      <section class="card" aria-label="Documents publics">
+        <h2>Documents publics</h2>
+        <ul class="list">
+          <li>
+            <a class="btn" href="Doc/FICHE_DE_SIGNATURE_D_APPUI.docx" download>
+              Télécharger — Fiche de signature d'appui (DOCX)
+            </a>
+          </li>
+
+          <li>
+            <a class="btn" href="Doc/CODE_DE_CONDUITE_SCQ.docx" download>
+              Télécharger — Code de conduite (DOCX)
+            </a>
+            <div class="small">Règles de comportement et de respect applicables au mouvement.</div>
+          </li>
+
+          <li>
+            <a class="btn" href="Doc/Scq%20%E2%80%94%20Doctrine%20Fondatrice%20Et%20Architecture%20Politique%20Compl%C3%A8te.pdf" download>
+              Télécharger — Doctrine fondatrice (PDF)
+            </a>
+          </li>
+        </ul>
+
+        <div class="btnrow">
+          <a class="btn secondary" href="code-conduite.html">Version web — Code de conduite</a>
+        </div>
+      </section>
+
+      <!-- Membres -->
+      <section class="card" aria-label="Documents pour les membres">
+        <h2>Documents pour les membres</h2>
+        <ul class="list">
+          <li>
+            <a class="btn" href="Doc/FORMULAIRE_ENGAGEMENT_MEMBRE_SCQ.docx" download>
+              Télécharger — Formulaire d'engagement (DOCX)
+            </a>
+          </li>
+
+          <li>
+            <a class="btn" href="Doc/POLITIQUE_CONTRIBUTIONS_VOLONTAIRES_SCQ.docx" download>
+              Télécharger — Politique de contributions volontaires (DOCX)
+            </a>
+          </li>
+
+          <li>
+            <a class="btn" href="Doc/LETTRE_REMERCIEMENT_SCQ.docx" download>
+              Télécharger — Lettre officielle de remerciement (DOCX)
+            </a>
+          </li>
+
+          <li>
+            <a class="btn" href="Doc/CARTE_MEMBRE_SCQ.jpg" download>
+              Télécharger — Carte de membre (JPEG)
+            </a>
+          </li>
+        </ul>
+
+        <div class="btnrow">
+          <a class="btn" href="membres.html">Aller à la section Membres</a>
+        </div>
+      </section>
+
     </div>
 
     <p class="small">
-      Pour toute question ou demande de document supplémentaire, veuillez nous contacter à :
-      <strong>contact@scq-officiel.ca</strong>.
+      Pour toute question ou demande de document supplémentaire, contactez :
+      <strong>scqofficiel@gmail.com</strong> (via la page <a href="contact.html">Contact</a>).
     </p>
+
   </main>
 
 </body>
