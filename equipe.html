@@ -8,9 +8,6 @@
   <link rel="stylesheet" href="css/styles.css" />
 
   <style>
-    /* ============================
-       Navigation
-       ============================ */
     nav{
       background:#0A2A66;
       padding:12px 16px;
@@ -31,7 +28,6 @@
       white-space:nowrap;
     }
     nav a:hover{ text-decoration:underline; }
-    nav a[aria-current="page"]{ background:rgba(255,255,255,0.15); }
     nav .logo{
       display:inline-flex;
       align-items:center;
@@ -46,31 +42,21 @@
       display:block;
     }
 
-    /* ============================
-       Bannière (uniforme)
-       ============================ */
     .banner{
       text-align:center;
       margin-top:16px;
-      width:100%;
-      overflow:hidden;
       padding:0 16px;
     }
     .banner img{
       width:100%;
       max-width:715px;
       height:auto;
-      max-height:260px;
-      object-fit:cover;
       border-radius:16px;
       box-shadow:0 0 12px rgba(0,0,0,0.10);
       display:block;
       margin:0 auto;
     }
 
-    /* ============================
-       Contenu
-       ============================ */
     main{
       max-width:980px;
       margin:22px auto 50px;
@@ -81,90 +67,118 @@
     }
 
     h1{ font-size:34px; color:#0047ab; margin:0 0 10px; text-align:center; }
-    h2{ font-size:22px; color:#0047ab; margin:22px 0 10px; }
-    h3{ font-size:18px; color:#0A2A66; margin:0 0 8px; }
-    p{ font-size:17px; margin:0 0 12px; line-height:1.65; color:#0f172a; }
-
-    .intro{
-      text-align:center;
-      max-width:860px;
-      margin:0 auto;
-    }
+    h2{ font-size:24px; color:#0047ab; margin:26px 0 10px; }
+    p{ font-size:17px; margin:0 0 14px; line-height:1.65; color:#0f172a; }
 
     .box{
-      margin-top:18px;
-      padding:14px 16px;
+      margin:18px 0;
+      padding:16px;
       border-radius:14px;
       background:rgba(0,71,171,0.06);
       border:1px solid rgba(0,71,171,0.14);
-      color:#0f172a;
-      line-height:1.6;
-      font-size:15px;
     }
+
+    .toolbar{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:12px;
+    }
+
+    .btn{
+      background:#0A2A66;
+      color:#fff;
+      padding:10px 14px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:700;
+      font-size:14px;
+      display:inline-block;
+    }
+    .btn.secondary{ background:#0f172a; }
+    .btn:hover{ text-decoration:underline; }
 
     .grid{
       display:grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns:repeat(2, minmax(0,1fr));
       gap:14px;
-      margin-top:18px;
-      align-items:start;
+      margin-top:14px;
+      align-items:stretch;
     }
 
-    .card{
+    .member{
       border:1px solid rgba(0,0,0,0.10);
       border-radius:14px;
       padding:16px;
       background:#fff;
       box-shadow:0 0 10px rgba(0,0,0,0.05);
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+
+    .member-top{
+      display:flex;
+      flex-direction:column;
+      gap:4px;
+    }
+
+    .name{
+      font-size:18px;
+      font-weight:800;
+      color:#0A2A66;
+      margin:0;
+      line-height:1.25;
+    }
+
+    .meta{
+      font-size:14px;
+      color:#334155;
+      margin:0;
+      line-height:1.4;
     }
 
     .role{
-      display:inline-block;
-      background:rgba(10,42,102,0.08);
-      border:1px solid rgba(10,42,102,0.12);
-      color:#0A2A66;
-      padding:6px 10px;
-      border-radius:999px;
-      font-weight:800;
-      font-size:12px;
-      margin-bottom:10px;
-    }
-
-    .list{
-      margin:0;
-      padding-left:18px;
-      font-size:16px;
-      line-height:1.6;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      margin-top:6px;
+      padding:8px 10px;
+      border-radius:12px;
+      background:rgba(15,23,42,0.04);
+      border:1px solid rgba(15,23,42,0.10);
       color:#0f172a;
+      font-size:14px;
+      font-weight:700;
+      width:fit-content;
     }
-    .list li{ margin-bottom:8px; }
 
-    .btnrow{
+    .desc{
+      margin:0;
+      font-size:15px;
+      color:#0f172a;
+      line-height:1.65;
+    }
+
+    .tags{
       display:flex;
       flex-wrap:wrap;
-      gap:10px;
-      margin-top:12px;
-      justify-content:center;
+      gap:8px;
+      margin-top:auto;
     }
 
-    .btn{
-      display:inline-block;
-      background:#0A2A66;
-      color:#fff;
-      padding:10px 12px;
-      border-radius:12px;
-      text-decoration:none;
+    .tag{
+      font-size:12px;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(0,71,171,0.08);
+      border:1px solid rgba(0,71,171,0.14);
+      color:#0A2A66;
       font-weight:700;
-      font-size:14px;
-      border:none;
-      cursor:pointer;
-      text-align:center;
     }
-    .btn:hover{ text-decoration:underline; }
-    .btn.secondary{ background:#0f172a; }
 
     .note{
-      margin-top:18px;
+      margin-top:22px;
       padding:14px 16px;
       border-radius:14px;
       background:rgba(15,23,42,0.04);
@@ -174,14 +188,7 @@
       line-height:1.6;
     }
 
-    .small{
-      font-size:14px;
-      color:#334155;
-      line-height:1.6;
-      margin:0;
-    }
-
-    @media (max-width:760px){
+    @media(max-width:760px){
       nav{ flex-direction:column; align-items:flex-start; }
       main{ margin:18px 12px 40px; padding:18px; }
       h1{ font-size:28px; }
@@ -198,10 +205,8 @@
     <a class="logo" href="index.html" aria-label="Retour à l’accueil">
       <img src="images/logo_scq.jpg" alt="Logo SCQ">
     </a>
-
     <a href="index.html">Accueil</a>
     <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
-    <a href="NotreVision.html">Notre vision</a>
     <a href="cadre.html">Cadre National</a>
     <a href="membres.html">Membres</a>
     <a href="equipe.html" aria-current="page">Équipe</a>
@@ -215,114 +220,71 @@
     <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
   </div>
 
-  <!-- Contenu -->
   <main>
-    <h1>Équipe</h1>
+    <h1>Équipe du SCQ</h1>
 
-    <div class="intro">
+    <div class="box">
       <p>
-        Cette page présente la structure d’équipe et les rôles fonctionnels du SCQ.
-        L’objectif est d’être clair : qui fait quoi, comment on travaille, et comment participer.
+        Cette page présente l’équipe et les responsabilités au sein du Parti Souveraineté et Citoyenneté du Québec (SCQ).
+        L’objectif est d’être clair : <strong>qui fait quoi</strong>, dans quelle région, et pour quel mandat.
       </p>
 
-      <div class="btnrow">
-        <a class="btn" href="membres.html">Devenir membre</a>
-        <a class="btn secondary" href="contact.html">Nous contacter</a>
+      <div class="toolbar">
+        <a class="btn" href="contact.html">Proposer votre aide</a>
+        <a class="btn secondary" href="membres.html">Devenir membre</a>
+        <a class="btn" href="doc.html">Documents</a>
       </div>
     </div>
 
-    <div class="box">
-      <strong>Important :</strong> le SCQ fonctionne sur une base d’entraide et de collaboration.
-      Les rôles ci-dessous décrivent la structure souhaitée. Ils peuvent évoluer selon les besoins,
-      les projets et l’arrivée de nouveaux collaborateurs.
-    </div>
+    <h2>Liste du personnel et des responsabilités</h2>
 
-    <h2>Structure et rôles</h2>
+    <section class="grid">
 
-    <div class="grid">
-      <section class="card">
-        <div class="role">Direction</div>
-        <h3>Chef / Représentant principal</h3>
-        <p class="small">
-          Porte la vision, représente le SCQ publiquement et coordonne la cohérence générale.
+      <!-- Exemple 1 -->
+      <article class="member">
+        <div class="member-top">
+          <p class="name">Benoit Cantin</p>
+          <p class="meta">Ville de Québec</p>
+          <div class="role">Chef du parti</div>
+        </div>
+
+        <p class="desc">
+          Direction générale du SCQ, représentation publique, priorités stratégiques,
+          validation des documents officiels et coordination des projets.
         </p>
-        <ul class="list">
-          <li>Communication publique et orientation stratégique.</li>
-          <li>Validation des documents structurants.</li>
-          <li>Coordination des priorités (cadre, volets, transparence).</li>
-        </ul>
-      </section>
 
-      <section class="card">
-        <div class="role">Administration</div>
-        <h3>Coordination & opérations</h3>
-        <p class="small">
-          Assure l’organisation quotidienne, la structure interne et le suivi des tâches.
-        </p>
-        <ul class="list">
-          <li>Gestion des demandes (messages, courriels, formulaires).</li>
-          <li>Organisation des réunions et des suivis.</li>
-          <li>Archivage et mise à jour des documents officiels.</li>
-        </ul>
-      </section>
+        <div class="tags">
+          <span class="tag">Direction</span>
+          <span class="tag">Stratégie</span>
+          <span class="tag">Communication</span>
+        </div>
+      </article>
 
-      <section class="card">
-        <div class="role">Communications</div>
-        <h3>Réseaux sociaux & contenu</h3>
-        <p class="small">
-          Produit et organise les publications (Facebook, vidéos, visuels, annonces).
-        </p>
-        <ul class="list">
-          <li>Planification des publications et messages publics.</li>
-          <li>Création visuelle (bannières, affiches, formats).</li>
-          <li>Modération : respect du code de conduite.</li>
-        </ul>
-      </section>
+      <!-- Exemple 2 (template à dupliquer) -->
+      <article class="member">
+        <div class="member-top">
+          <p class="name">Nom Prénom</p>
+          <p class="meta">Ville / Région</p>
+          <div class="role">Titre du rôle</div>
+        </div>
 
-      <section class="card">
-        <div class="role">Web</div>
-        <h3>Site officiel & documentation</h3>
-        <p class="small">
-          Maintient le site (structure, liens, pages uniformes, téléchargements).
+        <p class="desc">
+          Description courte : responsabilités principales, mandat, tâches.
         </p>
-        <ul class="list">
-          <li>Mise en page uniforme (navigation, bannière, cartes, boutons).</li>
-          <li>Correction des liens (DOCX/PDF/HTML) et des erreurs 404.</li>
-          <li>Publication et mise à jour du cadre et des volets.</li>
-        </ul>
-      </section>
 
-      <section class="card">
-        <div class="role">Finances</div>
-        <h3>Transparence & registre</h3>
-        <p class="small">
-          Tient un registre simple des coûts réels (hébergement, outils, matériel).
-        </p>
-        <ul class="list">
-          <li>Collecte et archivage des preuves (reçus / factures).</li>
-          <li>Publication de résumés compréhensibles.</li>
-          <li>Application de la politique de contributions volontaires.</li>
-        </ul>
-      </section>
+        <div class="tags">
+          <span class="tag">Domaine</span>
+          <span class="tag">Domaine</span>
+        </div>
+      </article>
 
-      <section class="card">
-        <div class="role">Citoyens</div>
-        <h3>Bénévoles & collaborateurs</h3>
-        <p class="small">
-          Participent selon leurs compétences (terrain, idées, rédaction, diffusion).
-        </p>
-        <ul class="list">
-          <li>Partager l’information et inviter des nouveaux membres.</li>
-          <li>Aider à la rédaction et à la vérification des documents.</li>
-          <li>Soutenir des projets concrets (selon disponibilité).</li>
-        </ul>
-      </section>
-    </div>
+      <!-- Ajoute d'autres membres ici -->
+
+    </section>
 
     <div class="note">
-      <strong>Participer :</strong> si vous souhaitez aider (site web, communications, rédaction, organisation),
-      écrivez-nous via la page <a href="contact.html">Contact</a>.
-      Merci d’indiquer vos disponibilités et vos compétences.
+      <strong>Mise à jour :</strong> si vous souhaitez rejoindre l’équipe, indiquez votre région, vos compétences
+      et le type d’implication (temps, tâches, spécialité) via la page <a href="contact.html">Contact</a>.
     </div>
 
   </main>
