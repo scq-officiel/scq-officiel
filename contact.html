@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="css/styles.css" />
 
   <style>
+    /* ============================
+       Navigation
+       ============================ */
     nav{
       background:#0A2A66;
       padding:12px 16px;
@@ -28,6 +31,7 @@
       white-space:nowrap;
     }
     nav a:hover{ text-decoration:underline; }
+    nav a[aria-current="page"]{ background:rgba(255,255,255,0.15); }
     nav .logo{
       display:inline-flex;
       align-items:center;
@@ -42,6 +46,9 @@
       display:block;
     }
 
+    /* ============================
+       Bannière (uniforme)
+       ============================ */
     .banner{
       text-align:center;
       margin-top:16px;
@@ -61,6 +68,9 @@
       margin:0 auto;
     }
 
+    /* ============================
+       Contenu
+       ============================ */
     main{
       max-width:980px;
       margin:22px auto 50px;
@@ -70,8 +80,8 @@
       box-shadow:0 0 12px rgba(0,0,0,0.10);
     }
 
-    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; }
-    h2{ font-size:24px; color:#0047ab; margin:22px 0 10px; }
+    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; text-align:center; }
+    h2{ font-size:22px; color:#0047ab; margin:22px 0 10px; }
     p{ font-size:17px; margin:0 0 12px; line-height:1.65; color:#0f172a; }
 
     .box{
@@ -84,9 +94,10 @@
 
     .grid{
       display:grid;
-      grid-template-columns:1fr 1fr;
+      grid-template-columns: 1fr 1fr;
       gap:14px;
       margin-top:14px;
+      align-items:start;
     }
 
     .card{
@@ -111,6 +122,7 @@
       border-radius:12px;
       border:1px solid rgba(0,0,0,0.15);
       font-size:15px;
+      outline:none;
     }
 
     textarea{ min-height:140px; resize:vertical; }
@@ -133,16 +145,10 @@
       font-size:14px;
       border:none;
       cursor:pointer;
+      text-align:center;
     }
     .btn:hover{ text-decoration:underline; }
     .btn.secondary{ background:#0f172a; }
-
-    .btn.facebook{
-      background:#1877f2;
-    }
-    .btn.facebook:hover{
-      background:#145dbf;
-    }
 
     .note{
       margin-top:14px;
@@ -167,101 +173,132 @@
       main{ margin:18px 12px 40px; padding:18px; }
       h1{ font-size:28px; }
       h2{ font-size:20px; }
-      .grid{ grid-template-columns:1fr; }
+      .grid{ grid-template-columns: 1fr; }
     }
   </style>
 </head>
 
 <body>
 
-<nav>
-  <a class="logo" href="index.html">
-    <img src="images/logo_scq.jpg" alt="Logo SCQ">
-  </a>
-  <a href="index.html">Accueil</a>
-  <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
-  <a href="cadre.html">Cadre National</a>
-  <a href="membres.html">Membres</a>
-  <a href="equipe.html">Équipe</a>
-  <a href="comptabilite.html">Comptabilité</a>
-  <a href="contact.html" aria-current="page">Contact</a>
-  <a href="doc.html">Documents</a>
-</nav>
+  <!-- Navigation -->
+  <nav>
+    <a class="logo" href="index.html" aria-label="Retour à l’accueil">
+      <img src="images/logo_scq.jpg" alt="Logo SCQ">
+    </a>
 
-<div class="banner">
-  <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
-</div>
+    <a href="index.html">Accueil</a>
+    <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+    <a href="NotreVision.html">Notre vision</a>
+    <a href="cadre.html">Cadre National</a>
+    <a href="membres.html">Membres</a>
+    <a href="equipe.html">Équipe</a>
+    <a href="comptabilite.html">Comptabilité</a>
+    <a href="contact.html" aria-current="page">Contact</a>
+    <a href="doc.html">Documents</a>
+  </nav>
 
-<main>
-  <h1>Contact</h1>
-
-  <div class="box">
-    <p>
-      Vous pouvez nous écrire via le formulaire ci-dessous.
-      Les messages sont transmis directement à l’adresse officielle :
-      <strong>scqofficiel@gmail.com</strong>.
-    </p>
+  <!-- Bannière -->
+  <div class="banner">
+    <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
   </div>
 
-  <div class="grid">
+  <!-- Contenu -->
+  <main>
+    <h1>Contact</h1>
 
-    <section class="card">
-      <h2>Écrire au SCQ</h2>
+    <div class="box">
+      <p>
+        Pour toute question, demande d’information ou demande de document, vous pouvez nous écrire via le formulaire ci-dessous.
+        Les messages envoyés par ce formulaire sont transmis directement à l’adresse officielle :
+        <strong>scqofficiel@gmail.com</strong>.
+      </p>
+      <p class="small">
+        Si vous préférez, vous pouvez aussi nous écrire directement à cette adresse courriel.
+      </p>
+    </div>
 
-      <form action="https://formspree.io/f/mjgvryza" method="POST">
-        <label>Nom</label>
-        <input type="text" name="nom" required>
+    <div class="grid">
+      <!-- Formulaire -->
+      <section class="card" aria-label="Formulaire de contact">
+        <h2>Écrire au SCQ</h2>
 
-        <label>Courriel</label>
-        <input type="email" name="email" required>
+        <p class="small">
+          Remplissez le formulaire et cliquez sur <strong>Envoyer le message</strong>.
+          Si c’est la première fois que Formspree est utilisé, il peut exiger une validation du compte administrateur.
+        </p>
 
-        <label>Objet</label>
-        <select name="objet" required>
-          <option value="">Choisir…</option>
-          <option>Information générale</option>
-          <option>Documents / cadre</option>
-          <option>Adhésion / membres</option>
-          <option>Comptabilité / transparence</option>
-          <option>Autre</option>
-        </select>
+        <!-- IMPORTANT : garde ton URL Formspree ici -->
+        <form action="https://formspree.io/f/mjgvryza" method="POST">
+          <label for="nom">Nom</label>
+          <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
 
-        <label>Message</label>
-        <textarea name="message" required></textarea>
+          <label for="email">Courriel</label>
+          <input type="email" id="email" name="email" placeholder="votre@email.com" required>
 
-        <input type="hidden" name="_subject" value="[SCQ] Message depuis le site">
-        <input type="hidden" name="_template" value="table">
+          <label for="objet">Objet</label>
+          <select id="objet" name="objet" required>
+            <option value="">Choisir…</option>
+            <option value="Information générale">Information générale</option>
+            <option value="Documents / cadre">Documents / cadre</option>
+            <option value="Adhésion / membres">Adhésion / membres</option>
+            <option value="Comptabilité / transparence">Comptabilité / transparence</option>
+            <option value="Autre">Autre</option>
+          </select>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Expliquez votre demande de façon claire et précise…" required></textarea>
+
+          <!-- Options Formspree -->
+          <input type="hidden" name="_subject" value="[SCQ] Nouveau message depuis le site officiel">
+          <input type="hidden" name="_template" value="table">
+
+          <div class="btnrow">
+            <button type="submit" class="btn">Envoyer le message</button>
+            <a class="btn secondary" href="doc.html">Documents</a>
+            <a class="btn" href="cadre.html">Cadre National</a>
+          </div>
+        </form>
+
+        <div class="note">
+          <strong>Conseil :</strong> si votre demande concerne un document précis, indiquez le nom de la page ou du fichier
+          (ex. <em>loi-constitution.html</em> ou <em>Doc/lois/Constitution_du_Quebec_souverain.docx</em>).
+        </div>
+      </section>
+
+      <!-- Coordonnées -->
+      <section class="card" aria-label="Coordonnées">
+        <h2>Coordonnées</h2>
+        <p><strong>Courriel officiel :</strong> scqofficiel@gmail.com</p>
+
+        <h2>Réseaux</h2>
+        <p class="small" style="margin-bottom:10px;">
+          Page Facebook officielle du SCQ :
+        </p>
+        <div class="btnrow">
+          <a class="btn" href="https://www.facebook.com/scqofficiel" target="_blank" rel="noopener noreferrer">
+            Ouvrir Facebook (SCQ Officiel)
+          </a>
+        </div>
+
+        <h2>Références utiles</h2>
+        <p class="small">
+          Pour consulter les textes officiels et le cadre :
+        </p>
 
         <div class="btnrow">
-          <button type="submit" class="btn">Envoyer le message</button>
-          <a class="btn secondary" href="doc.html">Documents</a>
           <a class="btn" href="cadre.html">Cadre National</a>
+          <a class="btn secondary" href="doc.html">Documents officiels</a>
         </div>
-      </form>
-    </section>
 
-    <section class="card">
-      <h2>Coordonnées</h2>
+        <div class="note">
+          <strong>Note technique :</strong> sur certains hébergements, la casse des dossiers et fichiers est sensible
+          (ex. <strong>Doc</strong> ≠ <strong>doc</strong>). Assurez-vous que les liens correspondent exactement
+          aux noms présents dans le dépôt.
+        </div>
+      </section>
+    </div>
 
-      <p><strong>Courriel :</strong> scqofficiel@gmail.com</p>
-
-      <div class="btnrow">
-        <a
-          class="btn facebook"
-          href="https://www.facebook.com/scqofficiel"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Nous rejoindre sur Facebook
-        </a>
-      </div>
-
-      <div class="note">
-        Les réponses sont traitées dans les meilleurs délais.
-      </div>
-    </section>
-
-  </div>
-</main>
+  </main>
 
 </body>
 </html>
