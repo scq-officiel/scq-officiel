@@ -31,22 +31,19 @@
     nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; margin-right:6px; }
     nav .logo img{ height:40px; width:auto; border-radius:10px; display:block; }
 
-    .banner {
-      text-align: center;
-      margin-top: 16px;
-      width: 100%;
-      overflow: hidden;
-      padding: 0 16px;
+    .banner{
+      text-align:center;
+      margin-top:16px;
+      padding:0 16px;
     }
-
-    .banner img {
-      width: 100%;
+    .banner img{
+      width:100%;
       max-width:715px;
-      height: auto;
-      max-height: 260px;
-      object-fit: cover;
-      border-radius: 16px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.10);
+      height:auto;
+      border-radius:16px;
+      box-shadow:0 0 12px rgba(0,0,0,0.10);
+      display:block;
+      margin:0 auto;
     }
 
     main{
@@ -58,13 +55,21 @@
       box-shadow:0 0 12px rgba(0,0,0,0.10);
     }
 
-    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; }
-    h2{ font-size:24px; color:#0047ab; margin:22px 0 10px; }
-    p{ font-size:17px; margin:0 0 12px; line-height:1.65; color:#0f172a; }
+    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; text-align:center; }
+    h2{ font-size:24px; color:#0047ab; margin:26px 0 10px; }
+    p{ font-size:17px; margin:0 0 14px; line-height:1.65; color:#0f172a; }
 
-    .hero{
+    .box{
+      margin:18px 0;
+      padding:16px;
+      border-radius:14px;
+      background:rgba(0,71,171,0.06);
+      border:1px solid rgba(0,71,171,0.14);
+    }
+
+    .grid{
       display:grid;
-      grid-template-columns: 1.2fr 0.8fr;
+      grid-template-columns:repeat(2, minmax(0,1fr));
       gap:14px;
       margin-top:14px;
       align-items:start;
@@ -86,60 +91,55 @@
     }
 
     .btn{
-      display:inline-block;
       background:#0A2A66;
       color:#fff;
-      padding:10px 12px;
-      border-radius:12px;
+      padding:10px 14px;
+      border-radius:999px;
       text-decoration:none;
       font-weight:700;
       font-size:14px;
+      display:inline-block;
     }
-    .btn:hover{ text-decoration:underline; }
     .btn.secondary{ background:#0f172a; }
+    .btn:hover{ text-decoration:underline; }
 
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap:14px;
-      margin-top:14px;
+    ul{
+      margin:10px 0 0 18px;
+      color:#0f172a;
+      line-height:1.6;
+      font-size:16px;
+      padding:0;
     }
+    li{ margin:8px 0; }
 
-    .meta{
-      margin-top:18px;
+    .note{
+      margin-top:22px;
       padding:14px 16px;
       border-radius:14px;
-      background:rgba(0,71,171,0.06);
-      border:1px solid rgba(0,71,171,0.14);
+      background:rgba(15,23,42,0.04);
+      border:1px solid rgba(15,23,42,0.10);
+      font-size:14px;
       color:#0f172a;
-      font-size:15px;
       line-height:1.6;
     }
 
-    .small{
-      margin-top:16px;
-      font-size:14px;
-      color:#334155;
-    }
-
-    @media (max-width: 760px){
+    @media(max-width:760px){
       nav{ flex-direction:column; align-items:flex-start; }
       main{ margin:18px 12px 40px; padding:18px; }
       h1{ font-size:28px; }
       h2{ font-size:20px; }
-      .hero{ grid-template-columns: 1fr; }
-      .grid{ grid-template-columns: 1fr; }
+      .grid{ grid-template-columns:1fr; }
     }
   </style>
 </head>
 
 <body>
 
+  <!-- Navigation -->
   <nav>
     <a class="logo" href="index.html" aria-label="Retour à l’accueil">
       <img src="images/logo_scq.jpg" alt="Logo SCQ">
     </a>
-
     <a href="index.html" aria-current="page">Accueil</a>
     <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
     <a href="cadre.html">Cadre National</a>
@@ -150,34 +150,47 @@
     <a href="doc.html">Documents</a>
   </nav>
 
+  <!-- Bannière -->
   <div class="banner">
     <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
   </div>
 
   <main>
-    <h1>Parti Souveraineté et Citoyenneté du Québec (SCQ)</h1>
-    <p>
-      Bienvenue sur l’espace officiel du SCQ. Cette plateforme présente notre cadre, nos documents et nos outils
-      de transparence. L’objectif est de rendre l’information accessible, structurée et vérifiable.
-    </p>
 
-    <section class="hero">
-      <div class="card">
+    <h1>Parti Souveraineté et Citoyenneté du Québec (SCQ)</h1>
+
+    <div class="box">
+      <p>
+        Bienvenue sur l’espace officiel du SCQ. Cette plateforme présente notre cadre, nos documents et notre méthode
+        de transparence. L’objectif est de rendre l’information <strong>accessible, structurée et vérifiable</strong>.
+      </p>
+
+      <div class="btnrow">
+        <a class="btn" href="cadre.html">Cadre National</a>
+        <a class="btn secondary" href="doc.html">Documents officiels</a>
+        <a class="btn" href="contact.html">Écrire au SCQ</a>
+      </div>
+    </div>
+
+    <div class="grid">
+
+      <section class="card">
         <h2>Accès rapide</h2>
         <p>
-          Consulte le cadre national (hiérarchie des normes) et accède directement aux documents officiels.
+          Accédez aux pages essentielles et à l’organisation du projet.
         </p>
         <div class="btnrow">
-          <a class="btn" href="cadre.html">Cadre National</a>
-          <a class="btn secondary" href="doc.html">Documents officiels</a>
-          <a class="btn" href="contact.html">Nous contacter</a>
+          <a class="btn" href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+          <a class="btn" href="NotreVision.html">Notre vision</a>
+          <a class="btn secondary" href="equipe.html">Équipe</a>
+          <a class="btn secondary" href="membres.html">Membres</a>
         </div>
-      </div>
+      </section>
 
-      <div class="card">
-        <h2>Liens essentiels</h2>
-        <p style="margin-bottom:10px;">
-          Versions web (HTML) des textes structurants :
+      <section class="card">
+        <h2>Textes structurants (HTML)</h2>
+        <p>
+          Versions web des documents de référence (consultation rapide).
         </p>
         <div class="btnrow">
           <a class="btn" href="loi-constitution.html">Constitution</a>
@@ -185,43 +198,45 @@
           <a class="btn" href="loi-ordinaires.html">Lois ordinaires</a>
           <a class="btn" href="loi-Reglements.html">Règlements</a>
           <a class="btn" href="loi-administratif.html">Pratiques admin.</a>
-          <a class="btn secondary" href="loi-scq-otc.html">SCQ – OTC</a>
+          <a class="btn secondary" href="loi-scq-otc.html">SCQ — OTC</a>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="grid">
-      <div class="card">
-        <h2>Transparence</h2>
+      <section class="card">
+        <h2>Volets (structure publique)</h2>
         <p>
-          Les documents officiels sont publiés pour consultation et téléchargement, afin de garantir une source unique
-          et stable. La page <strong>Documents</strong> regroupe les versions DOCX/PDF.
+          Trois volets pour clarifier l’approche, sans rien cacher, et montrer ce qui est construit.
         </p>
         <div class="btnrow">
-          <a class="btn" href="doc.html">Ouvrir Documents</a>
+          <a class="btn" href="Volet1.html">Volet 1</a>
+          <a class="btn" href="Volet2.html">Volet 2</a>
+          <a class="btn" href="Volet3.html">Volet 3</a>
         </div>
-      </div>
+        <p style="margin-top:10px; font-size:14px; color:#334155;">
+          Si ces liens ne fonctionnent pas, vérifie que les fichiers sont bien à la racine du site : <strong>Volet1.html</strong>, <strong>Volet2.html</strong>, <strong>Volet3.html</strong>.
+        </p>
+      </section>
 
-      <div class="card">
-        <h2>Organisation</h2>
+      <section class="card">
+        <h2>Transparence et règles internes</h2>
         <p>
-          La page <strong>Cadre National</strong> présente l’ordre des normes et les accès directs aux textes (HTML et DOCX),
-          pour éviter la confusion et les erreurs de liens.
+          Les documents publics et les règles de fonctionnement (consultation et téléchargements).
         </p>
         <div class="btnrow">
-          <a class="btn" href="cadre.html">Ouvrir Cadre National</a>
+          <a class="btn" href="doc.html">Téléchargements</a>
+          <a class="btn secondary" href="code-conduite.html">Code de conduite (HTML)</a>
+          <a class="btn" href="comptabilite.html">Comptabilité</a>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <div class="meta">
-      <strong>Note technique :</strong> sur certains hébergements (ex. GitHub Pages), la casse des dossiers et fichiers est
-      sensible (ex. <strong>Doc</strong> ≠ <strong>doc</strong>). Garde des noms simples et cohérents pour réduire les erreurs 404.
     </div>
 
-    <p class="small">
-      Pour toute question ou demande : <strong>scqofficiel@gmail.com</strong>
-    </p>
+    <div class="note">
+      <strong>Note technique :</strong> sur GitHub Pages, les noms doivent correspondre exactement.
+      Le dossier <strong>Doc</strong> est différent de <strong>doc</strong>, et les fichiers doivent être identiques lettre par lettre.
+      Pour les téléchargements, assure-toi que les documents existent bien dans <strong>Doc/lois/</strong> ou <strong>Doc/</strong>.
+    </div>
+
   </main>
 
 </body>
