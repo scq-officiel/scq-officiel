@@ -63,12 +63,14 @@
 
     .banner img {
       width: 100%;
-      max-width:715px;
+      max-width: 715px;
       height: auto;
       max-height: 260px;
       object-fit: cover;
       border-radius: 16px;
       box-shadow: 0 0 12px rgba(0,0,0,0.10);
+      display: block;
+      margin: 0 auto;
     }
 
     /* ============================
@@ -86,7 +88,7 @@
 
     h1 { font-size: 36px; color: #0047ab; margin: 0 0 10px; }
     h2 { font-size: 26px; color: #0047ab; margin: 22px 0 10px; }
-    p  { font-size: 18px; margin: 0 0 14px; line-height: 1.65; }
+    p  { font-size: 18px; margin: 0 0 14px; line-height: 1.65; color: #0f172a; }
 
     /* ============================
        Cartes (niveaux)
@@ -144,6 +146,45 @@
       background: #0f172a;
     }
 
+    /* ============================
+       Section VOLETS
+       ============================ */
+    .volets {
+      margin-top: 26px;
+      text-align: left;
+    }
+
+    .volets-intro {
+      margin: 0 0 10px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: rgba(0,71,171,0.06);
+      border: 1px solid rgba(0,71,171,0.14);
+    }
+
+    .volets-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+      color: #0A2A66;
+      background: rgba(10,42,102,0.08);
+      border: 1px solid rgba(10,42,102,0.16);
+      padding: 6px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    /* ============================
+       Note
+       ============================ */
     .note {
       margin-top: 18px;
       text-align: left;
@@ -159,6 +200,10 @@
     /* ============================
        Responsive
        ============================ */
+    @media (max-width: 900px) {
+      .volets-grid { grid-template-columns: 1fr; }
+    }
+
     @media (max-width: 760px) {
       h1 { font-size: 28px; }
       h2 { font-size: 22px; }
@@ -197,8 +242,8 @@
 
     <p>
       Bienvenue dans la section Cadre du Parti Souveraineté et Citoyenneté du Québec (SCQ).
-      Vous trouverez ici l’accès structuré aux documents officiels et à la hiérarchie des normes
-      qui encadre le Québec souverain.
+      Vous trouverez ici l’accès structuré aux documents officiels, ainsi que l’organisation de notre approche
+      pour informer le public avec clarté et transparence.
     </p>
 
     <h2>Règle de base à retenir</h2>
@@ -283,10 +328,75 @@
 
     </div>
 
+    <!-- ============================
+         NOUVELLE SECTION : 3 VOLETS
+         ============================ -->
+    <section class="volets" aria-label="Approche publique en trois volets">
+      <h2>Approche publique en 3 volets</h2>
+
+      <div class="volets-intro">
+        <p style="margin:0;">
+          Pour être transparents et ne rien cacher au public, notre démarche est structurée en trois volets clairs.
+          Chaque volet explique ce que nous appliquons immédiatement, comment nous sécurisons une transition, et ce que nous
+          construisons une fois le Québec pleinement souverain.
+        </p>
+      </div>
+
+      <div class="volets-grid">
+
+        <div class="niveau">
+          <div class="tag">VOLET 1 — Immédiat</div>
+          <h3>Québec dans le Canada</h3>
+          <p>
+            Règles et protections applicables tout de suite, sans rupture juridique : primauté du peuple, transparence,
+            lutte contre les abus modernes, protection du citoyen et préparation institutionnelle.
+          </p>
+          <div class="btnrow">
+            <a class="btn secondary" href="Doc/VOLET/VOLET%201%20-%20QU%C3%89BEC%20DANS%20LE%20CANADA.docx" download>
+              Télécharger (DOCX)
+            </a>
+          </div>
+        </div>
+
+        <div class="niveau">
+          <div class="tag">VOLET 2 — Transition</div>
+          <h3>Québec en transition constitutionnelle</h3>
+          <p>
+            Encadrement strict de la transition : continuité des droits, stabilité économique et sociale, limites claires
+            de l’autorité transitoire, transparence intégrale et protection contre l’ingérence.
+          </p>
+          <div class="btnrow">
+            <a class="btn secondary" href="Doc/VOLET/VOLET%202%20-%20QU%C3%89BEC%20EN%20TRANSITION%20CONSTITUTIONNELLE.docx" download>
+              Télécharger (DOCX)
+            </a>
+          </div>
+        </div>
+
+        <div class="niveau">
+          <div class="tag">VOLET 3 — Pays</div>
+          <h3>Québec pays souverain</h3>
+          <p>
+            Vision d’un État souverain fondé sur la dignité humaine, les libertés, la primauté du peuple, la protection
+            de la vie privée, une économie au service des citoyens et des contre-pouvoirs réels.
+          </p>
+          <div class="btnrow">
+            <a class="btn secondary" href="Doc/VOLET/VOLET%203%20-%20QU%C3%89BEC%20PAYS%20SOUUVERAIN.docx" download>
+              Télécharger (DOCX)
+            </a>
+          </div>
+          <!-- IMPORTANT :
+               Le nom exact du fichier est "VOLET 3 - QUÉBEC PAYS SOUVERAIN.docx"
+               Si ton lien 404, remets exactement ce nom OU renomme le fichier (recommandé).
+          -->
+        </div>
+
+      </div>
+    </section>
+
     <div class="note">
       <strong>Conseil technique :</strong> sur GitHub Pages, la casse et les caractères spéciaux comptent.
       Assure-toi que les dossiers et fichiers s’appellent exactement pareil (ex. <strong>Doc</strong> ≠ <strong>doc</strong>).
-      Évite les accents/espaces dans les noms de fichiers pour réduire les erreurs 404.
+      Idéalement, renomme les fichiers avec des noms simples (sans accents/espaces) pour éviter les erreurs 404.
     </div>
 
   </main>
