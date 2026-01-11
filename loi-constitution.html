@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Constitution – SCQ</title>
+  <title>SCQ - Constitution</title>
 
   <link rel="stylesheet" href="css/styles.css" />
 
@@ -28,24 +28,33 @@
       white-space:nowrap;
     }
     nav a:hover{ text-decoration:underline; }
-    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; margin-right:6px; }
-    nav .logo img{ height:40px; width:auto; border-radius:10px; display:block; }
+    nav .logo{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:0;
+      margin-right:6px;
+    }
+    nav .logo img{
+      height:40px;
+      width:auto;
+      border-radius:10px;
+      display:block;
+    }
 
     .banner{
       text-align:center;
       margin-top:16px;
-      width:100%;
-      overflow:hidden;
       padding:0 16px;
     }
     .banner img{
       width:100%;
-      max-width:1100px;
+      max-width:715px;
       height:auto;
-      max-height:260px;
-      object-fit:cover;
       border-radius:16px;
       box-shadow:0 0 12px rgba(0,0,0,0.10);
+      display:block;
+      margin:0 auto;
     }
 
     main{
@@ -57,74 +66,92 @@
       box-shadow:0 0 12px rgba(0,0,0,0.10);
     }
 
-    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; }
-    h2{ font-size:24px; color:#0047ab; margin:22px 0 10px; }
-    p, li{ font-size:17px; margin:0 0 12px; line-height:1.65; color:#0f172a; }
+    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; text-align:center; }
+    h2{ font-size:24px; color:#0047ab; margin:26px 0 10px; }
+    h3{ font-size:18px; color:#0A2A66; margin:0 0 8px; }
+    p{ font-size:17px; margin:0 0 14px; line-height:1.65; color:#0f172a; }
 
     .box{
       margin:18px 0;
-      padding:14px 16px;
+      padding:16px;
       border-radius:14px;
       background:rgba(0,71,171,0.06);
       border:1px solid rgba(0,71,171,0.14);
     }
 
-    .toc{
-      margin:14px 0 0;
-      padding:14px 16px;
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+      margin-top:14px;
+      align-items:start;
+    }
+
+    .card{
       border:1px solid rgba(0,0,0,0.10);
       border-radius:14px;
+      padding:16px;
       background:#fff;
+      box-shadow:0 0 10px rgba(0,0,0,0.05);
     }
-    .toc a{ color:#0A2A66; font-weight:700; text-decoration:none; }
-    .toc a:hover{ text-decoration:underline; }
-    .toc ul{ margin:8px 0 0 18px; }
 
-    .actions{
+    ul{
+      margin:10px 0 0 18px;
+      color:#0f172a;
+      line-height:1.6;
+      font-size:16px;
+      padding:0;
+    }
+    li{ margin:8px 0; }
+
+    .btnrow{
       display:flex;
       gap:10px;
       flex-wrap:wrap;
-      margin-top:12px;
+      margin-top:14px;
     }
+
     .btn{
-      display:inline-block;
       background:#0A2A66;
       color:#fff;
-      padding:10px 12px;
-      border-radius:12px;
+      padding:10px 14px;
+      border-radius:999px;
       text-decoration:none;
       font-weight:700;
       font-size:14px;
+      display:inline-block;
     }
-    .btn:hover{ text-decoration: underline; }
     .btn.secondary{ background:#0f172a; }
+    .btn:hover{ text-decoration:underline; }
 
     .note{
-      margin-top:18px;
+      margin-top:22px;
       padding:14px 16px;
       border-radius:14px;
       background:rgba(15,23,42,0.04);
       border:1px solid rgba(15,23,42,0.10);
       font-size:14px;
       color:#0f172a;
+      line-height:1.6;
     }
 
-    @media (max-width:760px){
-      h1{ font-size:28px; }
-      h2{ font-size:20px; }
+    @media(max-width:760px){
       nav{ flex-direction:column; align-items:flex-start; }
       main{ margin:18px 12px 40px; padding:18px; }
+      h1{ font-size:28px; }
+      h2{ font-size:20px; }
+      .grid{ grid-template-columns: 1fr; }
     }
   </style>
 </head>
 
 <body>
 
+  <!-- Navigation -->
   <nav>
-    <a class="logo" href="index.html" aria-label="Retour à l’accueil">
+    <a class="logo" href="index.html">
       <img src="images/logo_scq.jpg" alt="Logo SCQ">
     </a>
-
     <a href="index.html">Accueil</a>
     <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
     <a href="cadre.html">Cadre National</a>
@@ -135,86 +162,76 @@
     <a href="doc.html">Documents</a>
   </nav>
 
+  <!-- Bannière -->
   <div class="banner">
     <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
   </div>
 
   <main>
+
     <h1>Constitution du Québec souverain</h1>
 
     <div class="box">
       <p>
-        La <strong>Constitution</strong> est la norme suprême de l’État. Elle fixe les droits fondamentaux,
-        les principes de souveraineté, l’architecture institutionnelle, la hiérarchie des normes et
-        les mécanismes de contrôle destinés à prévenir l’arbitraire et l’ingérence.
-      </p>
-      <p>
-        <strong>Effet juridique :</strong> aucune loi, aucun règlement, aucune pratique administrative,
-        ni aucun acte de l’État ne peut contredire la Constitution. Toute contradiction est nulle
-        ou inopposable selon le mécanisme de contrôle applicable.
+        La <strong>Constitution</strong> est la norme suprême. Elle définit les droits fondamentaux,
+        la souveraineté, les institutions, ainsi que les mécanismes de protection démocratique.
+        Toute norme inférieure (lois, règlements, directives) doit obligatoirement s’y conformer.
       </p>
 
-      <div class="actions">
+      <div class="btnrow">
         <a class="btn" href="cadre.html">Retour au Cadre National</a>
-        <a class="btn secondary" href="Doc/lois/Constitution_du_Quebec_souverain.docx" download>Télécharger (DOCX)</a>
+        <a class="btn secondary" href="Doc/lois/Constitution_du_Quebec_souverain.docx" download>
+          Télécharger la Constitution (DOCX)
+        </a>
       </div>
     </div>
 
-    <div class="toc" aria-label="Sommaire">
-      <p><strong>Sommaire</strong></p>
-      <ul>
-        <li><a href="#role">Rôle et portée</a></li>
-        <li><a href="#hierarchie">Hiérarchie des normes</a></li>
-        <li><a href="#garanties">Garanties et verrous</a></li>
-        <li><a href="#revision">Révision constitutionnelle</a></li>
-        <li><a href="#publication">Publication et accès</a></li>
-      </ul>
+    <h2>Rôle et portée</h2>
+    <p>
+      La Constitution établit les fondations permanentes de l’État et encadre l’action publique.
+      Elle fixe les limites du pouvoir, protège les citoyens et assure la stabilité institutionnelle.
+    </p>
+
+    <div class="grid">
+      <section class="card">
+        <h3>Ce qu’elle contient</h3>
+        <ul>
+          <li>Droits et libertés fondamentaux</li>
+          <li>Souveraineté et citoyenneté</li>
+          <li>Institutions et séparation des pouvoirs</li>
+          <li>Transparence, intégrité et anti-ingérence</li>
+          <li>Mécanismes démocratiques et verrous constitutionnels</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>Ce qu’elle garantit</h3>
+        <ul>
+          <li>Primauté du droit et égalité devant la loi</li>
+          <li>Protection contre l’arbitraire et les abus</li>
+          <li>Stabilité des institutions et des règles</li>
+          <li>Contrôle et responsabilité des pouvoirs publics</li>
+          <li>Cadre clair pour l’évolution de l’État</li>
+        </ul>
+      </section>
     </div>
 
-    <h2 id="role">Rôle et portée</h2>
+    <h2>Principe de hiérarchie</h2>
     <p>
-      La Constitution établit les règles supérieures qui s’imposent à toutes les autorités publiques,
-      ainsi qu’aux personnes qui exercent une fonction publique ou agissent au nom de l’État.
+      En cas de contradiction, la Constitution prévaut automatiquement. Une loi contraire est invalide,
+      un règlement contraire est inapplicable, et une pratique administrative contraire doit être corrigée ou annulée.
     </p>
 
-    <h2 id="hierarchie">Hiérarchie des normes</h2>
+    <h2>Modification de la Constitution</h2>
     <p>
-      La hiérarchie des normes s’applique comme suit :
-    </p>
-    <ul>
-      <li><strong>1) Constitution</strong></li>
-      <li><strong>2) Lois organiques</strong></li>
-      <li><strong>3) Lois ordinaires</strong></li>
-      <li><strong>4) Règlements</strong></li>
-      <li><strong>5) Pratiques administratives</strong> (sans valeur normative autonome)</li>
-    </ul>
-    <p>
-      Toute norme inférieure doit être conforme à la norme supérieure; en cas de conflit,
-      la norme supérieure prévaut automatiquement.
-    </p>
-
-    <h2 id="garanties">Garanties et verrous</h2>
-    <p>
-      La Constitution comprend des garanties destinées à protéger les principes fondamentaux
-      et à empêcher les contournements. Elle encadre les pouvoirs publics, impose des limites
-      matérielles et procédurales, et prévoit des mécanismes de contrôle et de responsabilité.
-    </p>
-
-    <h2 id="revision">Révision constitutionnelle</h2>
-    <p>
-      Toute modification constitutionnelle doit suivre une procédure distincte, renforcée et transparente.
-      Aucune révision ne peut être effectuée par simple loi ou par règlement.
-    </p>
-
-    <h2 id="publication">Publication et accès</h2>
-    <p>
-      La version officielle doit être accessible au public, tenue à jour et traçable. Toute version non officielle
-      ne peut remplacer le texte publié par l’autorité compétente.
+      Une Constitution ne se modifie pas comme une loi ordinaire : toute modification doit suivre une
+      procédure constitutionnelle stricte, afin d’empêcher les changements opportunistes et de protéger
+      l’intérêt public à long terme.
     </p>
 
     <div class="note">
-      <strong>Conseil technique :</strong> si un lien de téléchargement donne 404 sur GitHub Pages,
-      vérifie la casse exacte du dossier (<strong>Doc</strong> ≠ <strong>doc</strong>) et du nom de fichier.
+      <strong>Version officielle :</strong> la version juridiquement opposable et à jour est publiée dans le document DOCX
+      disponible ci-dessus. La présente page a une fonction explicative et de consultation publique.
     </div>
 
   </main>
