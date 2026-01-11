@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCQ - Volet 1 | Québec dans le Canada</title>
+
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <style>
+    nav{background:#0A2A66;padding:12px 16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;position:sticky;top:0;z-index:1000;}
+    nav a{color:#fff;text-decoration:none;font-weight:700;padding:6px 8px;border-radius:10px;white-space:nowrap;}
+    nav a:hover{text-decoration:underline;}
+    nav .logo{display:inline-flex;align-items:center;gap:10px;margin-right:6px;padding:0;}
+    nav .logo img{height:40px;width:auto;border-radius:10px;display:block;}
+
+    .banner{ text-align:center; margin-top:16px; width:100%; overflow:hidden; padding:0 16px; }
+    .banner img{ width:100%; max-width:715px; height:auto; max-height:260px; object-fit:cover; border-radius:16px; box-shadow:0 0 12px rgba(0,0,0,0.10); display:block; margin:0 auto; }
+
+    main{ max-width:980px; margin:22px auto 50px; background:#fff; padding:26px; border-radius:14px; box-shadow:0 0 12px rgba(0,0,0,0.10); }
+    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; text-align:center; }
+    h2{ font-size:22px; color:#0047ab; margin:22px 0 10px; }
+    p{ font-size:17px; margin:0 0 12px; line-height:1.65; color:#0f172a; }
+
+    .box{ margin:18px 0; padding:14px 16px; border-radius:14px; background:rgba(0,71,171,0.06); border:1px solid rgba(0,71,171,0.14); }
+    .grid{ display:grid; grid-template-columns: 1fr 1fr; gap:14px; margin-top:14px; align-items:start; }
+    .card{ border:1px solid rgba(0,0,0,0.10); border-radius:14px; padding:16px; background:#fff; box-shadow:0 0 10px rgba(0,0,0,0.05); }
+    ul{ margin:10px 0 0 18px; color:#0f172a; line-height:1.6; }
+    li{ margin-bottom:8px; }
+
+    .btnrow{ display:flex; flex-wrap:wrap; gap:10px; margin-top:12px; }
+    .btn{ display:inline-block; background:#0A2A66; color:#fff; padding:10px 12px; border-radius:12px; text-decoration:none; font-weight:700; font-size:14px; }
+    .btn:hover{ text-decoration:underline; }
+    .btn.secondary{ background:#0f172a; }
+
+    .note{ margin-top:14px; padding:14px 16px; border-radius:14px; background:rgba(15,23,42,0.04); border:1px solid rgba(15,23,42,0.10); font-size:14px; color:#0f172a; line-height:1.6; }
+
+    @media (max-width:760px){
+      nav{ flex-direction:column; align-items:flex-start; }
+      main{ margin:18px 12px 40px; padding:18px; }
+      h1{ font-size:28px; }
+      .grid{ grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a class="logo" href="index.html" aria-label="Retour à l’accueil">
+      <img src="images/logo_scq.jpg" alt="Logo SCQ">
+    </a>
+
+    <a href="index.html">Accueil</a>
+    <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+    <a href="cadre.html" aria-current="page">Cadre National</a>
+    <a href="membres.html">Membres</a>
+    <a href="equipe.html">Équipe</a>
+    <a href="comptabilite.html">Comptabilité</a>
+    <a href="contact.html">Contact</a>
+    <a href="doc.html">Documents</a>
+  </nav>
+
+  <div class="banner">
+    <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
+  </div>
+
+  <main>
+    <h1>Volet 1 — Québec dans le Canada</h1>
+
+    <div class="box">
+      <p style="margin:0;">
+        Ce volet présente ce qui peut être mis en place immédiatement, dans le cadre actuel,
+        afin de protéger les citoyens, renforcer la transparence et préparer juridiquement la suite,
+        sans exiger la reconnaissance préalable d’un État souverain.
+      </p>
+    </div>
+
+    <div class="btnrow">
+      <a class="btn secondary"
+         href="Doc/VOLET/VOLET%201%20-%20QU%C3%89BEC%20DANS%20LE%20CANADA.docx"
+         download>
+        Télécharger (DOCX)
+      </a>
+      <a class="btn" href="cadre.html">Retour au Cadre</a>
+      <a class="btn" href="doc.html">Documents</a>
+    </div>
+
+    <div class="grid">
+      <section class="card">
+        <h2>Objectifs principaux</h2>
+        <ul>
+          <li>Protéger les citoyens contre les abus modernes.</li>
+          <li>Bloquer les dérives politiques, économiques et administratives.</li>
+          <li>Renforcer la transparence et la responsabilité publique.</li>
+          <li>Préparer juridiquement et institutionnellement la transition vers la souveraineté.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Ce que le volet apporte</h2>
+        <ul>
+          <li>Des règles et pratiques de gouvernance applicables immédiatement.</li>
+          <li>Des garde-fous contre l’évitement, l’opacité et les abus de pouvoir.</li>
+          <li>Une structure de continuité et de stabilité (droits, services, institutions).</li>
+          <li>Une base publique claire, lisible et vérifiable par tous.</li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="card" style="margin-top:14px;">
+      <h2>Résumé public</h2>
+      <p>
+        Le Volet 1 est la base de protection immédiate. Il sert à sécuriser la démocratie,
+        améliorer la gestion publique, établir des mécanismes de transparence et réduire les risques
+        de dérives. Il prépare le terrain légal et institutionnel pour que la population puisse décider
+        de la suite dans un cadre stable et compréhensible.
+      </p>
+    </section>
+
+    <div class="note">
+      <strong>Note :</strong> Pour garder tes liens stables sur GitHub Pages, conserve exactement ces noms et dossiers.
+      Si tu modifies un nom de fichier, pense à mettre à jour tous les liens.
+    </div>
+
+  </main>
+
+</body>
+</html>
