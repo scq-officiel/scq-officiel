@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lois ordinaires – SCQ</title>
+  <title>SCQ - Lois ordinaires</title>
 
   <link rel="stylesheet" href="css/styles.css" />
 
@@ -28,24 +28,33 @@
       white-space:nowrap;
     }
     nav a:hover{ text-decoration:underline; }
-    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; margin-right:6px; }
-    nav .logo img{ height:40px; width:auto; border-radius:10px; display:block; }
+    nav .logo{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:0;
+      margin-right:6px;
+    }
+    nav .logo img{
+      height:40px;
+      width:auto;
+      border-radius:10px;
+      display:block;
+    }
 
     .banner{
       text-align:center;
       margin-top:16px;
-      width:100%;
-      overflow:hidden;
       padding:0 16px;
     }
     .banner img{
       width:100%;
-      max-width:1100px;
+      max-width:715px;
       height:auto;
-      max-height:260px;
-      object-fit:cover;
       border-radius:16px;
       box-shadow:0 0 12px rgba(0,0,0,0.10);
+      display:block;
+      margin:0 auto;
     }
 
     main{
@@ -57,74 +66,92 @@
       box-shadow:0 0 12px rgba(0,0,0,0.10);
     }
 
-    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; }
-    h2{ font-size:24px; color:#0047ab; margin:22px 0 10px; }
-    p, li{ font-size:17px; margin:0 0 12px; line-height:1.65; color:#0f172a; }
+    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; text-align:center; }
+    h2{ font-size:24px; color:#0047ab; margin:26px 0 10px; }
+    h3{ font-size:18px; color:#0A2A66; margin:0 0 8px; }
+    p{ font-size:17px; margin:0 0 14px; line-height:1.65; color:#0f172a; }
 
     .box{
       margin:18px 0;
-      padding:14px 16px;
+      padding:16px;
       border-radius:14px;
       background:rgba(0,71,171,0.06);
       border:1px solid rgba(0,71,171,0.14);
     }
 
-    .toc{
-      margin:14px 0 0;
-      padding:14px 16px;
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+      margin-top:14px;
+      align-items:start;
+    }
+
+    .card{
       border:1px solid rgba(0,0,0,0.10);
       border-radius:14px;
+      padding:16px;
       background:#fff;
+      box-shadow:0 0 10px rgba(0,0,0,0.05);
     }
-    .toc a{ color:#0A2A66; font-weight:700; text-decoration:none; }
-    .toc a:hover{ text-decoration:underline; }
-    .toc ul{ margin:8px 0 0 18px; }
 
-    .actions{
+    ul{
+      margin:10px 0 0 18px;
+      color:#0f172a;
+      line-height:1.6;
+      font-size:16px;
+      padding:0;
+    }
+    li{ margin:8px 0; }
+
+    .btnrow{
       display:flex;
       gap:10px;
       flex-wrap:wrap;
-      margin-top:12px;
+      margin-top:14px;
     }
+
     .btn{
-      display:inline-block;
       background:#0A2A66;
       color:#fff;
-      padding:10px 12px;
-      border-radius:12px;
+      padding:10px 14px;
+      border-radius:999px;
       text-decoration:none;
       font-weight:700;
       font-size:14px;
+      display:inline-block;
     }
-    .btn:hover{ text-decoration: underline; }
     .btn.secondary{ background:#0f172a; }
+    .btn:hover{ text-decoration:underline; }
 
     .note{
-      margin-top:18px;
+      margin-top:22px;
       padding:14px 16px;
       border-radius:14px;
       background:rgba(15,23,42,0.04);
       border:1px solid rgba(15,23,42,0.10);
       font-size:14px;
       color:#0f172a;
+      line-height:1.6;
     }
 
-    @media (max-width:760px){
-      h1{ font-size:28px; }
-      h2{ font-size:20px; }
+    @media(max-width:760px){
       nav{ flex-direction:column; align-items:flex-start; }
       main{ margin:18px 12px 40px; padding:18px; }
+      h1{ font-size:28px; }
+      h2{ font-size:20px; }
+      .grid{ grid-template-columns: 1fr; }
     }
   </style>
 </head>
 
 <body>
 
+  <!-- Navigation -->
   <nav>
-    <a class="logo" href="index.html" aria-label="Retour à l’accueil">
+    <a class="logo" href="index.html">
       <img src="images/logo_scq.jpg" alt="Logo SCQ">
     </a>
-
     <a href="index.html">Accueil</a>
     <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
     <a href="cadre.html">Cadre National</a>
@@ -135,82 +162,70 @@
     <a href="doc.html">Documents</a>
   </nav>
 
+  <!-- Bannière -->
   <div class="banner">
     <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
   </div>
 
   <main>
+
     <h1>Lois ordinaires</h1>
 
     <div class="box">
       <p>
-        Les <strong>lois ordinaires</strong> encadrent les domaines sectoriels de la vie collective.
-        Elles mettent en œuvre, de manière concrète, les orientations fixées par la Constitution
-        et les lois organiques (droits, services publics, programmes, obligations, règles de fonctionnement).
-      </p>
-      <p>
-        <strong>Effet juridique :</strong> une loi ordinaire ne peut ni modifier la Constitution ni contredire
-        une loi organique. En cas d’incompatibilité, la norme supérieure prévaut automatiquement.
+        Les <strong>lois ordinaires</strong> traduisent le cadre constitutionnel en règles concrètes
+        applicables aux secteurs de la vie publique (logement, transport, environnement, santé, culture, etc.).
+        Elles doivent respecter la <strong>Constitution</strong> et les <strong>lois organiques</strong>.
       </p>
 
-      <div class="actions">
+      <div class="btnrow">
         <a class="btn" href="cadre.html">Retour au Cadre National</a>
-        <a class="btn secondary" href="Doc/lois/Lois_ordinaires_du_Quebec_souverain.docx" download>Télécharger (DOCX)</a>
+        <a class="btn secondary" href="Doc/lois/Lois_ordinaires_du_Quebec_souverain.docx" download>
+          Télécharger les lois ordinaires (DOCX)
+        </a>
       </div>
     </div>
 
-    <div class="toc" aria-label="Sommaire">
-      <p><strong>Sommaire</strong></p>
-      <ul>
-        <li><a href="#role">Rôle des lois ordinaires</a></li>
-        <li><a href="#domaines">Domaines d’application</a></li>
-        <li><a href="#limites">Limites juridiques</a></li>
-        <li><a href="#delegation">Délégation réglementaire</a></li>
-        <li><a href="#controle">Contrôle et conformité</a></li>
-      </ul>
+    <h2>Rôle des lois ordinaires</h2>
+    <p>
+      Les lois ordinaires servent à organiser des politiques publiques précises et à encadrer des domaines
+      particuliers, tout en restant cohérentes avec les principes supérieurs.
+    </p>
+
+    <div class="grid">
+      <section class="card">
+        <h3>Exemples de domaines</h3>
+        <ul>
+          <li>Logement, urbanisme et aménagement du territoire</li>
+          <li>Transport, routes et sécurité publique</li>
+          <li>Environnement, eau, déchets et protection des milieux</li>
+          <li>Culture, patrimoine et langue</li>
+          <li>Économie, travail et développement régional</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>Contraintes obligatoires</h3>
+        <ul>
+          <li>Respect de la Constitution (droits, libertés, institutions)</li>
+          <li>Respect des lois organiques (architecture de l’État)</li>
+          <li>Contrôle démocratique et transparence</li>
+          <li>Compatibilité avec les règlements d’application</li>
+          <li>Interdiction des effets contraires aux verrous constitutionnels</li>
+        </ul>
+      </section>
     </div>
 
-    <h2 id="role">Rôle des lois ordinaires</h2>
+    <h2>Application et règlements</h2>
     <p>
-      Les lois ordinaires traduisent les objectifs de l’État en règles applicables :
-      elles définissent les droits et obligations, établissent des cadres d’action,
-      et structurent les services et programmes publics.
-    </p>
-
-    <h2 id="domaines">Domaines d’application</h2>
-    <p>Les lois ordinaires peuvent notamment porter sur :</p>
-    <ul>
-      <li>le logement, l’aménagement du territoire et l’urbanisme;</li>
-      <li>les transports et les infrastructures;</li>
-      <li>la culture, la langue et le patrimoine;</li>
-      <li>l’environnement et la transition;</li>
-      <li>les programmes sociaux, économiques et communautaires.</li>
-    </ul>
-
-    <h2 id="limites">Limites juridiques</h2>
-    <p>
-      Une loi ordinaire ne peut pas modifier l’architecture constitutionnelle, ni prendre la place
-      d’une loi organique. Elle ne peut pas non plus restreindre un droit fondamental autrement
-      que selon les conditions strictes prévues par la Constitution.
-    </p>
-
-    <h2 id="delegation">Délégation réglementaire</h2>
-    <p>
-      Une loi ordinaire peut habiliter un règlement pour préciser des modalités techniques.
-      Toutefois, elle ne peut pas déléguer l’essence de la loi : un règlement ne peut pas inventer
-      une obligation ou un droit qui n’a pas de base claire dans la loi.
-    </p>
-
-    <h2 id="controle">Contrôle et conformité</h2>
-    <p>
-      Les lois ordinaires sont soumises au contrôle de constitutionnalité et de légalité.
-      Toute disposition incompatible avec une norme supérieure doit être corrigée, suspendue
-      ou abrogée selon les mécanismes applicables.
+      Une loi ordinaire peut être accompagnée de règlements pour préciser des modalités techniques
+      (délais, formulaires, procédures). Les règlements ne peuvent jamais étendre la loi ni créer des obligations
+      sans base légale.
     </p>
 
     <div class="note">
-      <strong>Conseil technique :</strong> si le téléchargement donne 404, vérifie la casse exacte du dossier
-      (<strong>Doc</strong> ≠ <strong>doc</strong>) et du nom de fichier.
+      <strong>Version officielle :</strong> la version juridiquement opposable et à jour est publiée en format DOCX
+      (bouton ci-dessus). La présente page est une synthèse explicative destinée au public.
     </div>
 
   </main>
