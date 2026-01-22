@@ -8,9 +8,6 @@
   <link rel="stylesheet" href="css/styles.css" />
 
   <style>
-    /* ============================
-       Navigation
-       ============================ */
     nav{
       background:#0A2A66;
       padding:12px 16px;
@@ -31,24 +28,9 @@
       white-space:nowrap;
     }
     nav a:hover{ text-decoration:underline; }
-    nav a[aria-current="page"]{ background:rgba(255,255,255,0.15); }
-    nav .logo{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:0;
-      margin-right:6px;
-    }
-    nav .logo img{
-      height:40px;
-      width:auto;
-      border-radius:10px;
-      display:block;
-    }
+    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; margin-right:6px; }
+    nav .logo img{ height:40px; width:auto; border-radius:10px; display:block; }
 
-    /* ============================
-       Bannière (uniforme)
-       ============================ */
     .banner{
       text-align:center;
       margin-top:16px;
@@ -68,9 +50,6 @@
       margin:0 auto;
     }
 
-    /* ============================
-       Contenu
-       ============================ */
     main{
       max-width:980px;
       margin:22px auto 50px;
@@ -80,33 +59,24 @@
       box-shadow:0 0 12px rgba(0,0,0,0.10);
     }
 
-    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; text-align:center; }
+    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; }
     h2{ font-size:24px; color:#0047ab; margin:22px 0 10px; }
     h3{ font-size:18px; color:#0A2A66; margin:0 0 8px; }
-    p{ font-size:17px; margin:0 0 12px; line-height:1.65; color:#0f172a; }
 
-    .intro{
-      text-align:center;
-      max-width:860px;
-      margin:0 auto;
-    }
-
-    .box{
-      margin-top:18px;
-      padding:14px 16px;
-      border-radius:14px;
-      background:rgba(0,71,171,0.06);
-      border:1px solid rgba(0,71,171,0.14);
+    p, li{
+      font-size:17px;
+      line-height:1.65;
       color:#0f172a;
-      line-height:1.6;
-      font-size:15px;
+      margin:0 0 12px;
     }
+    ul{ margin:0 0 12px 18px; }
 
     .grid{
       display:grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap:14px;
-      margin-top:18px;
+      margin-top:14px;
+      align-items:stretch;
     }
 
     .card{
@@ -117,21 +87,11 @@
       box-shadow:0 0 10px rgba(0,0,0,0.05);
     }
 
-    .card ul{
-      margin:0;
-      padding-left:18px;
-      font-size:16px;
-      line-height:1.6;
-      color:#0f172a;
-    }
-    .card li{ margin-bottom:8px; }
-
     .btnrow{
       display:flex;
       flex-wrap:wrap;
       gap:10px;
-      margin-top:12px;
-      justify-content:center;
+      margin-top:10px;
     }
 
     .btn{
@@ -143,8 +103,6 @@
       text-decoration:none;
       font-weight:700;
       font-size:14px;
-      border:none;
-      cursor:pointer;
     }
     .btn:hover{ text-decoration:underline; }
     .btn.secondary{ background:#0f172a; }
@@ -153,19 +111,19 @@
       margin-top:18px;
       padding:14px 16px;
       border-radius:14px;
-      background:rgba(15,23,42,0.04);
-      border:1px solid rgba(15,23,42,0.10);
-      font-size:14px;
+      background:rgba(0,71,171,0.06);
+      border:1px solid rgba(0,71,171,0.14);
       color:#0f172a;
+      font-size:14px;
       line-height:1.6;
     }
 
-    @media (max-width:760px){
+    @media (max-width: 760px){
       nav{ flex-direction:column; align-items:flex-start; }
       main{ margin:18px 12px 40px; padding:18px; }
       h1{ font-size:28px; }
       h2{ font-size:20px; }
-      .grid{ grid-template-columns:1fr; }
+      .grid{ grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -175,111 +133,161 @@
   <!-- Navigation -->
   <nav>
     <a class="logo" href="index.html" aria-label="Retour à l’accueil">
-      /logo_scq.jpg" alt="Logo SCQ">
+      <img src="images/logo_scq.jpg" alt="Logo SCQ">
     </a>
 
     <a href="index.html">Accueil</a>
     <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
-    <a href="NotreVision.html">Notre vision</a>
     <a href="cadre.html">Cadre National</a>
     <a href="Volet1.html">Volet 1</a>
     <a href="Volet2.html" aria-current="page">Volet 2</a>
     <a href="Volet3.html">Volet 3</a>
-    <a href="membres.html">Membres</a>
-    <a href="equipe.html">Équipe</a>
-    <a href="comptabilite.html">Comptabilité</a>
-    <a href="contact.html">Contact</a>
     <a href="doc.html">Documents</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
   <!-- Bannière -->
   <div class="banner">
-    <img src="images/Banniere-Officiel.jpg" alt="Bannière SCQ">
+    <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
   </div>
 
-  <!-- Contenu -->
   <main>
     <h1>Volet 2 — Québec en transition constitutionnelle</h1>
-
-    <div class="intro">
-      <p>
-        Ce volet encadre la période de transition à la suite d’un mandat démocratique explicite.
-        Il vise à empêcher toute improvisation, toute confiscation de pouvoir et toute dérive,
-        tout en garantissant la continuité des droits, des services et de la stabilité sociale.
-      </p>
-
-      <div class="btnrow">
-        <a class="btn" href="cadre.html">Cadre National</a>
-        <a class="btn secondary" href="doc.html">Documents officiels</a>
-        <a class="btn" href="contact.html">Nous contacter</a>
-      </div>
-    </div>
-
-    <div class="box">
-      <strong>Principe :</strong> la transition doit être <strong>encadrée</strong> et <strong>limitée</strong>.
-      Elle n’accorde jamais un chèque en blanc.
-      Elle protège la population, maintient les services essentiels et garantit que le processus reste
-      démocratique, traçable et vérifiable.
-    </div>
-
-    <h2>Objectifs du Volet 2</h2>
-
-    <div class="grid">
-      <section class="card">
-        <h3>1) Continuité des droits et des services</h3>
-        <ul>
-          <li>Assurer la continuité des droits fondamentaux.</li>
-          <li>Maintenir les services essentiels (santé, sécurité, justice, éducation).</li>
-          <li>Empêcher les ruptures administratives qui nuisent aux citoyens.</li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h3>2) Limites strictes du pouvoir transitoire</h3>
-        <ul>
-          <li>Interdire les pouvoirs exceptionnels non justifiés.</li>
-          <li>Encadrer les décisions : écrites, motivées, et traçables.</li>
-          <li>Fixer des mécanismes de contrôle et de reddition de comptes.</li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h3>3) Stabilité économique et sociale</h3>
-        <ul>
-          <li>Protéger les citoyens contre les chocs et l’incertitude.</li>
-          <li>Maintenir un cadre de continuité financière et administrative.</li>
-          <li>Éviter toute mesure brutale qui mettrait la population en risque.</li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h3>4) Protection du processus démocratique</h3>
-        <ul>
-          <li>Prévenir l’ingérence et les manipulations.</li>
-          <li>Garantir une information publique claire.</li>
-          <li>Empêcher que la transition serve à imposer un agenda non révélé.</li>
-        </ul>
-      </section>
-    </div>
-
-    <h2>Document officiel du Volet 2</h2>
     <p>
-      Le texte complet du Volet 2 est disponible en téléchargement. Il décrit le cadre transitoire,
-      les limites, les garanties et les mécanismes de sécurité démocratique.
+      Ce volet décrit comment le Québec peut passer d’un cadre politique actuel vers un cadre constitutionnel
+      renforcé, de manière <strong>ordonnée, légale, transparente</strong> et démocratiquement vérifiable.
+      L’objectif est d’éviter l’improvisation : une transition se prépare, se documente et se contrôle.
     </p>
 
     <div class="btnrow">
-      <a class="btn secondary" href="Doc/VOLET/VOLET%202%20-%20QU%C3%89BEC%20EN%20TRANSITION%20CONSTITUTIONNELLE.docx" download>
-        Télécharger (DOCX)
-      </a>
-      <a class="btn" href="Volet1.html">Retour Volet 1</a>
-      <a class="btn" href="Volet3.html">Aller au Volet 3</a>
+      <a class="btn" href="Volet1.html">← Volet 1</a>
+      <a class="btn secondary" href="loi-constitution.html">Constitution (hub)</a>
+      <a class="btn" href="Volet3.html">Volet 3 →</a>
+    </div>
+
+    <h2>Ce que le Volet 2 couvre</h2>
+
+    <div class="grid">
+
+      <section class="card">
+        <h3>1) Processus clair et public</h3>
+        <p>
+          Une transition réussie exige une documentation publique : étapes, calendrier, responsabilités et mécanismes de contrôle.
+          Chaque décision majeure doit être compréhensible par le citoyen.
+        </p>
+        <ul>
+          <li>Calendrier public de transition</li>
+          <li>Consultations et information citoyenne</li>
+          <li>Traçabilité des décisions</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>2) Continuité et stabilité</h3>
+        <p>
+          La transition protège la stabilité de l’État : les services essentiels continuent, les lois restent en vigueur
+          tant qu’elles ne sont pas remplacées légalement, et les droits demeurent protégés.
+        </p>
+        <ul>
+          <li>Continuité juridique encadrée</li>
+          <li>Protection des droits pendant la transition</li>
+          <li>Stabilité administrative et économique</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>3) Institutions de contrôle</h3>
+        <p>
+          La transition doit être surveillée. Des mécanismes de vérification et de reddition de comptes empêchent la dérive,
+          la fraude et l’opacité.
+        </p>
+        <ul>
+          <li>Contrôles indépendants</li>
+          <li>Audit, transparence, vérifiabilité</li>
+          <li>Recours et contestations possibles</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>4) Cadre transitoire (SCQ – OTC)</h3>
+        <p>
+          L’outil de transition constitutionnelle (OTC) encadre le rôle du SCQ pendant une transition :
+          informer, organiser, protéger l’intégrité démocratique. Aucun pouvoir autonome.
+        </p>
+        <ul>
+          <li>Subordination au cadre supérieur</li>
+          <li>Rôle strictement transitoire</li>
+          <li>Objectif : intégrité du processus</li>
+        </ul>
+      </section>
+
+    </div>
+
+    <h2>Références et liens officiels</h2>
+
+    <div class="grid">
+
+      <section class="card">
+        <h3>Constitution (références principales)</h3>
+        <p>
+          La transition constitutionnelle est explicitement décrite dans la Constitution.
+          Cette section sert de fondement pour structurer le passage de manière ordonnée.
+        </p>
+        <div class="btnrow">
+          <a class="btn" href="loi-constitution.html">Ouvrir le hub</a>
+          <a class="btn secondary" href="Constitution/transition.html">Transition (page)</a>
+          <a class="btn secondary" href="Constitution/revision.html">Révision (page)</a>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3>Outil transitoire SCQ (OTC)</h3>
+        <p>
+          Document transitoire encadrant l’organisation et la conduite du SCQ pendant une transition :
+          transparence, intégrité démocratique, non-opacité et responsabilité.
+        </p>
+        <div class="btnrow">
+          <a class="btn" href="loi-scq-otc.html">Lire (HTML)</a>
+          <a class="btn secondary" href="Doc/lois/SCQ_Outil_de_transition_constitutionnelle.docx" download>
+            Télécharger (DOCX)
+          </a>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3>Cadre National</h3>
+        <p>
+          Le Cadre National clarifie l’ordre des normes et évite les contradictions :
+          Constitution, lois, règlements, pratiques administratives et outils transitoires.
+        </p>
+        <div class="btnrow">
+          <a class="btn" href="cadre.html">Ouvrir Cadre National</a>
+          <a class="btn secondary" href="loi-organiques.html">Lois organiques</a>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3>Transparence documentaire</h3>
+        <p>
+          Les documents officiels (DOCX/PDF) sont regroupés pour téléchargement et vérification.
+          Cette publication est volontaire : elle vise à ne rien cacher au public.
+        </p>
+        <div class="btnrow">
+          <a class="btn" href="doc.html">Documents officiels</a>
+          <a class="btn secondary" href="cadre.html">Hiérarchie des normes</a>
+        </div>
+      </section>
+
     </div>
 
     <div class="note">
-      <strong>Note technique :</strong> sur GitHub Pages, les noms sont sensibles (majuscules, accents, espaces).
-      Assure-toi que le dossier <strong>Doc/VOLET/</strong> et le nom du fichier correspondent exactement.
-      Si tu veux éliminer ces risques, renomme les fichiers en version simple (ex. <em>volet2.docx</em>).
+      <strong>Note :</strong> Le Volet 2 est le cœur de la crédibilité. Une transition constitutionnelle ne peut pas être un slogan :
+      elle exige un plan public, des règles, des mécanismes de contrôle et une structure compréhensible pour tous.
+    </div>
+
+    <div class="btnrow">
+      <a class="btn secondary" href="Volet1.html">← Retour Volet 1</a>
+      <a class="btn" href="Volet3.html">Aller au Volet 3 →</a>
     </div>
 
   </main>
