@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SCQ - Cadre National</title>
+  <title>SCQ - Contact</title>
 
   <link rel="stylesheet" href="css/styles.css" />
 
@@ -28,285 +28,227 @@
       white-space:nowrap;
     }
     nav a:hover{ text-decoration:underline; }
-    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; margin-right:6px; }
-    nav .logo img{ height:40px; width:auto; border-radius:10px; display:block; }
+    nav .logo{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:0;
+      margin-right:6px;
+    }
+    nav .logo img{
+      height:40px;
+      width:auto;
+      border-radius:10px;
+      display:block;
+    }
 
     .banner{
       text-align:center;
       margin-top:16px;
-      width:100%;
-      overflow:hidden;
       padding:0 16px;
     }
     .banner img{
       width:100%;
       max-width:715px;
       height:auto;
-      max-height:260px;
-      object-fit:cover;
       border-radius:16px;
       box-shadow:0 0 12px rgba(0,0,0,0.10);
       display:block;
       margin:0 auto;
     }
 
-    .content{
+    main{
       max-width:980px;
       margin:22px auto 50px;
       background:#fff;
       padding:26px;
       border-radius:14px;
       box-shadow:0 0 12px rgba(0,0,0,0.10);
-      text-align:center;
     }
 
-    h1{ font-size:36px; color:#0047ab; margin:0 0 10px; }
-    h2{ font-size:26px; color:#0047ab; margin:22px 0 10px; }
-    p{ font-size:18px; margin:0 0 14px; line-height:1.65; color:#0f172a; }
+    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; text-align:center; }
+    h2{ font-size:24px; color:#0047ab; margin:22px 0 10px; }
+    p{ font-size:17px; margin:0 0 12px; line-height:1.65; color:#0f172a; }
 
-    .cadre-niveaux{
+    .grid{
       display:grid;
-      grid-template-columns:repeat(2, minmax(0, 1fr));
+      grid-template-columns:1fr 1fr;
       gap:14px;
-      margin-top:18px;
-      text-align:left;
+      margin-top:14px;
     }
-    .niveau{
+
+    .card{
       border:1px solid rgba(0,0,0,0.10);
       border-radius:14px;
       padding:16px;
       background:#fff;
       box-shadow:0 0 10px rgba(0,0,0,0.05);
     }
-    .niveau h3{
-      margin:0 0 8px;
-      font-size:18px;
+
+    label{
+      display:block;
+      font-weight:800;
       color:#0A2A66;
+      margin:12px 0 6px;
+      font-size:14px;
     }
-    .niveau p{
-      margin:0 0 12px;
-      font-size:16px;
-      color:#111827;
-      line-height:1.6;
+
+    input, textarea, select{
+      width:100%;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid rgba(0,0,0,0.15);
+      font-size:15px;
     }
+
+    textarea{ min-height:140px; resize:vertical; }
 
     .btnrow{
       display:flex;
       flex-wrap:wrap;
       gap:10px;
-      margin-top:6px;
+      margin-top:12px;
     }
+
     .btn{
-      display:inline-block;
       background:#0A2A66;
       color:#fff;
-      padding:10px 12px;
+      padding:10px 14px;
       border-radius:999px;
       text-decoration:none;
       font-weight:700;
       font-size:14px;
+      border:none;
+      cursor:pointer;
+      display:inline-block;
     }
-    .btn:hover{ text-decoration:underline; }
     .btn.secondary{ background:#0f172a; }
-
-    .section-title{
-      margin-top:28px;
-      padding-top:10px;
-      border-top:1px solid rgba(0,0,0,0.08);
-    }
+    .btn.youtube{ background:#cc0000; }
+    .btn:hover{ text-decoration:underline; }
 
     .note{
-      margin-top:18px;
-      text-align:left;
+      margin-top:14px;
       padding:14px 16px;
       border-radius:14px;
-      background:rgba(0,71,171,0.06);
-      border:1px solid rgba(0,71,171,0.14);
-      font-size:15px;
+      background:rgba(15,23,42,0.04);
+      border:1px solid rgba(15,23,42,0.10);
+      font-size:14px;
       color:#0f172a;
       line-height:1.6;
     }
 
-    @media (max-width:760px){
-      h1{ font-size:28px; }
-      h2{ font-size:22px; }
-      .cadre-niveaux{ grid-template-columns:1fr; }
+    @media(max-width:760px){
       nav{ flex-direction:column; align-items:flex-start; }
-      .content{ margin:18px 12px 40px; padding:18px; }
+      main{ margin:18px 12px 40px; padding:18px; }
+      h1{ font-size:28px; }
+      h2{ font-size:20px; }
+      .grid{ grid-template-columns:1fr; }
     }
   </style>
 </head>
 
 <body>
+
+  <!-- Navigation -->
   <nav>
-    <a class="logo" href="index.html" aria-label="Retour à l’accueil">
+    <a class="logo" href="index.html">
       <img src="images/logo_scq.jpg" alt="Logo SCQ">
     </a>
-
     <a href="index.html">Accueil</a>
     <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
-    <a href="cadre.html" aria-current="page">Cadre National</a>
+    <a href="cadre.html">Cadre National</a>
     <a href="membres.html">Membres</a>
     <a href="equipe.html">Équipe</a>
     <a href="comptabilite.html">Comptabilité</a>
-    <a href="contact.html">Contact</a>
+    <a href="contact.html" aria-current="page">Contact</a>
     <a href="doc.html">Documents</a>
   </nav>
 
+  <!-- Bannière -->
   <div class="banner">
-    <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
+    <img src="images/Banniere-Officiel.jpg" alt="Bannière SCQ">
   </div>
 
-  <main class="content">
-    <h1>Cadre du SCQ</h1>
+  <main>
+
+    <h1>Contact</h1>
 
     <p>
-      Bienvenue dans la section Cadre du Parti Souveraineté et Citoyenneté du Québec (SCQ).
-      Vous trouverez ici l’accès structuré aux documents officiels, à la hiérarchie des normes,
-      et à l’approche publique en trois volets, afin d’expliquer clairement ce que nous voulons construire.
+      Pour toute question, demande d’information ou communication officielle,
+      vous pouvez écrire directement au SCQ via le formulaire ci-dessous.
+      Les messages sont transmis à l’adresse officielle :
+      <strong>scqofficiel@gmail.com</strong>.
     </p>
 
-    <h2>Règle de base à retenir</h2>
-    <p>
-      Le cadre juridique repose sur une hiérarchie claire : chaque norme doit respecter le niveau supérieur.
-      En cas de contradiction, la norme supérieure prévaut automatiquement.
-    </p>
+    <div class="grid">
 
-    <!-- =========================
-         HIÉRARCHIE DES NORMES
-         ========================= -->
-    <h2 class="section-title">Hiérarchie des normes</h2>
+      <!-- Formulaire -->
+      <section class="card">
+        <h2>Écrire au SCQ</h2>
 
-    <div class="cadre-niveaux">
-      <div class="niveau">
-        <h3>1. Constitution</h3>
-        <p>
-          Texte suprême de l’État : droits fondamentaux, souveraineté, institutions et mécanismes de protection.
-          Aucun changement sans procédure constitutionnelle.
-        </p>
+        <form action="https://formspree.io/f/mjgvryza" method="POST">
+
+          <label for="nom">Nom</label>
+          <input type="text" id="nom" name="nom" required>
+
+          <label for="email">Courriel</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="objet">Objet</label>
+          <select id="objet" name="objet" required>
+            <option value="">Choisir…</option>
+            <option value="Information générale">Information générale</option>
+            <option value="Documents">Documents</option>
+            <option value="Adhésion">Adhésion / membres</option>
+            <option value="Comptabilité">Comptabilité</option>
+            <option value="Autre">Autre</option>
+          </select>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <input type="hidden" name="_subject" value="[SCQ] Message depuis le site officiel">
+          <input type="hidden" name="_template" value="table">
+
+          <div class="btnrow">
+            <button type="submit" class="btn">Envoyer le message</button>
+            <a class="btn secondary" href="doc.html">Documents</a>
+          </div>
+
+        </form>
+      </section>
+
+      <!-- Coordonnées -->
+      <section class="card">
+        <h2>Présence officielle</h2>
+
+        <p><strong>Courriel :</strong> scqofficiel@gmail.com</p>
+
         <div class="btnrow">
-          <a class="btn" href="loi-constitution.html">Lire (HTML)</a>
-          <a class="btn secondary" href="Doc/lois/Constitution_du_Quebec_souverain.docx" download>Télécharger (DOCX)</a>
+          <a class="btn"
+             href="https://www.facebook.com/Souverainete.et.Citoyennete.du.Quebec/"
+             target="_blank" rel="noopener">
+            Page Facebook officielle
+          </a>
         </div>
-      </div>
 
-      <div class="niveau">
-        <h3>2. Lois organiques</h3>
-        <p>
-          Lois structurantes qui organisent l’État (démocratie, institutions, finances publiques, administration, contrôle).
-          Elles appliquent directement la Constitution.
-        </p>
         <div class="btnrow">
-          <a class="btn" href="loi-organiques.html">Lire (HTML)</a>
-          <a class="btn secondary" href="Doc/lois/Lois_organiques_du_Quebec_souverain.docx" download>Télécharger (DOCX)</a>
+          <a class="btn youtube"
+             href="https://www.youtube.com/channel/UCaipQqk5Fw9g6Mt23yWXZPA"
+             target="_blank" rel="noopener">
+            Chaîne YouTube officielle
+          </a>
         </div>
-      </div>
 
-      <div class="niveau">
-        <h3>3. Lois ordinaires</h3>
-        <p>
-          Lois d’application sectorielle (logement, transport, culture, environnement, programmes publics).
-          Elles doivent respecter la Constitution et les lois organiques.
-        </p>
-        <div class="btnrow">
-          <a class="btn" href="loi-ordinaires.html">Lire (HTML)</a>
-          <a class="btn secondary" href="Doc/lois/Lois_ordinaires_du_Quebec_souverain.docx" download>Télécharger (DOCX)</a>
+        <div class="note">
+          <strong>Note :</strong> Les communications officielles du SCQ
+          sont publiées sur ces plateformes.
         </div>
-      </div>
+      </section>
 
-      <div class="niveau">
-        <h3>4. Règlements</h3>
-        <p>
-          Modalités techniques d’application : formats, délais, normes, protocoles.
-          Aucun règlement ne peut contredire une loi ni créer une obligation sans base légale.
-        </p>
-        <div class="btnrow">
-          <a class="btn" href="loi-Reglements.html">Lire (HTML)</a>
-          <a class="btn secondary" href="Doc/lois/Reglements_du_Quebec_souverain.docx" download>Télécharger (DOCX)</a>
-        </div>
-      </div>
-
-      <div class="niveau">
-        <h3>5. Pratiques administratives</h3>
-        <p>
-          Directives internes, procédures et guides d’application utilisés par l’administration.
-          Elles n’ont aucune valeur normative autonome : elles ne peuvent ni créer de droits ni imposer d’obligations nouvelles.
-        </p>
-        <div class="btnrow">
-          <a class="btn" href="loi-administratif.html">Lire (HTML)</a>
-          <a class="btn secondary" href="Doc/lois/Lois_administratives_du_quebec.docx" download>Télécharger (DOCX)</a>
-        </div>
-      </div>
-
-      <div class="niveau">
-        <h3>6. SCQ – Outil de transition constitutionnelle</h3>
-        <p>
-          Cadre transitoire encadrant l’organisation, la conduite et la communication du SCQ pendant une transition.
-          Strictement subordonné aux normes supérieures, sans légitimité autonome.
-        </p>
-        <div class="btnrow">
-          <a class="btn" href="loi-scq-otc.html">Lire (HTML)</a>
-          <a class="btn secondary" href="Doc/lois/SCQ_Outil_de_transition_constitutionnelle.docx" download>Télécharger (DOCX)</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- =========================
-         VOLETS (APPROCHE PUBLIQUE)
-         ========================= -->
-    <h2 class="section-title">Approche publique en 3 volets</h2>
-
-    <p>
-      Pour éviter toute confusion et ne rien cacher au public, le SCQ présente son projet en trois volets :
-      (1) la situation actuelle, (2) la transition encadrée, (3) le Québec pays souverain.
-      Chaque volet est détaillé et disponible en lecture web (HTML) et en téléchargement (DOCX).
-    </p>
-
-    <div class="cadre-niveaux">
-      <div class="niveau">
-        <h3>VOLET 1 — Québec dans le Canada</h3>
-        <p>
-          Diagnostic clair : ce que le Québec contrôle réellement, ce qui dépend du fédéral, et où se situent les blocages.
-          Objectif : informer sans propagande, avec une lecture structurée des enjeux.
-        </p>
-        <div class="btnrow">
-          <a class="btn" href="Volet1.html">Lire (HTML)</a>
-          <a class="btn secondary" href="Doc/VOLET/VOLET_1_QUEBEC_DANS_LE_CANADA.docx" download>Télécharger (DOCX)</a>
-        </div>
-      </div>
-
-      <div class="niveau">
-        <h3>VOLET 2 — Transition constitutionnelle</h3>
-        <p>
-          Méthode de transition : étapes, garde-fous, continuité des services, protection des droits,
-          et mécanismes de transparence pendant la mise en place du nouveau cadre.
-        </p>
-        <div class="btnrow">
-          <a class="btn" href="Volet2.html">Lire (HTML)</a>
-          <a class="btn secondary" href="Doc/VOLET/VOLET_2_TRANSITION_CONSTITUTIONNELLE.docx" download>Télécharger (DOCX)</a>
-        </div>
-      </div>
-
-      <div class="niveau">
-        <h3>VOLET 3 — Québec pays souverain</h3>
-        <p>
-          Vision finale : institutions, gouvernance, économie, services publics, droits, immigration, finances,
-          et garanties démocratiques pour un pays stable, moderne et au service du peuple.
-        </p>
-        <div class="btnrow">
-          <a class="btn" href="Volet3.html">Lire (HTML)</a>
-          <a class="btn secondary" href="Doc/VOLET/VOLET_3_QUEBEC_PAYS_SOUVERAIN.docx" download>Télécharger (DOCX)</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="note">
-      <strong>Conseil technique :</strong> sur GitHub Pages, la casse et les chemins doivent être exacts
-      (ex. <strong>Doc/VOLET</strong> ≠ <strong>doc/volet</strong>).
-      Maintenant que tes fichiers sont renommés “web-safe”, assure-toi simplement que tous les liens HTML
-      utilisent exactement les nouveaux noms.
     </div>
 
   </main>
+
 </body>
 </html>
