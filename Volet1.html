@@ -8,9 +8,6 @@
   <link rel="stylesheet" href="css/styles.css" />
 
   <style>
-    /* ============================
-       Navigation
-       ============================ */
     nav{
       background:#0A2A66;
       padding:12px 16px;
@@ -31,24 +28,9 @@
       white-space:nowrap;
     }
     nav a:hover{ text-decoration:underline; }
-    nav a[aria-current="page"]{ background:rgba(255,255,255,0.15); }
-    nav .logo{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:0;
-      margin-right:6px;
-    }
-    nav .logo img{
-      height:40px;
-      width:auto;
-      border-radius:10px;
-      display:block;
-    }
+    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; margin-right:6px; }
+    nav .logo img{ height:40px; width:auto; border-radius:10px; display:block; }
 
-    /* ============================
-       Bannière (uniforme)
-       ============================ */
     .banner{
       text-align:center;
       margin-top:16px;
@@ -68,9 +50,6 @@
       margin:0 auto;
     }
 
-    /* ============================
-       Contenu
-       ============================ */
     main{
       max-width:980px;
       margin:22px auto 50px;
@@ -80,33 +59,24 @@
       box-shadow:0 0 12px rgba(0,0,0,0.10);
     }
 
-    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; text-align:center; }
+    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; }
     h2{ font-size:24px; color:#0047ab; margin:22px 0 10px; }
     h3{ font-size:18px; color:#0A2A66; margin:0 0 8px; }
-    p{ font-size:17px; margin:0 0 12px; line-height:1.65; color:#0f172a; }
 
-    .intro{
-      text-align:center;
-      max-width:860px;
-      margin:0 auto;
-    }
-
-    .box{
-      margin-top:18px;
-      padding:14px 16px;
-      border-radius:14px;
-      background:rgba(0,71,171,0.06);
-      border:1px solid rgba(0,71,171,0.14);
+    p, li{
+      font-size:17px;
+      line-height:1.65;
       color:#0f172a;
-      line-height:1.6;
-      font-size:15px;
+      margin:0 0 12px;
     }
+    ul{ margin:0 0 12px 18px; }
 
     .grid{
       display:grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap:14px;
-      margin-top:18px;
+      margin-top:14px;
+      align-items:stretch;
     }
 
     .card{
@@ -117,21 +87,11 @@
       box-shadow:0 0 10px rgba(0,0,0,0.05);
     }
 
-    .card ul{
-      margin:0;
-      padding-left:18px;
-      font-size:16px;
-      line-height:1.6;
-      color:#0f172a;
-    }
-    .card li{ margin-bottom:8px; }
-
     .btnrow{
       display:flex;
       flex-wrap:wrap;
       gap:10px;
-      margin-top:12px;
-      justify-content:center;
+      margin-top:10px;
     }
 
     .btn{
@@ -143,8 +103,6 @@
       text-decoration:none;
       font-weight:700;
       font-size:14px;
-      border:none;
-      cursor:pointer;
     }
     .btn:hover{ text-decoration:underline; }
     .btn.secondary{ background:#0f172a; }
@@ -153,19 +111,19 @@
       margin-top:18px;
       padding:14px 16px;
       border-radius:14px;
-      background:rgba(15,23,42,0.04);
-      border:1px solid rgba(15,23,42,0.10);
-      font-size:14px;
+      background:rgba(0,71,171,0.06);
+      border:1px solid rgba(0,71,171,0.14);
       color:#0f172a;
+      font-size:14px;
       line-height:1.6;
     }
 
-    @media (max-width:760px){
+    @media (max-width: 760px){
       nav{ flex-direction:column; align-items:flex-start; }
       main{ margin:18px 12px 40px; padding:18px; }
       h1{ font-size:28px; }
       h2{ font-size:20px; }
-      .grid{ grid-template-columns:1fr; }
+      .grid{ grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -175,112 +133,134 @@
   <!-- Navigation -->
   <nav>
     <a class="logo" href="index.html" aria-label="Retour à l’accueil">
-      /logo_scq.jpg" alt="Logo SCQ">
+      <img src="images/logo_scq.jpg" alt="Logo SCQ">
     </a>
 
     <a href="index.html">Accueil</a>
     <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
-    <a href="NotreVision.html">Notre vision</a>
     <a href="cadre.html">Cadre National</a>
     <a href="Volet1.html" aria-current="page">Volet 1</a>
     <a href="Volet2.html">Volet 2</a>
     <a href="Volet3.html">Volet 3</a>
-    <a href="membres.html">Membres</a>
-    <a href="equipe.html">Équipe</a>
-    <a href="comptabilite.html">Comptabilité</a>
-    <a href="contact.html">Contact</a>
     <a href="doc.html">Documents</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
   <!-- Bannière -->
   <div class="banner">
-    <img src="images/Banniere-Officiel.jpg" alt="Bannière SCQ">
+    <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
   </div>
 
-  <!-- Contenu -->
   <main>
     <h1>Volet 1 — Québec dans le Canada</h1>
-
-    <div class="intro">
-      <p>
-        Ce volet présente une approche structurée pour améliorer concrètement la situation du Québec
-        <strong>dans le cadre actuel</strong>, sans cacher les limites du système.
-        L’objectif est de mettre en place des mesures réalistes, vérifiables et défendables
-        tout en préparant la suite de manière transparente.
-      </p>
-
-      <div class="btnrow">
-        <a class="btn" href="cadre.html">Cadre National</a>
-        <a class="btn secondary" href="doc.html">Documents officiels</a>
-        <a class="btn" href="contact.html">Nous contacter</a>
-      </div>
-    </div>
-
-    <div class="box">
-      <strong>Principe :</strong> ce volet sert à expliquer ce que nous faisons et ce que nous pouvons obtenir
-      immédiatement (gestion, réformes, transparence), même avant une transition constitutionnelle.
-      Il ne remplace pas les autres volets : il les complète, dans un ordre clair.
-    </div>
-
-    <h2>Objectifs du Volet 1</h2>
-
-    <div class="grid">
-      <section class="card">
-        <h3>1) Corriger le fonctionnement de l’État</h3>
-        <ul>
-          <li>Réduire le gaspillage et améliorer la gestion des services.</li>
-          <li>Mesures de transparence : documents accessibles, décisions traçables.</li>
-          <li>Contrôle administratif : procédures plus claires, moins d’opacité.</li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h3>2) Protéger le citoyen</h3>
-        <ul>
-          <li>Prioriser l’accès aux services essentiels (santé, logement, sécurité).</li>
-          <li>Rendre les règles compréhensibles et opposables.</li>
-          <li>Empêcher les abus : rendre l’État responsable et vérifiable.</li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h3>3) Structurer l’information publique</h3>
-        <ul>
-          <li>Publier le cadre, les textes et la logique complète du projet.</li>
-          <li>Faire une séparation claire : ce qui est actuel, ce qui est transitoire, ce qui est final.</li>
-          <li>Éviter la confusion : liens stables, pages uniformes, documents officiels.</li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h3>4) Préparer la suite (sans improvisation)</h3>
-        <ul>
-          <li>Préparer le Volet 2 (transition) avec règles, étapes et garanties.</li>
-          <li>Préparer le Volet 3 (souveraineté) avec un plan public et complet.</li>
-          <li>Garantir que personne ne découvre le projet « après coup » : tout est publié.</li>
-        </ul>
-      </section>
-    </div>
-
-    <h2>Document officiel du Volet 1</h2>
     <p>
-      Le texte complet du Volet 1 est disponible en téléchargement. Il détaille l’approche, les objectifs,
-      les limites du cadre actuel et la logique de continuité vers les volets suivants.
+      Ce volet présente l’approche du SCQ pour agir efficacement <strong>à l’intérieur du cadre canadien actuel</strong>,
+      sans ambiguïté et sans promesses impossibles. Objectif : protéger les intérêts du Québec, renforcer la capacité
+      d’action, et préparer la population à comprendre clairement les étapes suivantes.
     </p>
 
     <div class="btnrow">
-      <a class="btn secondary" href="Doc/VOLET/VOLET%201%20-%20QU%C3%89BEC%20DANS%20LE%20CANADA.docx" download>
-        Télécharger (DOCX)
-      </a>
-      <a class="btn" href="Volet2.html">Aller au Volet 2</a>
-      <a class="btn" href="Volet3.html">Aller au Volet 3</a>
+      <a class="btn" href="cadre.html">Cadre National</a>
+      <a class="btn secondary" href="loi-constitution.html">Constitution (hub)</a>
+      <a class="btn" href="Volet2.html">Aller au Volet 2 →</a>
+    </div>
+
+    <h2>Ce que le Volet 1 couvre</h2>
+
+    <div class="grid">
+
+      <section class="card">
+        <h3>1) Gouverner avec transparence</h3>
+        <p>
+          Même dans le cadre actuel, le SCQ vise à imposer une culture de transparence : décisions explicables,
+          dépenses traçables et documents accessibles au public.
+        </p>
+        <ul>
+          <li>Reddition de comptes publique</li>
+          <li>Publication des cadres, procédures et références</li>
+          <li>Réduction de l’opacité administrative</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>2) Protéger les intérêts du Québec</h3>
+        <p>
+          Refuser ce qui nuit au Québec, documenter les impacts, et défendre l’avantage réel du peuple.
+          Le Volet 1 met l’accent sur l’efficacité politique immédiate.
+        </p>
+        <ul>
+          <li>Analyse d’impact systématique</li>
+          <li>Priorité au Québec et à ses citoyens</li>
+          <li>Positionnement clair et constant</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>3) Renforcer l’appareil public</h3>
+        <p>
+          Améliorer la capacité d’action : règles simples, contrôle interne, lutte contre la fraude,
+          et amélioration des services essentiels.
+        </p>
+        <ul>
+          <li>Procédures administratives claires</li>
+          <li>Contrôles et audits</li>
+          <li>Service public orienté citoyen</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>4) Préparer la suite sans mentir</h3>
+        <p>
+          Le Volet 1 reconnaît une réalité : l’indépendance exige une population informée et prête.
+          On prépare le terrain par l’éducation politique et la cohérence.
+        </p>
+        <ul>
+          <li>Information citoyenne</li>
+          <li>Clarté sur les étapes</li>
+          <li>Préparation structurée</li>
+        </ul>
+      </section>
+
+    </div>
+
+    <h2>Références et cadre juridique</h2>
+    <div class="grid">
+
+      <section class="card">
+        <h3>Constitution (structure complète)</h3>
+        <p>
+          La Constitution sert de référence centrale pour comprendre l’architecture de l’État que le SCQ veut bâtir.
+          Même dans le Volet 1, elle est publiée pour transparence et cohérence.
+        </p>
+        <div class="btnrow">
+          <a class="btn" href="loi-constitution.html">Ouvrir le hub</a>
+          <a class="btn secondary" href="Constitution/principes.html">Principes</a>
+          <a class="btn secondary" href="Constitution/droits.html">Droits</a>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3>Cadre National (hiérarchie des normes)</h3>
+        <p>
+          Pour éviter la confusion, le Cadre National montre l’ordre des normes : Constitution, lois, règlements,
+          pratiques administratives et outils transitoires.
+        </p>
+        <div class="btnrow">
+          <a class="btn" href="cadre.html">Ouvrir Cadre National</a>
+          <a class="btn secondary" href="loi-organiques.html">Lois organiques</a>
+        </div>
+      </section>
+
     </div>
 
     <div class="note">
-      <strong>Note technique :</strong> sur GitHub Pages, les noms de dossiers/fichiers sont sensibles.
-      Assure-toi que le chemin correspond exactement à ton dépôt :
-      <strong>Doc/VOLET/</strong> et le nom du fichier (majuscules, espaces, accents).
-      Si tu veux éviter tout problème, renomme les fichiers en version simple (ex. <em>volet1.docx</em>).
+      <strong>Note :</strong> Le Volet 1 est volontairement pragmatique. Il sert à agir maintenant, dans le cadre actuel,
+      tout en gardant une structure publique, compréhensible et vérifiable pour préparer la suite sans improvisation.
+    </div>
+
+    <div class="btnrow">
+      <a class="btn secondary" href="Volet2.html">Volet 2 — Transition constitutionnelle →</a>
+      <a class="btn" href="Volet3.html">Volet 3 — Québec pays souverain →</a>
     </div>
 
   </main>
