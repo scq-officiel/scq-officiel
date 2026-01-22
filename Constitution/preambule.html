@@ -1,1 +1,200 @@
-<h1>Préambule</h1><p>Nous, peuple du Québec...</p>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCQ - Constitution | Préambule</title>
+
+  <!-- CSS global du site -->
+  <link rel="stylesheet" href="../css/styles.css" />
+
+  <style>
+    /* ============================
+       Navigation (identique au site)
+       ============================ */
+    nav{
+      background:#0A2A66;
+      padding:12px 16px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      font-weight:700;
+      padding:6px 8px;
+      border-radius:10px;
+      white-space:nowrap;
+    }
+    nav a:hover{ text-decoration:underline; }
+    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; margin-right:6px; }
+    nav .logo img{ height:40px; width:auto; border-radius:10px; display:block; }
+
+    /* ============================
+       Bannière (uniforme)
+       ============================ */
+    .banner{
+      text-align:center;
+      margin-top:16px;
+      width:100%;
+      overflow:hidden;
+      padding:0 16px;
+    }
+    .banner img{
+      width:100%;
+      max-width:715px;
+      height:auto;
+      max-height:260px;
+      object-fit:cover;
+      border-radius:16px;
+      box-shadow:0 0 12px rgba(0,0,0,0.10);
+      display:block;
+      margin:0 auto; /* centre parfaitement */
+    }
+
+    /* ============================
+       Contenu
+       ============================ */
+    main{
+      max-width:980px;
+      margin:22px auto 50px;
+      background:#fff;
+      padding:26px;
+      border-radius:14px;
+      box-shadow:0 0 12px rgba(0,0,0,0.10);
+    }
+
+    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; }
+    h2{ font-size:22px; color:#0047ab; margin:18px 0 10px; }
+    p{ font-size:17px; margin:0 0 12px; line-height:1.65; color:#0f172a; }
+
+    .card{
+      border:1px solid rgba(0,0,0,0.10);
+      border-radius:14px;
+      padding:16px;
+      background:#fff;
+      box-shadow:0 0 10px rgba(0,0,0,0.05);
+      margin-top:14px;
+    }
+
+    .btnrow{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:10px;
+    }
+    .btn{
+      display:inline-block;
+      background:#0A2A66;
+      color:#fff;
+      padding:10px 12px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:700;
+      font-size:14px;
+      border:none;
+      cursor:pointer;
+    }
+    .btn:hover{ text-decoration:underline; }
+    .btn.secondary{ background:#0f172a; }
+
+    .section-nav{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:10px;
+    }
+
+    .note{
+      margin-top:14px;
+      padding:14px 16px;
+      border-radius:14px;
+      background:rgba(0,71,171,0.06);
+      border:1px solid rgba(0,71,171,0.14);
+      color:#0f172a;
+      font-size:14px;
+      line-height:1.6;
+    }
+
+    @media (max-width:760px){
+      nav{ flex-direction:column; align-items:flex-start; }
+      main{ margin:18px 12px 40px; padding:18px; }
+      h1{ font-size:28px; }
+      h2{ font-size:20px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a class="logo" href="../index.html" aria-label="Retour à l’accueil">
+      <img src="../images/logo_scq.jpg" alt="Logo SCQ">
+    </a>
+
+    <a href="../index.html">Accueil</a>
+    <a href="../qui-sommes-nous.html">Qui sommes-nous ?</a>
+    <a href="../cadre.html">Cadre National</a>
+    <a href="../membres.html">Membres</a>
+    <a href="../equipe.html">Équipe</a>
+    <a href="../comptabilite.html">Comptabilité</a>
+    <a href="../contact.html">Contact</a>
+    <a href="../doc.html">Documents</a>
+  </nav>
+
+  <!-- Bannière -->
+  <div class="banner">
+    <img src="../images/Bannière-Officiel.jpg" alt="Bannière SCQ">
+  </div>
+
+  <!-- Contenu -->
+  <main>
+    <h1>Constitution — Préambule</h1>
+
+    <div class="btnrow">
+      <a class="btn" href="../loi-constitution.html">Retour à la page Constitution</a>
+      <a class="btn secondary" href="../Doc/lois/Constitution_du_Quebec_souverain.docx" download>Télécharger (DOCX)</a>
+    </div>
+
+    <div class="card">
+      <h2>Navigation des sections</h2>
+      <div class="section-nav" aria-label="Navigation constitution">
+        <a class="btn" href="preambule.html" aria-current="page">Préambule</a>
+        <a class="btn" href="principes.html">Principes</a>
+        <a class="btn" href="peuples.html">Peuples</a>
+        <a class="btn" href="droits.html">Droits</a>
+        <a class="btn" href="institutions.html">Institutions</a>
+        <a class="btn" href="justice.html">Justice</a>
+        <a class="btn" href="revision.html">Révision</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <!-- Contenu (texte) -->
+      <h2>Texte</h2>
+      <p>
+        Le préambule présente l’intention fondatrice et les valeurs qui guident l’État du Québec souverain :
+        souveraineté populaire, primauté du bien commun, transparence, justice, et respect de la dignité humaine.
+      </p>
+      <p>
+        Il sert de référence d’interprétation pour l’ensemble des articles constitutionnels et oriente la cohérence
+        des lois organiques, ordinaires et des règlements.
+      </p>
+    </div>
+
+    <div class="note">
+      <strong>Note technique :</strong> Cette page se trouve dans <strong>/Constitution/</strong>.
+      Les liens vers le site utilisent donc <strong>../</strong> (ex. <em>../loi-constitution.html</em>).
+      Assure-toi que les noms de fichiers correspondent exactement (casse incluse).
+    </div>
+
+  </main>
+
+</body>
+</html>
