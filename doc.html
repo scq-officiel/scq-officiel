@@ -40,6 +40,8 @@
       width:100%;
       max-width:715px;
       height:auto;
+      max-height:260px;
+      object-fit:cover;
       border-radius:16px;
       box-shadow:0 0 12px rgba(0,0,0,0.10);
       display:block;
@@ -118,102 +120,190 @@
 
 <body>
 
-<nav>
-  <a class="logo" href="index.html">
-    <img src="images/logo_scq.jpg" alt="Logo SCQ">
-  </a>
-  <a href="index.html">Accueil</a>
-  <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
-  <a href="cadre.html">Cadre National</a>
-  <a href="membres.html">Membres</a>
-  <a href="equipe.html">Équipe</a>
-  <a href="comptabilite.html">Comptabilité</a>
-  <a href="contact.html">Contact</a>
-  <a href="doc.html" aria-current="page">Documents</a>
-</nav>
+  <!-- Navigation -->
+  <nav>
+    <a class="logo" href="index.html" aria-label="Retour à l’accueil">
+      <img src="images/logo_scq.jpg" alt="Logo SCQ">
+    </a>
+    <a href="index.html">Accueil</a>
+    <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+    <a href="cadre.html">Cadre National</a>
+    <a href="membres.html">Membres</a>
+    <a href="equipe.html">Équipe</a>
+    <a href="comptabilite.html">Comptabilité</a>
+    <a href="contact.html">Contact</a>
+    <a href="doc.html" aria-current="page">Documents</a>
+  </nav>
 
-<div class="banner">
-  <img src="images/Banniere-Officiel.jpg" alt="Bannière SCQ">
-</div>
-
-<main>
-  <h1>Documents officiels</h1>
-
-  <p>
-    Cette section regroupe l’ensemble des documents officiels du
-    <strong>Parti Souveraineté et Citoyenneté du Québec (SCQ)</strong>.
-    Tous les documents sont rendus publics afin d’assurer une transparence complète.
-  </p>
-
-  <!-- ===============================
-       DOCUMENTS PUBLICS ET INTERNES
-       =============================== -->
-  <h2>Documents publics et internes</h2>
-  <div class="grid">
-
-    <div class="card">
-      <h3>Doctrine primaire et lignes directrices fondamentales</h3>
-      <p>
-        Document de référence définissant la doctrine politique, les valeurs fondatrices
-        et les lignes directrices structurantes du SCQ.
-      </p>
-      <a class="btn secondary"
-         href="Doc/Doctrine_primaire_et_lignes_directrices_fondamentales.docx"
-         download>
-        Télécharger (DOCX)
-      </a>
-    </div>
-
-    <div class="card">
-      <h3>Code de conduite</h3>
-      <p>Règles internes, devoirs et standards de comportement.</p>
-      <a class="btn secondary" href="Doc/Code_de_conduite_du_SCQ.docx" download>
-        Télécharger (DOCX)
-      </a>
-    </div>
-
-    <div class="card">
-      <h3>Formulaire d’engagement du membre</h3>
-      <p>Document officiel d’adhésion et d’engagement.</p>
-      <a class="btn secondary" href="Doc/FORMULAIRE_ENGAGEMENT_MEMBRE_SCQ.docx" download>
-        Télécharger (DOCX)
-      </a>
-    </div>
-
-    <div class="card">
-      <h3>Fiche de signature d’appui</h3>
-      <p>Soutien citoyen et engagement public.</p>
-      <a class="btn secondary" href="Doc/FICHE_DE_SIGNATURE_D_APPUI.docx" download>
-        Télécharger (DOCX)
-      </a>
-    </div>
-
-    <div class="card">
-      <h3>Lettre officielle de remerciement</h3>
-      <p>Lettre type utilisée par le SCQ.</p>
-      <a class="btn secondary" href="Doc/LETTRE_REMERCIEMENT_SCQ.docx" download>
-        Télécharger (DOCX)
-      </a>
-    </div>
-
-    <div class="card">
-      <h3>Politique de contributions volontaires</h3>
-      <p>Cadre éthique et financier des contributions.</p>
-      <a class="btn secondary" href="Doc/POLITIQUE_CONTRIBUTIONS_VOLONTAIRES_SCQ.docx" download>
-        Télécharger (DOCX)
-      </a>
-    </div>
-
+  <!-- Bannière -->
+  <div class="banner">
+    <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
   </div>
 
-  <div class="note">
-    <strong>Important :</strong> sur GitHub Pages, les chemins et la casse sont stricts.
-    Le fichier doit s’appeler exactement :
-    <br>
-    <code>Doc/Doctrine_primaire_et_lignes_directrices_fondamentales.docx</code>
-  </div>
+  <main>
+    <h1>Documents officiels</h1>
 
-</main>
+    <p>
+      Cette section regroupe l’ensemble des documents officiels du
+      <strong>Parti Souveraineté et Citoyenneté du Québec (SCQ)</strong>.
+      Tous les fichiers sont accessibles afin d’assurer la transparence,
+      la vérifiabilité et l’information citoyenne.
+    </p>
+
+    <h2>Textes juridiques fondamentaux</h2>
+    <div class="grid">
+
+      <div class="card">
+        <h3>Constitution du Québec souverain</h3>
+        <p>Texte suprême définissant les droits, institutions et mécanismes fondamentaux.</p>
+        <div class="btnrow">
+          <a class="btn" href="loi-constitution.html">Lire (HTML)</a>
+          <a class="btn secondary" href="Doc/lois/Constitution_du_Quebec_souverain.docx" download>Télécharger (DOCX)</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Lois organiques</h3>
+        <p>Lois structurantes organisant le fonctionnement de l’État.</p>
+        <div class="btnrow">
+          <a class="btn" href="loi-organiques.html">Lire (HTML)</a>
+          <a class="btn secondary" href="Doc/lois/Lois_organiques_du_Quebec_souverain.docx" download>Télécharger (DOCX)</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Lois ordinaires</h3>
+        <p>Lois sectorielles appliquant le cadre constitutionnel.</p>
+        <div class="btnrow">
+          <a class="btn" href="loi-ordinaires.html">Lire (HTML)</a>
+          <a class="btn secondary" href="Doc/lois/Lois_ordinaires_du_Quebec_souverain.docx" download>Télécharger (DOCX)</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Règlements</h3>
+        <p>Normes techniques et modalités d’application.</p>
+        <div class="btnrow">
+          <a class="btn" href="loi-Reglements.html">Lire (HTML)</a>
+          <a class="btn secondary" href="Doc/lois/Reglements_du_Quebec_souverain.docx" download>Télécharger (DOCX)</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Pratiques administratives</h3>
+        <p>Directives internes (sans valeur normative autonome).</p>
+        <div class="btnrow">
+          <a class="btn" href="loi-administratif.html">Lire (HTML)</a>
+          <a class="btn secondary" href="Doc/lois/Lois_administratives_du_quebec.docx" download>Télécharger (DOCX)</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>SCQ — Outil de transition constitutionnelle</h3>
+        <p>Cadre transitoire encadrant l’action du SCQ pendant la transition.</p>
+        <div class="btnrow">
+          <a class="btn" href="loi-scq-otc.html">Lire (HTML)</a>
+          <a class="btn secondary" href="Doc/lois/SCQ_Outil_de_transition_constitutionnelle.docx" download>Télécharger (DOCX)</a>
+        </div>
+      </div>
+
+    </div>
+
+    <h2>Approche publique — Volets</h2>
+    <div class="grid">
+
+      <div class="card">
+        <h3>Volet 1 — Québec dans le Canada</h3>
+        <p>Position, actions et priorités tant que le Québec demeure dans le Canada.</p>
+        <div class="btnrow">
+          <a class="btn" href="Volet1.html">Lire (HTML)</a>
+          <a class="btn secondary" href="Doc/VOLET/VOLET_1_QUEBEC_DANS_LE_CANADA.docx" download>Télécharger (DOCX)</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Volet 2 — Transition constitutionnelle</h3>
+        <p>Cadre de transition : stabilité, légitimité démocratique, continuité des services.</p>
+        <div class="btnrow">
+          <a class="btn" href="Volet2.html">Lire (HTML)</a>
+          <a class="btn secondary" href="Doc/VOLET/VOLET_2_TRANSITION_CONSTITUTIONNELLE.docx" download>Télécharger (DOCX)</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Volet 3 — Québec pays souverain</h3>
+        <p>Architecture complète de l’État souverain : institutions, règles, services essentiels.</p>
+        <div class="btnrow">
+          <a class="btn" href="Volet3.html">Lire (HTML)</a>
+          <a class="btn secondary" href="Doc/VOLET/VOLET_3_QUEBEC_PAYS_SOUVERAIN.docx" download>Télécharger (DOCX)</a>
+        </div>
+      </div>
+
+    </div>
+
+    <h2>Documents publics et internes</h2>
+    <div class="grid">
+
+      <div class="card">
+        <h3>Doctrine primaire (DOCX)</h3>
+        <p>Doctrine primaire et lignes directrices fondamentales (version téléchargeable).</p>
+        <a class="btn secondary" href="Doc/Doctrine_primaire_et_lignes_directrices_fondamentales.docx" download>Télécharger</a>
+      </div>
+
+      <div class="card">
+        <h3>Code de conduite (DOCX)</h3>
+        <p>Règles internes et standards de comportement.</p>
+        <a class="btn secondary" href="Doc/CODE_DE_CONDUITE_SCQ.docx" download>Télécharger</a>
+      </div>
+
+      <div class="card">
+        <h3>Fiche de signature d’appui (DOCX)</h3>
+        <p>Document public de soutien.</p>
+        <a class="btn secondary" href="Doc/FICHE_DE_SIGNATURE_D_APPUI.docx" download>Télécharger</a>
+      </div>
+
+      <div class="card">
+        <h3>Formulaire d’engagement membre (DOCX)</h3>
+        <p>Engagement et informations de base.</p>
+        <a class="btn secondary" href="Doc/FORMULAIRE_ENGAGEMENT_MEMBRE_SCQ.docx" download>Télécharger</a>
+      </div>
+
+      <div class="card">
+        <h3>Politique de contributions volontaires (DOCX)</h3>
+        <p>Cadre de contribution volontaire et implication.</p>
+        <a class="btn secondary" href="Doc/POLITIQUE_CONTRIBUTIONS_VOLONTAIRES_SCQ.docx" download>Télécharger</a>
+      </div>
+
+      <div class="card">
+        <h3>Lettre officielle de remerciement (DOCX)</h3>
+        <p>Lettre type de remerciement.</p>
+        <a class="btn secondary" href="Doc/LETTRE_REMERCIEMENT_SCQ.docx" download>Télécharger</a>
+      </div>
+
+      <div class="card">
+        <h3>Doctrine fondatrice (PDF)</h3>
+        <p>Doctrine et architecture politique complète.</p>
+        <a class="btn secondary" href="Doc/SCQ_Doctrine_Fondatrice_Architecture_Politique.pdf" download>Télécharger</a>
+      </div>
+
+      <div class="card">
+        <h3>Carte de membre (image)</h3>
+        <p>Visuel de carte de membre.</p>
+        <a class="btn secondary" href="Doc/CARTE_MEMBRE_SCQ.jpg" download>Télécharger</a>
+      </div>
+
+    </div>
+
+    <div class="note">
+      <strong>Note technique :</strong> sur GitHub Pages, les chemins et la casse sont stricts.
+      Conserve exactement : <strong>Doc</strong>, <strong>Doc/lois</strong> et <strong>Doc/VOLET</strong>.
+      Si tu renommes un fichier, il faut aussi mettre à jour son lien ici.
+      <br><br>
+      <strong>Si un téléchargement ne marche pas :</strong> vérifie le nom exact du fichier (majuscules/minuscules)
+      et teste l’ouverture du lien dans un nouvel onglet.
+    </div>
+
+  </main>
 
 </body>
 </html>
