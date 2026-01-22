@@ -1,1 +1,196 @@
-<h1>Institutions</h1><p>Parlement, Gouvernement, Conseil...</p>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCQ - Constitution | Institutions de l’État</title>
+
+  <!-- CSS global -->
+  <link rel="stylesheet" href="../css/styles.css" />
+
+  <style>
+    nav{
+      background:#0A2A66;
+      padding:12px 16px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      font-weight:700;
+      padding:6px 8px;
+      border-radius:10px;
+      white-space:nowrap;
+    }
+    nav a:hover{ text-decoration:underline; }
+    nav .logo{ display:inline-flex; align-items:center; gap:10px; }
+    nav .logo img{ height:40px; border-radius:10px; }
+
+    .banner{
+      text-align:center;
+      margin-top:16px;
+      padding:0 16px;
+    }
+    .banner img{
+      width:100%;
+      max-width:715px;
+      border-radius:16px;
+      box-shadow:0 0 12px rgba(0,0,0,0.10);
+      display:block;
+      margin:0 auto;
+    }
+
+    main{
+      max-width:980px;
+      margin:22px auto 50px;
+      background:#fff;
+      padding:26px;
+      border-radius:14px;
+      box-shadow:0 0 12px rgba(0,0,0,0.10);
+    }
+
+    h1{ font-size:34px; color:#0047ab; margin-bottom:10px; }
+    h2{ font-size:22px; color:#0047ab; margin-top:20px; }
+    h3{ font-size:18px; color:#0A2A66; margin-top:16px; }
+
+    p, li{
+      font-size:17px;
+      line-height:1.65;
+      color:#0f172a;
+    }
+
+    ul{ margin-left:20px; }
+
+    .card{
+      margin-top:16px;
+      padding:16px;
+      border-radius:14px;
+      border:1px solid rgba(0,0,0,0.10);
+      box-shadow:0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .btnrow{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin:12px 0;
+    }
+    .btn{
+      background:#0A2A66;
+      color:#fff;
+      padding:10px 12px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:700;
+      font-size:14px;
+    }
+    .btn.secondary{ background:#0f172a; }
+
+    .note{
+      margin-top:18px;
+      padding:14px;
+      border-radius:14px;
+      background:rgba(0,71,171,0.06);
+      border:1px solid rgba(0,71,171,0.14);
+      font-size:14px;
+      color:#0f172a;
+      line-height:1.6;
+    }
+
+    @media(max-width:760px){
+      nav{ flex-direction:column; align-items:flex-start; }
+      main{ margin:16px; padding:18px; }
+      h1{ font-size:28px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav>
+  <a class="logo" href="../index.html">
+    <img src="../images/logo_scq.jpg" alt="Logo SCQ">
+  </a>
+  <a href="../index.html">Accueil</a>
+  <a href="../cadre.html">Cadre National</a>
+  <a href="../loi-constitution.html">Constitution</a>
+  <a href="../doc.html">Documents</a>
+</nav>
+
+<!-- Bannière -->
+<div class="banner">
+  <img src="../images/Bannière-Officiel.jpg" alt="Bannière SCQ">
+</div>
+
+<main>
+
+  <h1>Institutions de l’État</h1>
+
+  <div class="btnrow">
+    <a class="btn" href="../loi-constitution.html">← Retour Constitution</a>
+    <a class="btn secondary" href="../Doc/lois/Constitution_du_Quebec_souverain.docx" download>Télécharger (DOCX)</a>
+  </div>
+
+  <div class="card">
+    <h2>Principe fondamental</h2>
+    <p>
+      Les institutions de l’État québécois sont établies pour servir le peuple,
+      garantir la démocratie, protéger les droits fondamentaux et assurer
+      une gouvernance transparente, responsable et stable.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Séparation des pouvoirs</h2>
+    <p>
+      L’organisation de l’État repose sur une séparation claire des pouvoirs,
+      afin d’éviter toute concentration abusive et de garantir l’équilibre démocratique.
+    </p>
+    <ul>
+      <li><strong>Pouvoir législatif :</strong> élabore et adopte les lois</li>
+      <li><strong>Pouvoir exécutif :</strong> applique les lois et administre l’État</li>
+      <li><strong>Pouvoir judiciaire :</strong> interprète les lois et rend la justice</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Institutions démocratiques</h2>
+    <ul>
+      <li>Assemblée nationale élue démocratiquement</li>
+      <li>Gouvernement responsable devant l’Assemblée</li>
+      <li>Institutions indépendantes de surveillance et de contrôle</li>
+      <li>Administrations publiques soumises à la loi et à la transparence</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Indépendance institutionnelle</h2>
+    <p>
+      Certaines institutions bénéficient d’une indépendance fonctionnelle afin
+      d’assurer l’impartialité, notamment en matière électorale, judiciaire,
+      financière et éthique.
+    </p>
+  </div>
+
+  <div class="note">
+    <strong>Garantie constitutionnelle :</strong>  
+    Aucune institution ne peut exercer un pouvoir qui ne lui est expressément
+    reconnu par la Constitution ou par une loi conforme à celle-ci.
+  </div>
+
+  <div class="btnrow">
+    <a class="btn" href="droits.html">← Droits</a>
+    <a class="btn" href="justice.html">Justice →</a>
+  </div>
+
+</main>
+
+</body>
+</html>
