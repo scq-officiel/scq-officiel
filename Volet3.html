@@ -8,9 +8,6 @@
   <link rel="stylesheet" href="css/styles.css" />
 
   <style>
-    /* ============================
-       Navigation
-       ============================ */
     nav{
       background:#0A2A66;
       padding:12px 16px;
@@ -31,24 +28,9 @@
       white-space:nowrap;
     }
     nav a:hover{ text-decoration:underline; }
-    nav a[aria-current="page"]{ background:rgba(255,255,255,0.15); }
-    nav .logo{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:0;
-      margin-right:6px;
-    }
-    nav .logo img{
-      height:40px;
-      width:auto;
-      border-radius:10px;
-      display:block;
-    }
+    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; margin-right:6px; }
+    nav .logo img{ height:40px; width:auto; border-radius:10px; display:block; }
 
-    /* ============================
-       Bannière (uniforme)
-       ============================ */
     .banner{
       text-align:center;
       margin-top:16px;
@@ -68,9 +50,6 @@
       margin:0 auto;
     }
 
-    /* ============================
-       Contenu
-       ============================ */
     main{
       max-width:980px;
       margin:22px auto 50px;
@@ -80,33 +59,24 @@
       box-shadow:0 0 12px rgba(0,0,0,0.10);
     }
 
-    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; text-align:center; }
+    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; }
     h2{ font-size:24px; color:#0047ab; margin:22px 0 10px; }
     h3{ font-size:18px; color:#0A2A66; margin:0 0 8px; }
-    p{ font-size:17px; margin:0 0 12px; line-height:1.65; color:#0f172a; }
 
-    .intro{
-      text-align:center;
-      max-width:860px;
-      margin:0 auto;
-    }
-
-    .box{
-      margin-top:18px;
-      padding:14px 16px;
-      border-radius:14px;
-      background:rgba(0,71,171,0.06);
-      border:1px solid rgba(0,71,171,0.14);
+    p, li{
+      font-size:17px;
+      line-height:1.65;
       color:#0f172a;
-      line-height:1.6;
-      font-size:15px;
+      margin:0 0 12px;
     }
+    ul{ margin:0 0 12px 18px; }
 
     .grid{
       display:grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap:14px;
-      margin-top:18px;
+      margin-top:14px;
+      align-items:stretch;
     }
 
     .card{
@@ -117,21 +87,11 @@
       box-shadow:0 0 10px rgba(0,0,0,0.05);
     }
 
-    .card ul{
-      margin:0;
-      padding-left:18px;
-      font-size:16px;
-      line-height:1.6;
-      color:#0f172a;
-    }
-    .card li{ margin-bottom:8px; }
-
     .btnrow{
       display:flex;
       flex-wrap:wrap;
       gap:10px;
-      margin-top:12px;
-      justify-content:center;
+      margin-top:10px;
     }
 
     .btn{
@@ -143,8 +103,6 @@
       text-decoration:none;
       font-weight:700;
       font-size:14px;
-      border:none;
-      cursor:pointer;
     }
     .btn:hover{ text-decoration:underline; }
     .btn.secondary{ background:#0f172a; }
@@ -153,19 +111,19 @@
       margin-top:18px;
       padding:14px 16px;
       border-radius:14px;
-      background:rgba(15,23,42,0.04);
-      border:1px solid rgba(15,23,42,0.10);
-      font-size:14px;
+      background:rgba(0,71,171,0.06);
+      border:1px solid rgba(0,71,171,0.14);
       color:#0f172a;
+      font-size:14px;
       line-height:1.6;
     }
 
-    @media (max-width:760px){
+    @media (max-width: 760px){
       nav{ flex-direction:column; align-items:flex-start; }
       main{ margin:18px 12px 40px; padding:18px; }
       h1{ font-size:28px; }
       h2{ font-size:20px; }
-      .grid{ grid-template-columns:1fr; }
+      .grid{ grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -180,105 +138,148 @@
 
     <a href="index.html">Accueil</a>
     <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
-    <a href="NotreVision.html">Notre vision</a>
     <a href="cadre.html">Cadre National</a>
     <a href="Volet1.html">Volet 1</a>
     <a href="Volet2.html">Volet 2</a>
     <a href="Volet3.html" aria-current="page">Volet 3</a>
-    <a href="membres.html">Membres</a>
-    <a href="equipe.html">Équipe</a>
-    <a href="comptabilite.html">Comptabilité</a>
-    <a href="contact.html">Contact</a>
     <a href="doc.html">Documents</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
   <!-- Bannière -->
   <div class="banner">
-    <img src="images/Banniere-Officiel.jpg" alt="Bannière SCQ">
+    <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
   </div>
 
-  <!-- Contenu -->
   <main>
     <h1>Volet 3 — Québec pays souverain</h1>
-
-    <div class="intro">
-      <p>
-        Ce volet présente la structure complète d’un Québec souverain : institutions, droits,
-        fonctionnement démocratique, organisation de l’État et mécanismes de protection.
-        Tout est présenté de façon publique, claire et vérifiable.
-      </p>
-
-      <div class="btnrow">
-        <a class="btn" href="cadre.html">Cadre National</a>
-        <a class="btn secondary" href="doc.html">Documents officiels</a>
-        <a class="btn" href="contact.html">Nous contacter</a>
-      </div>
-    </div>
-
-    <div class="box">
-      <strong>Principe :</strong> le Québec souverain doit être un État moderne, stable et démocratique,
-      avec des règles claires et des garde-fous concrets. L’État est au service du peuple,
-      et non l’inverse.
-    </div>
-
-    <h2>Objectifs du Volet 3</h2>
-
-    <div class="grid">
-      <section class="card">
-        <h3>1) Institutions solides et encadrées</h3>
-        <ul>
-          <li>Institutions compréhensibles et contrôlables par des règles écrites.</li>
-          <li>Limites réelles au pouvoir : séparation des fonctions et mécanismes de contrôle.</li>
-          <li>Décisions publiques, traçables et responsables.</li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h3>2) Droits et libertés effectifs</h3>
-        <ul>
-          <li>Protection des droits fondamentaux et des libertés publiques.</li>
-          <li>Garanties contre les abus administratifs et politiques.</li>
-          <li>Cadre clair pour empêcher les dérives autoritaires.</li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h3>3) Organisation de l’État et services</h3>
-        <ul>
-          <li>Un État qui sert les citoyens : santé, justice, éducation, sécurité.</li>
-          <li>Structure cohérente : Constitution, lois, règlements et pratiques.</li>
-          <li>Stabilité et continuité des services essentiels.</li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h3>4) Cohérence et transparence du projet</h3>
-        <ul>
-          <li>Projet public : rien n’est caché, tout est documenté.</li>
-          <li>Liens officiels disponibles (HTML + DOCX) pour vérification citoyenne.</li>
-          <li>Architecture complète et progressive (Volets 1 → 2 → 3).</li>
-        </ul>
-      </section>
-    </div>
-
-    <h2>Document officiel du Volet 3</h2>
     <p>
-      Le texte complet du Volet 3 est disponible en téléchargement. Il présente la structure finale
-      du Québec souverain et les principes fondamentaux du pays que nous voulons bâtir.
+      Ce volet présente la vision complète d’un <strong>Québec souverain</strong> : institutions solides, finances publiques responsables,
+      droits protégés et services essentiels centrés sur l’humain. Le SCQ publie ces bases pour que le public puisse
+      <strong>vérifier</strong> et comprendre ce que nous voulons construire, sans zone grise.
     </p>
 
     <div class="btnrow">
-      <a class="btn secondary" href="Doc/VOLET/VOLET%203%20-%20QU%C3%89BEC%20PAYS%20SOUVERAIN.docx" download>
-        Télécharger (DOCX)
-      </a>
-      <a class="btn" href="Volet2.html">Retour Volet 2</a>
-      <a class="btn" href="Volet1.html">Retour Volet 1</a>
+      <a class="btn" href="Volet2.html">← Volet 2</a>
+      <a class="btn secondary" href="loi-constitution.html">Constitution (hub)</a>
+      <a class="btn" href="cadre.html">Cadre National</a>
+    </div>
+
+    <h2>Ce que le Volet 3 couvre</h2>
+
+    <div class="grid">
+
+      <section class="card">
+        <h3>1) Un État structuré et contrôlé</h3>
+        <p>
+          Le Québec souverain repose sur des institutions clairement définies, une séparation réelle des pouvoirs
+          et des mécanismes de contrôle indépendants pour empêcher les abus.
+        </p>
+        <ul>
+          <li>Institutions de l’État et responsabilités</li>
+          <li>Contrôles et reddition de comptes</li>
+          <li>Stabilité démocratique</li>
+        </ul>
+        <div class="btnrow">
+          <a class="btn" href="Constitution/institutions.html">Institutions (Constitution)</a>
+          <a class="btn secondary" href="Constitution/justice.html">Justice</a>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3>2) Finances publiques responsables</h3>
+        <p>
+          Un pays souverain doit être financièrement stable : budgets transparents, fiscalité équitable,
+          dette encadrée et vérification indépendante.
+        </p>
+        <ul>
+          <li>Responsabilité budgétaire</li>
+          <li>Transparence des dépenses</li>
+          <li>Contrôle et audit</li>
+        </ul>
+        <div class="btnrow">
+          <a class="btn" href="Constitution/finances.html">Finances (Constitution)</a>
+          <a class="btn secondary" href="comptabilite.html">Comptabilité (SCQ)</a>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3>3) Droits, libertés et protection réelle</h3>
+        <p>
+          Les droits ne sont pas un slogan : ils doivent être garantis et défendables, avec des recours effectifs.
+          La Constitution établit la base. Les lois les appliquent concrètement.
+        </p>
+        <ul>
+          <li>Droits et libertés</li>
+          <li>Recours et justice accessible</li>
+          <li>Égalité devant la loi</li>
+        </ul>
+        <div class="btnrow">
+          <a class="btn" href="Constitution/droits.html">Droits (Constitution)</a>
+          <a class="btn secondary" href="Constitution/justice.html">Justice</a>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3>4) Services essentiels centrés sur l’humain</h3>
+        <p>
+          Un pays doit être bon à vivre : santé, éducation, logement, sécurité, infrastructures.
+          L’approche du SCQ vise à remettre l’humain au centre, avec des règles simples et vérifiables.
+        </p>
+        <ul>
+          <li>Objectifs clairs et mesurables</li>
+          <li>Procédures publiques et compréhensibles</li>
+          <li>Réduction de l’opacité</li>
+        </ul>
+        <div class="btnrow">
+          <a class="btn" href="loi-organiques.html">Lois organiques (HTML)</a>
+          <a class="btn secondary" href="loi-ordinaires.html">Lois ordinaires (HTML)</a>
+        </div>
+      </section>
+
+    </div>
+
+    <h2>Architecture juridique (pour vérification publique)</h2>
+
+    <div class="grid">
+
+      <section class="card">
+        <h3>Constitution (hub)</h3>
+        <p>
+          Point d’entrée officiel vers toutes les sections constitutionnelles (HTML),
+          avec téléchargement en DOCX pour archivage et preuve.
+        </p>
+        <div class="btnrow">
+          <a class="btn" href="loi-constitution.html">Ouvrir</a>
+          <a class="btn secondary" href="Doc/lois/Constitution_du_Quebec_souverain.docx" download>Télécharger (DOCX)</a>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3>Lois, règlements et pratiques</h3>
+        <p>
+          La Constitution fixe le cadre. Les lois et règlements appliquent concrètement.
+          Les pratiques administratives guident l’exécution sans créer de nouvelles obligations.
+        </p>
+        <div class="btnrow">
+          <a class="btn" href="loi-organiques.html">Lois organiques</a>
+          <a class="btn" href="loi-ordinaires.html">Lois ordinaires</a>
+          <a class="btn" href="loi-Reglements.html">Règlements</a>
+          <a class="btn secondary" href="loi-administratif.html">Pratiques admin.</a>
+        </div>
+      </section>
+
     </div>
 
     <div class="note">
-      <strong>Note technique :</strong> sur GitHub Pages, les noms sont sensibles (majuscules, accents, espaces).
-      Assure-toi que le dossier <strong>Doc/VOLET/</strong> et le nom du fichier correspondent exactement.
-      Si tu veux éliminer ces risques, renomme les fichiers en version simple (ex. <em>volet3.docx</em>).
+      <strong>Note :</strong> Le Volet 3 est la destination finale : un Québec souverain, structuré, transparent et stable.
+      Le SCQ publie le cadre complet pour éviter l’improvisation et permettre au public de vérifier ce que nous proposons.
+    </div>
+
+    <div class="btnrow">
+      <a class="btn secondary" href="Volet1.html">← Volet 1</a>
+      <a class="btn secondary" href="Volet2.html">← Volet 2</a>
+      <a class="btn" href="cadre.html">Cadre National</a>
     </div>
 
   </main>
