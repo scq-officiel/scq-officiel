@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SCQ - Constitution</title>
+  <title>SCQ - Constitution (Version HTML)</title>
 
   <link rel="stylesheet" href="css/styles.css" />
 
@@ -28,29 +28,22 @@
       white-space:nowrap;
     }
     nav a:hover{ text-decoration:underline; }
-    nav .logo{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:0;
-      margin-right:6px;
-    }
-    nav .logo img{
-      height:40px;
-      width:auto;
-      border-radius:10px;
-      display:block;
-    }
+    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; margin-right:6px; }
+    nav .logo img{ height:40px; width:auto; border-radius:10px; display:block; }
 
     .banner{
       text-align:center;
       margin-top:16px;
+      width:100%;
+      overflow:hidden;
       padding:0 16px;
     }
     .banner img{
       width:100%;
       max-width:715px;
       height:auto;
+      max-height:260px;
+      object-fit:cover;
       border-radius:16px;
       box-shadow:0 0 12px rgba(0,0,0,0.10);
       display:block;
@@ -66,25 +59,16 @@
       box-shadow:0 0 12px rgba(0,0,0,0.10);
     }
 
-    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; text-align:center; }
-    h2{ font-size:24px; color:#0047ab; margin:26px 0 10px; }
-    h3{ font-size:18px; color:#0A2A66; margin:0 0 8px; }
-    p{ font-size:17px; margin:0 0 14px; line-height:1.65; color:#0f172a; }
-
-    .box{
-      margin:18px 0;
-      padding:16px;
-      border-radius:14px;
-      background:rgba(0,71,171,0.06);
-      border:1px solid rgba(0,71,171,0.14);
-    }
+    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; }
+    h2{ font-size:24px; color:#0047ab; margin:22px 0 10px; }
+    p{ font-size:17px; margin:0 0 12px; line-height:1.65; color:#0f172a; }
 
     .grid{
       display:grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap:14px;
       margin-top:14px;
-      align-items:start;
+      align-items:stretch;
     }
 
     .card{
@@ -95,47 +79,51 @@
       box-shadow:0 0 10px rgba(0,0,0,0.05);
     }
 
-    ul{
-      margin:10px 0 0 18px;
+    .card h3{
+      margin:0 0 8px;
+      font-size:18px;
+      color:#0A2A66;
+    }
+
+    .card p{
+      margin:0 0 12px;
+      font-size:16px;
       color:#0f172a;
       line-height:1.6;
-      font-size:16px;
-      padding:0;
     }
-    li{ margin:8px 0; }
 
     .btnrow{
       display:flex;
-      gap:10px;
       flex-wrap:wrap;
-      margin-top:14px;
+      gap:10px;
+      margin-top:10px;
     }
 
     .btn{
+      display:inline-block;
       background:#0A2A66;
       color:#fff;
-      padding:10px 14px;
-      border-radius:999px;
+      padding:10px 12px;
+      border-radius:12px;
       text-decoration:none;
       font-weight:700;
       font-size:14px;
-      display:inline-block;
     }
-    .btn.secondary{ background:#0f172a; }
     .btn:hover{ text-decoration:underline; }
+    .btn.secondary{ background:#0f172a; }
 
     .note{
-      margin-top:22px;
+      margin-top:18px;
       padding:14px 16px;
       border-radius:14px;
-      background:rgba(15,23,42,0.04);
-      border:1px solid rgba(15,23,42,0.10);
-      font-size:14px;
+      background:rgba(0,71,171,0.06);
+      border:1px solid rgba(0,71,171,0.14);
       color:#0f172a;
+      font-size:14px;
       line-height:1.6;
     }
 
-    @media(max-width:760px){
+    @media (max-width: 760px){
       nav{ flex-direction:column; align-items:flex-start; }
       main{ margin:18px 12px 40px; padding:18px; }
       h1{ font-size:28px; }
@@ -149,9 +137,10 @@
 
   <!-- Navigation -->
   <nav>
-    <a class="logo" href="index.html">
+    <a class="logo" href="index.html" aria-label="Retour à l’accueil">
       <img src="images/logo_scq.jpg" alt="Logo SCQ">
     </a>
+
     <a href="index.html">Accueil</a>
     <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
     <a href="cadre.html">Cadre National</a>
@@ -164,74 +153,103 @@
 
   <!-- Bannière -->
   <div class="banner">
-    <img src="images/Banniere-Officiel.jpg" alt="Bannière SCQ">
+    <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
   </div>
 
   <main>
+    <h1>Constitution du Québec souverain (Version HTML)</h1>
+    <p>
+      Cette page sert de point d’accès officiel vers les sections de la Constitution.
+      Chaque section est publiée en format web (HTML) pour consultation simple et transparente.
+    </p>
 
-    <h1>Constitution du Québec souverain</h1>
-
-    <div class="box">
-      <p>
-        La <strong>Constitution</strong> est la norme suprême. Elle définit les droits fondamentaux,
-        la souveraineté, les institutions, ainsi que les mécanismes de protection démocratique.
-        Toute norme inférieure (lois, règlements, directives) doit obligatoirement s’y conformer.
-      </p>
-
-      <div class="btnrow">
-        <a class="btn" href="cadre.html">Retour au Cadre National</a>
-        <a class="btn secondary" href="Doc/lois/Constitution_du_Quebec_souverain.docx" download>
-          Télécharger la Constitution (DOCX)
-        </a>
-      </div>
+    <div class="btnrow">
+      <a class="btn" href="cadre.html">Cadre National</a>
+      <a class="btn secondary" href="Doc/lois/Constitution_du_Quebec_souverain.docx" download>Télécharger (DOCX)</a>
     </div>
 
-    <h2>Rôle et portée</h2>
-    <p>
-      La Constitution établit les fondations permanentes de l’État et encadre l’action publique.
-      Elle fixe les limites du pouvoir, protège les citoyens et assure la stabilité institutionnelle.
-    </p>
+    <h2>Sections de la Constitution</h2>
 
     <div class="grid">
-      <section class="card">
-        <h3>Ce qu’elle contient</h3>
-        <ul>
-          <li>Droits et libertés fondamentaux</li>
-          <li>Souveraineté et citoyenneté</li>
-          <li>Institutions et séparation des pouvoirs</li>
-          <li>Transparence, intégrité et anti-ingérence</li>
-          <li>Mécanismes démocratiques et verrous constitutionnels</li>
-        </ul>
-      </section>
 
-      <section class="card">
-        <h3>Ce qu’elle garantit</h3>
-        <ul>
-          <li>Primauté du droit et égalité devant la loi</li>
-          <li>Protection contre l’arbitraire et les abus</li>
-          <li>Stabilité des institutions et des règles</li>
-          <li>Contrôle et responsabilité des pouvoirs publics</li>
-          <li>Cadre clair pour l’évolution de l’État</li>
-        </ul>
-      </section>
+      <div class="card">
+        <h3>Préambule</h3>
+        <p>Vision fondatrice, objectifs, sens de l’État et principes généraux.</p>
+        <div class="btnrow">
+          <a class="btn" href="Constitution/preambule.html">Ouvrir</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Principes fondamentaux</h3>
+        <p>Souveraineté populaire, primauté du droit, laïcité, transparence et stabilité démocratique.</p>
+        <div class="btnrow">
+          <a class="btn" href="Constitution/principes.html">Ouvrir</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Peuples et citoyenneté</h3>
+        <p>Définition civique, égalité, participation démocratique, reconnaissance et cohésion sociale.</p>
+        <div class="btnrow">
+          <a class="btn" href="Constitution/peuples.html">Ouvrir</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Droits et libertés</h3>
+        <p>Droits fondamentaux, libertés civiles, garanties juridiques et droits sociaux essentiels.</p>
+        <div class="btnrow">
+          <a class="btn" href="Constitution/droits.html">Ouvrir</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Justice et État de droit</h3>
+        <p>Indépendance judiciaire, accès à la justice, égalité devant la loi et recours effectifs.</p>
+        <div class="btnrow">
+          <a class="btn" href="Constitution/justice.html">Ouvrir</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Institutions de l’État</h3>
+        <p>Pouvoirs législatif, exécutif, judiciaire et institutions de contrôle.</p>
+        <div class="btnrow">
+          <a class="btn" href="Constitution/institutions.html">Ouvrir</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Finances publiques</h3>
+        <p>Responsabilité budgétaire, transparence financière, fiscalité équitable et contrôles.</p>
+        <div class="btnrow">
+          <a class="btn" href="Constitution/finances.html">Ouvrir</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Transition constitutionnelle</h3>
+        <p>Continuité juridique, mise en œuvre progressive, garanties et stabilité du passage.</p>
+        <div class="btnrow">
+          <a class="btn" href="Constitution/transition.html">Ouvrir</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Révision constitutionnelle</h3>
+        <p>Procédure renforcée, verrous démocratiques, consultations et validation.</p>
+        <div class="btnrow">
+          <a class="btn" href="Constitution/revision.html">Ouvrir</a>
+        </div>
+      </div>
+
     </div>
 
-    <h2>Principe de hiérarchie</h2>
-    <p>
-      En cas de contradiction, la Constitution prévaut automatiquement. Une loi contraire est invalide,
-      un règlement contraire est inapplicable, et une pratique administrative contraire doit être corrigée ou annulée.
-    </p>
-
-    <h2>Modification de la Constitution</h2>
-    <p>
-      Une Constitution ne se modifie pas comme une loi ordinaire : toute modification doit suivre une
-      procédure constitutionnelle stricte, afin d’empêcher les changements opportunistes et de protéger
-      l’intérêt public à long terme.
-    </p>
-
     <div class="note">
-      <strong>Version officielle :</strong> la version juridiquement opposable et à jour est publiée dans le document DOCX
-      disponible ci-dessus. La présente page a une fonction explicative et de consultation publique.
+      <strong>Important :</strong> si une section affiche une erreur 404, vérifie que le nom du fichier
+      correspond exactement (majuscules/minuscules). Exemple : <strong>Constitution</strong> ≠ <strong>constitution</strong>.
+      Idéalement, évite les accents dans les noms de fichiers à long terme.
     </div>
 
   </main>
