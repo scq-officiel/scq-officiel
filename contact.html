@@ -28,19 +28,8 @@
       white-space:nowrap;
     }
     nav a:hover{ text-decoration:underline; }
-    nav .logo{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:0;
-      margin-right:6px;
-    }
-    nav .logo img{
-      height:40px;
-      width:auto;
-      border-radius:10px;
-      display:block;
-    }
+    nav .logo{ display:inline-flex; align-items:center; gap:10px; }
+    nav .logo img{ height:40px; border-radius:10px; }
 
     .banner{
       text-align:center;
@@ -50,7 +39,6 @@
     .banner img{
       width:100%;
       max-width:715px;
-      height:auto;
       border-radius:16px;
       box-shadow:0 0 12px rgba(0,0,0,0.10);
       display:block;
@@ -66,15 +54,22 @@
       box-shadow:0 0 12px rgba(0,0,0,0.10);
     }
 
-    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; text-align:center; }
-    h2{ font-size:24px; color:#0047ab; margin:22px 0 10px; }
-    p{ font-size:17px; margin:0 0 12px; line-height:1.65; color:#0f172a; }
+    h1{ font-size:34px; color:#0047ab; margin-bottom:10px; }
+    h2{ font-size:22px; color:#0047ab; margin-top:22px; }
+
+    p{
+      font-size:17px;
+      line-height:1.65;
+      color:#0f172a;
+      margin-bottom:12px;
+    }
 
     .grid{
       display:grid;
-      grid-template-columns:1fr 1fr;
+      grid-template-columns: 1fr 1fr;
       gap:14px;
       margin-top:14px;
+      align-items:start;
     }
 
     .card{
@@ -87,10 +82,10 @@
 
     label{
       display:block;
-      font-weight:800;
-      color:#0A2A66;
+      font-weight:700;
       margin:12px 0 6px;
       font-size:14px;
+      color:#0A2A66;
     }
 
     input, textarea, select{
@@ -113,18 +108,15 @@
     .btn{
       background:#0A2A66;
       color:#fff;
-      padding:10px 14px;
-      border-radius:999px;
+      padding:10px 12px;
+      border-radius:12px;
       text-decoration:none;
       font-weight:700;
       font-size:14px;
       border:none;
       cursor:pointer;
-      display:inline-block;
     }
     .btn.secondary{ background:#0f172a; }
-    .btn.youtube{ background:#cc0000; }
-    .btn:hover{ text-decoration:underline; }
 
     .note{
       margin-top:14px;
@@ -137,11 +129,10 @@
       line-height:1.6;
     }
 
-    @media(max-width:760px){
+    @media (max-width:760px){
       nav{ flex-direction:column; align-items:flex-start; }
       main{ margin:18px 12px 40px; padding:18px; }
       h1{ font-size:28px; }
-      h2{ font-size:20px; }
       .grid{ grid-template-columns:1fr; }
     }
   </style>
@@ -149,106 +140,98 @@
 
 <body>
 
-  <!-- Navigation -->
-  <nav>
-    <a class="logo" href="index.html">
-      <img src="images/logo_scq.jpg" alt="Logo SCQ">
-    </a>
-    <a href="index.html">Accueil</a>
-    <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
-    <a href="cadre.html">Cadre National</a>
-    <a href="membres.html">Membres</a>
-    <a href="equipe.html">Équipe</a>
-    <a href="comptabilite.html">Comptabilité</a>
-    <a href="contact.html" aria-current="page">Contact</a>
-    <a href="doc.html">Documents</a>
-  </nav>
+<!-- Navigation -->
+<nav>
+  <a class="logo" href="index.html">
+    <img src="images/logo_scq.jpg" alt="Logo SCQ">
+  </a>
+  <a href="index.html">Accueil</a>
+  <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+  <a href="cadre.html">Cadre National</a>
+  <a href="doc.html">Documents</a>
+  <a href="contact.html" aria-current="page">Contact</a>
+</nav>
 
-  <!-- Bannière -->
-  <div class="banner">
-    <img src="images/Banniere-Officiel.jpg" alt="Bannière SCQ">
+<!-- Bannière -->
+<div class="banner">
+  <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
+</div>
+
+<main>
+
+  <h1>Contact</h1>
+
+  <p>
+    Pour toute question, demande d’information ou communication officielle,
+    vous pouvez utiliser le formulaire ci-dessous ou nos plateformes publiques.
+    Les messages sont transmis à <strong>scqofficiel@gmail.com</strong>.
+  </p>
+
+  <div class="grid">
+
+    <!-- FORMULAIRE -->
+    <section class="card">
+      <h2>Écrire au SCQ</h2>
+
+      <form action="https://formspree.io/f/mjgvryza" method="POST">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" required>
+
+        <label for="email">Courriel</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="objet">Objet</label>
+        <select id="objet" name="objet" required>
+          <option value="">Choisir…</option>
+          <option>Information générale</option>
+          <option>Documents / Constitution</option>
+          <option>Adhésion / Membres</option>
+          <option>Autre</option>
+        </select>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <input type="hidden" name="_subject" value="[SCQ] Message depuis le site officiel">
+        <input type="hidden" name="_template" value="table">
+
+        <div class="btnrow">
+          <button type="submit" class="btn">Envoyer le message</button>
+        </div>
+      </form>
+
+      <div class="note">
+        Merci de formuler votre message de façon claire et précise.
+      </div>
+    </section>
+
+    <!-- COORDONNÉES -->
+    <section class="card">
+      <h2>Plateformes officielles</h2>
+
+      <p><strong>Courriel :</strong> scqofficiel@gmail.com</p>
+
+      <div class="btnrow">
+        <a class="btn" href="https://www.facebook.com/Souverainete.et.Citoyennete.du.Quebec/" target="_blank">
+          Facebook
+        </a>
+        <a class="btn secondary" href="https://www.youtube.com/channel/UCaipQqk5Fw9g6Mt23yWXZPA" target="_blank">
+          YouTube
+        </a>
+        <a class="btn" href="https://www.instagram.com/scqofficiel/" target="_blank">
+          Instagram
+        </a>
+      </div>
+
+      <div class="note">
+        Les plateformes officielles servent à la diffusion publique,
+        à l’information citoyenne et à la transparence du projet.
+      </div>
+    </section>
+
   </div>
 
-  <main>
-
-    <h1>Contact</h1>
-
-    <p>
-      Pour toute question, demande d’information ou communication officielle,
-      vous pouvez écrire directement au SCQ via le formulaire ci-dessous.
-      Les messages sont transmis à l’adresse officielle :
-      <strong>scqofficiel@gmail.com</strong>.
-    </p>
-
-    <div class="grid">
-
-      <!-- Formulaire -->
-      <section class="card">
-        <h2>Écrire au SCQ</h2>
-
-        <form action="https://formspree.io/f/mjgvryza" method="POST">
-
-          <label for="nom">Nom</label>
-          <input type="text" id="nom" name="nom" required>
-
-          <label for="email">Courriel</label>
-          <input type="email" id="email" name="email" required>
-
-          <label for="objet">Objet</label>
-          <select id="objet" name="objet" required>
-            <option value="">Choisir…</option>
-            <option value="Information générale">Information générale</option>
-            <option value="Documents">Documents</option>
-            <option value="Adhésion">Adhésion / membres</option>
-            <option value="Comptabilité">Comptabilité</option>
-            <option value="Autre">Autre</option>
-          </select>
-
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required></textarea>
-
-          <input type="hidden" name="_subject" value="[SCQ] Message depuis le site officiel">
-          <input type="hidden" name="_template" value="table">
-
-          <div class="btnrow">
-            <button type="submit" class="btn">Envoyer le message</button>
-            <a class="btn secondary" href="doc.html">Documents</a>
-          </div>
-
-        </form>
-      </section>
-
-      <!-- Coordonnées -->
-      <section class="card">
-        <h2>Présence officielle</h2>
-
-        <p><strong>Courriel :</strong> scqofficiel@gmail.com</p>
-
-        <div class="btnrow">
-          <a class="btn"
-             href="https://www.facebook.com/Souverainete.et.Citoyennete.du.Quebec/"
-             target="_blank" rel="noopener">
-            Page Facebook officielle
-          </a>
-        </div>
-
-        <div class="btnrow">
-          <a class="btn youtube"
-             href="https://www.youtube.com/channel/UCaipQqk5Fw9g6Mt23yWXZPA"
-             target="_blank" rel="noopener">
-            Chaîne YouTube officielle
-          </a>
-        </div>
-
-        <div class="note">
-          <strong>Note :</strong> Les communications officielles du SCQ
-          sont publiées sur ces plateformes.
-        </div>
-      </section>
-
-    </div>
-
-  </main>
+</main>
 
 </body>
 </html>
