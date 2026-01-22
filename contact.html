@@ -70,20 +70,11 @@
     h2{ font-size:24px; color:#0047ab; margin:22px 0 10px; }
     p{ font-size:17px; margin:0 0 12px; line-height:1.65; color:#0f172a; }
 
-    .box{
-      margin:18px 0;
-      padding:16px;
-      border-radius:14px;
-      background:rgba(0,71,171,0.06);
-      border:1px solid rgba(0,71,171,0.14);
-    }
-
     .grid{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:14px;
       margin-top:14px;
-      align-items:start;
     }
 
     .card{
@@ -108,15 +99,14 @@
       border-radius:12px;
       border:1px solid rgba(0,0,0,0.15);
       font-size:15px;
-      outline:none;
     }
 
     textarea{ min-height:140px; resize:vertical; }
 
     .btnrow{
       display:flex;
-      gap:10px;
       flex-wrap:wrap;
+      gap:10px;
       margin-top:12px;
     }
 
@@ -147,12 +137,6 @@
       line-height:1.6;
     }
 
-    .small{
-      font-size:14px;
-      color:#334155;
-      line-height:1.6;
-    }
-
     @media(max-width:760px){
       nav{ flex-direction:column; align-items:flex-start; }
       main{ margin:18px 12px 40px; padding:18px; }
@@ -167,7 +151,7 @@
 
   <!-- Navigation -->
   <nav>
-    <a class="logo" href="index.html" aria-label="Retour à l’accueil">
+    <a class="logo" href="index.html">
       <img src="images/logo_scq.jpg" alt="Logo SCQ">
     </a>
     <a href="index.html">Accueil</a>
@@ -182,20 +166,19 @@
 
   <!-- Bannière -->
   <div class="banner">
-    <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
+    <img src="images/Banniere-Officiel.jpg" alt="Bannière SCQ">
   </div>
 
   <main>
 
     <h1>Contact</h1>
 
-    <div class="box">
-      <p>
-        Pour toute question, demande d’information ou demande de document, vous pouvez écrire directement au SCQ.
-        Les messages envoyés via ce formulaire sont transmis à l’adresse officielle :
-        <strong>scqofficiel@gmail.com</strong>.
-      </p>
-    </div>
+    <p>
+      Pour toute question, demande d’information ou communication officielle,
+      vous pouvez écrire directement au SCQ via le formulaire ci-dessous.
+      Les messages sont transmis à l’adresse officielle :
+      <strong>scqofficiel@gmail.com</strong>.
+    </p>
 
     <div class="grid">
 
@@ -224,7 +207,7 @@
           <label for="message">Message</label>
           <textarea id="message" name="message" required></textarea>
 
-          <input type="hidden" name="_subject" value="[SCQ] Nouveau message depuis le site officiel">
+          <input type="hidden" name="_subject" value="[SCQ] Message depuis le site officiel">
           <input type="hidden" name="_template" value="table">
 
           <div class="btnrow">
@@ -237,25 +220,29 @@
 
       <!-- Coordonnées -->
       <section class="card">
-        <h2>Coordonnées officielles</h2>
+        <h2>Présence officielle</h2>
 
         <p><strong>Courriel :</strong> scqofficiel@gmail.com</p>
 
         <div class="btnrow">
-          <a class="btn" href="https://www.facebook.com/Souverainete.et.Citoyennete.du.Quebec/" target="_blank" rel="noopener">
+          <a class="btn"
+             href="https://www.facebook.com/Souverainete.et.Citoyennete.du.Quebec/"
+             target="_blank" rel="noopener">
             Page Facebook officielle
           </a>
         </div>
 
         <div class="btnrow">
-          <a class="btn youtube" href="https://www.youtube.com/channel/UCaipQqk5Fw9g6Mt23yWXZPA" target="_blank" rel="noopener">
+          <a class="btn youtube"
+             href="https://www.youtube.com/channel/UCaipQqk5Fw9g6Mt23yWXZPA"
+             target="_blank" rel="noopener">
             Chaîne YouTube officielle
           </a>
         </div>
 
         <div class="note">
-          <strong>Note :</strong> suivez nos publications officielles pour les mises à jour,
-          annonces et communications publiques du SCQ.
+          <strong>Note :</strong> Les communications officielles du SCQ
+          sont publiées sur ces plateformes.
         </div>
       </section>
 
