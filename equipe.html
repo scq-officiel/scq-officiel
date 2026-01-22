@@ -28,19 +28,8 @@
       white-space:nowrap;
     }
     nav a:hover{ text-decoration:underline; }
-    nav .logo{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:0;
-      margin-right:6px;
-    }
-    nav .logo img{
-      height:40px;
-      width:auto;
-      border-radius:10px;
-      display:block;
-    }
+    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; margin-right:6px; }
+    nav .logo img{ height:40px; width:auto; border-radius:10px; display:block; }
 
     .banner{
       text-align:center;
@@ -68,7 +57,7 @@
 
     h1{ font-size:34px; color:#0047ab; margin:0 0 10px; text-align:center; }
     h2{ font-size:24px; color:#0047ab; margin:26px 0 10px; }
-    p{ font-size:17px; margin:0 0 14px; line-height:1.65; color:#0f172a; }
+    p{ font-size:17px; margin:0 0 12px; line-height:1.65; color:#0f172a; }
 
     .box{
       margin:18px 0;
@@ -78,10 +67,10 @@
       border:1px solid rgba(0,71,171,0.14);
     }
 
-    .toolbar{
+    .btnrow{
       display:flex;
-      flex-wrap:wrap;
       gap:10px;
+      flex-wrap:wrap;
       margin-top:12px;
     }
 
@@ -98,83 +87,52 @@
     .btn.secondary{ background:#0f172a; }
     .btn:hover{ text-decoration:underline; }
 
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(2, minmax(0,1fr));
-      gap:14px;
-      margin-top:14px;
-      align-items:stretch;
+    .section{
+      margin-top:18px;
+      padding-top:8px;
+      border-top:1px solid rgba(0,0,0,0.08);
     }
 
-    .member{
+    .grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+      margin-top:12px;
+      align-items:start;
+    }
+
+    .card{
       border:1px solid rgba(0,0,0,0.10);
       border-radius:14px;
       padding:16px;
       background:#fff;
       box-shadow:0 0 10px rgba(0,0,0,0.05);
-      display:flex;
-      flex-direction:column;
-      gap:10px;
     }
 
-    .member-top{
-      display:flex;
-      flex-direction:column;
-      gap:4px;
-    }
-
-    .name{
-      font-size:18px;
-      font-weight:800;
-      color:#0A2A66;
-      margin:0;
-      line-height:1.25;
-    }
-
-    .meta{
-      font-size:14px;
-      color:#334155;
-      margin:0;
-      line-height:1.4;
-    }
-
-    .role{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      margin-top:6px;
-      padding:8px 10px;
+    .member{
+      margin:0 0 12px;
+      padding:12px 12px;
       border-radius:12px;
-      background:rgba(15,23,42,0.04);
-      border:1px solid rgba(15,23,42,0.10);
-      color:#0f172a;
-      font-size:14px;
-      font-weight:700;
-      width:fit-content;
+      background:rgba(15,23,42,0.03);
+      border:1px solid rgba(15,23,42,0.08);
     }
-
+    .member strong{
+      color:#0A2A66;
+      display:block;
+      margin-bottom:4px;
+      font-size:16px;
+    }
+    .role{
+      font-weight:800;
+      color:#0f172a;
+      margin-bottom:6px;
+      font-size:14px;
+    }
     .desc{
       margin:0;
-      font-size:15px;
-      color:#0f172a;
-      line-height:1.65;
-    }
-
-    .tags{
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
-      margin-top:auto;
-    }
-
-    .tag{
-      font-size:12px;
-      padding:6px 10px;
-      border-radius:999px;
-      background:rgba(0,71,171,0.08);
-      border:1px solid rgba(0,71,171,0.14);
-      color:#0A2A66;
-      font-weight:700;
+      color:#334155;
+      font-size:14px;
+      line-height:1.6;
     }
 
     .note{
@@ -217,74 +175,156 @@
 
   <!-- Bannière -->
   <div class="banner">
-    <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
+    <img src="images/Banniere-Officiel.jpg" alt="Bannière SCQ">
   </div>
 
   <main>
+
     <h1>Équipe du SCQ</h1>
 
     <div class="box">
       <p>
-        Cette page présente l’équipe et les responsabilités au sein du Parti Souveraineté et Citoyenneté du Québec (SCQ).
-        L’objectif est d’être clair : <strong>qui fait quoi</strong>, dans quelle région, et pour quel mandat.
+        Cette page présente l’équipe et les responsabilités au sein du
+        <strong>Parti Souveraineté et Citoyenneté du Québec (SCQ)</strong>.
+        L’objectif est d’être clair sur <strong>qui fait quoi</strong>, pour une organisation transparente.
       </p>
-
-      <div class="toolbar">
-        <a class="btn" href="contact.html">Proposer votre aide</a>
+      <div class="btnrow">
+        <a class="btn" href="contact.html">Nous contacter</a>
         <a class="btn secondary" href="membres.html">Devenir membre</a>
         <a class="btn" href="doc.html">Documents</a>
       </div>
     </div>
 
-    <h2>Liste du personnel et des responsabilités</h2>
+    <section class="section">
+      <h2>Direction</h2>
+      <div class="grid">
 
-    <section class="grid">
+        <div class="card">
+          <div class="member">
+            <strong>Benoit Cantin (Ville de Québec)</strong>
+            <div class="role">Chef du parti</div>
+            <p class="desc">
+              Porte la vision, supervise la structure du projet, coordonne les priorités et assure la cohérence des documents officiels.
+            </p>
+          </div>
 
-      <!-- Exemple 1 -->
-      <article class="member">
-        <div class="member-top">
-          <p class="name">Benoit Cantin</p>
-          <p class="meta">Ville de Québec</p>
-          <div class="role">Chef du parti</div>
+          <!-- Ajoute ici d’autres membres de direction -->
+          <div class="member">
+            <strong>Poste à combler</strong>
+            <div class="role">Vice-chef / Direction stratégique</div>
+            <p class="desc">
+              Soutien à la direction, coordination des dossiers prioritaires et organisation interne.
+            </p>
+          </div>
         </div>
 
-        <p class="desc">
-          Direction générale du SCQ, représentation publique, priorités stratégiques,
-          validation des documents officiels et coordination des projets.
-        </p>
+        <div class="card">
+          <div class="member">
+            <strong>Poste à combler</strong>
+            <div class="role">Secrétariat général</div>
+            <p class="desc">
+              Gestion administrative, suivi des communications, classement des documents et coordination des tâches.
+            </p>
+          </div>
 
-        <div class="tags">
-          <span class="tag">Direction</span>
-          <span class="tag">Stratégie</span>
-          <span class="tag">Communication</span>
-        </div>
-      </article>
-
-      <!-- Exemple 2 (template à dupliquer) -->
-      <article class="member">
-        <div class="member-top">
-          <p class="name">Nom Prénom</p>
-          <p class="meta">Ville / Région</p>
-          <div class="role">Titre du rôle</div>
+          <div class="member">
+            <strong>Poste à combler</strong>
+            <div class="role">Trésorerie / Comptabilité</div>
+            <p class="desc">
+              Suivi des contributions, publication des informations de transparence et conformité interne.
+            </p>
+          </div>
         </div>
 
-        <p class="desc">
-          Description courte : responsabilités principales, mandat, tâches.
-        </p>
+      </div>
+    </section>
 
-        <div class="tags">
-          <span class="tag">Domaine</span>
-          <span class="tag">Domaine</span>
+    <section class="section">
+      <h2>Communications</h2>
+      <div class="grid">
+
+        <div class="card">
+          <div class="member">
+            <strong>Poste à combler</strong>
+            <div class="role">Responsable communications</div>
+            <p class="desc">
+              Rédaction publique, cohérence du message, publications Facebook/YouTube et réponses aux citoyens.
+            </p>
+          </div>
+          <div class="member">
+            <strong>Poste à combler</strong>
+            <div class="role">Création contenu (vidéo/visuels)</div>
+            <p class="desc">
+              Montage, visuels, bannières, préparation des scripts et optimisation des publications.
+            </p>
+          </div>
         </div>
-      </article>
 
-      <!-- Ajoute d'autres membres ici -->
+        <div class="card">
+          <div class="member">
+            <strong>Poste à combler</strong>
+            <div class="role">Gestion communauté (modération)</div>
+            <p class="desc">
+              Animation des échanges, modération, accueil des nouveaux membres, organisation des discussions.
+            </p>
+          </div>
+          <div class="member">
+            <strong>Poste à combler</strong>
+            <div class="role">Relations médias</div>
+            <p class="desc">
+              Contacts médias, demandes d’entrevue, communiqués, suivi et calendrier de communication.
+            </p>
+          </div>
+        </div>
 
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Développement et organisation</h2>
+      <div class="grid">
+
+        <div class="card">
+          <div class="member">
+            <strong>Poste à combler</strong>
+            <div class="role">Web / Site officiel</div>
+            <p class="desc">
+              Mise à jour des pages, corrections de liens, uniformisation du site et publication des documents.
+            </p>
+          </div>
+          <div class="member">
+            <strong>Poste à combler</strong>
+            <div class="role">Recherche et rédaction (cadre / lois)</div>
+            <p class="desc">
+              Mise en forme, cohérence des textes, vérification des sections, révisions et versioning.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="member">
+            <strong>Poste à combler</strong>
+            <div class="role">Organisation terrain</div>
+            <p class="desc">
+              Mobilisation, recrutement, événements locaux, coordination d’équipes régionales.
+            </p>
+          </div>
+          <div class="member">
+            <strong>Poste à combler</strong>
+            <div class="role">Coordination bénévoles</div>
+            <p class="desc">
+              Attribution des tâches, suivi des volontaires, intégration et gestion des priorités.
+            </p>
+          </div>
+        </div>
+
+      </div>
     </section>
 
     <div class="note">
-      <strong>Mise à jour :</strong> si vous souhaitez rejoindre l’équipe, indiquez votre région, vos compétences
-      et le type d’implication (temps, tâches, spécialité) via la page <a href="contact.html">Contact</a>.
+      <strong>Recrutement :</strong> plusieurs postes sont actuellement ouverts.
+      Si vous souhaitez contribuer (rédaction, communications, organisation, web, etc.),
+      écrivez-nous via la page suivante : <a href="contact.html"><strong>Contact</strong></a>.
     </div>
 
   </main>
