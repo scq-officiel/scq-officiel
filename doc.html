@@ -55,4 +55,165 @@
       box-shadow:0 0 12px rgba(0,0,0,0.10);
     }
 
-    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; t
+    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; text-align:center; }
+    h2{ font-size:24px; color:#0047ab; margin:26px 0 10px; }
+    h3{ font-size:18px; color:#0A2A66; margin:0 0 8px; }
+    p{ font-size:17px; margin:0 0 12px; line-height:1.65; color:#0f172a; }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:14px;
+      margin-top:14px;
+    }
+
+    .card{
+      border:1px solid rgba(0,0,0,0.10);
+      border-radius:14px;
+      padding:16px;
+      background:#fff;
+      box-shadow:0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .btnrow{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+
+    .btn{
+      background:#0A2A66;
+      color:#fff;
+      padding:10px 14px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:700;
+      font-size:14px;
+      display:inline-block;
+    }
+    .btn.secondary{ background:#0f172a; }
+    .btn:hover{ text-decoration:underline; }
+
+    .note{
+      margin-top:20px;
+      padding:14px 16px;
+      border-radius:14px;
+      background:rgba(0,71,171,0.06);
+      border:1px solid rgba(0,71,171,0.14);
+      font-size:14px;
+      color:#0f172a;
+      line-height:1.6;
+    }
+
+    @media(max-width:760px){
+      nav{ flex-direction:column; align-items:flex-start; }
+      main{ margin:18px 12px 40px; padding:18px; }
+      h1{ font-size:28px; }
+      h2{ font-size:20px; }
+      .grid{ grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <a class="logo" href="index.html">
+    <img src="images/logo_scq.jpg" alt="Logo SCQ">
+  </a>
+  <a href="index.html">Accueil</a>
+  <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+  <a href="cadre.html">Cadre National</a>
+  <a href="membres.html">Membres</a>
+  <a href="equipe.html">Équipe</a>
+  <a href="comptabilite.html">Comptabilité</a>
+  <a href="contact.html">Contact</a>
+  <a href="doc.html" aria-current="page">Documents</a>
+</nav>
+
+<div class="banner">
+  <img src="images/Banniere-Officiel.jpg" alt="Bannière SCQ">
+</div>
+
+<main>
+  <h1>Documents officiels</h1>
+
+  <p>
+    Cette section regroupe l’ensemble des documents officiels du
+    <strong>Parti Souveraineté et Citoyenneté du Québec (SCQ)</strong>.
+    Tous les documents sont rendus publics afin d’assurer une transparence complète.
+  </p>
+
+  <!-- ===============================
+       DOCUMENTS PUBLICS ET INTERNES
+       =============================== -->
+  <h2>Documents publics et internes</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3>Doctrine primaire et lignes directrices fondamentales</h3>
+      <p>
+        Document de référence définissant la doctrine politique, les valeurs fondatrices
+        et les lignes directrices structurantes du SCQ.
+      </p>
+      <a class="btn secondary"
+         href="Doc/Doctrine_primaire_et_lignes_directrices_fondamentales.docx"
+         download>
+        Télécharger (DOCX)
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Code de conduite</h3>
+      <p>Règles internes, devoirs et standards de comportement.</p>
+      <a class="btn secondary" href="Doc/Code_de_conduite_du_SCQ.docx" download>
+        Télécharger (DOCX)
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Formulaire d’engagement du membre</h3>
+      <p>Document officiel d’adhésion et d’engagement.</p>
+      <a class="btn secondary" href="Doc/FORMULAIRE_ENGAGEMENT_MEMBRE_SCQ.docx" download>
+        Télécharger (DOCX)
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Fiche de signature d’appui</h3>
+      <p>Soutien citoyen et engagement public.</p>
+      <a class="btn secondary" href="Doc/FICHE_DE_SIGNATURE_D_APPUI.docx" download>
+        Télécharger (DOCX)
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Lettre officielle de remerciement</h3>
+      <p>Lettre type utilisée par le SCQ.</p>
+      <a class="btn secondary" href="Doc/LETTRE_REMERCIEMENT_SCQ.docx" download>
+        Télécharger (DOCX)
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Politique de contributions volontaires</h3>
+      <p>Cadre éthique et financier des contributions.</p>
+      <a class="btn secondary" href="Doc/POLITIQUE_CONTRIBUTIONS_VOLONTAIRES_SCQ.docx" download>
+        Télécharger (DOCX)
+      </a>
+    </div>
+
+  </div>
+
+  <div class="note">
+    <strong>Important :</strong> sur GitHub Pages, les chemins et la casse sont stricts.
+    Le fichier doit s’appeler exactement :
+    <br>
+    <code>Doc/Doctrine_primaire_et_lignes_directrices_fondamentales.docx</code>
+  </div>
+
+</main>
+
+</body>
+</html>
