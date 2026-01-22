@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SCQ - Constitution (Version HTML)</title>
+  <title>SCQ - Documents officiels</title>
 
   <link rel="stylesheet" href="css/styles.css" />
 
@@ -28,8 +28,19 @@
       white-space:nowrap;
     }
     nav a:hover{ text-decoration:underline; }
-    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; margin-right:6px; }
-    nav .logo img{ height:40px; width:auto; border-radius:10px; display:block; }
+    nav .logo{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:0;
+      margin-right:6px;
+    }
+    nav .logo img{
+      height:40px;
+      width:auto;
+      border-radius:10px;
+      display:block;
+    }
 
     .banner{
       text-align:center;
@@ -85,17 +96,10 @@
       color:#0A2A66;
     }
 
-    .card p{
-      margin:0 0 12px;
-      font-size:16px;
-      color:#0f172a;
-      line-height:1.6;
-    }
-
     .btnrow{
       display:flex;
-      flex-wrap:wrap;
       gap:10px;
+      flex-wrap:wrap;
       margin-top:10px;
     }
 
@@ -108,6 +112,8 @@
       text-decoration:none;
       font-weight:700;
       font-size:14px;
+      border:none;
+      cursor:pointer;
     }
     .btn:hover{ text-decoration:underline; }
     .btn.secondary{ background:#0f172a; }
@@ -118,12 +124,12 @@
       border-radius:14px;
       background:rgba(0,71,171,0.06);
       border:1px solid rgba(0,71,171,0.14);
+      font-size:15px;
       color:#0f172a;
-      font-size:14px;
       line-height:1.6;
     }
 
-    @media (max-width: 760px){
+    @media (max-width:760px){
       nav{ flex-direction:column; align-items:flex-start; }
       main{ margin:18px 12px 40px; padding:18px; }
       h1{ font-size:28px; }
@@ -135,7 +141,6 @@
 
 <body>
 
-  <!-- Navigation -->
   <nav>
     <a class="logo" href="index.html" aria-label="Retour à l’accueil">
       <img src="images/logo_scq.jpg" alt="Logo SCQ">
@@ -144,116 +149,143 @@
     <a href="index.html">Accueil</a>
     <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
     <a href="cadre.html">Cadre National</a>
-    <a href="loi-constitution.html" aria-current="page">Constitution</a>
-    <a href="doc.html">Documents</a>
+    <a href="membres.html">Membres</a>
+    <a href="equipe.html">Équipe</a>
+    <a href="comptabilite.html">Comptabilité</a>
     <a href="contact.html">Contact</a>
+    <a href="doc.html" aria-current="page">Documents</a>
   </nav>
 
-  <!-- Bannière -->
   <div class="banner">
     <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
   </div>
 
   <main>
-    <h1>Constitution du Québec souverain — Version web (HTML)</h1>
-
+    <h1>Documents officiels</h1>
     <p>
-      Cette page est le <strong>point d’accès officiel</strong> vers les sections de la Constitution
-      publiées en format web. L’objectif est d’offrir une consultation simple, stable et transparente.
+      Cette section regroupe l’ensemble des documents officiels du Parti Souveraineté et Citoyenneté du Québec (SCQ).
+      Tous les documents ci-dessous sont accessibles afin d’assurer la transparence, l’information citoyenne
+      et la participation démocratique.
     </p>
 
-    <div class="btnrow">
-      <a class="btn" href="cadre.html">Cadre National</a>
-      <a class="btn secondary" href="Doc/lois/Constitution_du_Quebec_souverain.docx" download>Télécharger (DOCX)</a>
-    </div>
-
-    <h2>Sections de la Constitution</h2>
-
+    <h2>Documents des lois</h2>
     <div class="grid">
 
-      <!-- OPTIONNEL (si tu l'as) -->
-      <section class="card">
-        <h3>Préambule (optionnel)</h3>
-        <p>Vision fondatrice, finalités et principes directeurs.</p>
+      <div class="card">
+        <h3>Constitution du Québec souverain (DOCX)</h3>
+        <p>Texte constitutionnel complet.</p>
         <div class="btnrow">
-          <a class="btn secondary" href="Constitution/preambule.html">Ouvrir</a>
+          <a class="btn" href="loi-constitution.html">Lire (HTML)</a>
+          <a class="btn secondary" href="Doc/lois/Constitution_du_Quebec_souverain.docx" download>Télécharger</a>
         </div>
-      </section>
+      </div>
 
-      <section class="card">
-        <h3>Principes fondamentaux</h3>
-        <p>Souveraineté populaire, primauté du droit, transparence et cadre démocratique.</p>
+      <div class="card">
+        <h3>Lois organiques du Québec souverain (DOCX)</h3>
+        <p>Organisation des institutions, mécanismes structurants.</p>
         <div class="btnrow">
-          <a class="btn" href="Constitution/principes.html">Ouvrir</a>
+          <a class="btn" href="loi-organiques.html">Lire (HTML)</a>
+          <a class="btn secondary" href="Doc/lois/Lois_organiques_du_Quebec_souverain.docx" download>Télécharger</a>
         </div>
-      </section>
+      </div>
 
-      <section class="card">
-        <h3>Peuples et citoyenneté</h3>
-        <p>Définition civique, égalité, participation démocratique et cohésion.</p>
+      <div class="card">
+        <h3>Lois ordinaires du Québec souverain (DOCX)</h3>
+        <p>Cadres d’application sectorielle (politiques publiques, services, etc.).</p>
         <div class="btnrow">
-          <a class="btn" href="Constitution/peuples.html">Ouvrir</a>
+          <a class="btn" href="loi-ordinaires.html">Lire (HTML)</a>
+          <a class="btn secondary" href="Doc/lois/Lois_ordinaires_du_Quebec_souverain.docx" download>Télécharger</a>
         </div>
-      </section>
+      </div>
 
-      <section class="card">
-        <h3>Droits et libertés</h3>
-        <p>Droits fondamentaux, garanties juridiques et droits sociaux essentiels.</p>
+      <div class="card">
+        <h3>Lois administratives du Québec (DOCX)</h3>
+        <p>Directives, procédures et cadres d’application internes.</p>
         <div class="btnrow">
-          <a class="btn" href="Constitution/droits.html">Ouvrir</a>
+          <a class="btn" href="loi-administratif.html">Lire (HTML)</a>
+          <a class="btn secondary" href="Doc/lois/Lois_administratives_du_quebec.docx" download>Télécharger</a>
         </div>
-      </section>
+      </div>
 
-      <section class="card">
-        <h3>Justice et État de droit</h3>
-        <p>Indépendance judiciaire, accès à la justice, recours effectifs et égalité devant la loi.</p>
+      <div class="card">
+        <h3>Règlements du Québec souverain (DOCX)</h3>
+        <p>Normes techniques d’application (délais, formats, protocoles).</p>
         <div class="btnrow">
-          <a class="btn" href="Constitution/justice.html">Ouvrir</a>
+          <a class="btn" href="loi-Reglements.html">Lire (HTML)</a>
+          <a class="btn secondary" href="Doc/lois/Reglements_du_Quebec_souverain.docx" download>Télécharger</a>
         </div>
-      </section>
+      </div>
 
-      <section class="card">
-        <h3>Institutions de l’État</h3>
-        <p>Organisation des pouvoirs, institutions de contrôle, responsabilités et fonctionnement.</p>
+      <div class="card">
+        <h3>SCQ – Outil de transition constitutionnelle (DOCX)</h3>
+        <p>Document transitoire encadrant l’organisation pendant la transition.</p>
         <div class="btnrow">
-          <a class="btn" href="Constitution/institutions.html">Ouvrir</a>
+          <a class="btn" href="loi-scq-otc.html">Lire (HTML)</a>
+          <a class="btn secondary" href="Doc/lois/SCQ_Outil_de_transition_constitutionnelle.docx" download>Télécharger</a>
         </div>
-      </section>
+      </div>
 
-      <section class="card">
-        <h3>Finances publiques</h3>
-        <p>Fiscalité, budget, dette, transparence et reddition de comptes.</p>
-        <div class="btnrow">
-          <a class="btn" href="Constitution/finances.html">Ouvrir</a>
-        </div>
-      </section>
+    </div>
 
-      <section class="card">
-        <h3>Transition constitutionnelle</h3>
-        <p>Continuité juridique, mise en œuvre progressive et protection des droits.</p>
-        <div class="btnrow">
-          <a class="btn" href="Constitution/transition.html">Ouvrir</a>
-        </div>
-      </section>
+    <h2>Documents publics et internes</h2>
+    <div class="grid">
 
-      <!-- OPTIONNEL (si tu l'ajoutes) -->
-      <section class="card">
-        <h3>Révision constitutionnelle (optionnel)</h3>
-        <p>Procédure renforcée et verrous démocratiques pour modifier la Constitution.</p>
-        <div class="btnrow">
-          <a class="btn secondary" href="Constitution/revision.html">Ouvrir</a>
-        </div>
-      </section>
+      <div class="card">
+        <h3>Code de conduite (DOCX)</h3>
+        <p>Règles internes et standards de comportement.</p>
+        <a class="btn secondary" href="Doc/Code_de_conduite_du_SCQ.docx" download>Télécharger</a>
+      </div>
+
+      <div class="card">
+        <h3>Doctrine primaire et lignes directrices fondamentales (DOCX)</h3>
+        <p>Principes directeurs, doctrine primaire et repères structurants du SCQ.</p>
+        <a class="btn secondary" href="Doc/Doctrine_primaire_et_lignes_directrices_fondamentales.docx" download>Télécharger</a>
+      </div>
+
+      <div class="card">
+        <h3>Fiche de signature d’appui (DOCX)</h3>
+        <p>Document public de soutien.</p>
+        <a class="btn secondary" href="Doc/FICHE_DE_SIGNATURE_D_APPUI.docx" download>Télécharger</a>
+      </div>
+
+      <div class="card">
+        <h3>Formulaire d’engagement membre (DOCX)</h3>
+        <p>Engagement et informations de base.</p>
+        <a class="btn secondary" href="Doc/FORMULAIRE_ENGAGEMENT_MEMBRE_SCQ.docx" download>Télécharger</a>
+      </div>
+
+      <div class="card">
+        <h3>Politique de contributions volontaires (DOCX)</h3>
+        <p>Cadre de contribution volontaire et implication.</p>
+        <a class="btn secondary" href="Doc/POLITIQUE_CONTRIBUTIONS_VOLONTAIRES_SCQ.docx" download>Télécharger</a>
+      </div>
+
+      <div class="card">
+        <h3>Lettre officielle de remerciement (DOCX)</h3>
+        <p>Lettre type de remerciement.</p>
+        <a class="btn secondary" href="Doc/LETTRE_REMERCIEMENT_SCQ.docx" download>Télécharger</a>
+      </div>
+
+      <div class="card">
+        <h3>Doctrine fondatrice (PDF)</h3>
+        <p>Doctrine et architecture politique complète.</p>
+        <a class="btn secondary" href="Doc/SCQ_Doctrine_Fondatrice_Architecture_Politique.pdf" download>Télécharger</a>
+      </div>
+
+      <div class="card">
+        <h3>Carte de membre (image)</h3>
+        <p>Visuel de carte de membre.</p>
+        <a class="btn secondary" href="Doc/CARTE_MEMBRE_SCQ.jpg" download>Télécharger</a>
+      </div>
 
     </div>
 
     <div class="note">
-      <strong>Note technique :</strong> sur certains hébergements, la casse des dossiers et fichiers est sensible
-      (ex. <strong>Constitution</strong> ≠ <strong>constitution</strong>).
-      Assure-toi que les noms sont identiques au caractère près.
+      <strong>Note technique :</strong> sur GitHub Pages, les chemins et la casse sont stricts.
+      Conserve exactement : <strong>Doc</strong>, <strong>Doc/lois</strong> et <strong>Doc/VOLET</strong>.
+      Si tu renommes un fichier, il faut aussi mettre à jour son lien ici.
     </div>
 
   </main>
-
 </body>
 </html>
