@@ -1,150 +1,120 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SCQ — Adhérer</title>
-  <link rel="stylesheet" href="css/styles.css"/>
-  <meta name="description" content="Adhésion et participation — membre, bénévole, collaborateur, soutien. Formulaire officiel SCQ."/>
-  <link rel="canonical" href="https://www.scq-officiel.ca/adhesion.html"/>
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
-
-  <meta property="og:site_name" content="SCQ"/>
-  <meta property="og:title" content="SCQ — Adhérer"/>
-  <meta property="og:description" content="Participez au SCQ : adhésion, bénévolat, collaboration. Formulaire officiel."/>
-  <meta property="og:url" content="https://www.scq-officiel.ca/adhesion.html"/>
-  <meta property="og:type" content="website"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adhésion – SCQ Officiel</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 </head>
 <body>
-  <a class="skip-link" href="#contenu">Aller au contenu</a>
 
-  <header class="topbar">
-    <div class="brand">
-      <a href="index.html" class="brandlink">
-        <img src="assets/logo-scq.svg" alt="Logo SCQ" class="logo">
-        <span class="brandname">SCQ</span>
-      </a>
-    </div>
-    <nav class="nav">
-      <a href="index.html">Accueil</a>
-      <a href="NotreVision.html">Notre vision</a>
-      <a href="constitution.html">Constitution</a>
-      <a href="programme.html">Programme</a>
-      <a href="cadre.html">Cadre national</a>
-      <a href="doc.html">Documents</a>
-      <a href="presse.html">Presse</a>
-      <a href="equipe.html">Équipe</a>
-      <a href="adhesion.html" class="active">Adhérer</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+<a class="skip-link" href="#main">Aller au contenu</a>
+<nav class="topnav" aria-label="Navigation principale">
+  <a class="logo" href="index.html" aria-label="Retour à l’accueil">
+    <img src="images/logo_scq.jpg" alt="Logo SCQ">
+  </a>
+  <div class="navlinks">
+    <a href="index.html">Accueil</a>
+    <a href="NotreVision.html">Notre vision</a>
+    <a href="Constitution/preambule.html">Constitution</a>
+    <a href="cadre.html">Cadre national</a>
+    <a href="doc.html">Documents</a>
+    <a href="presse.html">Presse</a>
+    <a href="equipe.html">Équipe</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="navcta">
+    <a class="btn btn--cta" href="adhesion.html">Adhérer</a>
+  </div>
+</nav>
+
+<main id="main" class="container">
+  <header class="pagehead">
+    <h1>Adhésion</h1>
   </header>
+  
+<section class="card">
+  <h2>Pourquoi adhérer</h2>
+  <p>Le SCQ est en construction et vise à refonder la gouvernance autour de la transparence intégrale, de la responsabilité des décideurs et de la primauté du bien commun.</p>
+  <ul>
+    <li>Participer à l’élaboration des propositions et des documents de référence.</li>
+    <li>Contribuer au terrain : recrutement, organisation, communications.</li>
+    <li>Soutenir un projet politique structuré, discipliné et orienté résultats.</li>
+  </ul>
+</section>
 
-  <main id="contenu" class="page">
-    <h1>Adhérer et participer</h1>
-    <p class="lead">
-      Le SCQ se construit avec des citoyens responsables. Que vous souhaitiez <strong>adhérer</strong>,
-      <strong>donner un coup de main</strong> ou <strong>collaborer</strong>, utilisez le formulaire ci‑dessous.
+<section class="card">
+  <h2>Formulaire d’adhésion / bénévolat</h2>
+  <p>Remplissez ce formulaire. Nous vous recontactons dès que possible.</p>
+
+  <form class="form" action="https://formspree.io/f/mjgvryza" method="POST">
+    <div class="grid">
+      <div>
+        <label for="nom">Nom complet</label>
+        <input id="nom" name="nom" type="text" required autocomplete="name">
+      </div>
+      <div>
+        <label for="email">Courriel</label>
+        <input id="email" name="email" type="email" required autocomplete="email">
+      </div>
+      <div>
+        <label for="ville">Ville / Région</label>
+        <input id="ville" name="ville" type="text" autocomplete="address-level2">
+      </div>
+      <div>
+        <label for="role">Je souhaite</label>
+        <select id="role" name="interet" required>
+          <option value="" selected disabled>Choisir…</option>
+          <option>M’inscrire comme membre</option>
+          <option>Devenir bénévole / collaborateur</option>
+          <option>Être informé(e) (sans engagement)</option>
+          <option>Proposer une compétence / un service</option>
+        </select>
+      </div>
+    </div>
+
+    <label for="message">Message (optionnel)</label>
+    <textarea id="message" name="message" rows="5" placeholder="Votre motivation, vos compétences, votre disponibilité…"></textarea>
+
+    <!-- Anti-spam (honeypot) -->
+    <input type="text" name="_gotcha" style="display:none">
+
+    <button class="btn btn--cta" type="submit">Envoyer</button>
+
+    <p class="small">
+      En envoyant ce formulaire, vous acceptez notre <a href="politique-confidentialite.html">politique de confidentialité</a>.
+      Après l’envoi, Formspree peut afficher sa page de confirmation selon la configuration du formulaire.
     </p>
+  </form>
+</section>
 
-    <section class="grid">
-      <div class="card">
-        <h2>Options de participation</h2>
-        <ul>
-          <li><strong>Membre</strong> : suivre le projet, participer aux consultations, recevoir les annonces.</li>
-          <li><strong>Bénévole</strong> : aide terrain (diffusion, événements, organisation).</li>
-          <li><strong>Collaborateur</strong> : expertise (juridique, communications, TI, finances, design, etc.).</li>
-          <li><strong>Soutien</strong> : appui matériel / logistique (selon le cadre légal applicable).</li>
-        </ul>
-        <p class="hint">
-          Le SCQ n’utilise pas de clauses cachées : vous pouvez indiquer clairement votre niveau d’implication et vos limites.
-        </p>
-      </div>
+<section class="card">
+  <h2>Ce que vous pouvez faire dès maintenant</h2>
+  <div class="btnrow">
+    <a class="btn" href="doc.html">Consulter les documents</a>
+    <a class="btn" href="presse.html">Presse & communications</a>
+    <a class="btn" href="contact.html">Nous contacter</a>
+  </div>
+</section>
 
-      <div class="card">
-        <h2>Formulaire officiel</h2>
+</main>
 
-        <form class="form" action="https://formspree.io/f/mjgvryza" method="POST">
-          <input type="hidden" name="_subject" value="SCQ — Nouvelle demande d’adhésion / participation">
-          <input type="hidden" name="_next" value="https://www.scq-officiel.ca/merci.html">
-          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
-
-          <div class="field">
-            <label for="nom">Nom complet</label>
-            <input id="nom" name="nom" type="text" autocomplete="name" required>
-          </div>
-
-          <div class="field">
-            <label for="email">Courriel</label>
-            <input id="email" name="email" type="email" autocomplete="email" required>
-          </div>
-
-          <div class="field">
-            <label for="ville">Ville (optionnel)</label>
-            <input id="ville" name="ville" type="text" autocomplete="address-level2">
-          </div>
-
-          <div class="field">
-            <label for="role">Je souhaite</label>
-            <select id="role" name="role" required>
-              <option value="" selected disabled>Choisir…</option>
-              <option>Membre</option>
-              <option>Bénévole</option>
-              <option>Collaborer (expertise)</option>
-              <option>Soutenir (logistique)</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="competences">Compétences / intérêts (optionnel)</label>
-            <input id="competences" name="competences" type="text" placeholder="Ex.: communications, TI, droit, finances, terrain…">
-          </div>
-
-          <div class="field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required placeholder="Dites-nous comment vous souhaitez aider et vos disponibilités."></textarea>
-          </div>
-
-          <div class="field check">
-            <input id="consent" name="consentement" type="checkbox" required>
-            <label for="consent">
-              Je consens à être contacté par le SCQ au sujet de cette demande. J’ai lu la
-              <a href="privacy.html">Politique de confidentialité</a>.
-            </label>
-          </div>
-
-          <div class="btnrow">
-            <button class="btn" type="submit">Envoyer</button>
-            <a class="btn secondary" href="doc.html">Voir les documents</a>
-          </div>
-
-          <p class="micro">
-            En envoyant ce formulaire, vous transmettez vos informations à Formspree pour livraison au SCQ.
-            Pour des détails, consultez la Politique de confidentialité.
-          </p>
-        </form>
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>Documents d’adhésion (PDF)</h2>
-      <p>Pour les versions PDF (lecture / impression), voici les documents actuellement publiés :</p>
-      <ul>
-        <li><a href="doc/adhesion/SCQ_ADHESION_FORM.pdf" download>Formulaire d’adhésion (PDF)</a></li>
-        <li><a href="doc/adhesion/SCQ_Code_de_conduite.pdf" download>Code de conduite (PDF)</a></li>
-        <li><a href="doc/adhesion/SCQ_Charte_de_transparence.pdf" download>Charte de transparence (PDF)</a></li>
-      </ul>
-      <p class="hint">Si un fichier n’ouvre pas, vérifiez qu’il existe bien à l’emplacement indiqué (respect exact des majuscules/minuscules).</p>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>SCQ — Souveraineté et Citoyenneté du Québec</p>
-    <p>Site officiel — information, documents et participation citoyenne.</p>
-    <p class="footlinks">
-      <a href="privacy.html">Politique de confidentialité</a>
-      <a href="legal.html">Avis légal</a>
+<footer class="site-footer" role="contentinfo">
+  <div class="wrap">
+    <div class="meta">
+      <strong>SCQ – Souveraineté et Citoyenneté du Québec</strong><br>
+      <span>Site officiel du mouvement. Dernière mise à jour: <span data-current-year></span>.</span>
+    </div>
+    <div class="links" aria-label="Liens institutionnels">
+      <a href="politique-confidentialite.html">Politique de confidentialité</a>
+      <a href="avis-legal.html">Avis légal</a>
       <a href="accessibilite.html">Accessibilité</a>
-    </p>
-  </footer>
+      <a href="conformite.html">Conformité</a>
+    </div>
+  </div>
+</footer>
+<script src="js/site.js" defer></script>
+
 </body>
 </html>

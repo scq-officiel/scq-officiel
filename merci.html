@@ -1,64 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SCQ — Merci</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Merci – SCQ Officiel</title>
   <link rel="stylesheet" href="css/styles.css">
-  <meta name="description" content="Confirmation — Votre demande a été envoyée au SCQ.">
-  <link rel="canonical" href="https://www.scq-officiel.ca/merci.html">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <meta property="og:site_name" content="SCQ">
-  <meta property="og:title" content="SCQ — Merci">
-  <meta property="og:description" content="Votre demande a été envoyée. Nous vous répondrons dès que possible.">
-  <meta property="og:url" content="https://www.scq-officiel.ca/merci.html">
-  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 </head>
 <body>
-  <a class="skip-link" href="#contenu">Aller au contenu</a>
-  <header class="topbar">
-    <div class="brand">
-      <a href="index.html" class="brandlink">
-        <img src="assets/logo-scq.svg" alt="Logo SCQ" class="logo">
-        <span class="brandname">SCQ</span>
-      </a>
-    </div>
-    <nav class="nav">
-      <a href="index.html">Accueil</a>
-      <a href="NotreVision.html">Notre vision</a>
-      <a href="adhesion.html" class="active">Adhérer</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
 
-  <main id="contenu" class="page">
+<a class="skip-link" href="#main">Aller au contenu</a>
+<nav class="topnav" aria-label="Navigation principale">
+  <a class="logo" href="index.html" aria-label="Retour à l’accueil">
+    <img src="images/logo_scq.jpg" alt="Logo SCQ">
+  </a>
+  <div class="navlinks">
+    <a href="index.html">Accueil</a>
+    <a href="NotreVision.html">Notre vision</a>
+    <a href="Constitution/preambule.html">Constitution</a>
+    <a href="cadre.html">Cadre national</a>
+    <a href="doc.html">Documents</a>
+    <a href="presse.html">Presse</a>
+    <a href="equipe.html">Équipe</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="navcta">
+    <a class="btn btn--cta" href="adhesion.html">Adhérer</a>
+  </div>
+</nav>
+
+<main id="main" class="container">
+  <header class="pagehead">
     <h1>Merci</h1>
-    <p class="lead">
-      Votre demande a été envoyée avec succès. Nous vous répondrons dès que possible.
-    </p>
+  </header>
+  
+<section class="card">
+  <h2>Merci</h2>
+  <p>Votre message a été transmis. Nous vous recontacterons dès que possible.</p>
+  <div class="btnrow">
+    <a class="btn btn--cta" href="index.html">Retour à l’accueil</a>
+    <a class="btn" href="doc.html">Documents</a>
+    <a class="btn" href="presse.html">Presse</a>
+  </div>
+</section>
 
-    <section class="card">
-      <h2>Prochaines étapes</h2>
-      <ul>
-        <li>Consultez les documents publics pour comprendre notre cadre et notre méthode.</li>
-        <li>Partagez le site à une personne de confiance qui souhaite améliorer le Québec.</li>
-        <li>Si vous avez oublié un détail, vous pouvez nous écrire à nouveau via la page Contact.</li>
-      </ul>
-      <div class="btnrow">
-        <a class="btn" href="doc.html">Documents officiels</a>
-        <a class="btn secondary" href="index.html">Retour à l’accueil</a>
-      </div>
-    </section>
-  </main>
+</main>
 
-  <footer class="footer">
-    <p>SCQ — Souveraineté et Citoyenneté du Québec</p>
-    <p>Site officiel — information, documents et participation citoyenne.</p>
-    <p class="footlinks">
-      <a href="privacy.html">Politique de confidentialité</a>
-      <a href="legal.html">Avis légal</a>
+<footer class="site-footer" role="contentinfo">
+  <div class="wrap">
+    <div class="meta">
+      <strong>SCQ – Souveraineté et Citoyenneté du Québec</strong><br>
+      <span>Site officiel du mouvement. Dernière mise à jour: <span data-current-year></span>.</span>
+    </div>
+    <div class="links" aria-label="Liens institutionnels">
+      <a href="politique-confidentialite.html">Politique de confidentialité</a>
+      <a href="avis-legal.html">Avis légal</a>
       <a href="accessibilite.html">Accessibilité</a>
-    </p>
-  </footer>
+      <a href="conformite.html">Conformité</a>
+    </div>
+  </div>
+</footer>
+<script src="js/site.js" defer></script>
+
 </body>
 </html>
