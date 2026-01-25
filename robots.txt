@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://scq-officiel.ca/sitemap.xml
