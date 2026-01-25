@@ -1,59 +1,26 @@
-<!DOCTYPE html>
-
-<html lang="fr">
+<!doctype html>
+<html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>404 – SCQ Officiel</title>
-<link href="css/styles.css" rel="stylesheet"/>
-<link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SCQ Officiel - Not Found</title>
+  <meta http-equiv="refresh" content="0; url=/fr/404.html">
+  <script>
+    (function() {
+      try {
+        var lang = (navigator.languages && navigator.languages[0]) || navigator.language || "";
+        lang = (lang || "").toLowerCase();
+        var target = lang.startsWith("en") ? "/en/404.html" : "/fr/404.html";
+        window.location.replace(target);
+      } catch (e) {
+        window.location.replace("/fr/404.html");
+      }
+    })();
+  </script>
 </head>
 <body>
-<nav aria-label="Navigation principale" class="topnav">
-<a aria-label="Retour à l’accueil" class="logo" href="index.html">
-<img alt="Logo SCQ" src="images/logo_scq.jpg"/>
-</a>
-<div class="navlinks">
-<a href="index.html">Accueil</a>
-<a href="NotreVision.html">Notre vision</a>
-<a href="cadre.html">Cadre national</a>
-<a href="doc.html">Documents</a>
-<a href="presse.html">Presse</a>
-<a href="equipe.html">Équipe</a>
-<a href="contact.html">Contact</a>
-</div>
-<div class="navcta">
-<a class="btn btn--cta" href="adhesion.html">Adhérer</a>
-</div>
-</nav>
-<main class="container" id="main">
-<header class="pagehead">
-<h1>404</h1>
-</header>
-<section class="card">
-<h2>Page introuvable</h2>
-<p>La page demandée n’existe pas (ou a été déplacée). Utilisez la navigation ci-dessus, ou retournez à l’accueil.</p>
-<div class="btnrow">
-<a class="btn btn--cta" href="index.html">Accueil</a>
-<a class="btn" href="doc.html">Documents</a>
-<a class="btn" href="adhesion.html">Adhérer</a>
-</div>
-</section>
-</main>
-<footer class="site-footer" role="contentinfo">
-<div class="wrap">
-<div class="meta">
-<strong>SCQ – Souveraineté et Citoyenneté du Québec</strong><br/>
-<span>Site officiel du mouvement. Dernière mise à jour: <span data-current-year=""></span>.</span>
-</div>
-<div aria-label="Liens institutionnels" class="links">
-<a href="politique-confidentialite.html">Politique de confidentialité</a>
-<a href="avis-legal.html">Avis légal</a>
-<a href="accessibilite.html">Accessibilité</a>
-<a href="conformite.html">Conformité</a>
-</div>
-</div>
-</footer>
-<script defer="" src="js/site.js"></script>
+  <noscript>
+    <p><a href="/fr/404.html">Français</a> | <a href="/en/404.html">English</a></p>
+  </noscript>
 </body>
 </html>

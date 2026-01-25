@@ -1,41 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://www.scq-officiel.ca/404.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/Constitution/droits.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/Constitution/finances.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/Constitution/institutions.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/Constitution/justice.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/Constitution/peuples.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/Constitution/preambule.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/Constitution/principes.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/Constitution/revision.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/Constitution/transition.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/NotreVision.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/Volet1.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/Volet2.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/Volet3.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/accessibilite.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/adhesion.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/avis-legal.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/cadre.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/code-conduite.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/comptabilite.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/conformite.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/contact.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/doc.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/equipe.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/forms.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/index.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/loi-Reglements.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/loi-administratif.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/loi-constitution.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/loi-ordinaires.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/loi-organiques.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/loi-scq-otc.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/membres.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/merci.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/politique-confidentialite.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/presse.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/qui-sommes-nous.html</loc><lastmod>2026-01-25</lastmod></url>
-<url><loc>https://www.scq-officiel.ca/statut.html</loc><lastmod>2026-01-25</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/index.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/404.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/404.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/accessibilite.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/adhesion.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/avis-legal.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/cadre.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/code-conduite.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/comptabilite.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/conformite.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/contact.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/doc.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/equipe.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/forms.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/index.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/loi-administratif.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/loi-constitution.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/loi-ordinaires.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/loi-organiques.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/loi-Reglements.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/loi-scq-otc.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/membres.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/merci.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/NotreVision.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/politique-confidentialite.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/presse.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/qui-sommes-nous.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/statut.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/Volet1.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/Volet2.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/Volet3.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/Constitution/droits.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/Constitution/finances.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/Constitution/institutions.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/Constitution/justice.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/Constitution/peuples.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/Constitution/preambule.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/Constitution/principes.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/Constitution/revision.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/fr/Constitution/transition.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/404.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/accessibilite.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/adhesion.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/avis-legal.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/cadre.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/code-conduite.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/comptabilite.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/conformite.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/contact.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/doc.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/equipe.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/forms.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/index.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/loi-administratif.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/loi-constitution.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/loi-ordinaires.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/loi-organiques.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/loi-Reglements.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/loi-scq-otc.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/membres.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/merci.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/NotreVision.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/politique-confidentialite.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/presse.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/qui-sommes-nous.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/statut.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/Volet1.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/Volet2.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/Volet3.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/Constitution/droits.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/Constitution/finances.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/Constitution/institutions.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/Constitution/justice.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/Constitution/peuples.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/Constitution/preambule.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/Constitution/principes.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/Constitution/revision.html</loc><lastmod>2026-01-24</lastmod></url>
+  <url><loc>https://www.scq-officiel.ca/en/Constitution/transition.html</loc><lastmod>2026-01-24</lastmod></url>
 </urlset>

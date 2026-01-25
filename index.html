@@ -1,131 +1,26 @@
-<!DOCTYPE html>
-
-<html lang="fr">
+<!doctype html>
+<html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>SCQ - Accueil</title>
-<link href="css/styles.css" rel="stylesheet"/>
-<link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/><link href="https://www.scq-officiel.ca/index.html" rel="canonical"/><meta content="Bienvenue sur l’espace officiel du SCQ. Cette plateforme présente notre cadre, nos documents et notre méthode
-        de transparence. L’objectif est de rendre " name="description"/><meta content="SCQ Officiel" property="og:site_name"/><meta content="SCQ - Accueil" property="og:title"/><meta content="Bienvenue sur l’espace officiel du SCQ. Cette plateforme présente notre cadre, nos documents et notre méthode
-        de transparence. L’objectif est de rendre " property="og:description"/><meta content="website" property="og:type"/><meta content="https://www.scq-officiel.ca/index.html" property="og:url"/><meta content="https://www.scq-officiel.ca/assets/og-image.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="SCQ - Accueil" name="twitter:title"/><meta content="Bienvenue sur l’espace officiel du SCQ. Cette plateforme présente notre cadre, nos documents et notre méthode
-        de transparence. L’objectif est de rendre " name="twitter:description"/><meta content="https://www.scq-officiel.ca/assets/og-image.png" name="twitter:image"/></head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SCQ Officiel</title>
+  <meta http-equiv="refresh" content="0; url=/fr/index.html">
+  <script>
+    (function() {
+      try {
+        var lang = (navigator.languages && navigator.languages[0]) || navigator.language || "";
+        lang = (lang || "").toLowerCase();
+        var target = lang.startsWith("en") ? "/en/index.html" : "/fr/index.html";
+        window.location.replace(target);
+      } catch (e) {
+        window.location.replace("/fr/index.html");
+      }
+    })();
+  </script>
+</head>
 <body>
-<!-- Navigation -->
-<nav aria-label="Navigation principale" class="topnav">
-<a aria-label="Retour à l’accueil" class="logo" href="index.html">
-<img alt="Logo SCQ" src="images/logo_scq.jpg"/>
-</a>
-<div class="navlinks">
-<a href="index.html">Accueil</a>
-<a href="NotreVision.html">Notre vision</a>
-<a href="cadre.html">Cadre national</a>
-<a href="doc.html">Documents</a>
-<a href="presse.html">Presse</a>
-<a href="equipe.html">Équipe</a>
-<a href="contact.html">Contact</a>
-</div>
-<div class="navcta">
-<a class="btn btn--cta" href="adhesion.html">Adhérer</a>
-</div>
-</nav>
-<!-- Bannière -->
-<div class="banner">
-<img alt="Bannière SCQ" src="images/Banniere-Officiel.jpg"/>
-</div>
-<main id="main">
-<div class="box">
-<p>
-        Bienvenue sur l’espace officiel du SCQ. Cette plateforme présente notre cadre, nos documents et notre méthode
-        de transparence. L’objectif est de rendre l’information <strong>accessible, structurée et vérifiable</strong>.
-      </p>
-<div class="btnrow">
-<a class="btn" href="cadre.html">Cadre National</a>
-<a class="btn secondary" href="doc.html">Documents officiels</a>
-<a class="btn" href="contact.html">Écrire au SCQ</a>
-</div>
-</div>
-<div class="grid">
-<section class="card">
-<h2>Accès rapide</h2>
-<p>
-          Accédez aux pages essentielles et à l’organisation du projet.
-        </p>
-<div class="btnrow">
-<a class="btn" href="qui-sommes-nous.html">Qui sommes-nous ?</a>
-<a class="btn" href="NotreVision.html">Notre vision</a>
-<a class="btn secondary" href="equipe.html">Équipe</a>
-<a class="btn secondary" href="membres.html">Membres</a>
-</div>
-</section>
-<section class="card">
-<h2>Textes structurants (HTML)</h2>
-<p>
-          Versions web des documents de référence (consultation rapide).
-        </p>
-<div class="btnrow">
-
-<a class="btn" href="loi-organiques.html">Lois organiques</a>
-<a class="btn" href="loi-ordinaires.html">Lois ordinaires</a>
-<a class="btn" href="loi-Reglements.html">Règlements</a>
-<a class="btn" href="loi-administratif.html">Pratiques admin.</a>
-<a class="btn secondary" href="loi-scq-otc.html">SCQ — OTC</a>
-</div>
-</section>
-<section class="card">
-<h2>Volets (structure publique)</h2>
-<p>
-          Trois volets pour clarifier l’approche, sans rien cacher, et montrer ce qui est construit.
-        </p>
-<div class="btnrow">
-<a class="btn" href="Volet1.html">Volet 1</a>
-<a class="btn" href="Volet2.html">Volet 2</a>
-<a class="btn" href="Volet3.html">Volet 3</a>
-</div>
-<p style="margin-top:10px; font-size:14px; color:#334155;">
-          Si ces liens ne fonctionnent pas, vérifie que les fichiers sont bien à la racine du site : <strong>Volet1.html</strong>, <strong>Volet2.html</strong>, <strong>Volet3.html</strong>.
-        </p>
-</section>
-<section class="card">
-<h2>Transparence et règles internes</h2>
-<p>
-          Les documents publics et les règles de fonctionnement (consultation et téléchargements).
-        </p>
-<div class="btnrow">
-<a class="btn" href="doc.html">Téléchargements</a>
-<a class="btn secondary" href="code-conduite.html">Code de conduite (HTML)</a>
-<a class="btn" href="comptabilite.html">Comptabilité</a>
-</div>
-</section>
-</div>
-<div class="note">
-<strong>Note technique :</strong> sur GitHub Pages, les noms doivent correspondre exactement.
-      Le dossier <strong>Doc</strong> est différent de <strong>doc</strong>, et les fichiers doivent être identiques lettre par lettre.
-      Pour les téléchargements, assure-toi que les documents existent bien dans <strong>Doc/lois/</strong> ou <strong>Doc/</strong>.
-    </div>
-<section class="card">
-<h2>Rejoindre le SCQ</h2>
-<p>Devenez membre, bénévole ou collaborateur. Participez à la construction d’un projet politique structuré et transparent.</p>
-<div class="btnrow">
-<a class="btn btn--cta" href="adhesion.html">Adhérer</a>
-<a class="btn" href="doc.html">Documents</a>
-<a class="btn" href="presse.html">Presse</a>
-</div>
-</section>
-</main>
-<footer class="site-footer" role="contentinfo">
-<div class="wrap">
-<div class="meta">
-<strong>SCQ – Souveraineté et Citoyenneté du Québec</strong><br/>
-<span>Site officiel du mouvement. Dernière mise à jour: <span data-current-year=""></span>.</span>
-</div>
-<div aria-label="Liens institutionnels" class="links">
-<a href="politique-confidentialite.html">Politique de confidentialité</a>
-<a href="avis-legal.html">Avis légal</a>
-<a href="accessibilite.html">Accessibilité</a>
-<a href="conformite.html">Conformité</a>
-</div>
-</div>
-</footer>
+  <noscript>
+    <p><a href="/fr/index.html">Français</a> | <a href="/en/index.html">English</a></p>
+  </noscript>
 </body>
 </html>
