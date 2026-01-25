@@ -1,268 +1,120 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SCQ – Lois organiques du Québec souverain</title>
-
-  <link rel="stylesheet" href="css/styles.css" />
-
-  <style>
-    nav{
-      background:#0A2A66;
-      padding:12px 16px;
-      display:flex;
-      align-items:center;
-      gap:10px;
-      flex-wrap:wrap;
-      position:sticky;
-      top:0;
-      z-index:1000;
-    }
-    nav a{
-      color:#fff;
-      text-decoration:none;
-      font-weight:700;
-      padding:6px 8px;
-      border-radius:10px;
-      white-space:nowrap;
-    }
-    nav a:hover{ text-decoration:underline; }
-    nav .logo{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:0;
-      margin-right:6px;
-    }
-    nav .logo img{
-      height:40px;
-      width:auto;
-      border-radius:10px;
-      display:block;
-    }
-
-    .banner{
-      text-align:center;
-      margin-top:16px;
-      width:100%;
-      padding:0 16px;
-    }
-    .banner img{
-      width:100%;
-      max-width:715px;
-      max-height:260px;
-      object-fit:cover;
-      border-radius:16px;
-      box-shadow:0 0 12px rgba(0,0,0,0.10);
-      display:block;
-      margin:0 auto;
-    }
-
-    main{
-      max-width:980px;
-      margin:22px auto 50px;
-      background:#fff;
-      padding:26px;
-      border-radius:14px;
-      box-shadow:0 0 12px rgba(0,0,0,0.10);
-    }
-
-    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; }
-    h2{ font-size:24px; color:#0047ab; margin:22px 0 10px; }
-    p{ font-size:17px; margin:0 0 12px; line-height:1.65; color:#0f172a; }
-
-    ul{
-      margin:8px 0 0 20px;
-      color:#0f172a;
-      line-height:1.65;
-      font-size:16px;
-    }
-
-    .section{
-      margin-top:18px;
-      padding:16px;
-      border-radius:14px;
-      background:rgba(0,71,171,0.05);
-      border:1px solid rgba(0,71,171,0.12);
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap:14px;
-      margin-top:14px;
-    }
-
-    .card{
-      border:1px solid rgba(0,0,0,0.10);
-      border-radius:14px;
-      padding:16px;
-      background:#fff;
-      box-shadow:0 0 10px rgba(0,0,0,0.05);
-    }
-
-    .card h3{
-      margin:0 0 8px;
-      font-size:18px;
-      color:#0A2A66;
-    }
-
-    .btnrow{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top:12px;
-    }
-
-    .btn{
-      display:inline-block;
-      background:#0A2A66;
-      color:#fff;
-      padding:10px 12px;
-      border-radius:12px;
-      text-decoration:none;
-      font-weight:700;
-      font-size:14px;
-    }
-    .btn.secondary{ background:#0f172a; }
-    .btn:hover{ text-decoration:underline; }
-
-    .note{
-      margin-top:18px;
-      padding:14px 16px;
-      border-radius:14px;
-      background:rgba(15,23,42,0.04);
-      border:1px solid rgba(15,23,42,0.10);
-      font-size:15px;
-      color:#0f172a;
-      line-height:1.6;
-    }
-
-    @media (max-width:760px){
-      nav{ flex-direction:column; align-items:flex-start; }
-      main{ margin:18px 12px 40px; padding:18px; }
-      h1{ font-size:28px; }
-      h2{ font-size:20px; }
-      .grid{ grid-template-columns:1fr; }
-    }
-  </style>
-</head>
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SCQ – Lois organiques du Québec souverain</title>
+<link href="css/styles.css" rel="stylesheet"/>
+<meta content="SCQ – Lois organiques du Québec souverain — Site officiel du Parti Souveraineté et Citoyenneté du Québec (SCQ)." name="description"/><link href="https://scq-officiel.ca/loi-organiques.html" rel="canonical"/><link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/><meta content="SCQ" property="og:site_name"/><meta content="SCQ – Lois organiques du Québec souverain" property="og:title"/><meta content="Site officiel du SCQ. Consultez nos documents, notre vision et les moyens de participation." property="og:description"/><meta content="website" property="og:type"/><meta content="https://scq-officiel.ca/loi-organiques.html" property="og:url"/><meta content="https://scq-officiel.ca/assets/og-image.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="SCQ – Lois organiques du Québec souverain" name="twitter:title"/><meta content="Site officiel du SCQ. Documents, vision et participation." name="twitter:description"/><meta content="https://scq-officiel.ca/assets/og-image.png" name="twitter:image"/></head>
 <body>
-
-  <!-- Navigation -->
-  <nav>
-    <a class="logo" href="index.html" aria-label="Retour à l’accueil">
-      <img src="images/logo_scq.jpg" alt="Logo SCQ">
-    </a>
-
-    <a href="index.html">Accueil</a>
-    <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
-    <a href="cadre.html">Cadre National</a>
-    <a href="membres.html">Membres</a>
-    <a href="equipe.html">Équipe</a>
-    <a href="comptabilite.html">Comptabilité</a>
-    <a href="contact.html">Contact</a>
-    <a href="doc.html">Documents</a>
-  </nav>
-
-  <!-- Bannière -->
-  <div class="banner">
-    <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
-  </div>
-
-  <!-- Contenu -->
-  <main>
-
-    <h1>Lois organiques</h1>
-
-    <p>
+<!-- Navigation -->
+<nav>
+<a aria-label="Retour à l’accueil" class="logo" href="index.html">
+<img alt="Logo SCQ" src="images/logo_scq.jpg"/>
+</a>
+<a href="index.html">Accueil</a>
+<a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+<a href="cadre.html">Cadre National</a>
+<a href="membres.html">Membres</a>
+<a href="equipe.html">Équipe</a>
+<a href="comptabilite.html">Comptabilité</a>
+<a href="contact.html">Contact</a>
+<a href="doc.html">Documents</a>
+</nav>
+<!-- Bannière -->
+<div class="banner">
+<img alt="Bannière SCQ" src="images/Bannière-Officiel.jpg"/>
+</div>
+<!-- Contenu -->
+<main>
+<h1>Lois organiques</h1>
+<p>
       Les <strong>lois organiques</strong> constituent le <strong>deuxième niveau</strong> de la hiérarchie des normes.
       Elles organisent le fonctionnement interne de l’État : institutions, démocratie, finances publiques,
       administration, contrôle, transparence et mécanismes d’intégrité.
     </p>
-
-    <div class="section">
-      <h2>Rôle des lois organiques</h2>
-      <p>
+<div class="section">
+<h2>Rôle des lois organiques</h2>
+<p>
         Les lois organiques servent à :
       </p>
-      <ul>
-        <li>mettre en place les institutions prévues par la Constitution;</li>
-        <li>définir les procédures fondamentales de l’État (règles de gouvernance et de contrôle);</li>
-        <li>organiser l’appareil public (administration, services essentiels, audits, enquêtes);</li>
-        <li>fixer les mécanismes de transparence, d’intégrité et de reddition de comptes.</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Limites juridiques</h2>
-      <p>
+<ul>
+<li>mettre en place les institutions prévues par la Constitution;</li>
+<li>définir les procédures fondamentales de l’État (règles de gouvernance et de contrôle);</li>
+<li>organiser l’appareil public (administration, services essentiels, audits, enquêtes);</li>
+<li>fixer les mécanismes de transparence, d’intégrité et de reddition de comptes.</li>
+</ul>
+</div>
+<div class="section">
+<h2>Limites juridiques</h2>
+<p>
         Une loi organique :
       </p>
-      <ul>
-        <li>ne peut jamais contredire la Constitution;</li>
-        <li>doit respecter les droits fondamentaux;</li>
-        <li>crée les structures et procédures, mais ne remplace pas les lois ordinaires sectorielles.</li>
-      </ul>
-    </div>
-
-    <h2>Blocs structurants (exemples)</h2>
-    <div class="grid">
-
-      <div class="card">
-        <h3>Démocratie et élections</h3>
-        <p>Processus électoral, référendums, transparence électorale et mécanismes de légitimité démocratique.</p>
-      </div>
-
-      <div class="card">
-        <h3>Institutions de l’État</h3>
-        <p>Organisation des pouvoirs, séparation, contrôles internes, responsabilité institutionnelle.</p>
-      </div>
-
-      <div class="card">
-        <h3>Finances publiques</h3>
-        <p>Budget, contrôle des dépenses, audits, reddition de comptes, mécanismes anti-fraude.</p>
-      </div>
-
-      <div class="card">
-        <h3>Administration et service public</h3>
-        <p>Organisation administrative, cadres de performance, règles de gestion et d’imputabilité.</p>
-      </div>
-
-      <div class="card">
-        <h3>Transparence et intégrité</h3>
-        <p>Contrôles, enquêtes, conflits d’intérêts, lobbying, anticorruption, traçabilité des décisions.</p>
-      </div>
-
-      <div class="card">
-        <h3>Justice et sécurité institutionnelle</h3>
-        <p>Cadres procéduraux, institutions judiciaires, mécanismes de protection constitutionnelle.</p>
-      </div>
-
-    </div>
-
-    <div class="section">
-      <h2>Accès au document officiel</h2>
-      <p>
+<ul>
+<li>ne peut jamais contredire la Constitution;</li>
+<li>doit respecter les droits fondamentaux;</li>
+<li>crée les structures et procédures, mais ne remplace pas les lois ordinaires sectorielles.</li>
+</ul>
+</div>
+<h2>Blocs structurants (exemples)</h2>
+<div class="grid">
+<div class="card">
+<h3>Démocratie et élections</h3>
+<p>Processus électoral, référendums, transparence électorale et mécanismes de légitimité démocratique.</p>
+</div>
+<div class="card">
+<h3>Institutions de l’État</h3>
+<p>Organisation des pouvoirs, séparation, contrôles internes, responsabilité institutionnelle.</p>
+</div>
+<div class="card">
+<h3>Finances publiques</h3>
+<p>Budget, contrôle des dépenses, audits, reddition de comptes, mécanismes anti-fraude.</p>
+</div>
+<div class="card">
+<h3>Administration et service public</h3>
+<p>Organisation administrative, cadres de performance, règles de gestion et d’imputabilité.</p>
+</div>
+<div class="card">
+<h3>Transparence et intégrité</h3>
+<p>Contrôles, enquêtes, conflits d’intérêts, lobbying, anticorruption, traçabilité des décisions.</p>
+</div>
+<div class="card">
+<h3>Justice et sécurité institutionnelle</h3>
+<p>Cadres procéduraux, institutions judiciaires, mécanismes de protection constitutionnelle.</p>
+</div>
+</div>
+<div class="section">
+<h2>Accès au document officiel</h2>
+<p>
         Les documents téléchargeables (DOCX/PDF) sont centralisés dans la page <strong>Documents</strong>
         afin d’assurer une source unique, stable et éviter les liens cassés.
       </p>
-
-      <div class="btnrow">
-        <a class="btn" href="doc.html">Aller à Documents (téléchargements)</a>
-        <a class="btn secondary" href="cadre.html">Retour au Cadre National</a>
-      </div>
-    </div>
-
-    <div class="note">
-      <strong>Principe clé :</strong> les lois organiques construisent l’ossature de l’État.
+<div class="btnrow">
+<a class="btn" href="doc.html">Aller à Documents (téléchargements)</a>
+<a class="btn secondary" href="cadre.html">Retour au Cadre National</a>
+</div>
+</div>
+<div class="note">
+<strong>Principe clé :</strong> les lois organiques construisent l’ossature de l’État.
       Elles rendent possibles les lois ordinaires et les règlements, tout en assurant que la gouvernance
       demeure contrôlable, transparente et conforme à la Constitution.
     </div>
-
-  </main>
-
-</body>
+</main>
+<footer class="site-footer">
+<div class="container footer-grid">
+<div>
+<div class="footer-title">SCQ — Souveraineté et Citoyenneté du Québec</div>
+<div class="footer-meta">Site officiel — information, documents et participation citoyenne.</div>
+</div>
+<div>
+<div class="footer-title">Liens</div>
+<a href="politique-confidentialite.html">Politique de confidentialité</a><br/>
+<a href="avis-legal.html">Avis légal</a><br/>
+<a href="accessibilite.html">Accessibilité</a><br/>
+<a href="contact.html">Contact</a>
+</div>
+</div>
+<div class="container footer-bottom">© <span id="year"></span> SCQ. Tous droits réservés.</div>
+</footer><script>document.getElementById('year').textContent = new Date().getFullYear();</script></body>
 </html>

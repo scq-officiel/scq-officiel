@@ -1,269 +1,143 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SCQ - Volet 1 | Québec dans le Canada</title>
-
-  <link rel="stylesheet" href="css/styles.css" />
-
-  <style>
-    nav{
-      background:#0A2A66;
-      padding:12px 16px;
-      display:flex;
-      align-items:center;
-      gap:10px;
-      flex-wrap:wrap;
-      position:sticky;
-      top:0;
-      z-index:1000;
-    }
-    nav a{
-      color:#fff;
-      text-decoration:none;
-      font-weight:700;
-      padding:6px 8px;
-      border-radius:10px;
-      white-space:nowrap;
-    }
-    nav a:hover{ text-decoration:underline; }
-    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; margin-right:6px; }
-    nav .logo img{ height:40px; width:auto; border-radius:10px; display:block; }
-
-    .banner{
-      text-align:center;
-      margin-top:16px;
-      width:100%;
-      overflow:hidden;
-      padding:0 16px;
-    }
-    .banner img{
-      width:100%;
-      max-width:715px;
-      height:auto;
-      max-height:260px;
-      object-fit:cover;
-      border-radius:16px;
-      box-shadow:0 0 12px rgba(0,0,0,0.10);
-      display:block;
-      margin:0 auto;
-    }
-
-    main{
-      max-width:980px;
-      margin:22px auto 50px;
-      background:#fff;
-      padding:26px;
-      border-radius:14px;
-      box-shadow:0 0 12px rgba(0,0,0,0.10);
-    }
-
-    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; }
-    h2{ font-size:24px; color:#0047ab; margin:22px 0 10px; }
-    h3{ font-size:18px; color:#0A2A66; margin:0 0 8px; }
-
-    p, li{
-      font-size:17px;
-      line-height:1.65;
-      color:#0f172a;
-      margin:0 0 12px;
-    }
-    ul{ margin:0 0 12px 18px; }
-
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap:14px;
-      margin-top:14px;
-      align-items:stretch;
-    }
-
-    .card{
-      border:1px solid rgba(0,0,0,0.10);
-      border-radius:14px;
-      padding:16px;
-      background:#fff;
-      box-shadow:0 0 10px rgba(0,0,0,0.05);
-    }
-
-    .btnrow{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:10px;
-    }
-
-    .btn{
-      display:inline-block;
-      background:#0A2A66;
-      color:#fff;
-      padding:10px 12px;
-      border-radius:12px;
-      text-decoration:none;
-      font-weight:700;
-      font-size:14px;
-    }
-    .btn:hover{ text-decoration:underline; }
-    .btn.secondary{ background:#0f172a; }
-
-    .note{
-      margin-top:18px;
-      padding:14px 16px;
-      border-radius:14px;
-      background:rgba(0,71,171,0.06);
-      border:1px solid rgba(0,71,171,0.14);
-      color:#0f172a;
-      font-size:14px;
-      line-height:1.6;
-    }
-
-    @media (max-width: 760px){
-      nav{ flex-direction:column; align-items:flex-start; }
-      main{ margin:18px 12px 40px; padding:18px; }
-      h1{ font-size:28px; }
-      h2{ font-size:20px; }
-      .grid{ grid-template-columns: 1fr; }
-    }
-  </style>
-</head>
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SCQ - Volet 1 | Québec dans le Canada</title>
+<link href="css/styles.css" rel="stylesheet"/>
+<meta content="SCQ - Volet 1 | Québec dans le Canada — Site officiel du Parti Souveraineté et Citoyenneté du Québec (SCQ)." name="description"/><link href="https://scq-officiel.ca/Volet1.html" rel="canonical"/><link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/><meta content="SCQ" property="og:site_name"/><meta content="SCQ - Volet 1 | Québec dans le Canada" property="og:title"/><meta content="Site officiel du SCQ. Consultez nos documents, notre vision et les moyens de participation." property="og:description"/><meta content="website" property="og:type"/><meta content="https://scq-officiel.ca/Volet1.html" property="og:url"/><meta content="https://scq-officiel.ca/assets/og-image.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="SCQ - Volet 1 | Québec dans le Canada" name="twitter:title"/><meta content="Site officiel du SCQ. Documents, vision et participation." name="twitter:description"/><meta content="https://scq-officiel.ca/assets/og-image.png" name="twitter:image"/></head>
 <body>
-
-  <!-- Navigation -->
-  <nav>
-    <a class="logo" href="index.html" aria-label="Retour à l’accueil">
-      <img src="images/logo_scq.jpg" alt="Logo SCQ">
-    </a>
-
-    <a href="index.html">Accueil</a>
-    <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
-    <a href="cadre.html">Cadre National</a>
-    <a href="Volet1.html" aria-current="page">Volet 1</a>
-    <a href="Volet2.html">Volet 2</a>
-    <a href="Volet3.html">Volet 3</a>
-    <a href="doc.html">Documents</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <!-- Bannière -->
-  <div class="banner">
-    <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
-  </div>
-
-  <main>
-    <h1>Volet 1 — Québec dans le Canada</h1>
-    <p>
+<!-- Navigation -->
+<nav>
+<a aria-label="Retour à l’accueil" class="logo" href="index.html">
+<img alt="Logo SCQ" src="images/logo_scq.jpg"/>
+</a>
+<a href="index.html">Accueil</a>
+<a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+<a href="cadre.html">Cadre National</a>
+<a aria-current="page" href="Volet1.html">Volet 1</a>
+<a href="Volet2.html">Volet 2</a>
+<a href="Volet3.html">Volet 3</a>
+<a href="doc.html">Documents</a>
+<a href="contact.html">Contact</a>
+</nav>
+<!-- Bannière -->
+<div class="banner">
+<img alt="Bannière SCQ" src="images/Bannière-Officiel.jpg"/>
+</div>
+<main>
+<h1>Volet 1 — Québec dans le Canada</h1>
+<p>
       Ce volet présente l’approche du SCQ pour agir efficacement <strong>à l’intérieur du cadre canadien actuel</strong>,
       sans ambiguïté et sans promesses impossibles. Objectif : protéger les intérêts du Québec, renforcer la capacité
       d’action, et préparer la population à comprendre clairement les étapes suivantes.
     </p>
-
-    <div class="btnrow">
-      <a class="btn" href="cadre.html">Cadre National</a>
-      <a class="btn secondary" href="loi-constitution.html">Constitution (hub)</a>
-      <a class="btn" href="Volet2.html">Aller au Volet 2 →</a>
-    </div>
-
-    <h2>Ce que le Volet 1 couvre</h2>
-
-    <div class="grid">
-
-      <section class="card">
-        <h3>1) Gouverner avec transparence</h3>
-        <p>
+<div class="btnrow">
+<a class="btn" href="cadre.html">Cadre National</a>
+<a class="btn secondary" href="loi-constitution.html">Constitution (hub)</a>
+<a class="btn" href="Volet2.html">Aller au Volet 2 →</a>
+</div>
+<h2>Ce que le Volet 1 couvre</h2>
+<div class="grid">
+<section class="card">
+<h3>1) Gouverner avec transparence</h3>
+<p>
           Même dans le cadre actuel, le SCQ vise à imposer une culture de transparence : décisions explicables,
           dépenses traçables et documents accessibles au public.
         </p>
-        <ul>
-          <li>Reddition de comptes publique</li>
-          <li>Publication des cadres, procédures et références</li>
-          <li>Réduction de l’opacité administrative</li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h3>2) Protéger les intérêts du Québec</h3>
-        <p>
+<ul>
+<li>Reddition de comptes publique</li>
+<li>Publication des cadres, procédures et références</li>
+<li>Réduction de l’opacité administrative</li>
+</ul>
+</section>
+<section class="card">
+<h3>2) Protéger les intérêts du Québec</h3>
+<p>
           Refuser ce qui nuit au Québec, documenter les impacts, et défendre l’avantage réel du peuple.
           Le Volet 1 met l’accent sur l’efficacité politique immédiate.
         </p>
-        <ul>
-          <li>Analyse d’impact systématique</li>
-          <li>Priorité au Québec et à ses citoyens</li>
-          <li>Positionnement clair et constant</li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h3>3) Renforcer l’appareil public</h3>
-        <p>
+<ul>
+<li>Analyse d’impact systématique</li>
+<li>Priorité au Québec et à ses citoyens</li>
+<li>Positionnement clair et constant</li>
+</ul>
+</section>
+<section class="card">
+<h3>3) Renforcer l’appareil public</h3>
+<p>
           Améliorer la capacité d’action : règles simples, contrôle interne, lutte contre la fraude,
           et amélioration des services essentiels.
         </p>
-        <ul>
-          <li>Procédures administratives claires</li>
-          <li>Contrôles et audits</li>
-          <li>Service public orienté citoyen</li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h3>4) Préparer la suite sans mentir</h3>
-        <p>
+<ul>
+<li>Procédures administratives claires</li>
+<li>Contrôles et audits</li>
+<li>Service public orienté citoyen</li>
+</ul>
+</section>
+<section class="card">
+<h3>4) Préparer la suite sans mentir</h3>
+<p>
           Le Volet 1 reconnaît une réalité : l’indépendance exige une population informée et prête.
           On prépare le terrain par l’éducation politique et la cohérence.
         </p>
-        <ul>
-          <li>Information citoyenne</li>
-          <li>Clarté sur les étapes</li>
-          <li>Préparation structurée</li>
-        </ul>
-      </section>
-
-    </div>
-
-    <h2>Références et cadre juridique</h2>
-    <div class="grid">
-
-      <section class="card">
-        <h3>Constitution (structure complète)</h3>
-        <p>
+<ul>
+<li>Information citoyenne</li>
+<li>Clarté sur les étapes</li>
+<li>Préparation structurée</li>
+</ul>
+</section>
+</div>
+<h2>Références et cadre juridique</h2>
+<div class="grid">
+<section class="card">
+<h3>Constitution (structure complète)</h3>
+<p>
           La Constitution sert de référence centrale pour comprendre l’architecture de l’État que le SCQ veut bâtir.
           Même dans le Volet 1, elle est publiée pour transparence et cohérence.
         </p>
-        <div class="btnrow">
-          <a class="btn" href="loi-constitution.html">Ouvrir le hub</a>
-          <a class="btn secondary" href="Constitution/principes.html">Principes</a>
-          <a class="btn secondary" href="Constitution/droits.html">Droits</a>
-        </div>
-      </section>
-
-      <section class="card">
-        <h3>Cadre National (hiérarchie des normes)</h3>
-        <p>
+<div class="btnrow">
+<a class="btn" href="loi-constitution.html">Ouvrir le hub</a>
+<a class="btn secondary" href="Constitution/principes.html">Principes</a>
+<a class="btn secondary" href="Constitution/droits.html">Droits</a>
+</div>
+</section>
+<section class="card">
+<h3>Cadre National (hiérarchie des normes)</h3>
+<p>
           Pour éviter la confusion, le Cadre National montre l’ordre des normes : Constitution, lois, règlements,
           pratiques administratives et outils transitoires.
         </p>
-        <div class="btnrow">
-          <a class="btn" href="cadre.html">Ouvrir Cadre National</a>
-          <a class="btn secondary" href="loi-organiques.html">Lois organiques</a>
-        </div>
-      </section>
-
-    </div>
-
-    <div class="note">
-      <strong>Note :</strong> Le Volet 1 est volontairement pragmatique. Il sert à agir maintenant, dans le cadre actuel,
+<div class="btnrow">
+<a class="btn" href="cadre.html">Ouvrir Cadre National</a>
+<a class="btn secondary" href="loi-organiques.html">Lois organiques</a>
+</div>
+</section>
+</div>
+<div class="note">
+<strong>Note :</strong> Le Volet 1 est volontairement pragmatique. Il sert à agir maintenant, dans le cadre actuel,
       tout en gardant une structure publique, compréhensible et vérifiable pour préparer la suite sans improvisation.
     </div>
-
-    <div class="btnrow">
-      <a class="btn secondary" href="Volet2.html">Volet 2 — Transition constitutionnelle →</a>
-      <a class="btn" href="Volet3.html">Volet 3 — Québec pays souverain →</a>
-    </div>
-
-  </main>
-
-</body>
+<div class="btnrow">
+<a class="btn secondary" href="Volet2.html">Volet 2 — Transition constitutionnelle →</a>
+<a class="btn" href="Volet3.html">Volet 3 — Québec pays souverain →</a>
+</div>
+</main>
+<footer class="site-footer">
+<div class="container footer-grid">
+<div>
+<div class="footer-title">SCQ — Souveraineté et Citoyenneté du Québec</div>
+<div class="footer-meta">Site officiel — information, documents et participation citoyenne.</div>
+</div>
+<div>
+<div class="footer-title">Liens</div>
+<a href="politique-confidentialite.html">Politique de confidentialité</a><br/>
+<a href="avis-legal.html">Avis légal</a><br/>
+<a href="accessibilite.html">Accessibilité</a><br/>
+<a href="contact.html">Contact</a>
+</div>
+</div>
+<div class="container footer-bottom">© <span id="year"></span> SCQ. Tous droits réservés.</div>
+</footer><script>document.getElementById('year').textContent = new Date().getFullYear();</script></body>
 </html>

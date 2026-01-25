@@ -1,237 +1,100 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SCQ - Contact</title>
-
-  <link rel="stylesheet" href="css/styles.css" />
-
-  <style>
-    nav{
-      background:#0A2A66;
-      padding:12px 16px;
-      display:flex;
-      align-items:center;
-      gap:10px;
-      flex-wrap:wrap;
-      position:sticky;
-      top:0;
-      z-index:1000;
-    }
-    nav a{
-      color:#fff;
-      text-decoration:none;
-      font-weight:700;
-      padding:6px 8px;
-      border-radius:10px;
-      white-space:nowrap;
-    }
-    nav a:hover{ text-decoration:underline; }
-    nav .logo{ display:inline-flex; align-items:center; gap:10px; }
-    nav .logo img{ height:40px; border-radius:10px; }
-
-    .banner{
-      text-align:center;
-      margin-top:16px;
-      padding:0 16px;
-    }
-    .banner img{
-      width:100%;
-      max-width:715px;
-      border-radius:16px;
-      box-shadow:0 0 12px rgba(0,0,0,0.10);
-      display:block;
-      margin:0 auto;
-    }
-
-    main{
-      max-width:980px;
-      margin:22px auto 50px;
-      background:#fff;
-      padding:26px;
-      border-radius:14px;
-      box-shadow:0 0 12px rgba(0,0,0,0.10);
-    }
-
-    h1{ font-size:34px; color:#0047ab; margin-bottom:10px; }
-    h2{ font-size:22px; color:#0047ab; margin-top:22px; }
-
-    p{
-      font-size:17px;
-      line-height:1.65;
-      color:#0f172a;
-      margin-bottom:12px;
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:14px;
-      margin-top:14px;
-      align-items:start;
-    }
-
-    .card{
-      border:1px solid rgba(0,0,0,0.10);
-      border-radius:14px;
-      padding:16px;
-      background:#fff;
-      box-shadow:0 0 10px rgba(0,0,0,0.05);
-    }
-
-    label{
-      display:block;
-      font-weight:700;
-      margin:12px 0 6px;
-      font-size:14px;
-      color:#0A2A66;
-    }
-
-    input, textarea, select{
-      width:100%;
-      padding:10px 12px;
-      border-radius:12px;
-      border:1px solid rgba(0,0,0,0.15);
-      font-size:15px;
-    }
-
-    textarea{ min-height:140px; resize:vertical; }
-
-    .btnrow{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:12px;
-    }
-
-    .btn{
-      background:#0A2A66;
-      color:#fff;
-      padding:10px 12px;
-      border-radius:12px;
-      text-decoration:none;
-      font-weight:700;
-      font-size:14px;
-      border:none;
-      cursor:pointer;
-    }
-    .btn.secondary{ background:#0f172a; }
-
-    .note{
-      margin-top:14px;
-      padding:14px 16px;
-      border-radius:14px;
-      background:rgba(15,23,42,0.04);
-      border:1px solid rgba(15,23,42,0.10);
-      font-size:14px;
-      color:#0f172a;
-      line-height:1.6;
-    }
-
-    @media (max-width:760px){
-      nav{ flex-direction:column; align-items:flex-start; }
-      main{ margin:18px 12px 40px; padding:18px; }
-      h1{ font-size:28px; }
-      .grid{ grid-template-columns:1fr; }
-    }
-  </style>
-</head>
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SCQ - Contact</title>
+<link href="css/styles.css" rel="stylesheet"/>
+<meta content="SCQ - Contact — Site officiel du Parti Souveraineté et Citoyenneté du Québec (SCQ)." name="description"/><link href="https://scq-officiel.ca/contact.html" rel="canonical"/><link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/><meta content="SCQ" property="og:site_name"/><meta content="SCQ - Contact" property="og:title"/><meta content="Site officiel du SCQ. Consultez nos documents, notre vision et les moyens de participation." property="og:description"/><meta content="website" property="og:type"/><meta content="https://scq-officiel.ca/contact.html" property="og:url"/><meta content="https://scq-officiel.ca/assets/og-image.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="SCQ - Contact" name="twitter:title"/><meta content="Site officiel du SCQ. Documents, vision et participation." name="twitter:description"/><meta content="https://scq-officiel.ca/assets/og-image.png" name="twitter:image"/></head>
 <body>
-
 <!-- Navigation -->
 <nav>
-  <a class="logo" href="index.html">
-    <img src="images/logo_scq.jpg" alt="Logo SCQ">
-  </a>
-  <a href="index.html">Accueil</a>
-  <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
-  <a href="cadre.html">Cadre National</a>
-  <a href="doc.html">Documents</a>
-  <a href="contact.html" aria-current="page">Contact</a>
+<a class="logo" href="index.html">
+<img alt="Logo SCQ" src="images/logo_scq.jpg"/>
+</a>
+<a href="index.html">Accueil</a>
+<a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+<a href="cadre.html">Cadre National</a>
+<a href="doc.html">Documents</a>
+<a aria-current="page" href="contact.html">Contact</a>
 </nav>
-
 <!-- Bannière -->
 <div class="banner">
-  <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
+<img alt="Bannière SCQ" src="images/Bannière-Officiel.jpg"/>
 </div>
-
 <main>
-
-  <h1>Contact</h1>
-
-  <p>
+<h1>Contact</h1>
+<p>
     Pour toute question, demande d’information ou communication officielle,
     vous pouvez utiliser le formulaire ci-dessous ou nos plateformes publiques.
     Les messages sont transmis à <strong>scqofficiel@gmail.com</strong>.
   </p>
-
-  <div class="grid">
-
-    <!-- FORMULAIRE -->
-    <section class="card">
-      <h2>Écrire au SCQ</h2>
-
-      <form action="https://formspree.io/f/mjgvryza" method="POST">
-        <label for="nom">Nom</label>
-        <input type="text" id="nom" name="nom" required>
-
-        <label for="email">Courriel</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="objet">Objet</label>
-        <select id="objet" name="objet" required>
-          <option value="">Choisir…</option>
-          <option>Information générale</option>
-          <option>Documents / Constitution</option>
-          <option>Adhésion / Membres</option>
-          <option>Autre</option>
-        </select>
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" required></textarea>
-
-        <input type="hidden" name="_subject" value="[SCQ] Message depuis le site officiel">
-        <input type="hidden" name="_template" value="table">
-
-        <div class="btnrow">
-          <button type="submit" class="btn">Envoyer le message</button>
-        </div>
-      </form>
-
-      <div class="note">
+<div class="grid">
+<!-- FORMULAIRE -->
+<section class="card">
+<h2>Écrire au SCQ</h2>
+<form action="https://formspree.io/f/mjgvryza" method="POST">
+<label for="nom">Nom</label>
+<input id="nom" name="nom" required="" type="text"/>
+<label for="email">Courriel</label>
+<input id="email" name="email" required="" type="email"/>
+<label for="objet">Objet</label>
+<select id="objet" name="objet" required="">
+<option value="">Choisir…</option>
+<option>Information générale</option>
+<option>Documents / Constitution</option>
+<option>Adhésion / Membres</option>
+<option>Autre</option>
+</select>
+<label for="message">Message</label>
+<textarea id="message" name="message" required=""></textarea>
+<input name="_subject" type="hidden" value="[SCQ] Message depuis le site officiel"/>
+<input name="_template" type="hidden" value="table"/>
+<div class="btnrow">
+<button class="btn" type="submit">Envoyer le message</button>
+</div>
+</form>
+<div class="note">
         Merci de formuler votre message de façon claire et précise.
       </div>
-    </section>
-
-    <!-- COORDONNÉES -->
-    <section class="card">
-      <h2>Plateformes officielles</h2>
-
-      <p><strong>Courriel :</strong> scqofficiel@gmail.com</p>
-
-      <div class="btnrow">
-        <a class="btn" href="https://www.facebook.com/Souverainete.et.Citoyennete.du.Quebec/" target="_blank">
+</section>
+<!-- COORDONNÉES -->
+<section class="card">
+<h2>Plateformes officielles</h2>
+<p><strong>Courriel :</strong> scqofficiel@gmail.com</p>
+<div class="btnrow">
+<a class="btn" href="https://www.facebook.com/Souverainete.et.Citoyennete.du.Quebec/" target="_blank">
           Facebook
         </a>
-        <a class="btn secondary" href="https://www.youtube.com/channel/UCaipQqk5Fw9g6Mt23yWXZPA" target="_blank">
+<a class="btn secondary" href="https://www.youtube.com/channel/UCaipQqk5Fw9g6Mt23yWXZPA" target="_blank">
           YouTube
         </a>
-        <a class="btn" href="https://www.instagram.com/scqofficiel/" target="_blank">
+<a class="btn" href="https://www.instagram.com/scqofficiel/" target="_blank">
           Instagram
         </a>
-      </div>
-
-      <div class="note">
+</div>
+<div class="note">
         Les plateformes officielles servent à la diffusion publique,
         à l’information citoyenne et à la transparence du projet.
       </div>
-    </section>
-
-  </div>
-
+</section>
+</div>
 </main>
-
-</body>
+<footer class="site-footer">
+<div class="container footer-grid">
+<div>
+<div class="footer-title">SCQ — Souveraineté et Citoyenneté du Québec</div>
+<div class="footer-meta">Site officiel — information, documents et participation citoyenne.</div>
+</div>
+<div>
+<div class="footer-title">Liens</div>
+<a href="politique-confidentialite.html">Politique de confidentialité</a><br/>
+<a href="avis-legal.html">Avis légal</a><br/>
+<a href="accessibilite.html">Accessibilité</a><br/>
+<a href="contact.html">Contact</a>
+</div>
+</div>
+<div class="container footer-bottom">© <span id="year"></span> SCQ. Tous droits réservés.</div>
+</footer><script>document.getElementById('year').textContent = new Date().getFullYear();</script></body>
 </html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCQ - Accessibilité</title>
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <meta name="description" content="Accessibilité — SCQ, Souveraineté et Citoyenneté du Québec." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://scq-officiel.ca/." />
+  <meta property="og:site_name" content="SCQ" />
+  <meta property="og:title" content="Accessibilité" />
+  <meta property="og:description" content="Site officiel du SCQ. Consultez nos documents, notre vision et les moyens de participation." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://scq-officiel.ca/" />
+  <meta property="og:image" content="https://scq-officiel.ca/assets/og-image.png" />
+
+</head>
+<body>
+<nav>
+    <a class="logo" href="index.html" aria-label="Retour à l’accueil">
+      <img src="images/logo_scq.jpg" alt="Logo SCQ">
+    </a>
+    <a href="index.html" aria-current="page">Accueil</a>
+    <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+    <a href="cadre.html">Cadre National</a>
+    <a href="membres.html">Membres</a>
+    <a href="equipe.html">Équipe</a>
+    <a href="comptabilite.html">Comptabilité</a>
+    <a href="contact.html">Contact</a>
+    <a href="doc.html">Documents</a>
+  </nav>
+<div class="banner">
+    <img src="images/Banniere-Officiel.jpg" alt="Bannière SCQ">
+  </div>
+
+    <main class="container">
+      <section class="card">
+        <h1>Accessibilité</h1>
+        <p>Le SCQ vise à rendre ce site accessible au plus grand nombre (navigation clavier, lisibilité, contrastes, structure claire).</p>
+<h2>Mesures</h2>
+<ul>
+  <li>Structure sémantique (titres, sections, liens descriptifs).</li>
+  <li>Contrastes et tailles de police lisibles.</li>
+  <li>Compatibilité mobile.</li>
+</ul>
+<h2>Améliorations continues</h2>
+<p>Si vous rencontrez un obstacle d’accessibilité, contactez-nous via la page Contact en décrivant le problème et la page concernée.</p>
+<p><em>Dernière mise à jour :</em> <span id="lastUpdated"></span></p>
+<script>document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString('fr-CA');</script>
+
+      </section>
+    </main>
+    
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-title">SCQ — Souveraineté et Citoyenneté du Québec</div>
+      <div class="footer-meta">Site officiel — information, documents et participation citoyenne.</div>
+    </div>
+    <div>
+      <div class="footer-title">Liens</div>
+      <a href="politique-confidentialite.html">Politique de confidentialité</a><br/>
+      <a href="avis-legal.html">Avis légal</a><br/>
+      <a href="accessibilite.html">Accessibilité</a><br/>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">© <span id="year"></span> SCQ. Tous droits réservés.</div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,333 +1,177 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SCQ - Équipe</title>
-
-  <link rel="stylesheet" href="css/styles.css" />
-
-  <style>
-    nav{
-      background:#0A2A66;
-      padding:12px 16px;
-      display:flex;
-      align-items:center;
-      gap:10px;
-      flex-wrap:wrap;
-      position:sticky;
-      top:0;
-      z-index:1000;
-    }
-    nav a{
-      color:#fff;
-      text-decoration:none;
-      font-weight:700;
-      padding:6px 8px;
-      border-radius:10px;
-      white-space:nowrap;
-    }
-    nav a:hover{ text-decoration:underline; }
-    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; margin-right:6px; }
-    nav .logo img{ height:40px; width:auto; border-radius:10px; display:block; }
-
-    .banner{
-      text-align:center;
-      margin-top:16px;
-      padding:0 16px;
-    }
-    .banner img{
-      width:100%;
-      max-width:715px;
-      height:auto;
-      border-radius:16px;
-      box-shadow:0 0 12px rgba(0,0,0,0.10);
-      display:block;
-      margin:0 auto;
-    }
-
-    main{
-      max-width:980px;
-      margin:22px auto 50px;
-      background:#fff;
-      padding:26px;
-      border-radius:14px;
-      box-shadow:0 0 12px rgba(0,0,0,0.10);
-    }
-
-    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; text-align:center; }
-    h2{ font-size:24px; color:#0047ab; margin:26px 0 10px; }
-    p{ font-size:17px; margin:0 0 12px; line-height:1.65; color:#0f172a; }
-
-    .box{
-      margin:18px 0;
-      padding:16px;
-      border-radius:14px;
-      background:rgba(0,71,171,0.06);
-      border:1px solid rgba(0,71,171,0.14);
-    }
-
-    .btnrow{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top:12px;
-    }
-
-    .btn{
-      background:#0A2A66;
-      color:#fff;
-      padding:10px 14px;
-      border-radius:999px;
-      text-decoration:none;
-      font-weight:700;
-      font-size:14px;
-      display:inline-block;
-    }
-    .btn.secondary{ background:#0f172a; }
-    .btn:hover{ text-decoration:underline; }
-
-    .section{
-      margin-top:18px;
-      padding-top:8px;
-      border-top:1px solid rgba(0,0,0,0.08);
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:14px;
-      margin-top:12px;
-      align-items:start;
-    }
-
-    .card{
-      border:1px solid rgba(0,0,0,0.10);
-      border-radius:14px;
-      padding:16px;
-      background:#fff;
-      box-shadow:0 0 10px rgba(0,0,0,0.05);
-    }
-
-    .member{
-      margin:0 0 12px;
-      padding:12px 12px;
-      border-radius:12px;
-      background:rgba(15,23,42,0.03);
-      border:1px solid rgba(15,23,42,0.08);
-    }
-    .member strong{
-      color:#0A2A66;
-      display:block;
-      margin-bottom:4px;
-      font-size:16px;
-    }
-    .role{
-      font-weight:800;
-      color:#0f172a;
-      margin-bottom:6px;
-      font-size:14px;
-    }
-    .desc{
-      margin:0;
-      color:#334155;
-      font-size:14px;
-      line-height:1.6;
-    }
-
-    .note{
-      margin-top:22px;
-      padding:14px 16px;
-      border-radius:14px;
-      background:rgba(15,23,42,0.04);
-      border:1px solid rgba(15,23,42,0.10);
-      font-size:14px;
-      color:#0f172a;
-      line-height:1.6;
-    }
-
-    @media(max-width:760px){
-      nav{ flex-direction:column; align-items:flex-start; }
-      main{ margin:18px 12px 40px; padding:18px; }
-      h1{ font-size:28px; }
-      h2{ font-size:20px; }
-      .grid{ grid-template-columns:1fr; }
-    }
-  </style>
-</head>
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SCQ - Équipe</title>
+<link href="css/styles.css" rel="stylesheet"/>
+<meta content="SCQ - Équipe — Site officiel du Parti Souveraineté et Citoyenneté du Québec (SCQ)." name="description"/><link href="https://scq-officiel.ca/equipe.html" rel="canonical"/><link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/><meta content="SCQ" property="og:site_name"/><meta content="SCQ - Équipe" property="og:title"/><meta content="Site officiel du SCQ. Consultez nos documents, notre vision et les moyens de participation." property="og:description"/><meta content="website" property="og:type"/><meta content="https://scq-officiel.ca/equipe.html" property="og:url"/><meta content="https://scq-officiel.ca/assets/og-image.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="SCQ - Équipe" name="twitter:title"/><meta content="Site officiel du SCQ. Documents, vision et participation." name="twitter:description"/><meta content="https://scq-officiel.ca/assets/og-image.png" name="twitter:image"/></head>
 <body>
-
-  <!-- Navigation -->
-  <nav>
-    <a class="logo" href="index.html" aria-label="Retour à l’accueil">
-      <img src="images/logo_scq.jpg" alt="Logo SCQ">
-    </a>
-    <a href="index.html">Accueil</a>
-    <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
-    <a href="cadre.html">Cadre National</a>
-    <a href="membres.html">Membres</a>
-    <a href="equipe.html" aria-current="page">Équipe</a>
-    <a href="comptabilite.html">Comptabilité</a>
-    <a href="contact.html">Contact</a>
-    <a href="doc.html">Documents</a>
-  </nav>
-
-  <!-- Bannière -->
-  <div class="banner">
-    <img src="images/Banniere-Officiel.jpg" alt="Bannière SCQ">
-  </div>
-
-  <main>
-
-    <h1>Équipe du SCQ</h1>
-
-    <div class="box">
-      <p>
+<!-- Navigation -->
+<nav>
+<a aria-label="Retour à l’accueil" class="logo" href="index.html">
+<img alt="Logo SCQ" src="images/logo_scq.jpg"/>
+</a>
+<a href="index.html">Accueil</a>
+<a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+<a href="cadre.html">Cadre National</a>
+<a href="membres.html">Membres</a>
+<a aria-current="page" href="equipe.html">Équipe</a>
+<a href="comptabilite.html">Comptabilité</a>
+<a href="contact.html">Contact</a>
+<a href="doc.html">Documents</a>
+</nav>
+<!-- Bannière -->
+<div class="banner">
+<img alt="Bannière SCQ" src="images/Banniere-Officiel.jpg"/>
+</div>
+<main>
+<h1>Équipe du SCQ</h1>
+<div class="box">
+<p>
         Cette page présente l’équipe et les responsabilités au sein du
         <strong>Parti Souveraineté et Citoyenneté du Québec (SCQ)</strong>.
         L’objectif est d’être clair sur <strong>qui fait quoi</strong>, pour une organisation transparente.
       </p>
-      <div class="btnrow">
-        <a class="btn" href="contact.html">Nous contacter</a>
-        <a class="btn secondary" href="membres.html">Devenir membre</a>
-        <a class="btn" href="doc.html">Documents</a>
-      </div>
-    </div>
-
-    <section class="section">
-      <h2>Direction</h2>
-      <div class="grid">
-
-        <div class="card">
-          <div class="member">
-            <strong>Benoit Cantin (Ville de Québec)</strong>
-            <div class="role">Chef du parti</div>
-            <p class="desc">
+<div class="btnrow">
+<a class="btn" href="contact.html">Nous contacter</a>
+<a class="btn secondary" href="membres.html">Devenir membre</a>
+<a class="btn" href="doc.html">Documents</a>
+</div>
+</div>
+<section class="section">
+<h2>Direction</h2>
+<div class="grid">
+<div class="card">
+<div class="member">
+<strong>Benoit Cantin (Ville de Québec)</strong>
+<div class="role">Chef du parti</div>
+<p class="desc">
               Porte la vision, supervise la structure du projet, coordonne les priorités et assure la cohérence des documents officiels.
             </p>
-          </div>
-
-          <!-- Ajoute ici d’autres membres de direction -->
-          <div class="member">
-            <strong>Poste à combler</strong>
-            <div class="role">Vice-chef / Direction stratégique</div>
-            <p class="desc">
+</div>
+<!-- Ajoute ici d’autres membres de direction -->
+<div class="member">
+<strong>Poste à combler</strong>
+<div class="role">Vice-chef / Direction stratégique</div>
+<p class="desc">
               Soutien à la direction, coordination des dossiers prioritaires et organisation interne.
             </p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="member">
-            <strong>Poste à combler</strong>
-            <div class="role">Secrétariat général</div>
-            <p class="desc">
+</div>
+</div>
+<div class="card">
+<div class="member">
+<strong>Poste à combler</strong>
+<div class="role">Secrétariat général</div>
+<p class="desc">
               Gestion administrative, suivi des communications, classement des documents et coordination des tâches.
             </p>
-          </div>
-
-          <div class="member">
-            <strong>Poste à combler</strong>
-            <div class="role">Trésorerie / Comptabilité</div>
-            <p class="desc">
+</div>
+<div class="member">
+<strong>Poste à combler</strong>
+<div class="role">Trésorerie / Comptabilité</div>
+<p class="desc">
               Suivi des contributions, publication des informations de transparence et conformité interne.
             </p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Communications</h2>
-      <div class="grid">
-
-        <div class="card">
-          <div class="member">
-            <strong>Poste à combler</strong>
-            <div class="role">Responsable communications</div>
-            <p class="desc">
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<h2>Communications</h2>
+<div class="grid">
+<div class="card">
+<div class="member">
+<strong>Poste à combler</strong>
+<div class="role">Responsable communications</div>
+<p class="desc">
               Rédaction publique, cohérence du message, publications Facebook/YouTube et réponses aux citoyens.
             </p>
-          </div>
-          <div class="member">
-            <strong>Poste à combler</strong>
-            <div class="role">Création contenu (vidéo/visuels)</div>
-            <p class="desc">
+</div>
+<div class="member">
+<strong>Poste à combler</strong>
+<div class="role">Création contenu (vidéo/visuels)</div>
+<p class="desc">
               Montage, visuels, bannières, préparation des scripts et optimisation des publications.
             </p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="member">
-            <strong>Poste à combler</strong>
-            <div class="role">Gestion communauté (modération)</div>
-            <p class="desc">
+</div>
+</div>
+<div class="card">
+<div class="member">
+<strong>Poste à combler</strong>
+<div class="role">Gestion communauté (modération)</div>
+<p class="desc">
               Animation des échanges, modération, accueil des nouveaux membres, organisation des discussions.
             </p>
-          </div>
-          <div class="member">
-            <strong>Poste à combler</strong>
-            <div class="role">Relations médias</div>
-            <p class="desc">
+</div>
+<div class="member">
+<strong>Poste à combler</strong>
+<div class="role">Relations médias</div>
+<p class="desc">
               Contacts médias, demandes d’entrevue, communiqués, suivi et calendrier de communication.
             </p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Développement et organisation</h2>
-      <div class="grid">
-
-        <div class="card">
-          <div class="member">
-            <strong>Poste à combler</strong>
-            <div class="role">Web / Site officiel</div>
-            <p class="desc">
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<h2>Développement et organisation</h2>
+<div class="grid">
+<div class="card">
+<div class="member">
+<strong>Poste à combler</strong>
+<div class="role">Web / Site officiel</div>
+<p class="desc">
               Mise à jour des pages, corrections de liens, uniformisation du site et publication des documents.
             </p>
-          </div>
-          <div class="member">
-            <strong>Poste à combler</strong>
-            <div class="role">Recherche et rédaction (cadre / lois)</div>
-            <p class="desc">
+</div>
+<div class="member">
+<strong>Poste à combler</strong>
+<div class="role">Recherche et rédaction (cadre / lois)</div>
+<p class="desc">
               Mise en forme, cohérence des textes, vérification des sections, révisions et versioning.
             </p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="member">
-            <strong>Poste à combler</strong>
-            <div class="role">Organisation terrain</div>
-            <p class="desc">
+</div>
+</div>
+<div class="card">
+<div class="member">
+<strong>Poste à combler</strong>
+<div class="role">Organisation terrain</div>
+<p class="desc">
               Mobilisation, recrutement, événements locaux, coordination d’équipes régionales.
             </p>
-          </div>
-          <div class="member">
-            <strong>Poste à combler</strong>
-            <div class="role">Coordination bénévoles</div>
-            <p class="desc">
+</div>
+<div class="member">
+<strong>Poste à combler</strong>
+<div class="role">Coordination bénévoles</div>
+<p class="desc">
               Attribution des tâches, suivi des volontaires, intégration et gestion des priorités.
             </p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <div class="note">
-      <strong>Recrutement :</strong> plusieurs postes sont actuellement ouverts.
+</div>
+</div>
+</div>
+</section>
+<div class="note">
+<strong>Recrutement :</strong> plusieurs postes sont actuellement ouverts.
       Si vous souhaitez contribuer (rédaction, communications, organisation, web, etc.),
       écrivez-nous via la page suivante : <a href="contact.html"><strong>Contact</strong></a>.
     </div>
-
-  </main>
-
-</body>
+</main>
+<footer class="site-footer">
+<div class="container footer-grid">
+<div>
+<div class="footer-title">SCQ — Souveraineté et Citoyenneté du Québec</div>
+<div class="footer-meta">Site officiel — information, documents et participation citoyenne.</div>
+</div>
+<div>
+<div class="footer-title">Liens</div>
+<a href="politique-confidentialite.html">Politique de confidentialité</a><br/>
+<a href="avis-legal.html">Avis légal</a><br/>
+<a href="accessibilite.html">Accessibilité</a><br/>
+<a href="contact.html">Contact</a>
+</div>
+</div>
+<div class="container footer-bottom">© <span id="year"></span> SCQ. Tous droits réservés.</div>
+</footer><script>document.getElementById('year').textContent = new Date().getFullYear();</script></body>
 </html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCQ - Avis légal</title>
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <meta name="description" content="Avis légal — SCQ, Souveraineté et Citoyenneté du Québec." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://scq-officiel.ca/." />
+  <meta property="og:site_name" content="SCQ" />
+  <meta property="og:title" content="Avis légal" />
+  <meta property="og:description" content="Site officiel du SCQ. Consultez nos documents, notre vision et les moyens de participation." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://scq-officiel.ca/" />
+  <meta property="og:image" content="https://scq-officiel.ca/assets/og-image.png" />
+
+</head>
+<body>
+<nav>
+    <a class="logo" href="index.html" aria-label="Retour à l’accueil">
+      <img src="images/logo_scq.jpg" alt="Logo SCQ">
+    </a>
+    <a href="index.html" aria-current="page">Accueil</a>
+    <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+    <a href="cadre.html">Cadre National</a>
+    <a href="membres.html">Membres</a>
+    <a href="equipe.html">Équipe</a>
+    <a href="comptabilite.html">Comptabilité</a>
+    <a href="contact.html">Contact</a>
+    <a href="doc.html">Documents</a>
+  </nav>
+<div class="banner">
+    <img src="images/Banniere-Officiel.jpg" alt="Bannière SCQ">
+  </div>
+
+    <main class="container">
+      <section class="card">
+        <h1>Avis légal</h1>
+        <p>Le présent site est une plateforme d’information et de communication liée au Parti Souveraineté et Citoyenneté du Québec (SCQ).</p>
+<h2>Responsabilité</h2>
+<p>Le contenu est fourni à titre informatif. Malgré les efforts de mise à jour, des erreurs peuvent survenir. Le SCQ se réserve le droit de modifier le contenu sans préavis.</p>
+<h2>Propriété intellectuelle</h2>
+<p>Les textes, visuels et documents sont protégés. Toute reproduction substantielle sans autorisation peut être interdite, sauf mention contraire.</p>
+<h2>Liens externes</h2>
+<p>Les liens vers des sites externes sont fournis pour référence. Le SCQ n’assume aucune responsabilité quant au contenu de ces sites.</p>
+<p><em>Dernière mise à jour :</em> <span id="lastUpdated"></span></p>
+<script>document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString('fr-CA');</script>
+
+      </section>
+    </main>
+    
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-title">SCQ — Souveraineté et Citoyenneté du Québec</div>
+      <div class="footer-meta">Site officiel — information, documents et participation citoyenne.</div>
+    </div>
+    <div>
+      <div class="footer-title">Liens</div>
+      <a href="politique-confidentialite.html">Politique de confidentialité</a><br/>
+      <a href="avis-legal.html">Avis légal</a><br/>
+      <a href="accessibilite.html">Accessibilité</a><br/>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">© <span id="year"></span> SCQ. Tous droits réservés.</div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

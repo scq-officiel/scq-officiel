@@ -1,245 +1,118 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SCQ - Qui sommes-nous ?</title>
-
-  <link rel="stylesheet" href="css/styles.css" />
-
-  <style>
-    nav{
-      background:#0A2A66;
-      padding:12px 16px;
-      display:flex;
-      align-items:center;
-      gap:10px;
-      flex-wrap:wrap;
-      position:sticky;
-      top:0;
-      z-index:1000;
-    }
-    nav a{
-      color:#fff;
-      text-decoration:none;
-      font-weight:700;
-      padding:6px 8px;
-      border-radius:10px;
-      white-space:nowrap;
-    }
-    nav a:hover{ text-decoration:underline; }
-    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; margin-right:6px; }
-    nav .logo img{ height:40px; width:auto; border-radius:10px; display:block; }
-
-    .banner{
-      text-align:center;
-      margin-top:16px;
-      padding:0 16px;
-    }
-    .banner img{
-      width:100%;
-      max-width:715px;
-      height:auto;
-      border-radius:16px;
-      box-shadow:0 0 12px rgba(0,0,0,0.10);
-      display:block;
-      margin:0 auto;
-    }
-
-    main{
-      max-width:980px;
-      margin:22px auto 50px;
-      background:#fff;
-      padding:26px;
-      border-radius:14px;
-      box-shadow:0 0 12px rgba(0,0,0,0.10);
-    }
-
-    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; text-align:center; }
-    h2{ font-size:24px; color:#0047ab; margin:26px 0 10px; }
-    h3{ font-size:18px; color:#0A2A66; margin:0 0 8px; }
-    p{ font-size:17px; margin:0 0 14px; line-height:1.65; color:#0f172a; }
-
-    .box{
-      margin:18px 0;
-      padding:16px;
-      border-radius:14px;
-      background:rgba(0,71,171,0.06);
-      border:1px solid rgba(0,71,171,0.14);
-    }
-
-    .btnrow{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top:12px;
-    }
-
-    .btn{
-      background:#0A2A66;
-      color:#fff;
-      padding:10px 14px;
-      border-radius:999px;
-      text-decoration:none;
-      font-weight:700;
-      font-size:14px;
-      display:inline-block;
-    }
-    .btn.secondary{ background:#0f172a; }
-    .btn:hover{ text-decoration:underline; }
-
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(2, minmax(0,1fr));
-      gap:14px;
-      margin-top:14px;
-      align-items:start;
-    }
-
-    .card{
-      border:1px solid rgba(0,0,0,0.10);
-      border-radius:14px;
-      padding:16px;
-      background:#fff;
-      box-shadow:0 0 10px rgba(0,0,0,0.05);
-    }
-
-    ul{
-      margin:10px 0 0 18px;
-      color:#0f172a;
-      line-height:1.6;
-      font-size:16px;
-      padding:0;
-    }
-    li{ margin:8px 0; }
-
-    .note{
-      margin-top:22px;
-      padding:14px 16px;
-      border-radius:14px;
-      background:rgba(15,23,42,0.04);
-      border:1px solid rgba(15,23,42,0.10);
-      font-size:14px;
-      color:#0f172a;
-      line-height:1.6;
-    }
-
-    @media(max-width:760px){
-      nav{ flex-direction:column; align-items:flex-start; }
-      main{ margin:18px 12px 40px; padding:18px; }
-      h1{ font-size:28px; }
-      h2{ font-size:20px; }
-      .grid{ grid-template-columns:1fr; }
-    }
-  </style>
-</head>
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SCQ - Qui sommes-nous ?</title>
+<link href="css/styles.css" rel="stylesheet"/>
+<meta content="SCQ - Qui sommes-nous ? — Site officiel du Parti Souveraineté et Citoyenneté du Québec (SCQ)." name="description"/><link href="https://scq-officiel.ca/qui-sommes-nous.html" rel="canonical"/><link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/><meta content="SCQ" property="og:site_name"/><meta content="SCQ - Qui sommes-nous ?" property="og:title"/><meta content="Site officiel du SCQ. Consultez nos documents, notre vision et les moyens de participation." property="og:description"/><meta content="website" property="og:type"/><meta content="https://scq-officiel.ca/qui-sommes-nous.html" property="og:url"/><meta content="https://scq-officiel.ca/assets/og-image.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="SCQ - Qui sommes-nous ?" name="twitter:title"/><meta content="Site officiel du SCQ. Documents, vision et participation." name="twitter:description"/><meta content="https://scq-officiel.ca/assets/og-image.png" name="twitter:image"/></head>
 <body>
-
-  <!-- Navigation -->
-  <nav>
-    <a class="logo" href="index.html" aria-label="Retour à l’accueil">
-      <img src="images/logo_scq.jpg" alt="Logo SCQ">
-    </a>
-    <a href="index.html">Accueil</a>
-    <a href="qui-sommes-nous.html" aria-current="page">Qui sommes-nous ?</a>
-    <a href="cadre.html">Cadre National</a>
-    <a href="membres.html">Membres</a>
-    <a href="equipe.html">Équipe</a>
-    <a href="comptabilite.html">Comptabilité</a>
-    <a href="contact.html">Contact</a>
-    <a href="doc.html">Documents</a>
-  </nav>
-
-  <!-- Bannière -->
-  <div class="banner">
-    <img src="images/Banniere-Officiel.jpg" alt="Bannière SCQ">
-  </div>
-
-  <main>
-
-    <h1>Qui sommes-nous ?</h1>
-
-    <div class="box">
-      <p>
+<!-- Navigation -->
+<nav>
+<a aria-label="Retour à l’accueil" class="logo" href="index.html">
+<img alt="Logo SCQ" src="images/logo_scq.jpg"/>
+</a>
+<a href="index.html">Accueil</a>
+<a aria-current="page" href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+<a href="cadre.html">Cadre National</a>
+<a href="membres.html">Membres</a>
+<a href="equipe.html">Équipe</a>
+<a href="comptabilite.html">Comptabilité</a>
+<a href="contact.html">Contact</a>
+<a href="doc.html">Documents</a>
+</nav>
+<!-- Bannière -->
+<div class="banner">
+<img alt="Bannière SCQ" src="images/Banniere-Officiel.jpg"/>
+</div>
+<main>
+<h1>Qui sommes-nous ?</h1>
+<div class="box">
+<p>
         Le <strong>Parti Souveraineté et Citoyenneté du Québec (SCQ)</strong> est une organisation politique
         orientée vers la construction d’un Québec plus cohérent, plus transparent et réellement au service du peuple.
         Notre démarche repose sur une idée simple : <strong>un État solide se construit avec des règles claires</strong>,
         accessibles à tous, et contrôlables par les citoyens.
       </p>
-
-      <div class="btnrow">
-        <a class="btn" href="cadre.html">Cadre National</a>
-        <a class="btn secondary" href="doc.html">Documents officiels</a>
-        <a class="btn" href="contact.html">Nous contacter</a>
-      </div>
-    </div>
-
-    <h2>Notre mission</h2>
-    <p>
+<div class="btnrow">
+<a class="btn" href="cadre.html">Cadre National</a>
+<a class="btn secondary" href="doc.html">Documents officiels</a>
+<a class="btn" href="contact.html">Nous contacter</a>
+</div>
+</div>
+<h2>Notre mission</h2>
+<p>
       Donner aux citoyens un projet structuré et vérifiable : une vision, des règles, et des outils concrets pour
       bâtir un Québec fort, stable et démocratique. Nous voulons remplacer les discours vagues par des textes clairs,
       publiés, consultables et améliorables.
     </p>
-
-    <div class="grid">
-      <section class="card">
-        <h3>Ce que nous voulons</h3>
-        <ul>
-          <li>Un cadre constitutionnel clair et compréhensible</li>
-          <li>Des institutions responsables et contrôlables</li>
-          <li>Une transparence réelle (documents accessibles, traçabilité)</li>
-          <li>Des décisions basées sur des faits et des règles</li>
-          <li>Une participation citoyenne structurée</li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h3>Ce que nous refusons</h3>
-        <ul>
-          <li>Les promesses sans plan ni documents vérifiables</li>
-          <li>La langue de bois et l’évitement des enjeux</li>
-          <li>Les décisions opaques et l’absence de reddition de comptes</li>
-          <li>Les systèmes mal gérés qui gaspillent les ressources</li>
-          <li>La division inutile : nous privilégions la construction</li>
-        </ul>
-      </section>
-    </div>
-
-    <h2>Notre méthode : transparence et hiérarchie des normes</h2>
-    <p>
+<div class="grid">
+<section class="card">
+<h3>Ce que nous voulons</h3>
+<ul>
+<li>Un cadre constitutionnel clair et compréhensible</li>
+<li>Des institutions responsables et contrôlables</li>
+<li>Une transparence réelle (documents accessibles, traçabilité)</li>
+<li>Des décisions basées sur des faits et des règles</li>
+<li>Une participation citoyenne structurée</li>
+</ul>
+</section>
+<section class="card">
+<h3>Ce que nous refusons</h3>
+<ul>
+<li>Les promesses sans plan ni documents vérifiables</li>
+<li>La langue de bois et l’évitement des enjeux</li>
+<li>Les décisions opaques et l’absence de reddition de comptes</li>
+<li>Les systèmes mal gérés qui gaspillent les ressources</li>
+<li>La division inutile : nous privilégions la construction</li>
+</ul>
+</section>
+</div>
+<h2>Notre méthode : transparence et hiérarchie des normes</h2>
+<p>
       Le SCQ présente publiquement l’architecture de son projet : Constitution, lois organiques, lois ordinaires,
       règlements et pratiques administratives. Chaque niveau a un rôle précis, et chacun doit respecter le niveau supérieur.
       C’est ce qui rend un État stable et protège le citoyen.
     </p>
-
-    <div class="grid">
-      <section class="card">
-        <h3>Pourquoi publier les documents ?</h3>
-        <ul>
-          <li>Pour que tout le monde voie ce qui est proposé</li>
-          <li>Pour éviter les mauvaises surprises et les zones grises</li>
-          <li>Pour permettre une critique constructive</li>
-          <li>Pour garantir une source unique et stable</li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h3>Où les consulter ?</h3>
-        <ul>
-          <li><strong>Cadre National</strong> : l’ordre des normes et les accès directs (HTML + DOCX)</li>
-          <li><strong>Documents</strong> : versions officielles à télécharger (DOCX/PDF)</li>
-          <li><strong>Contact</strong> : questions, demandes et propositions</li>
-        </ul>
-      </section>
-    </div>
-
-    <div class="note">
-      <strong>Important :</strong> Le SCQ publie ses bases pour que les citoyens puissent juger sur du concret.
+<div class="grid">
+<section class="card">
+<h3>Pourquoi publier les documents ?</h3>
+<ul>
+<li>Pour que tout le monde voie ce qui est proposé</li>
+<li>Pour éviter les mauvaises surprises et les zones grises</li>
+<li>Pour permettre une critique constructive</li>
+<li>Pour garantir une source unique et stable</li>
+</ul>
+</section>
+<section class="card">
+<h3>Où les consulter ?</h3>
+<ul>
+<li><strong>Cadre National</strong> : l’ordre des normes et les accès directs (HTML + DOCX)</li>
+<li><strong>Documents</strong> : versions officielles à télécharger (DOCX/PDF)</li>
+<li><strong>Contact</strong> : questions, demandes et propositions</li>
+</ul>
+</section>
+</div>
+<div class="note">
+<strong>Important :</strong> Le SCQ publie ses bases pour que les citoyens puissent juger sur du concret.
       Notre objectif est de bâtir un projet sérieux, lisible et vérifiable, étape par étape.
     </div>
-
-  </main>
-
-</body>
+</main>
+<footer class="site-footer">
+<div class="container footer-grid">
+<div>
+<div class="footer-title">SCQ — Souveraineté et Citoyenneté du Québec</div>
+<div class="footer-meta">Site officiel — information, documents et participation citoyenne.</div>
+</div>
+<div>
+<div class="footer-title">Liens</div>
+<a href="politique-confidentialite.html">Politique de confidentialité</a><br/>
+<a href="avis-legal.html">Avis légal</a><br/>
+<a href="accessibilite.html">Accessibilité</a><br/>
+<a href="contact.html">Contact</a>
+</div>
+</div>
+<div class="container footer-bottom">© <span id="year"></span> SCQ. Tous droits réservés.</div>
+</footer><script>document.getElementById('year').textContent = new Date().getFullYear();</script></body>
 </html>

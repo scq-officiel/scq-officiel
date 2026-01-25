@@ -1,288 +1,161 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SCQ - Volet 3 | Québec pays souverain</title>
-
-  <link rel="stylesheet" href="css/styles.css" />
-
-  <style>
-    nav{
-      background:#0A2A66;
-      padding:12px 16px;
-      display:flex;
-      align-items:center;
-      gap:10px;
-      flex-wrap:wrap;
-      position:sticky;
-      top:0;
-      z-index:1000;
-    }
-    nav a{
-      color:#fff;
-      text-decoration:none;
-      font-weight:700;
-      padding:6px 8px;
-      border-radius:10px;
-      white-space:nowrap;
-    }
-    nav a:hover{ text-decoration:underline; }
-    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; margin-right:6px; }
-    nav .logo img{ height:40px; width:auto; border-radius:10px; display:block; }
-
-    .banner{
-      text-align:center;
-      margin-top:16px;
-      width:100%;
-      overflow:hidden;
-      padding:0 16px;
-    }
-    .banner img{
-      width:100%;
-      max-width:715px;
-      height:auto;
-      max-height:260px;
-      object-fit:cover;
-      border-radius:16px;
-      box-shadow:0 0 12px rgba(0,0,0,0.10);
-      display:block;
-      margin:0 auto;
-    }
-
-    main{
-      max-width:980px;
-      margin:22px auto 50px;
-      background:#fff;
-      padding:26px;
-      border-radius:14px;
-      box-shadow:0 0 12px rgba(0,0,0,0.10);
-    }
-
-    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; }
-    h2{ font-size:24px; color:#0047ab; margin:22px 0 10px; }
-    h3{ font-size:18px; color:#0A2A66; margin:0 0 8px; }
-
-    p, li{
-      font-size:17px;
-      line-height:1.65;
-      color:#0f172a;
-      margin:0 0 12px;
-    }
-    ul{ margin:0 0 12px 18px; }
-
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap:14px;
-      margin-top:14px;
-      align-items:stretch;
-    }
-
-    .card{
-      border:1px solid rgba(0,0,0,0.10);
-      border-radius:14px;
-      padding:16px;
-      background:#fff;
-      box-shadow:0 0 10px rgba(0,0,0,0.05);
-    }
-
-    .btnrow{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:10px;
-    }
-
-    .btn{
-      display:inline-block;
-      background:#0A2A66;
-      color:#fff;
-      padding:10px 12px;
-      border-radius:12px;
-      text-decoration:none;
-      font-weight:700;
-      font-size:14px;
-    }
-    .btn:hover{ text-decoration:underline; }
-    .btn.secondary{ background:#0f172a; }
-
-    .note{
-      margin-top:18px;
-      padding:14px 16px;
-      border-radius:14px;
-      background:rgba(0,71,171,0.06);
-      border:1px solid rgba(0,71,171,0.14);
-      color:#0f172a;
-      font-size:14px;
-      line-height:1.6;
-    }
-
-    @media (max-width: 760px){
-      nav{ flex-direction:column; align-items:flex-start; }
-      main{ margin:18px 12px 40px; padding:18px; }
-      h1{ font-size:28px; }
-      h2{ font-size:20px; }
-      .grid{ grid-template-columns: 1fr; }
-    }
-  </style>
-</head>
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SCQ - Volet 3 | Québec pays souverain</title>
+<link href="css/styles.css" rel="stylesheet"/>
+<meta content="SCQ - Volet 3 | Québec pays souverain — Site officiel du Parti Souveraineté et Citoyenneté du Québec (SCQ)." name="description"/><link href="https://scq-officiel.ca/Volet3.html" rel="canonical"/><link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/><meta content="SCQ" property="og:site_name"/><meta content="SCQ - Volet 3 | Québec pays souverain" property="og:title"/><meta content="Site officiel du SCQ. Consultez nos documents, notre vision et les moyens de participation." property="og:description"/><meta content="website" property="og:type"/><meta content="https://scq-officiel.ca/Volet3.html" property="og:url"/><meta content="https://scq-officiel.ca/assets/og-image.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="SCQ - Volet 3 | Québec pays souverain" name="twitter:title"/><meta content="Site officiel du SCQ. Documents, vision et participation." name="twitter:description"/><meta content="https://scq-officiel.ca/assets/og-image.png" name="twitter:image"/></head>
 <body>
-
-  <!-- Navigation -->
-  <nav>
-    <a class="logo" href="index.html" aria-label="Retour à l’accueil">
-      <img src="images/logo_scq.jpg" alt="Logo SCQ">
-    </a>
-
-    <a href="index.html">Accueil</a>
-    <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
-    <a href="cadre.html">Cadre National</a>
-    <a href="Volet1.html">Volet 1</a>
-    <a href="Volet2.html">Volet 2</a>
-    <a href="Volet3.html" aria-current="page">Volet 3</a>
-    <a href="doc.html">Documents</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <!-- Bannière -->
-  <div class="banner">
-    <img src="images/Bannière-Officiel.jpg" alt="Bannière SCQ">
-  </div>
-
-  <main>
-    <h1>Volet 3 — Québec pays souverain</h1>
-    <p>
+<!-- Navigation -->
+<nav>
+<a aria-label="Retour à l’accueil" class="logo" href="index.html">
+<img alt="Logo SCQ" src="images/logo_scq.jpg"/>
+</a>
+<a href="index.html">Accueil</a>
+<a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+<a href="cadre.html">Cadre National</a>
+<a href="Volet1.html">Volet 1</a>
+<a href="Volet2.html">Volet 2</a>
+<a aria-current="page" href="Volet3.html">Volet 3</a>
+<a href="doc.html">Documents</a>
+<a href="contact.html">Contact</a>
+</nav>
+<!-- Bannière -->
+<div class="banner">
+<img alt="Bannière SCQ" src="images/Bannière-Officiel.jpg"/>
+</div>
+<main>
+<h1>Volet 3 — Québec pays souverain</h1>
+<p>
       Ce volet présente la vision complète d’un <strong>Québec souverain</strong> : institutions solides, finances publiques responsables,
       droits protégés et services essentiels centrés sur l’humain. Le SCQ publie ces bases pour que le public puisse
       <strong>vérifier</strong> et comprendre ce que nous voulons construire, sans zone grise.
     </p>
-
-    <div class="btnrow">
-      <a class="btn" href="Volet2.html">← Volet 2</a>
-      <a class="btn secondary" href="loi-constitution.html">Constitution (hub)</a>
-      <a class="btn" href="cadre.html">Cadre National</a>
-    </div>
-
-    <h2>Ce que le Volet 3 couvre</h2>
-
-    <div class="grid">
-
-      <section class="card">
-        <h3>1) Un État structuré et contrôlé</h3>
-        <p>
+<div class="btnrow">
+<a class="btn" href="Volet2.html">← Volet 2</a>
+<a class="btn secondary" href="loi-constitution.html">Constitution (hub)</a>
+<a class="btn" href="cadre.html">Cadre National</a>
+</div>
+<h2>Ce que le Volet 3 couvre</h2>
+<div class="grid">
+<section class="card">
+<h3>1) Un État structuré et contrôlé</h3>
+<p>
           Le Québec souverain repose sur des institutions clairement définies, une séparation réelle des pouvoirs
           et des mécanismes de contrôle indépendants pour empêcher les abus.
         </p>
-        <ul>
-          <li>Institutions de l’État et responsabilités</li>
-          <li>Contrôles et reddition de comptes</li>
-          <li>Stabilité démocratique</li>
-        </ul>
-        <div class="btnrow">
-          <a class="btn" href="Constitution/institutions.html">Institutions (Constitution)</a>
-          <a class="btn secondary" href="Constitution/justice.html">Justice</a>
-        </div>
-      </section>
-
-      <section class="card">
-        <h3>2) Finances publiques responsables</h3>
-        <p>
+<ul>
+<li>Institutions de l’État et responsabilités</li>
+<li>Contrôles et reddition de comptes</li>
+<li>Stabilité démocratique</li>
+</ul>
+<div class="btnrow">
+<a class="btn" href="Constitution/institutions.html">Institutions (Constitution)</a>
+<a class="btn secondary" href="Constitution/justice.html">Justice</a>
+</div>
+</section>
+<section class="card">
+<h3>2) Finances publiques responsables</h3>
+<p>
           Un pays souverain doit être financièrement stable : budgets transparents, fiscalité équitable,
           dette encadrée et vérification indépendante.
         </p>
-        <ul>
-          <li>Responsabilité budgétaire</li>
-          <li>Transparence des dépenses</li>
-          <li>Contrôle et audit</li>
-        </ul>
-        <div class="btnrow">
-          <a class="btn" href="Constitution/finances.html">Finances (Constitution)</a>
-          <a class="btn secondary" href="comptabilite.html">Comptabilité (SCQ)</a>
-        </div>
-      </section>
-
-      <section class="card">
-        <h3>3) Droits, libertés et protection réelle</h3>
-        <p>
+<ul>
+<li>Responsabilité budgétaire</li>
+<li>Transparence des dépenses</li>
+<li>Contrôle et audit</li>
+</ul>
+<div class="btnrow">
+<a class="btn" href="Constitution/finances.html">Finances (Constitution)</a>
+<a class="btn secondary" href="comptabilite.html">Comptabilité (SCQ)</a>
+</div>
+</section>
+<section class="card">
+<h3>3) Droits, libertés et protection réelle</h3>
+<p>
           Les droits ne sont pas un slogan : ils doivent être garantis et défendables, avec des recours effectifs.
           La Constitution établit la base. Les lois les appliquent concrètement.
         </p>
-        <ul>
-          <li>Droits et libertés</li>
-          <li>Recours et justice accessible</li>
-          <li>Égalité devant la loi</li>
-        </ul>
-        <div class="btnrow">
-          <a class="btn" href="Constitution/droits.html">Droits (Constitution)</a>
-          <a class="btn secondary" href="Constitution/justice.html">Justice</a>
-        </div>
-      </section>
-
-      <section class="card">
-        <h3>4) Services essentiels centrés sur l’humain</h3>
-        <p>
+<ul>
+<li>Droits et libertés</li>
+<li>Recours et justice accessible</li>
+<li>Égalité devant la loi</li>
+</ul>
+<div class="btnrow">
+<a class="btn" href="Constitution/droits.html">Droits (Constitution)</a>
+<a class="btn secondary" href="Constitution/justice.html">Justice</a>
+</div>
+</section>
+<section class="card">
+<h3>4) Services essentiels centrés sur l’humain</h3>
+<p>
           Un pays doit être bon à vivre : santé, éducation, logement, sécurité, infrastructures.
           L’approche du SCQ vise à remettre l’humain au centre, avec des règles simples et vérifiables.
         </p>
-        <ul>
-          <li>Objectifs clairs et mesurables</li>
-          <li>Procédures publiques et compréhensibles</li>
-          <li>Réduction de l’opacité</li>
-        </ul>
-        <div class="btnrow">
-          <a class="btn" href="loi-organiques.html">Lois organiques (HTML)</a>
-          <a class="btn secondary" href="loi-ordinaires.html">Lois ordinaires (HTML)</a>
-        </div>
-      </section>
-
-    </div>
-
-    <h2>Architecture juridique (pour vérification publique)</h2>
-
-    <div class="grid">
-
-      <section class="card">
-        <h3>Constitution (hub)</h3>
-        <p>
+<ul>
+<li>Objectifs clairs et mesurables</li>
+<li>Procédures publiques et compréhensibles</li>
+<li>Réduction de l’opacité</li>
+</ul>
+<div class="btnrow">
+<a class="btn" href="loi-organiques.html">Lois organiques (HTML)</a>
+<a class="btn secondary" href="loi-ordinaires.html">Lois ordinaires (HTML)</a>
+</div>
+</section>
+</div>
+<h2>Architecture juridique (pour vérification publique)</h2>
+<div class="grid">
+<section class="card">
+<h3>Constitution (hub)</h3>
+<p>
           Point d’entrée officiel vers toutes les sections constitutionnelles (HTML),
           avec téléchargement en DOCX pour archivage et preuve.
         </p>
-        <div class="btnrow">
-          <a class="btn" href="loi-constitution.html">Ouvrir</a>
-          <a class="btn secondary" href="Doc/lois/Constitution_du_Quebec_souverain.docx" download>Télécharger (DOCX)</a>
-        </div>
-      </section>
-
-      <section class="card">
-        <h3>Lois, règlements et pratiques</h3>
-        <p>
+<div class="btnrow">
+<a class="btn" href="loi-constitution.html">Ouvrir</a>
+<a class="btn secondary" download="" href="Doc/lois/Constitution_du_Quebec_souverain.docx">Télécharger (DOCX)</a>
+</div>
+</section>
+<section class="card">
+<h3>Lois, règlements et pratiques</h3>
+<p>
           La Constitution fixe le cadre. Les lois et règlements appliquent concrètement.
           Les pratiques administratives guident l’exécution sans créer de nouvelles obligations.
         </p>
-        <div class="btnrow">
-          <a class="btn" href="loi-organiques.html">Lois organiques</a>
-          <a class="btn" href="loi-ordinaires.html">Lois ordinaires</a>
-          <a class="btn" href="loi-Reglements.html">Règlements</a>
-          <a class="btn secondary" href="loi-administratif.html">Pratiques admin.</a>
-        </div>
-      </section>
-
-    </div>
-
-    <div class="note">
-      <strong>Note :</strong> Le Volet 3 est la destination finale : un Québec souverain, structuré, transparent et stable.
+<div class="btnrow">
+<a class="btn" href="loi-organiques.html">Lois organiques</a>
+<a class="btn" href="loi-ordinaires.html">Lois ordinaires</a>
+<a class="btn" href="loi-Reglements.html">Règlements</a>
+<a class="btn secondary" href="loi-administratif.html">Pratiques admin.</a>
+</div>
+</section>
+</div>
+<div class="note">
+<strong>Note :</strong> Le Volet 3 est la destination finale : un Québec souverain, structuré, transparent et stable.
       Le SCQ publie le cadre complet pour éviter l’improvisation et permettre au public de vérifier ce que nous proposons.
     </div>
-
-    <div class="btnrow">
-      <a class="btn secondary" href="Volet1.html">← Volet 1</a>
-      <a class="btn secondary" href="Volet2.html">← Volet 2</a>
-      <a class="btn" href="cadre.html">Cadre National</a>
-    </div>
-
-  </main>
-
-</body>
+<div class="btnrow">
+<a class="btn secondary" href="Volet1.html">← Volet 1</a>
+<a class="btn secondary" href="Volet2.html">← Volet 2</a>
+<a class="btn" href="cadre.html">Cadre National</a>
+</div>
+</main>
+<footer class="site-footer">
+<div class="container footer-grid">
+<div>
+<div class="footer-title">SCQ — Souveraineté et Citoyenneté du Québec</div>
+<div class="footer-meta">Site officiel — information, documents et participation citoyenne.</div>
+</div>
+<div>
+<div class="footer-title">Liens</div>
+<a href="politique-confidentialite.html">Politique de confidentialité</a><br/>
+<a href="avis-legal.html">Avis légal</a><br/>
+<a href="accessibilite.html">Accessibilité</a><br/>
+<a href="contact.html">Contact</a>
+</div>
+</div>
+<div class="container footer-bottom">© <span id="year"></span> SCQ. Tous droits réservés.</div>
+</footer><script>document.getElementById('year').textContent = new Date().getFullYear();</script></body>
 </html>

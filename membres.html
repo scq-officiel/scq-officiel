@@ -1,261 +1,131 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SCQ - Membres</title>
-
-  <link rel="stylesheet" href="css/styles.css" />
-
-  <style>
-    nav{
-      background:#0A2A66;
-      padding:12px 16px;
-      display:flex;
-      align-items:center;
-      gap:10px;
-      flex-wrap:wrap;
-      position:sticky;
-      top:0;
-      z-index:1000;
-    }
-    nav a{
-      color:#fff;
-      text-decoration:none;
-      font-weight:700;
-      padding:6px 8px;
-      border-radius:10px;
-      white-space:nowrap;
-    }
-    nav a:hover{ text-decoration:underline; }
-    nav .logo{ display:inline-flex; align-items:center; gap:10px; padding:0; margin-right:6px; }
-    nav .logo img{ height:40px; width:auto; border-radius:10px; display:block; }
-
-    .banner{
-      text-align:center;
-      margin-top:16px;
-      padding:0 16px;
-    }
-    .banner img{
-      width:100%;
-      max-width:715px;
-      height:auto;
-      border-radius:16px;
-      box-shadow:0 0 12px rgba(0,0,0,0.10);
-      display:block;
-      margin:0 auto;
-    }
-
-    main{
-      max-width:980px;
-      margin:22px auto 50px;
-      background:#fff;
-      padding:26px;
-      border-radius:14px;
-      box-shadow:0 0 12px rgba(0,0,0,0.10);
-    }
-
-    h1{ font-size:34px; color:#0047ab; margin:0 0 10px; text-align:center; }
-    h2{ font-size:24px; color:#0047ab; margin:26px 0 10px; }
-    h3{ font-size:18px; color:#0A2A66; margin:0 0 8px; }
-    p{ font-size:17px; margin:0 0 14px; line-height:1.65; color:#0f172a; }
-
-    .box{
-      margin:18px 0;
-      padding:16px;
-      border-radius:14px;
-      background:rgba(0,71,171,0.06);
-      border:1px solid rgba(0,71,171,0.14);
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:14px;
-      margin-top:14px;
-      align-items:start;
-    }
-
-    .card{
-      border:1px solid rgba(0,0,0,0.10);
-      border-radius:14px;
-      padding:16px;
-      background:#fff;
-      box-shadow:0 0 10px rgba(0,0,0,0.05);
-    }
-
-    ul{
-      margin:10px 0 0 18px;
-      color:#0f172a;
-      line-height:1.6;
-      font-size:16px;
-      padding:0;
-    }
-    li{ margin:8px 0; }
-
-    .btnrow{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top:12px;
-    }
-
-    .btn{
-      background:#0A2A66;
-      color:#fff;
-      padding:10px 14px;
-      border-radius:999px;
-      text-decoration:none;
-      font-weight:700;
-      font-size:14px;
-      display:inline-block;
-    }
-    .btn.secondary{ background:#0f172a; }
-    .btn:hover{ text-decoration:underline; }
-
-    .note{
-      margin-top:22px;
-      padding:14px 16px;
-      border-radius:14px;
-      background:rgba(15,23,42,0.04);
-      border:1px solid rgba(15,23,42,0.10);
-      font-size:14px;
-      color:#0f172a;
-      line-height:1.6;
-    }
-
-    @media(max-width:760px){
-      nav{ flex-direction:column; align-items:flex-start; }
-      main{ margin:18px 12px 40px; padding:18px; }
-      h1{ font-size:28px; }
-      h2{ font-size:20px; }
-      .grid{ grid-template-columns: 1fr; }
-    }
-  </style>
-</head>
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SCQ - Membres</title>
+<link href="css/styles.css" rel="stylesheet"/>
+<meta content="SCQ - Membres — Site officiel du Parti Souveraineté et Citoyenneté du Québec (SCQ)." name="description"/><link href="https://scq-officiel.ca/membres.html" rel="canonical"/><link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/><meta content="SCQ" property="og:site_name"/><meta content="SCQ - Membres" property="og:title"/><meta content="Site officiel du SCQ. Consultez nos documents, notre vision et les moyens de participation." property="og:description"/><meta content="website" property="og:type"/><meta content="https://scq-officiel.ca/membres.html" property="og:url"/><meta content="https://scq-officiel.ca/assets/og-image.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="SCQ - Membres" name="twitter:title"/><meta content="Site officiel du SCQ. Documents, vision et participation." name="twitter:description"/><meta content="https://scq-officiel.ca/assets/og-image.png" name="twitter:image"/></head>
 <body>
-
-  <!-- Navigation -->
-  <nav>
-    <a class="logo" href="index.html" aria-label="Retour à l’accueil">
-      <img src="images/logo_scq.jpg" alt="Logo SCQ">
-    </a>
-    <a href="index.html">Accueil</a>
-    <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
-    <a href="cadre.html">Cadre National</a>
-    <a href="membres.html" aria-current="page">Membres</a>
-    <a href="equipe.html">Équipe</a>
-    <a href="comptabilite.html">Comptabilité</a>
-    <a href="contact.html">Contact</a>
-    <a href="doc.html">Documents</a>
-  </nav>
-
-  <!-- Bannière -->
-  <div class="banner">
-    <img src="images/Banniere-Officiel.jpg" alt="Bannière SCQ">
-  </div>
-
-  <main>
-
-    <h1>Membres</h1>
-
-    <div class="box">
-      <p>
+<!-- Navigation -->
+<nav>
+<a aria-label="Retour à l’accueil" class="logo" href="index.html">
+<img alt="Logo SCQ" src="images/logo_scq.jpg"/>
+</a>
+<a href="index.html">Accueil</a>
+<a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+<a href="cadre.html">Cadre National</a>
+<a aria-current="page" href="membres.html">Membres</a>
+<a href="equipe.html">Équipe</a>
+<a href="comptabilite.html">Comptabilité</a>
+<a href="contact.html">Contact</a>
+<a href="doc.html">Documents</a>
+</nav>
+<!-- Bannière -->
+<div class="banner">
+<img alt="Bannière SCQ" src="images/Banniere-Officiel.jpg"/>
+</div>
+<main>
+<h1>Membres</h1>
+<div class="box">
+<p>
         Cette section présente l’adhésion et met à disposition les documents utiles pour les membres et collaborateurs.
         L’objectif : <strong>clarté, transparence et participation</strong>.
       </p>
-      <div class="btnrow">
-        <a class="btn" href="contact.html">Écrire au SCQ</a>
-        <a class="btn secondary" href="doc.html">Documents officiels</a>
-        <a class="btn" href="cadre.html">Cadre National</a>
-      </div>
-    </div>
-
-    <h2>Adhésion et participation</h2>
-    <div class="grid">
-      <section class="card">
-        <h3>Ce que signifie être membre</h3>
-        <ul>
-          <li>Participer à un projet citoyen structuré et transparent</li>
-          <li>Respecter les règles d’intégrité, de conduite et de responsabilité</li>
-          <li>Contribuer : idées, organisation, diffusion, soutien, projets</li>
-          <li>Favoriser un climat respectueux et constructif</li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h3>Principes de base</h3>
-        <ul>
-          <li>Transparence des documents et des règles</li>
-          <li>Refus des pratiques d’influence et de manipulation</li>
-          <li>Priorité à l’intérêt public et à la cohérence des cadres</li>
-          <li>Respect des citoyens, du débat et des faits</li>
-        </ul>
-      </section>
-    </div>
-
-    <h2>Documents utiles (téléchargements)</h2>
-    <div class="grid">
-
-      <section class="card">
-        <h3>Code de conduite</h3>
-        <p>Référentiel d’intégrité et de comportement attendu au sein du SCQ.</p>
-        <div class="btnrow">
-          <a class="btn secondary" href="Doc/Code_de_conduite_du_SCQ.docx" download>Télécharger (DOCX)</a>
-        </div>
-      </section>
-
-      <section class="card">
-        <h3>Formulaire d’engagement du membre</h3>
-        <p>Document d’adhésion / engagement (selon le processus interne du SCQ).</p>
-        <div class="btnrow">
-          <a class="btn secondary" href="Doc/FORMULAIRE_ENGAGEMENT_MEMBRE_SCQ.docx" download>Télécharger (DOCX)</a>
-        </div>
-      </section>
-
-      <section class="card">
-        <h3>Politique de contributions volontaires</h3>
-        <p>Cadre de contribution volontaire et d’implication du membre.</p>
-        <div class="btnrow">
-          <a class="btn secondary" href="Doc/POLITIQUE_CONTRIBUTIONS_VOLONTAIRES_SCQ.docx" download>Télécharger (DOCX)</a>
-        </div>
-      </section>
-
-      <section class="card">
-        <h3>Lettre officielle de remerciement</h3>
-        <p>Modèle de lettre à usage organisationnel (remerciements officiels).</p>
-        <div class="btnrow">
-          <a class="btn secondary" href="Doc/LETTRE_REMERCIEMENT_SCQ.docx" download>Télécharger (DOCX)</a>
-        </div>
-      </section>
-
-      <section class="card">
-        <h3>Carte de membre</h3>
-        <p>Visuel de carte de membre (image).</p>
-        <div class="btnrow">
-          <a class="btn secondary" href="Doc/CARTE_MEMBRE_SCQ.jpg" download>Télécharger (Image)</a>
-        </div>
-      </section>
-
-      <section class="card">
-        <h3>Fiche de signature d’appui</h3>
-        <p>Document public pour appui et mobilisation.</p>
-        <div class="btnrow">
-          <a class="btn secondary" href="Doc/FICHE_DE_SIGNATURE_D_APPUI.docx" download>Télécharger (DOCX)</a>
-        </div>
-      </section>
-
-    </div>
-
-    <div class="note">
-      <strong>Si un téléchargement ne fonctionne pas :</strong>
+<div class="btnrow">
+<a class="btn" href="contact.html">Écrire au SCQ</a>
+<a class="btn secondary" href="doc.html">Documents officiels</a>
+<a class="btn" href="cadre.html">Cadre National</a>
+</div>
+</div>
+<h2>Adhésion et participation</h2>
+<div class="grid">
+<section class="card">
+<h3>Ce que signifie être membre</h3>
+<ul>
+<li>Participer à un projet citoyen structuré et transparent</li>
+<li>Respecter les règles d’intégrité, de conduite et de responsabilité</li>
+<li>Contribuer : idées, organisation, diffusion, soutien, projets</li>
+<li>Favoriser un climat respectueux et constructif</li>
+</ul>
+</section>
+<section class="card">
+<h3>Principes de base</h3>
+<ul>
+<li>Transparence des documents et des règles</li>
+<li>Refus des pratiques d’influence et de manipulation</li>
+<li>Priorité à l’intérêt public et à la cohérence des cadres</li>
+<li>Respect des citoyens, du débat et des faits</li>
+</ul>
+</section>
+</div>
+<h2>Documents utiles (téléchargements)</h2>
+<div class="grid">
+<section class="card">
+<h3>Code de conduite</h3>
+<p>Référentiel d’intégrité et de comportement attendu au sein du SCQ.</p>
+<div class="btnrow">
+<a class="btn secondary" download="" href="Doc/Code_de_conduite_du_SCQ.docx">Télécharger (DOCX)</a>
+</div>
+</section>
+<section class="card">
+<h3>Formulaire d’engagement du membre</h3>
+<p>Document d’adhésion / engagement (selon le processus interne du SCQ).</p>
+<div class="btnrow">
+<a class="btn secondary" download="" href="Doc/FORMULAIRE_ENGAGEMENT_MEMBRE_SCQ.docx">Télécharger (DOCX)</a>
+</div>
+</section>
+<section class="card">
+<h3>Politique de contributions volontaires</h3>
+<p>Cadre de contribution volontaire et d’implication du membre.</p>
+<div class="btnrow">
+<a class="btn secondary" download="" href="Doc/POLITIQUE_CONTRIBUTIONS_VOLONTAIRES_SCQ.docx">Télécharger (DOCX)</a>
+</div>
+</section>
+<section class="card">
+<h3>Lettre officielle de remerciement</h3>
+<p>Modèle de lettre à usage organisationnel (remerciements officiels).</p>
+<div class="btnrow">
+<a class="btn secondary" download="" href="Doc/LETTRE_REMERCIEMENT_SCQ.docx">Télécharger (DOCX)</a>
+</div>
+</section>
+<section class="card">
+<h3>Carte de membre</h3>
+<p>Visuel de carte de membre (image).</p>
+<div class="btnrow">
+<a class="btn secondary" download="" href="Doc/CARTE_MEMBRE_SCQ.jpg">Télécharger (Image)</a>
+</div>
+</section>
+<section class="card">
+<h3>Fiche de signature d’appui</h3>
+<p>Document public pour appui et mobilisation.</p>
+<div class="btnrow">
+<a class="btn secondary" download="" href="Doc/FICHE_DE_SIGNATURE_D_APPUI.docx">Télécharger (DOCX)</a>
+</div>
+</section>
+</div>
+<div class="note">
+<strong>Si un téléchargement ne fonctionne pas :</strong>
       vérifie que le fichier existe exactement au chemin indiqué et que la casse est identique.
       Sur GitHub Pages : <strong>Doc</strong> ≠ <strong>doc</strong>.
       Pour une liste complète, utilise la page <strong>Documents</strong>.
     </div>
-
-  </main>
-
-</body>
+</main>
+<footer class="site-footer">
+<div class="container footer-grid">
+<div>
+<div class="footer-title">SCQ — Souveraineté et Citoyenneté du Québec</div>
+<div class="footer-meta">Site officiel — information, documents et participation citoyenne.</div>
+</div>
+<div>
+<div class="footer-title">Liens</div>
+<a href="politique-confidentialite.html">Politique de confidentialité</a><br/>
+<a href="avis-legal.html">Avis légal</a><br/>
+<a href="accessibilite.html">Accessibilité</a><br/>
+<a href="contact.html">Contact</a>
+</div>
+</div>
+<div class="container footer-bottom">© <span id="year"></span> SCQ. Tous droits réservés.</div>
+</footer><script>document.getElementById('year').textContent = new Date().getFullYear();</script></body>
 </html>
